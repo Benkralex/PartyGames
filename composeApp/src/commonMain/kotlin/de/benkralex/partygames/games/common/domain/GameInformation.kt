@@ -1,7 +1,6 @@
 package de.benkralex.partygames.games.common.domain
 
 import androidx.compose.ui.graphics.Color
-import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
 data class GameInformation (

@@ -8,7 +8,6 @@ import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_author
 import partygames.composeapp.generated.resources.find_liar_description
 import partygames.composeapp.generated.resources.find_liar_title
-import partygames.composeapp.generated.resources.impostor_title
 
 
 class FindLiar(
