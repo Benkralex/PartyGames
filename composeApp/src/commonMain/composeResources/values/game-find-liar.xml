@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="find_liar_title">Find the Liar</string>
+    <string name="find_liar_description">Lorem Ipsum dolorem</string>
+    <string name="find_liar_author">Benkralex</string>
+</resources>
