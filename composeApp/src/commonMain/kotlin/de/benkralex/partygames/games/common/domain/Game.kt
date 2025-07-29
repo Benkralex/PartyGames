@@ -9,12 +9,12 @@ interface Game {
     //-------------
     // Settings
     //-------------
-    val settings: Map<String, Any>
+    val settings: Map<String, Any?>
 
     //-------------
     // AI (Coming soon)
     //-------------
-    val generateContentWithAI: Boolean
+    /*val generateContentWithAI: Boolean
     val prompt: String
     val argsNames: List<String>
 
@@ -29,5 +29,5 @@ interface Game {
         finalPrompt.replace("\\}", "}")
         finalPrompt.replace("\\{", "{")
         return finalPrompt
-    }
+    }*/
 }

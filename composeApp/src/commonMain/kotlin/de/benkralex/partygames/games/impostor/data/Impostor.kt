@@ -9,14 +9,7 @@ import partygames.composeapp.generated.resources.impostor_author
 import partygames.composeapp.generated.resources.impostor_description
 import partygames.composeapp.generated.resources.impostor_title
 
-class Impostor(
-    playerCount: Int,
-    impostorCount: Int,
-    topics: List<String>,
-    hint: Boolean,
-    difficulty: Difficulty,
-    override val generateContentWithAI: Boolean = false,
-) : Game {
+class Impostor : Game {
     override val information: GameInformation = GameInformation(
         name = Res.string.impostor_title,
         description = Res.string.impostor_description,
@@ -25,16 +18,32 @@ class Impostor(
         color = Color.Blue,
     )
 
-
-    override val settings: Map<String, Any> = mapOf(
-        "playerCount" to playerCount,
-        "impostorCount" to impostorCount,
-        "topics" to topics,
-        "hint" to hint,
-        "difficulty" to difficulty,
+    override var settings: Map<String, Any?> = mapOf(
+        "playerCount" to null,
+        "impostorCount" to null,
+        "topics" to null,
+        "hint" to null,
+        "difficulty" to null,
     )
 
-
-    override val prompt: String = ""
-    override val argsNames: List<String> = listOf()
+    fun createGame(
+        playerCount: Int,
+        impostorCount: Int,
+        topics: List<String>,
+        hint: Boolean,
+        difficulty: Difficulty,
+    ) {
+        settings = mapOf(
+            "playerCount" to playerCount,
+            "impostorCount" to impostorCount,
+            "topics" to topics,
+            "hint" to hint,
+            "difficulty" to difficulty,
+        )
+    }
 }
+
+data class ImpostorWordPair (
+    val mainWord: String,
+    val impostorHint: String,
+)

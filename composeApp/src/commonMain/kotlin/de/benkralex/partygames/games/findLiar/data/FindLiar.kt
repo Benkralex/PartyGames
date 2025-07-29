@@ -10,13 +10,7 @@ import partygames.composeapp.generated.resources.find_liar_description
 import partygames.composeapp.generated.resources.find_liar_title
 
 
-class FindLiar(
-    playerCount: Int,
-    liarCount: Int,
-    topics: List<String>,
-    difficulty: Difficulty,
-    override val generateContentWithAI: Boolean = false,
-) : Game {
+class FindLiar : Game {
     override val information: GameInformation = GameInformation(
         name = Res.string.find_liar_title,
         description = Res.string.find_liar_description,
@@ -25,15 +19,29 @@ class FindLiar(
         color = Color.Red,
     )
 
-
-    override val settings: Map<String, Any> = mapOf(
-        "playerCount" to playerCount,
-        "liarCount" to liarCount,
-        "topics" to topics,
-        "difficulty" to difficulty,
+    override var settings: Map<String, Any?> = mapOf(
+        "playerCount" to null,
+        "liarCount" to null,
+        "topics" to null,
+        "difficulty" to null,
     )
 
-
-    override val prompt: String = ""
-    override val argsNames: List<String> = listOf()
+    fun createGame(
+        playerCount: Int,
+        liarCount: Int,
+        topics: List<String>,
+        difficulty: Difficulty,
+    ) {
+        settings = mapOf(
+            "playerCount" to playerCount,
+            "liarCount" to liarCount,
+            "topics" to topics,
+            "difficulty" to difficulty,
+        )
+    }
 }
+
+data class FindLiarQuestionPair(
+    val mainQuestion: String,
+    val liarQuestion: String,
+)
