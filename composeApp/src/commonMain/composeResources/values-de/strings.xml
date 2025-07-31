@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="app_name">PartyGames</string>
+    <string name="difficulty">Schwierigkeit</string>
+    <string name="error_valid_number">Bitte eine gültige Zahl eingeben</string>
+    <string name="error_valid_range">Bitte eine Zahl zwischen %min% und %max% eingeben</string>
+    <string name="error_empty_input">Bitte geben Sie einen Wert ein</string>
 </resources>
