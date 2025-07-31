@@ -11,6 +11,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
+import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.error_empty_input
+import partygames.composeapp.generated.resources.error_valid_number
+import partygames.composeapp.generated.resources.error_valid_range
 
 @Composable
 fun SelectNumberWidget(
@@ -18,33 +23,65 @@ fun SelectNumberWidget(
     onNumberSelected: (Int) -> Unit,
     min: Int,
     max: Int,
-    placeholder: String,
+    label: String,
+    initialValue: String = "",
 ) {
     val textFieldValue = remember { mutableStateOf("") }
+    val validNumError: String = stringResource(Res.string.error_valid_number)
+    val validRangeError: String = stringResource(Res.string.error_valid_range)
+    val emptyValueError = stringResource(Res.string.error_empty_input)
+    val isError = remember { mutableStateOf(initialValue.isEmpty()) }
+    val errorMessage = remember { mutableStateOf(
+        if (initialValue.isEmpty()) {
+            emptyValueError
+        } else {
+            ""
+        }
+    ) }
     OutlinedTextField(
         modifier = modifier,
         value = textFieldValue.value,
+        isError = isError.value,
+        supportingText = {
+            if (isError.value) {
+                Text(
+                    text = errorMessage.value,
+                    color = MaterialTheme.colorScheme.error,
+                )
+            }
+        },
         onValueChange = { newValue: String ->
             textFieldValue.value = newValue
             val number = newValue.toIntOrNull()
             if (number != null && number in min..max) {
                 onNumberSelected(number)
+                isError.value = false
+            } else {
+                if (number == null) {
+                    if (newValue.isEmpty()) {
+                        errorMessage.value = emptyValueError
+                    } else {
+                        errorMessage.value = validNumError
+                    }
+                } else {
+                    errorMessage.value = validRangeError
+                        .replace("%min%", min.toString())
+                        .replace("%max%", max.toString())
+                }
+                isError.value = true
             }
         },
-        placeholder = {
+        label = {
             Text(
-                text = placeholder,
+                text = label,
             )
         },
         singleLine = true,
         keyboardOptions = KeyboardOptions.Default.copy(
             keyboardType = KeyboardType.Number
         ),
-        colors = OutlinedTextFieldDefaults.colors(
-            focusedBorderColor = MaterialTheme.colorScheme.primary,
-            unfocusedBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f),
-            focusedLabelColor = MaterialTheme.colorScheme.primary,
-            cursorColor = MaterialTheme.colorScheme.primary
+        colors = OutlinedTextFieldDefaults.colors().copy(
+            unfocusedLabelColor = OutlinedTextFieldDefaults.colors().unfocusedPlaceholderColor
         )
     )
 }

@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import de.benkralex.partygames.app.theme.AppTheme
 import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
@@ -30,19 +31,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 @Preview
 fun App() {
-    val colors: ColorScheme = if (isSystemInDarkTheme()) {
-        darkColorScheme(
-            primary = Color(0xFF000033)
-        )
-    } else {
-        lightColorScheme(
-            primary = Color(0xFF000088)
-        )
-    }
-
-    MaterialTheme (
-        colorScheme = colors,
-    ) {
+    AppTheme {
         val navController = rememberNavController()
         NavHost(
             navController = navController,
