@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="find_liar_title">Find the Liar</string>
-    <string name="find_liar_description">Lorem Ipsum dolorem</string>
+    <string name="find_liar_description">An exciting game where you spot the fake answers and uncover the liars!</string>
     <string name="find_liar_author">Benkralex</string>
+    <string name="find_liar_how_to_play">
+All players answer a question – except the liar(s), who get a different one.
+Then, all answers and the main question are shown.
+Discuss the answers together and figure out who the liar is!
+    </string>
 </resources>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="find_liar_title">Finde den Lügner</string>
-    <string name="find_liar_description">Lorem Ipsum dolorem</string>
+    <string name="find_liar_description">Ein spannendes Spiel, bei dem du den falschen Antworten auf die Spur kommst und die Lügner enttarnst!</string>
     <string name="find_liar_author">Benkralex</string>
+    <string name="find_liar_how_to_play">
+Alle Spielerinnen und Spieler beantworten eine Frage – außer den Lügnern, die eine andere bekommen.
+Anschließend werden die Antworten und die (richtige) Frage angezeigt.
+Diskutiert gemeinsam, wer lügt, und enttarnt die Lügner!
+    </string>
 </resources>

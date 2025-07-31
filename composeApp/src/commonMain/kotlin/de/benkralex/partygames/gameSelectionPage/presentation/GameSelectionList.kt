@@ -1,4 +1,4 @@
-package de.benkralex.partygames.gameSelection.presentation
+package de.benkralex.partygames.gameSelectionPage.presentation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.GameSelectionCard
-import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun GameSelectionList (

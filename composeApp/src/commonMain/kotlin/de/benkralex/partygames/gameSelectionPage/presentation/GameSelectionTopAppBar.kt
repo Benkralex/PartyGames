@@ -1,4 +1,4 @@
-package de.benkralex.partygames.gameSelection.presentation
+package de.benkralex.partygames.gameSelectionPage.presentation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="impostor_title">Impostor</string>
-    <string name="impostor_description">Lorem Ipsum dolorem</string>
+    <string name="impostor_description">Ein cleveres Ratespiel, bei dem die Impostor enttarnt werden müssen, bevor sie das geheime Wort erraten!</string>
     <string name="impostor_author">Benkralex</string>
+    <string name="impostor_how_to_play">
+Jeder Spieler bekommt ein geheimes Wort angezeigt – außer den Impostor(en).
+Diese sehen nur „Impostor“ oder einen vagen Hinweis.
+Danach sagt jeder Spieler reihum ein Wort, das zum geheimen Begriff passt.
+Ziel ist es, anhand der Aussagen die Impostor zu entlarven.
+Wurden alle Impostor gefunden, dürfen sie noch einmal raten, welches Wort die anderen hatten.
+Raten sie richtig, gewinnen die Impostor – raten sie falsch, gewinnt das restliche Team.
+    </string>
 </resources>

@@ -1,5 +1,8 @@
 package de.benkralex.partygames.games.common.domain
 
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+
 interface Game {
     //-------------
     // Information
@@ -10,6 +13,11 @@ interface Game {
     // Settings
     //-------------
     val settings: Map<String, Any?>
+
+    //-------------
+    // UI
+    //-------------
+    val setupWidget: @Composable (modifier: Modifier) -> Unit
 
     //-------------
     // AI (Coming soon)

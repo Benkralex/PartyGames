@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="impostor_title">Impostor</string>
-    <string name="impostor_description">Lorem Ipsum dolorem</string>
+    <string name="impostor_description">A clever guessing game where impostors must be uncovered before they guess the secret word!</string>
     <string name="impostor_author">Benkralex</string>
+    <string name="impostor_how_to_play">
+Each player gets a secret word – except the impostor(s).
+They only see “Impostor” or a vague clue.
+Then, each player says a word related to the secret one.
+Try to identify the impostors based on what everyone says.
+Once all impostors are found, they get one chance to guess the secret word.
+If they guess correctly, the impostors win. If not, the rest of the players win.
+    </string>
 </resources>

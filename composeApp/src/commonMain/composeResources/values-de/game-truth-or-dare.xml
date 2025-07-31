@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="truth_or_dare_title">Wahrheit oder Pflicht</string>
-    <string name="truth_or_dare_description">Lorem Ipsum dolorem</string>
+    <string name="truth_or_dare_description">Das klassische Partyspiel für mutige Entscheidungen, peinliche Wahrheiten und lustige Herausforderungen!</string>
     <string name="truth_or_dare_author">Benkralex</string>
+    <string name="truth_or_dare_how_to_play">
+Jeder Spieler entscheidet sich zwischen Wahrheit und Pflicht.
+Dann muss die gewählte Frage ehrlich beantwortet oder die Aufgabe erfüllt werden.
+Anschließend wählt der aktuelle Spieler die nächste Person aus, die an der Reihe ist.
+    </string>
 </resources>

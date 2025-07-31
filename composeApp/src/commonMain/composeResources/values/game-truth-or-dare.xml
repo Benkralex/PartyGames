@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="truth_or_dare_title">Truth or Dare</string>
-    <string name="truth_or_dare_description">Lorem Ipsum dolorem</string>
+    <string name="truth_or_dare_description">The classic party game of bold dares, awkward truths, and endless fun!</string>
     <string name="truth_or_dare_author">Benkralex</string>
+    <string name="truth_or_dare_how_to_play">
+Each player chooses either Truth or Dare.
+Then they must either answer a question honestly or complete a challenge.
+After that, they pick the next player to take a turn.
+    </string>
 </resources>
