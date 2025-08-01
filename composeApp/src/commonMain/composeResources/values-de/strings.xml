@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">PartyGames</string>
 
+    <string name="start_game">Spiel starten</string>
+
     <string name="difficulty">Schwierigkeit</string>
     <string name="topics">Themen</string>
 
