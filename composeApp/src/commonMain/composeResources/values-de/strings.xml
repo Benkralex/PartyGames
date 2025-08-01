@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="app_name">PartyGames</string>
+
     <string name="difficulty">Schwierigkeit</string>
+    <string name="topics">Themen</string>
+
     <string name="error_valid_number">Bitte eine gültige Zahl eingeben</string>
     <string name="error_valid_range">Bitte eine Zahl zwischen %min% und %max% eingeben</string>
     <string name="error_empty_input">Bitte geben Sie einen Wert ein</string>
+
+    <string name="difficulty_trivial">Trivial</string>
+    <string name="difficulty_extra_easy">Sehr einfach</string>
+    <string name="difficulty_easy">Einfach</string>
+    <string name="difficulty_moderate">Moderat</string>
+    <string name="difficulty_medium">Mittel</string>
+    <string name="difficulty_challenging">Herausfordernd</string>
+    <string name="difficulty_hard">Schwierig</string>
+    <string name="difficulty_very_hard">Sehr schwierig</string>
+    <string name="difficulty_extreme">Extrem</string>
+    <string name="difficulty_nightmare">Albtraum</string>
 </resources>

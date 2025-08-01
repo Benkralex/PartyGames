@@ -21,12 +21,13 @@ import partygames.composeapp.generated.resources.error_valid_range
 fun SelectNumberWidget(
     modifier: Modifier = Modifier,
     onNumberSelected: (Int) -> Unit,
+    onInputChange: (String) -> Unit = {},
     min: Int,
     max: Int,
     label: String,
     initialValue: String = "",
 ) {
-    val textFieldValue = remember { mutableStateOf("") }
+    val textFieldValue = remember { mutableStateOf(initialValue) }
     val validNumError: String = stringResource(Res.string.error_valid_number)
     val validRangeError: String = stringResource(Res.string.error_valid_range)
     val emptyValueError = stringResource(Res.string.error_empty_input)
@@ -42,15 +43,16 @@ fun SelectNumberWidget(
         modifier = modifier,
         value = textFieldValue.value,
         isError = isError.value,
-        supportingText = {
-            if (isError.value) {
+        supportingText = if (isError.value) {
+            {
                 Text(
                     text = errorMessage.value,
                     color = MaterialTheme.colorScheme.error,
                 )
             }
-        },
+        } else null,
         onValueChange = { newValue: String ->
+            onInputChange(newValue)
             textFieldValue.value = newValue
             val number = newValue.toIntOrNull()
             if (number != null && number in min..max) {

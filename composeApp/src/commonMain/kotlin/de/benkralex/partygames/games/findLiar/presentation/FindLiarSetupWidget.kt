@@ -1,19 +1,19 @@
 package de.benkralex.partygames.games.findLiar.presentation
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import de.benkralex.partygames.games.common.presentation.SelectBooleanWidget
+import de.benkralex.partygames.games.common.presentation.CheckboxInputWidget
 import de.benkralex.partygames.games.common.presentation.SelectDifficultyWidget
 import de.benkralex.partygames.games.common.presentation.SelectNumberWidget
 import de.benkralex.partygames.games.common.presentation.StringListInputWidget
@@ -23,6 +23,7 @@ import partygames.composeapp.generated.resources.find_liar_res_liar_count
 import partygames.composeapp.generated.resources.find_liar_res_player
 import partygames.composeapp.generated.resources.find_liar_res_player_name
 import partygames.composeapp.generated.resources.find_liar_res_players
+import partygames.composeapp.generated.resources.topics
 
 @Composable
 fun FindLiarSetupWidget(
@@ -34,8 +35,9 @@ fun FindLiarSetupWidget(
         topics: List<String>,
         difficulty: Difficulty,
     */
+    val scrollState = rememberScrollState()
     Column (
-        modifier = modifier,
+        modifier = modifier.verticalScroll(scrollState),
     ) {
         val playerCount = remember { mutableStateOf(3) }
         val childModifier: Modifier = Modifier
@@ -69,6 +71,7 @@ fun FindLiarSetupWidget(
                 // Handle liar count selection
             },
             modifier = childModifier,
+            initialValue = "1",
         )
         HorizontalDivider(
             modifier = Modifier
@@ -82,5 +85,25 @@ fun FindLiarSetupWidget(
             },
             modifier = childModifier,
         )
+        HorizontalDivider(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp)
+                .padding(top = 8.dp),
+        )
+        CheckboxInputWidget(
+            modifier = childModifier,
+            label = stringResource(Res.string.topics),
+            options = mapOf(
+                "Animals" to true,
+                "Food" to false,
+                "Movies" to false,
+                "Books" to false,
+                "Sports" to false,
+                "Music" to false,
+            ),
+            onValueChange = {  },
+        )
+        Spacer(modifier = Modifier.height(50.dp))
     }
 }
