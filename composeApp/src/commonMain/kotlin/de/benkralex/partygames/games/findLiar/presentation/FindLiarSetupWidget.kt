@@ -18,9 +18,11 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListWidget
+import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput.DifficultyInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
+import de.benkralex.partygames.games.findLiar.data.getTopics
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.difficulty
@@ -49,6 +51,10 @@ fun FindLiarSetupWidget(
         playerListLabel, playerSingleLabel, playerNameStart,
         liarCountLabel, difficultyLabel, topicsLabel
     )
+
+    viewModel.topicsState.checkboxSingleStates = getTopics().map { topic ->
+        CheckboxSingleState(topic, true)
+    }
 
     // update Liar Count Constraints
     viewModel.updateLiarCountConstraints()

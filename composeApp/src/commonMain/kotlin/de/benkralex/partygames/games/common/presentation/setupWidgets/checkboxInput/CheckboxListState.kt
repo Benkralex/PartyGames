@@ -2,9 +2,9 @@ package de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxI
 
 class CheckboxListState(
     var label: String,
-    val checkboxSingleStates: List<CheckboxSingleState>,
+    var checkboxSingleStates: List<CheckboxSingleState>,
     val minCount: Int = 0,
-    val maxCount: Int = checkboxSingleStates.size,
+    val maxCount: Int = Int.MAX_VALUE,
     var isError: Boolean = false,
     var errorMessage: String = "",
 )

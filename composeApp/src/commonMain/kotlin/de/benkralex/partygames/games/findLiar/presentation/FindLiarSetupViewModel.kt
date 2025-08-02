@@ -1,9 +1,9 @@
 package de.benkralex.partygames.games.findLiar.presentation
 
-import androidx.lifecycle.ViewModel
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
@@ -11,9 +11,8 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.difficulty
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringSingleState
+import de.benkralex.partygames.games.findLiar.data.getTopics
 import io.github.aakira.napier.Napier
-import kotlin.text.compareTo
-import kotlin.toString
 
 class FindLiarSetupViewModel: ViewModel() {
 
@@ -53,13 +52,7 @@ class FindLiarSetupViewModel: ViewModel() {
 
     val topicsState = CheckboxListState(
         label = "",
-        checkboxSingleStates = listOf(
-            CheckboxSingleState("Lorem ipsum1", true),
-            CheckboxSingleState("Lorem ipsum2", false),
-            CheckboxSingleState("Lorem ipsum3", false),
-            CheckboxSingleState("Lorem ipsum4", true),
-            CheckboxSingleState("Lorem ipsum5", true),
-        ),
+        checkboxSingleStates = emptyList(),
         minCount = 1,
     )
 
@@ -105,7 +98,6 @@ class FindLiarSetupViewModel: ViewModel() {
         }
     }
 
-    // Rest der Methoden bleibt gleich
     fun setupGame(setupGameCallback: (List<String>, Int, List<String>, Difficulty) -> Unit) {
         Napier.i(
             "players=$players," +

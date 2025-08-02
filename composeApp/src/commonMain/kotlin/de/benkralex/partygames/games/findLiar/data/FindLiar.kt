@@ -57,11 +57,3 @@ class FindLiar : Game {
         )
     }
 }
-
-@Serializable
-data class FindLiarQuestionPair(
-    val mainQuestion: String,
-    val liarQuestion: String,
-    val topic: String,
-    val difficulty: Difficulty,
-)
