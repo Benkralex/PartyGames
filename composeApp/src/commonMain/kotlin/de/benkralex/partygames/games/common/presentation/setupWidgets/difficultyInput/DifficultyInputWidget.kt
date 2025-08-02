@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.common.presentation
+package de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -6,15 +6,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Difficulty
+import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
+import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
-import partygames.composeapp.generated.resources.difficulty
 import partygames.composeapp.generated.resources.difficulty_challenging
 import partygames.composeapp.generated.resources.difficulty_easy
 import partygames.composeapp.generated.resources.difficulty_extra_easy
@@ -27,11 +29,10 @@ import partygames.composeapp.generated.resources.difficulty_trivial
 import partygames.composeapp.generated.resources.difficulty_very_hard
 
 @Composable
-fun SelectDifficultyWidget(
+fun DifficultyInputWidget(
     modifier: Modifier = Modifier,
-    onDifficultySelected: (Difficulty) -> Unit,
+    state: DifficultyInputState
 ) {
-    val difficulty = remember { mutableStateOf(5) }
     val difficultyNames: Map<Difficulty, StringResource> = mapOf(
         Difficulty.TRIVIAL to Res.string.difficulty_trivial,
         Difficulty.EXTRA_EASY to Res.string.difficulty_extra_easy,
@@ -44,43 +45,43 @@ fun SelectDifficultyWidget(
         Difficulty.EXTREME to Res.string.difficulty_extreme,
         Difficulty.NIGHTMARE to Res.string.difficulty_nightmare,
     )
+
+    val numberInputState = remember {
+        IntegerInputState(
+            label = state.label,
+            min = 1,
+            max = 10,
+            defaultValue = 5,
+        )
+    }
+
     Column (
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        SelectNumberWidget(
-            modifier = Modifier
-                .fillMaxWidth(),
-            onNumberSelected = { number ->
-                difficulty.value = number
-                if (difficultyFromNumber(number) != null) {
-                    onDifficultySelected(difficultyFromNumber(number)!!)
-                }
-            },
-            onInputChange = { newString ->
-                val newNumber = newString.toIntOrNull()
-                difficulty.value = newNumber ?: 0
-            },
-            min = 1,
-            max = 10,
-            label = "${stringResource(Res.string.difficulty)} (1-10)",
-            initialValue = "5",
-        )
-        if (difficultyFromNumber(difficulty.value) != null) {
-            Text(
-                text = stringResource(
-                    resource = difficultyNames.getOrElse(
-                        key = difficultyFromNumber(difficulty.value)!!,
-                        defaultValue = { Res.string.difficulty_medium },
-                    ),
-                ),
-                style = MaterialTheme.typography.labelMedium
-            )
+        val difficulty by remember {
+            derivedStateOf {
+                difficultyFromNumber(numberInputState.value)
+            }
         }
+        state.value = difficulty
+        IntegerInputWidget(
+            state = numberInputState,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        Text(
+            text = stringResource(
+                resource = difficultyNames.getOrElse(
+                    key = state.value,
+                    defaultValue = { Res.string.difficulty_medium },
+                ),
+            ),
+            style = MaterialTheme.typography.labelMedium
+        )
     }
 }
 
-private fun difficultyFromNumber(number: Int): Difficulty? {
+private fun difficultyFromNumber(number: Int): Difficulty {
     return when (number) {
         1 -> Difficulty.TRIVIAL
         2 -> Difficulty.EXTRA_EASY
@@ -92,6 +93,6 @@ private fun difficultyFromNumber(number: Int): Difficulty? {
         8 -> Difficulty.VERY_HARD
         9 -> Difficulty.EXTREME
         10 -> Difficulty.NIGHTMARE
-        else -> null
+        else -> throw IllegalArgumentException("Invalid difficulty number: $number")
     }
 }

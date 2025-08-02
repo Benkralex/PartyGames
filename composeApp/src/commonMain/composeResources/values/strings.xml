@@ -10,6 +10,9 @@
     <string name="error_valid_number">Please enter a valid number</string>
     <string name="error_valid_range">Please enter a number between %min% and %max%</string>
     <string name="error_empty_input">Please enter a value</string>
+    <string name="error_duplicate">Duplicate</string>
+    <string name="error_checkbox_too_many">Choose at most %max% element/s</string>
+    <string name="error_checkbox_too_little">Choose at least %min% element/s</string>
 
     <string name="difficulty_trivial">Trivial</string>
     <string name="difficulty_extra_easy">Extra easy</string>
