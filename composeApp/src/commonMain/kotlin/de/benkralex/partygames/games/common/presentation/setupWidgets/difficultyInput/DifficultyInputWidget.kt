@@ -65,6 +65,7 @@ fun DifficultyInputWidget(
             }
         }
         state.value = difficulty
+        state.realValue = numberInputState.realValue
         IntegerInputWidget(
             state = numberInputState,
             modifier = Modifier.fillMaxWidth(),

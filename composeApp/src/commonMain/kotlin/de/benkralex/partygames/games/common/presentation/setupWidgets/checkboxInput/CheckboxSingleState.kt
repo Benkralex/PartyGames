@@ -5,9 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 
 class CheckboxSingleState(
-    label: String,
+    val label: String,
     defaultValue: Boolean,
 ) {
     var value by mutableStateOf(defaultValue)
-    val label = label
 }

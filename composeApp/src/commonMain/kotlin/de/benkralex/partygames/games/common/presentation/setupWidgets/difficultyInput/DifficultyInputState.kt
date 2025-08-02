@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import de.benkralex.partygames.games.common.domain.Difficulty
 
 class DifficultyInputState(
-    val label: String,
+    var label: String,
     defaultValue: Difficulty,
 ) {
     var value by mutableStateOf(defaultValue)

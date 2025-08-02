@@ -55,7 +55,7 @@ fun IntegerInputWidget(
                     .replace("%max%", state.max.toString())
                 return@OutlinedTextField
             }
-            state.value = number!!
+            state.value = number
             state.isError = false
         },
         label = {

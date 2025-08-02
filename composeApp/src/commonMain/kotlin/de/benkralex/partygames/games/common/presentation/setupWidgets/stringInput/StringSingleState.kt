@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 
 class StringSingleState(
-    val label: String,
+    var label: String,
     defaultValue: String,
 ) {
     var value by mutableStateOf(defaultValue)

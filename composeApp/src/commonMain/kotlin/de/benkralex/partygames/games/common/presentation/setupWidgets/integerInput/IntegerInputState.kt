@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 
 class IntegerInputState(
-    val label: String,
+    var label: String,
     defaultValue: Int,
     min: Int = Int.MIN_VALUE,
     max: Int = Int.MAX_VALUE,
