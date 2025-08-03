@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Game
-import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupWidget
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)

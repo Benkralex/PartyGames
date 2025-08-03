@@ -1,10 +1,7 @@
 package de.benkralex.partygames.games.findLiar.data
 
-import androidx.compose.runtime.Composable
 import de.benkralex.partygames.games.common.domain.Difficulty
-import kotlinx.serialization.Serializable
 import org.jetbrains.compose.resources.StringResource
-import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_data_liar_question_best_gift_received
 import partygames.composeapp.generated.resources.find_liar_data_liar_question_best_movie

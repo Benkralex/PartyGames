@@ -6,12 +6,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getKeyByGame
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarPlayWidget
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupWidget
-import kotlinx.serialization.Serializable
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_author
 import partygames.composeapp.generated.resources.find_liar_description

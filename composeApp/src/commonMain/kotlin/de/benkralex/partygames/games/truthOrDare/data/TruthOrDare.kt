@@ -35,19 +35,16 @@ class TruthOrDare : Game {
     override val playWidget: @Composable ((Modifier) -> Unit)
         get() = {}
 
-    override fun createGame(settings: Map<String, Any?>) {
-        this.settings = settings
-    }
-
-    fun createGame(
-        topics: List<String>,
-        ageMin: Int?,
-        ageMax: Int?,
+    override fun createGame(
+        //topics: List<String>,
+        //ageMin: Int?,
+        //ageMax: Int?,
+        settings: Map<String, Any?>
     ) {
-        settings = mapOf(
-            "topics" to topics,
-            "ageMin" to ageMin,
-            "ageMax" to ageMax,
-        )
+        this.settings = settings// mapOf(
+            //"topics" to topics,
+            //"ageMin" to ageMin,
+            //"ageMax" to ageMax,
+        //)
     }
 }

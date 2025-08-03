@@ -34,24 +34,21 @@ class Impostor : Game {
     override val playWidget: @Composable ((Modifier) -> Unit)
         get() = {}
 
-    override fun createGame(settings: Map<String, Any?>) {
-        this.settings = settings
-    }
-
-    fun createGame(
-        players: List<String>,
+    override fun createGame(
+        /*players: List<String>,
         impostorCount: Int,
         topics: List<String>,
         hint: Boolean,
-        difficulty: Difficulty,
+        difficulty: Difficulty,*/
+        settings: Map<String, Any?>
     ) {
-        settings = mapOf(
+        this.settings = settings /*mapOf(
             "players" to players,
             "impostorCount" to impostorCount,
             "topics" to topics,
             "hint" to hint,
             "difficulty" to difficulty,
-        )
+        )*/
     }
 }
 
