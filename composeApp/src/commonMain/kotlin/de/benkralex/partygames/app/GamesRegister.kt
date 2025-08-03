@@ -1,5 +1,8 @@
 package de.benkralex.partygames.app
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.findLiar.data.FindLiar
 import de.benkralex.partygames.games.impostor.data.Impostor
@@ -9,6 +12,10 @@ val gamesRegister: List<Game> = listOf(
     Impostor(),
     TruthOrDare(),
     FindLiar(),
+)
+
+var activeGame: String? by mutableStateOf(
+    null
 )
 
 fun getGameByKey(key: String): Game? {

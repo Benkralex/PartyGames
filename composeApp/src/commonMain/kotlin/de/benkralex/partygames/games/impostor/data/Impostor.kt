@@ -31,6 +31,12 @@ class Impostor : Game {
     override val setupWidget = @Composable { modifier: Modifier ->
         Text("Test I", modifier = modifier)
     }
+    override val playWidget: @Composable ((Modifier) -> Unit)
+        get() = {}
+
+    override fun createGame(settings: Map<String, Any?>) {
+        this.settings = settings
+    }
 
     fun createGame(
         players: List<String>,

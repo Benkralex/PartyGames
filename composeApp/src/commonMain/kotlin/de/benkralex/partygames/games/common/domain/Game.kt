@@ -18,6 +18,13 @@ interface Game {
     // UI
     //-------------
     val setupWidget: @Composable (modifier: Modifier) -> Unit
+    val playWidget: @Composable (modifier: Modifier) -> Unit
+
+    //-------------
+    // Game Logic
+    //-------------
+    fun createGame(settings: Map<String, Any?>)
+
 
     //-------------
     // AI (Coming soon)

@@ -6,13 +6,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListState
-import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput.DifficultyInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringSingleState
-import de.benkralex.partygames.games.findLiar.data.getTopics
 import io.github.aakira.napier.Napier
+import org.jetbrains.compose.resources.StringResource
 
 class FindLiarSetupViewModel: ViewModel() {
 
@@ -98,7 +97,7 @@ class FindLiarSetupViewModel: ViewModel() {
         }
     }
 
-    fun setupGame(setupGameCallback: (List<String>, Int, List<String>, Difficulty) -> Unit) {
+    fun setupGame(setupGameCallback: (List<String>, Int, List<StringResource>, Difficulty) -> Unit) {
         Napier.i(
             "players=$players," +
                     " liarCount=${liarCount}," +

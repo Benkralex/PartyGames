@@ -4,9 +4,12 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import de.benkralex.partygames.app.activeGame
+import de.benkralex.partygames.app.getKeyByGame
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
+import de.benkralex.partygames.games.findLiar.presentation.FindLiarPlayWidget
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupWidget
 import kotlinx.serialization.Serializable
 import partygames.composeapp.generated.resources.Res
@@ -38,22 +41,26 @@ class FindLiar : Game {
         FindLiarSetupWidget(
             modifier = modifier,
             setupGame = { players, liarCount, topics, difficulty ->
-                createGame(players, liarCount, topics, difficulty)
+                createGame(mapOf(
+                    "players" to players,
+                    "liarCount" to liarCount,
+                    "topics" to topics,
+                    "difficulty" to difficulty,
+                ))
             }
         )
     }
 
-    fun createGame(
-        players: List<String>,
-        liarCount: Int,
-        topics: List<String>,
-        difficulty: Difficulty,
-    ) {
-        settings = mapOf(
-            "players" to players,
-            "liarCount" to liarCount,
-            "topics" to topics,
-            "difficulty" to difficulty,
+    override val playWidget = @Composable { modifier: Modifier ->
+        FindLiarPlayWidget(
+            modifier = modifier,
         )
+    }
+
+    override fun createGame(
+        settings: Map<String, Any?>,
+    ) {
+        this.settings = settings
+        activeGame = getKeyByGame(this)
     }
 }

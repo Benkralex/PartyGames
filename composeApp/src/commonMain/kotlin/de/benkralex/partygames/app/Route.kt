@@ -12,4 +12,7 @@ sealed interface Route {
 
     @Serializable
     data class GameSettings(val gameKey: String) : Route
+
+    @Serializable
+    data object GamePlay : Route
 }
