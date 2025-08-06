@@ -6,6 +6,9 @@
 
     <string name="difficulty">Schwierigkeit</string>
     <string name="topics">Themen</string>
+    <string name="how_to_play">Spielanleitung</string>
+
+    <string name="accept_dialog">Ok</string>
 
     <string name="error_valid_number">Bitte eine gültige Zahl eingeben</string>
     <string name="error_valid_range">Bitte eine Zahl zwischen %min% und %max% eingeben</string>
