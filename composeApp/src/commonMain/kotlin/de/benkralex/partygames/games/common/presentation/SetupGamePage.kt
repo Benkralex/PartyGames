@@ -78,7 +78,6 @@ fun SetupGamePage(
                     }
                 },
                 actions = {
-                    val infoText = stringResource(game.information.howToPlay)
                     IconButton(
                         onClick = {
                             showInfoDialog = true
