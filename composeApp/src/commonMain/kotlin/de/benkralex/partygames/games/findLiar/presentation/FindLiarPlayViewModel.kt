@@ -8,11 +8,10 @@ import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import de.benkralex.partygames.games.findLiar.data.FindLiarQuestionPair
 import de.benkralex.partygames.games.findLiar.data.getQuestionSets
+import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import io.github.aakira.napier.Napier
-import org.jetbrains.compose.resources.StringResource
 
 class FindLiarPlayViewModel : ViewModel() {
     var game: FindLiar? = null

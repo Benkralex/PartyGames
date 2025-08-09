@@ -2,6 +2,8 @@
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import de.benkralex.partygames.app.DATA_STORE_FILE_NAME
+import de.benkralex.partygames.app.createDataStore
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
