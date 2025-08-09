@@ -1,6 +1,5 @@
 {
     "uid": "find_liar_default1",
-    "fallback_locale": "en_US",
     "title": {
         "de_DE": "Finde den Lügner - Standard Fragenset 3",
         "en_US": "Find the Liar - Default Question Set 3"
@@ -26,7 +25,7 @@
             "de_DE": "Eigenes Können",
             "en_US": "Own Ability"
         }
-},
+    },
     "questions": [
         {
             "topic_key": "own_opinion",
@@ -123,6 +122,6 @@
                 "de_DE": "Welches Fach würdest du überspringen, wenn du könntest?",
                 "en_US": "Which subject would you skip if you could?"
             }
-        },
+        }
     ]
 }

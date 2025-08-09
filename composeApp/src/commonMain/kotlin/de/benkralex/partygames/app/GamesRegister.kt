@@ -4,9 +4,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import de.benkralex.partygames.games.common.domain.Game
-import de.benkralex.partygames.games.findLiar.data.FindLiar
-import de.benkralex.partygames.games.impostor.data.Impostor
-import de.benkralex.partygames.games.truthOrDare.data.TruthOrDare
+import de.benkralex.partygames.games.findLiar.domain.FindLiar
+import de.benkralex.partygames.games.impostor.domain.Impostor
+import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 
 val gamesRegister: List<Game> = listOf(
     Impostor(),

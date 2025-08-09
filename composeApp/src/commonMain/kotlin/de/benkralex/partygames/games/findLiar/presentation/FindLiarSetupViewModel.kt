@@ -11,8 +11,9 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.difficulty
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringSingleState
+import de.benkralex.partygames.settingsPage.data.Settings
+import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
-import org.jetbrains.compose.resources.StringResource
 
 class FindLiarSetupViewModel: ViewModel() {
 
@@ -73,11 +74,29 @@ class FindLiarSetupViewModel: ViewModel() {
         if (_playersState.value == null) {
             _playersState.value = StringListState(
                 label = playerListLabel,
-                stringSingleStates = mapOf(
-                    0 to StringSingleState(label = playerSingleLabel, defaultValue = "$playerNameStart 1"),
-                    1 to StringSingleState(label = playerSingleLabel, defaultValue = "$playerNameStart 2"),
-                    2 to StringSingleState(label = playerSingleLabel, defaultValue = "$playerNameStart 3"),
-                ),
+                stringSingleStates = if (settings.value.lastPlayers.isEmpty()) {
+                    mapOf(
+                        0 to StringSingleState(
+                            label = playerSingleLabel,
+                            defaultValue = "$playerNameStart 1"
+                        ),
+                        1 to StringSingleState(
+                            label = playerSingleLabel,
+                            defaultValue = "$playerNameStart 2"
+                        ),
+                        2 to StringSingleState(
+                            label = playerSingleLabel,
+                            defaultValue = "$playerNameStart 3"
+                        ),
+                    )
+                } else {
+                    settings.value.lastPlayers.mapIndexed { index, playerName ->
+                        index to StringSingleState(
+                            label = playerSingleLabel,
+                            defaultValue = playerName
+                        )
+                    }.toMap()
+                },
                 minCount = 3,
                 textFieldLabel = playerSingleLabel,
                 defaultValue = playerNameStart,
@@ -110,7 +129,11 @@ class FindLiarSetupViewModel: ViewModel() {
             Napier.e("Setup is invalid, cannot start game")
             return
         }
-
+        val newSettings = Settings(
+            languages = settings.value.languages,
+            lastPlayers = players
+        )
+        settings.value = newSettings
         setupGameCallback(players, liarCount, topics, difficulty)
     }
 

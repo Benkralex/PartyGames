@@ -4,10 +4,11 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.findLiar.data.FindLiar
+import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import de.benkralex.partygames.games.findLiar.data.FindLiarQuestionPair
 import de.benkralex.partygames.games.findLiar.data.getQuestionSets
 import io.github.aakira.napier.Napier
@@ -31,7 +32,7 @@ class FindLiarPlayViewModel : ViewModel() {
         game?.settings?.get("difficulty") as? Difficulty ?: Difficulty.MEDIUM
     }
     val questionPairs by derivedStateOf {
-        getQuestionSets().filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
+        getQuestionSets(listOf(Locale.current.language)).filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
     }
 
 

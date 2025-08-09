@@ -7,6 +7,8 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -17,6 +19,9 @@ import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.PlayGamePage
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
 import de.benkralex.partygames.games.findLiar.data.updateQuestionDatasets
+import de.benkralex.partygames.settingsPage.data.loadSettings
+import de.benkralex.partygames.settingsPage.data.saveSettings
+import de.benkralex.partygames.settingsPage.data.settings
 import de.benkralex.partygames.settingsPage.presentation.SettingsPage
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
@@ -25,11 +30,19 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 @Preview
-fun App() {
+fun App(
+    prefs: DataStore<Preferences>
+) {
     Napier.base(DebugAntilog())
     AppTheme {
         LaunchedEffect(Unit) {
             updateQuestionDatasets()
+            loadSettings(prefs)
+        }
+
+        LaunchedEffect(settings.value) {
+            Napier.i("Settings Saved: \nLanguages: ${settings.value.languages} \nLastPlayers: ${settings.value.lastPlayers}")
+            saveSettings(prefs)
         }
 
         val navController = rememberNavController()

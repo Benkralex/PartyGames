@@ -1,6 +1,5 @@
 {
     "uid": "find_liar_default1",
-    "fallback_locale": "en_US",
     "title": {
         "de_DE": "Finde den Lügner - Standard Fragenset 2",
         "en_US": "Find the Liar - Default Question Set 2"

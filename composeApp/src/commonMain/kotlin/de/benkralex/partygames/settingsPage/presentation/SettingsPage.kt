@@ -9,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import de.benkralex.partygames.settingsPage.data.settings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -29,7 +30,7 @@ fun SettingsPage(
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "Settings Page",
+                text = "Languages: ${settings.value.languages} \n LastPlayers: ${settings.value.lastPlayers}",
             )
         }
     }

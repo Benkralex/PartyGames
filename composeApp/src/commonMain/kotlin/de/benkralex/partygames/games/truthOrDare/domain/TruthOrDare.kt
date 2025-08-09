@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.truthOrDare.data
+package de.benkralex.partygames.games.truthOrDare.domain
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,8 +18,8 @@ class TruthOrDare : Game {
         description = Res.string.truth_or_dare_description,
         author = Res.string.truth_or_dare_author,
         image = "truth_or_dare_image",
-        colorLightTheme = Color.Green,
-        colorDarkTheme = Color.Green,
+        colorLightTheme = Color.Companion.Green,
+        colorDarkTheme = Color.Companion.Green,
         howToPlay = Res.string.truth_or_dare_how_to_play,
     )
 

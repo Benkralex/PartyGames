@@ -1,10 +1,9 @@
-package de.benkralex.partygames.games.impostor.data
+package de.benkralex.partygames.games.impostor.domain
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import partygames.composeapp.generated.resources.*

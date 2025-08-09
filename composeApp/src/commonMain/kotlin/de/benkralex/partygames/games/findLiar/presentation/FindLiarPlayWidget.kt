@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getGameByKey
-import de.benkralex.partygames.games.findLiar.data.FindLiar
+import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import io.github.aakira.napier.Napier
 import org.jetbrains.compose.resources.stringResource
 import androidx.compose.ui.text.intl.Locale

@@ -15,7 +15,6 @@ import partygames.composeapp.generated.resources.Res
 
 data class FindLiarDataset(
     val uid: String,
-    val fallbackLocale: String,
     val title: TranslatableString,
     val description: TranslatableString,
     val author: TranslatableString,
@@ -62,7 +61,6 @@ suspend fun updateQuestionDatasets() {
                 }.toMap()
                 val dataset = FindLiarDataset(
                     uid = (jsonDataset["uid"] as JsonPrimitive).content,
-                    fallbackLocale = (jsonDataset["fallback_locale"] as JsonPrimitive).content,
                     title = TranslatableString(
                         translations = (jsonDataset["title"] as JsonObject).map {
                             it.key to (it.value as JsonPrimitive).content
@@ -117,10 +115,20 @@ suspend fun updateQuestionDatasets() {
     }
 }
 
-fun getQuestionSets(): List<FindLiarQuestionPair> {
-    return datasets.flatMap { it.questionPairs }
+fun getQuestionSets(languages: List<String>): List<FindLiarQuestionPair> {
+    return datasets.flatMap { it.questionPairs }.filter { q ->
+        q.liarQuestion.translations.keys.any { lang ->
+            lang in languages
+                    || lang.split("_")[0] in languages
+                    || lang in languages.map { it.split("_")[0] }
+        } && q.mainQuestion.translations.keys.any { lang ->
+            lang in languages
+                    || lang.split("_")[0] in languages
+                    || lang in languages.map { it.split("_")[0] }
+        }
+    }
 }
 
-fun getTopics(): List<TranslatableString> {
-    return getQuestionSets().map { it.topic }.toSet().toList()
+fun getTopics(languages: List<String>): List<TranslatableString> {
+    return getQuestionSets(languages).map { it.topic }.toSet().toList()
 }

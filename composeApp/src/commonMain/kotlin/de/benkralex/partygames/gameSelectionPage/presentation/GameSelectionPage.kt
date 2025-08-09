@@ -5,9 +5,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import de.benkralex.partygames.games.common.domain.Game
-import de.benkralex.partygames.games.findLiar.data.FindLiar
-import de.benkralex.partygames.games.impostor.data.Impostor
-import de.benkralex.partygames.games.truthOrDare.data.TruthOrDare
+import de.benkralex.partygames.games.findLiar.domain.FindLiar
+import de.benkralex.partygames.games.impostor.domain.Impostor
+import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 
 @Composable
 fun GameSelectionPage(

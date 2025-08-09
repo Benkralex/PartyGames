@@ -76,6 +76,9 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
 
             implementation(libs.napier)
+
+            api(libs.datastore.preferences)
+            api(libs.datastore)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

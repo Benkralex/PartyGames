@@ -1,22 +1,21 @@
 {
     "uid": "find_liar_structure",
-    "fallback_locale": "en_US",
     "title": {
         "de_DE": "Titel",
         "en_US": "Title",
-        "es_ES": "Título",
+        "es": "Título",
         "fr_FR": "Titre"
     },
     "description": {
         "de_DE": "Beschreibung",
         "en_US": "Description",
-        "es_ES": "Descripción",
+        "es": "Descripción",
         "fr_FR": "Description"
     },
     "author": {
         "de_DE": "Autor",
         "en_US": "Author",
-        "es_ES": "Autor",
+        "es": "Autor",
         "fr_FR": "Auteur"
     },
     "topics": [
@@ -24,21 +23,21 @@
             "key": "topic1",
             "de_DE": "Thema 1",
             "en_US": "Topic 1",
-            "es_ES": "Tema 1",
+            "es": "Tema 1",
             "fr_FR": "Sujet 1"
         },
         {
             "key": "topic2",
             "de_DE": "Thema 2",
             "en_US": "Topic 2",
-            "es_ES": "Tema 2",
+            "es": "Tema 2",
             "fr_FR": "Sujet 2"
         },
         {
             "key": "topic3",
             "de_DE": "Thema 3",
             "en_US": "Topic 3",
-            "es_ES": "Tema 3",
+            "es": "Tema 3",
             "fr_FR": "Sujet 3"
         }
     ],
@@ -49,13 +48,13 @@
             "main_question": {
                 "de_DE": "Hauptfrage 1",
                 "en_US": "Main Question 1",
-                "es_ES": "Pregunta Principal 1",
+                "es": "Pregunta Principal 1",
                 "fr_FR": "Question Principale 1"
             },
             "liar_question": {
                 "de_DE": "Lügnerfrage 1",
                 "en_US": "Liar Question 1",
-                "es_ES": "Pregunta del Mentiroso 1",
+                "es": "Pregunta del Mentiroso 1",
                 "fr_FR": "Question du Menteur 1"
             }
         },
@@ -65,13 +64,13 @@
             "main_question": {
                 "de_DE": "Hauptfrage 2",
                 "en_US": "Main Question 2",
-                "es_ES": "Pregunta Principal 2",
+                "es": "Pregunta Principal 2",
                 "fr_FR": "Question Principale 2"
             },
             "liar_question": {
                 "de_DE": "Lügnerfrage 2",
                 "en_US": "Liar Question 2",
-                "es_ES": "Pregunta del Mentiroso 2",
+                "es": "Pregunta del Mentiroso 2",
                 "fr_FR": "Question du Menteur 2"
             }
         }

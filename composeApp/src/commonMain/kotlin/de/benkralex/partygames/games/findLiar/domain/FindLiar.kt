@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.findLiar.data
+package de.benkralex.partygames.games.findLiar.domain
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
@@ -22,8 +22,8 @@ class FindLiar : Game {
         description = Res.string.find_liar_description,
         author = Res.string.find_liar_author,
         image = "find_liar_image",
-        colorLightTheme = Color.Red,
-        colorDarkTheme = Color.Red,
+        colorLightTheme = Color.Companion.Red,
+        colorDarkTheme = Color.Companion.Red,
         howToPlay = Res.string.find_liar_how_to_play,
     )
 
@@ -39,12 +39,14 @@ class FindLiar : Game {
         FindLiarSetupWidget(
             modifier = modifier,
             setupGame = { players, liarCount, topics, difficulty ->
-                createGame(mapOf(
-                    "players" to players,
-                    "liarCount" to liarCount,
-                    "topics" to topics,
-                    "difficulty" to difficulty,
-                ))
+                createGame(
+                    mapOf(
+                        "players" to players,
+                        "liarCount" to liarCount,
+                        "topics" to topics,
+                        "difficulty" to difficulty,
+                    )
+                )
             }
         )
     }
