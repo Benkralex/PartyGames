@@ -1,0 +1,128 @@
+{
+    "uid": "find_liar_default1",
+    "fallback_locale": "en_US",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset 1",
+        "en_US": "Find the Liar - Default Question Set 1"
+    },
+    "description": {
+        "de_DE": "Ein spannendes Spiel, bei dem du den falschen Antworten auf die Spur kommst und die Lügner enttarnst!",
+        "en_US": "An exciting game where you spot the fake answers and uncover the liars!"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Ability"
+        }
+},
+    "questions": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist deine Lieblingsfarbe?",
+                "en_US": "What is your favorite color?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Farbe ist überbewertet?",
+                "en_US": "What color is overrated?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsgetränk?",
+                "en_US": "What is your favorite drink?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Getränk magst du nicht?",
+                "en_US": "What drink do you dislike?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingstier?",
+                "en_US": "What is your favorite animal?"
+            },
+            "liar_question": {
+                "de_DE": "Vor welchem Tier hast du Angst?",
+                "en_US": "What animal are you afraid of?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsfeiertag?",
+                "en_US": "What's your favorite holiday?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Feiertag findest du nervig?",
+                "en_US": "What holiday do you find annoying?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welche Jahreszeit magst du am liebsten?",
+                "en_US": "What's your favorite season of the year?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Jahreszeit magst du überhaupt nicht?",
+                "en_US": "Which season do you dislike the most?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingssnack?",
+                "en_US": "What's your favorite snack?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Snack meidest du?",
+                "en_US": "What snack do you avoid?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welche Art von Wetter liebst du?",
+                "en_US": "What kind of weather do you love?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Wetterlage hasst du?",
+                "en_US": "What kind of weather do you hate?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welche Eissorte magst du am liebsten?",
+                "en_US": "What's your favorite ice cream flavor?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Eissorte meidest du?",
+                "en_US": "What ice cream flavor do you avoid?"
+            }
+        }
+    ]
+}

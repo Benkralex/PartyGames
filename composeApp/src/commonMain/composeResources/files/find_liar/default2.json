@@ -1,0 +1,128 @@
+{
+    "uid": "find_liar_default1",
+    "fallback_locale": "en_US",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset 2",
+        "en_US": "Find the Liar - Default Question Set 2"
+    },
+    "description": {
+        "de_DE": "Ein spannendes Spiel, bei dem du den falschen Antworten auf die Spur kommst und die Lügner enttarnst!",
+        "en_US": "An exciting game where you spot the fake answers and uncover the liars!"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Ability"
+        }
+},
+    "questions": [
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Was isst du normalerweise zum Frühstück?",
+                "en_US": "What do you usually eat for breakfast?"
+            },
+            "liar_question": {
+                "de_DE": "Was isst du nie zum Frühstück?",
+                "en_US": "What is something you never eat for breakfast?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Obst magst du am liebsten?",
+                "en_US": "What's your favorite fruit?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Obst magst du gar nicht?",
+                "en_US": "What fruit do you dislike?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsdessert?",
+                "en_US": "What's your favorite dessert?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Dessert überspringst du immer?",
+                "en_US": "What dessert do you always skip?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Farbe trägst du am liebsten?",
+                "en_US": "What color do you like wearing most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Farbe würdest du niemals tragen?",
+                "en_US": "What color would you never wear?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Tageszeit gefällt dir am besten?",
+                "en_US": "What's your favorite time of day?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Tageszeit magst du nicht?",
+                "en_US": "What time of day do you dislike?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Art Schuhe magst du am liebsten?",
+                "en_US": "What's your favorite type of shoes?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Schuhe würdest du niemals tragen?",
+                "en_US": "What shoes would you never wear?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welchen Wochentag magst du am meisten?",
+                "en_US": "Which day of the week do you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Welcher Wochentag fühlt sich am längsten oder miesesten an?",
+                "en_US": "Which day feels the longest or worst?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingssommergetränk?",
+                "en_US": "What's your favorite summer drink?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Getränk ist im Sommer völlig überschätzt?",
+                "en_US": "What drink is overrated in summer?"
+            }
+        }
+    ]
+}

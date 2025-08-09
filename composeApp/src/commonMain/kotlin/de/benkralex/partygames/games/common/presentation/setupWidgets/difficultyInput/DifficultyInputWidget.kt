@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Difficulty
+import de.benkralex.partygames.games.common.domain.difficultyFromNumber
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import org.jetbrains.compose.resources.StringResource
@@ -82,18 +83,3 @@ fun DifficultyInputWidget(
     }
 }
 
-private fun difficultyFromNumber(number: Int): Difficulty {
-    return when (number) {
-        1 -> Difficulty.TRIVIAL
-        2 -> Difficulty.EXTRA_EASY
-        3 -> Difficulty.EASY
-        4 -> Difficulty.MODERATE
-        5 -> Difficulty.MEDIUM
-        6 -> Difficulty.CHALLENGING
-        7 -> Difficulty.HARD
-        8 -> Difficulty.VERY_HARD
-        9 -> Difficulty.EXTREME
-        10 -> Difficulty.NIGHTMARE
-        else -> throw IllegalArgumentException("Invalid difficulty number: $number")
-    }
-}

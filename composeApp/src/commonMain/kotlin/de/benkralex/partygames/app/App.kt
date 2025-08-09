@@ -1,12 +1,12 @@
 package de.benkralex.partygames.app
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.activity.compose.BackHandler
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -16,6 +16,7 @@ import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.PlayGamePage
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
+import de.benkralex.partygames.games.findLiar.data.updateQuestionDatasets
 import de.benkralex.partygames.settingsPage.presentation.SettingsPage
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
@@ -27,6 +28,10 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun App() {
     Napier.base(DebugAntilog())
     AppTheme {
+        LaunchedEffect(Unit) {
+            updateQuestionDatasets()
+        }
+
         val navController = rememberNavController()
         NavHost(
             navController = navController,
@@ -85,7 +90,7 @@ fun App() {
                 }
 
                 SetupGamePage(
-                    game = game!!,
+                    game = game,
                     onNavigateBack = {
                         navController.navigateUp()
                     }
@@ -104,18 +109,12 @@ fun App() {
                     return@composable
                 }
 
-                /*LaunchedEffect(activeGame) {
-                    if (activeGame == null) {
-                        navController.navigate(Route.GameSelection)
-                    }
-                }*/
-
                 BackHandler {
                     navController.navigate(Route.GameSelection)
                 }
 
                 PlayGamePage(
-                    game = game!!,
+                    game = game,
                     onNavigateBack = {
                         navController.navigate(Route.GameSelection)
                     }

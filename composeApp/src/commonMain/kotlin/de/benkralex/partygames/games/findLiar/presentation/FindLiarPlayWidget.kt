@@ -37,6 +37,7 @@ import de.benkralex.partygames.app.getGameByKey
 import de.benkralex.partygames.games.findLiar.data.FindLiar
 import io.github.aakira.napier.Napier
 import org.jetbrains.compose.resources.stringResource
+import androidx.compose.ui.text.intl.Locale
 
 @Composable
 fun FindLiarPlayWidget(
@@ -73,7 +74,7 @@ fun FindLiarPlayWidget(
         key(viewModel.game, viewModel.answeringPlayer, viewModel.question) {
             if (viewModel.game != null && viewModel.question != null && viewModel.answeringPlayer != null) {
                 AskQuestionCard(
-                    question = stringResource(viewModel.question!!),
+                    question = viewModel.question!![Locale.current.language + "_" + Locale.current.region],
                     player = viewModel.answeringPlayer!!,
                     onAnswer = { answer: String ->
                         Napier.i("Antwort von ${viewModel.answeringPlayer} eingereicht: $answer")
@@ -90,7 +91,7 @@ fun FindLiarPlayWidget(
             } else if (viewModel.game != null && viewModel.answeringPlayer == null && viewModel.answers.size == viewModel.playerCount) {
                 ShowAnswers(
                     answers = viewModel.answers,
-                    question = stringResource(viewModel.currentQuestionPair!!.mainQuestion),
+                    question = viewModel.currentQuestionPair!!.mainQuestion[Locale.current.language + "_" + Locale.current.region],
                     liars = viewModel.liars,
                     modifier = Modifier
                         .fillMaxWidth()

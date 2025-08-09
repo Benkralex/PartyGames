@@ -17,13 +17,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
+import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput.DifficultyInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
 import de.benkralex.partygames.games.findLiar.data.getTopics
-import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.difficulty
@@ -38,7 +38,7 @@ import partygames.composeapp.generated.resources.topics
 fun FindLiarSetupWidget(
     modifier: Modifier = Modifier,
     viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(),
-    setupGame: (List<String>, Int, List<StringResource>, Difficulty) -> Unit = { _, _, _, _ -> }
+    setupGame: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit = { _, _, _, _ -> }
 ) {
     // initialise labels
     val playerListLabel = stringResource(Res.string.find_liar_res_players)

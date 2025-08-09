@@ -8,8 +8,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun CheckboxSingleWidget(
@@ -33,7 +33,7 @@ fun CheckboxSingleWidget(
             },
         )
         Text(
-            text = stringResource(state.label),
+            text = state.label[Locale.current.language + "_" + Locale.current.region],
         )
     }
 }

@@ -1,0 +1,680 @@
+{
+    "uid": "find_liar_default1",
+    "fallback_locale": "en_US",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset",
+        "en_US": "Find the Liar - Default Question Set"
+    },
+    "description": {
+        "de_DE": "Ein spannendes Spiel, bei dem du den falschen Antworten auf die Spur kommst und die Lügner enttarnst!",
+        "en_US": "An exciting game where you spot the fake answers and uncover the liars!"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Ability"
+        }
+},
+    "questions": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Was ist dein Traumjob?",
+                "en_US": "What's your dream job?"
+            },
+            "liar_question": {
+                "de_DE": "Welcher Job wäre dein absoluter Albtraum?",
+                "en_US": "What job would be your worst nightmare?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Welchen Ort besuchst du am häufigsten?",
+                "en_US": "What place do you visit the most?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Ort meidest du?",
+                "en_US": "What place do you avoid?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Was war das beste Geschenk, das du je bekommen hast?",
+                "en_US": "What's the best gift you've ever received?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Geschenk mochtest du nicht?",
+                "en_US": "What's a gift you didn't like?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Was trägst du am liebsten?",
+                "en_US": "What's your favorite thing to wear?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Kleidung würdest du nie tragen?",
+                "en_US": "What clothing would you never wear?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Welches Spiel spielst du am liebsten?",
+                "en_US": "What's your favorite game to play?"
+            },
+            "liar_question": {
+                "de_DE": "Bei welchem Spiel hast du nie Spaß?",
+                "en_US": "What game do you never enjoy?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Welchen Sport spielst oder schaust du am liebsten?",
+                "en_US": "What's your favorite sport to play or watch?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Sport findest du langweilig?",
+                "en_US": "What sport do you find boring?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Welches Haustier hättest du gern?",
+                "en_US": "What pet would you love to have?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Haustier würdest du niemals wollen?",
+                "en_US": "What pet would you never want?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 4,
+            "main_question": {
+                "de_DE": "Welches Geschenk hast du am liebsten verschenkt?",
+                "en_US": "What's the best gift you've ever given?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Geschenk bereust du verschenkt zu haben?",
+                "en_US": "What's a gift you regret giving?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Welches verborgenes Talent hast du?",
+                "en_US": "What hidden talent do you have?"
+            },
+            "liar_question": {
+                "de_DE": "Worin bist du richtig schlecht?",
+                "en_US": "What is something you're really bad at?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Was schätzt du am meisten an einem Freund?",
+                "en_US": "What do you value most in a friend?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Charaktereigenschaft magst du bei anderen gar nicht?",
+                "en_US": "What personality trait do you dislike in others?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Welche Aktivität entspannt dich am meisten?",
+                "en_US": "What activity helps you relax the most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Aktivität stresst dich am meisten?",
+                "en_US": "What activity stresses you out the most?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsbuch?",
+                "en_US": "What is your favorite book?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Buch findest du langweilig?",
+                "en_US": "What book do you think is boring?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Was war die beste Mahlzeit, die du je hattest?",
+                "en_US": "What's the best meal you've ever had?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Mahlzeit hasst du völlig?",
+                "en_US": "What meal do you absolutely dislike?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Welchen Geruch magst du am liebsten?",
+                "en_US": "What is your favorite smell?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Geruch verabscheust du?",
+                "en_US": "What smell do you hate?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Welcher Klang gefällt dir am besten?",
+                "en_US": "What's your favorite sound?"
+            },
+            "liar_question": {
+                "de_DE": "Welcher Ton nervt dich?",
+                "en_US": "What sound annoys you?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 5,
+            "main_question": {
+                "de_DE": "Welches Instrument liebst du vom Klang her?",
+                "en_US": "What instrument do you love the sound of?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Instrument klingt für dich nervig?",
+                "en_US": "What instrument sounds annoying to you?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Worauf bist du am meisten stolz?",
+                "en_US": "What are you most proud of?"
+            },
+            "liar_question": {
+                "de_DE": "Wofür schämst du dich?",
+                "en_US": "What is something you're ashamed of?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Wer ist dein Vorbild?",
+                "en_US": "Who is your role model?"
+            },
+            "liar_question": {
+                "de_DE": "Wen bewunderst du überhaupt nicht?",
+                "en_US": "Who is someone you don't look up to?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Was wolltest du sein, als du ein Kind warst?",
+                "en_US": "What did you want to be when you were a kid?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Beruf hättest du dir als Kind niemals vorstellen können?",
+                "en_US": "What job did you never imagine doing as a kid?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Was ist das Lustigste, das dir je passiert ist?",
+                "en_US": "What's the funniest thing that's ever happened to you?"
+            },
+            "liar_question": {
+                "de_DE": "In welcher Situation hast du dich am unwohlsten gefühlt?",
+                "en_US": "What situation made you feel awkward?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Was ist deine schönste Kindheitserinnerung?",
+                "en_US": "What's your best childhood memory?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Kindheitserinnerung versuchst du zu vergessen?",
+                "en_US": "What childhood memory do you try to forget?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Wer war dein Lieblingslehrer?",
+                "en_US": "Who was your favorite teacher?"
+            },
+            "liar_question": {
+                "de_DE": "Gab es einen Lehrer, mit dem du dich überhaupt nicht verstanden hast?",
+                "en_US": "Was there a teacher you didn't get along with?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Was war dein bester Urlaub bisher?",
+                "en_US": "What was your best vacation ever?"
+            },
+            "liar_question": {
+                "de_DE": "Was war dein schlimmstes Urlaubserlebnis?",
+                "en_US": "What was your worst vacation experience?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 6,
+            "main_question": {
+                "de_DE": "Wer bringt dich immer zum Lachen?",
+                "en_US": "Who always makes you laugh?"
+            },
+            "liar_question": {
+                "de_DE": "Wessen Witze bringen dich nie zum Lachen?",
+                "en_US": "Whose jokes never make you laugh?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Welcher Wert ist dir am wichtigsten?",
+                "en_US": "What value is most important to you?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Wert findest du überbewertet?",
+                "en_US": "What value do you find overrated?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Wo fühlst du dich am wohlsten?",
+                "en_US": "Where do you feel most comfortable?"
+            },
+            "liar_question": {
+                "de_DE": "Wo fühlst du dich fehl am Platz?",
+                "en_US": "Where do you feel out of place?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Welches Lied motiviert dich immer?",
+                "en_US": "What song always motivates you?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Lied überspringst du immer?",
+                "en_US": "What song do you always skip?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Was ist deine schönste Geburtstagserinnerung?",
+                "en_US": "What's your favorite birthday memory?"
+            },
+            "liar_question": {
+                "de_DE": "Was war dein schlimmstes Geburtstagserlebnis?",
+                "en_US": "What was your worst birthday experience?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Wo sitzt du am liebsten im Unterricht?",
+                "en_US": "Where do you like to sit in class?"
+            },
+            "liar_question": {
+                "de_DE": "Wo würdest du im Unterricht ungern sitzen?",
+                "en_US": "Where would you hate to sit in class?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Was zeichnest du am liebsten?",
+                "en_US": "What do you like drawing the most?"
+            },
+            "liar_question": {
+                "de_DE": "Was würdest du niemals zeichnen?",
+                "en_US": "What would you never draw?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Welche Website besuchst du oft?",
+                "en_US": "What website do you visit often?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Website meidest du?",
+                "en_US": "What website do you avoid?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 7,
+            "main_question": {
+                "de_DE": "Welches Fabelwesen fasziniert dich?",
+                "en_US": "What mythical creature fascinates you?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Fabelwesen findest du albern?",
+                "en_US": "What mythical creature do you find silly?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Welchen Fehler hast du gemacht und daraus gelernt?",
+                "en_US": "What is a mistake you've learned from?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Fehler machst du immer wieder?",
+                "en_US": "What is a mistake you keep repeating?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Welche Superkraft würdest du gern haben?",
+                "en_US": "What superpower would you want?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Superkraft würdest du nicht wollen?",
+                "en_US": "What superpower would you not want?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Welche Social‑Media‑Plattform magst du am liebsten?",
+                "en_US": "What's your favorite social media platform?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Social‑Media‑Plattform meidest du?",
+                "en_US": "Which social media do you avoid?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Wo sitzt du am liebsten im Bus/Zug?",
+                "en_US": "Where do you prefer to sit on the bus/train?"
+            },
+            "liar_question": {
+                "de_DE": "Wo sitzt du im öffentlichen Verkehr ungern?",
+                "en_US": "Where do you avoid sitting on public transport?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Welche Schlafposition ist deine liebste?",
+                "en_US": "What's your favorite sleeping position?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Schlafposition fühlst du als unbequem?",
+                "en_US": "What sleeping position feels uncomfortable to you?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Was ist deine beste Eigenschaft?",
+                "en_US": "What's your best personal quality?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Eigenschaft würgst du an dir selbst gerne ändern?",
+                "en_US": "What's a trait of yours you wish to change?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Was ist deine schönste Erinnerung mit Freunden?",
+                "en_US": "What's your favorite memory with friends?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Erinnerung mit Freunden ist dir peinlich?",
+                "en_US": "What memory with friends makes you cringe?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_question": {
+                "de_DE": "Was ist das Beste an der Schule für dich?",
+                "en_US": "What's the best part of school for you?"
+            },
+            "liar_question": {
+                "de_DE": "Was ist das Schlimmste an der Schule für dich?",
+                "en_US": "What's the worst part of school for you?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Wie entspannst du dich am liebsten?",
+                "en_US": "What's your favorite way to relax?"
+            },
+            "liar_question": {
+                "de_DE": "Was, obwohl es angeblich entspannend ist, nervt dich?",
+                "en_US": "What supposedly relaxing thing annoys you?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Was für ein Tag macht dich am glücklichsten?",
+                "en_US": "What kind of day makes you happiest?"
+            },
+            "liar_question": {
+                "de_DE": "Was für ein Tag verdirbt dir die Laune?",
+                "en_US": "What kind of day ruins your mood?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Welche Hausarbeit machst du gern?",
+                "en_US": "What chore do you actually enjoy?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Hausarbeit meidest du immer?",
+                "en_US": "What chore do you always avoid?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Wann kannst du am besten lernen?",
+                "en_US": "When do you concentrate best?"
+            },
+            "liar_question": {
+                "de_DE": "Wann lernst du am schlechtesten?",
+                "en_US": "When are you worst at studying?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Mit wem redest du am liebsten?",
+                "en_US": "Who do you love talking to?"
+            },
+            "liar_question": {
+                "de_DE": "Mit wem redest du nur ungern?",
+                "en_US": "Who's hard to have a conversation with?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Was ist die beste Entscheidung, die du je getroffen hast?",
+                "en_US": "What's the best decision you've ever made?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Entscheidung bereust du am meisten?",
+                "en_US": "What decision do you regret most?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Welche Sprache magst du am liebsten?",
+                "en_US": "What language do you like the most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Sprache findest du schwer oder nervig?",
+                "en_US": "What language do you find difficult or annoying?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_question": {
+                "de_DE": "Was machst du am liebsten mit deiner Familie?",
+                "en_US": "What's your favorite thing to do with your family?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Familienaktivität magst du nicht?",
+                "en_US": "What family activity do you not enjoy?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was ist das Beste an dir?",
+                "en_US": "What's the best thing about you?"
+            },
+            "liar_question": {
+                "de_DE": "Worüber kritisierst du dich selbst häufig?",
+                "en_US": "What's something you often criticize yourself for?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Feiertagstradition liebst du?",
+                "en_US": "What holiday tradition do you love?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Feiertagstradition würdest du überspringen?",
+                "en_US": "What holiday tradition would you skip?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Art von Filmen magst du am liebsten?",
+                "en_US": "What kind of movies do you enjoy the most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Filmart findest du langweilig?",
+                "en_US": "What kind of movies do you find boring?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Wie sähe dein Traumhaus aus?",
+                "en_US": "What would your dream home be like?"
+            },
+            "liar_question": {
+                "de_DE": "In was für einem Zuhause würdest du niemals leben?",
+                "en_US": "What kind of home would you never live in?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was ist das Beste an Wochenenden?",
+                "en_US": "What's the best thing about weekends?"
+            },
+            "liar_question": {
+                "de_DE": "Was magst du an Wochenenden nicht?",
+                "en_US": "What do you dislike about weekends?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welches Schulevent magst du am liebsten?",
+                "en_US": "What school event do you love?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Schulevent versuchst du zu meiden?",
+                "en_US": "What school event do you try to avoid?"
+            }
+        }
+    ]
+}

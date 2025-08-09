@@ -6,9 +6,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
+import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.findLiar.data.FindLiar
 import de.benkralex.partygames.games.findLiar.data.FindLiarQuestionPair
-import de.benkralex.partygames.games.findLiar.data.getDefaultQuestionSet
+import de.benkralex.partygames.games.findLiar.data.getQuestionSets
 import io.github.aakira.napier.Napier
 import org.jetbrains.compose.resources.StringResource
 
@@ -17,8 +18,8 @@ class FindLiarPlayViewModel : ViewModel() {
     val players: List<String> by derivedStateOf {
         game?.settings?.get("players") as? List<String> ?: emptyList()
     }
-    val topics: List<StringResource> by derivedStateOf {
-        game?.settings?.get("topics") as? List<StringResource> ?: emptyList()
+    val topics: List<TranslatableString> by derivedStateOf {
+        game?.settings?.get("topics") as? List<TranslatableString> ?: emptyList()
     }
     val liarCount: Int by derivedStateOf {
         game?.settings?.get("liarCount") as? Int ?: 1
@@ -30,7 +31,7 @@ class FindLiarPlayViewModel : ViewModel() {
         game?.settings?.get("difficulty") as? Difficulty ?: Difficulty.MEDIUM
     }
     val questionPairs by derivedStateOf {
-        getDefaultQuestionSet().filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
+        getQuestionSets().filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
     }
 
 
@@ -38,7 +39,7 @@ class FindLiarPlayViewModel : ViewModel() {
     var currentQuestionPair: FindLiarQuestionPair? = null
     var playedQuestions: MutableList<FindLiarQuestionPair> = mutableListOf()
     var answeringPlayer: String? by mutableStateOf(null)
-    var question: StringResource? by mutableStateOf(null)
+    var question: TranslatableString? by mutableStateOf(null)
     var answers: MutableMap<String, String> = mutableMapOf()
 
     fun initNewRound() {

@@ -1,0 +1,128 @@
+{
+    "uid": "find_liar_default1",
+    "fallback_locale": "en_US",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset 3",
+        "en_US": "Find the Liar - Default Question Set 3"
+    },
+    "description": {
+        "de_DE": "Ein spannendes Spiel, bei dem du den falschen Antworten auf die Spur kommst und die Lügner enttarnst!",
+        "en_US": "An exciting game where you spot the fake answers and uncover the liars!"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Ability"
+        }
+},
+    "questions": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Was ist der beste Film, den du je gesehen hast?",
+                "en_US": "What is the best movie you've ever seen?"
+            },
+            "liar_question": {
+                "de_DE": "Welcher Film ist total überbewertet?",
+                "en_US": "What movie is totally overrated?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Welche App benutzt du am häufigsten auf deinem Handy?",
+                "en_US": "Which app do you use the most on your phone?"
+            },
+            "liar_question": {
+                "de_DE": "Welche App benutzt du nie auf deinem Handy?",
+                "en_US": "Which app do you never use on your phone?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Was war dein bestes Schulfach?",
+                "en_US": "What was your best subject in school?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Fach hast du am meisten gehasst?",
+                "en_US": "Which subject did you hate the most?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Was machst du am liebsten am Wochenende?",
+                "en_US": "What's your favorite thing to do on the weekend?"
+            },
+            "liar_question": {
+                "de_DE": "Was machst du nie am Wochenende?",
+                "en_US": "What's something you never do on weekends?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Welche Musik liebst du?",
+                "en_US": "What kind of music do you love?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Musik hasst du?",
+                "en_US": "What kind of music do you hate?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsplatz zu Hause?",
+                "en_US": "What's your favorite spot in your home?"
+            },
+            "liar_question": {
+                "de_DE": "Was ist der langweiligste Ort in deinem Zuhause?",
+                "en_US": "What's the most boring spot in your home?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Was ist dein liebstes Hobby?",
+                "en_US": "What's your favorite hobby?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Hobby würdest du niemals ausprobieren?",
+                "en_US": "What's a hobby you'd never try?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 3,
+            "main_question": {
+                "de_DE": "Welches Schulfach magst du am meisten?",
+                "en_US": "Which subject do you enjoy the most?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Fach würdest du überspringen, wenn du könntest?",
+                "en_US": "Which subject would you skip if you could?"
+            }
+        },
+    ]
+}
