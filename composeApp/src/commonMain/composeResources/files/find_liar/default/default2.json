@@ -1,0 +1,397 @@
+{
+    "uid": "find_liar_default2",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset 2",
+        "en_US": "Find the Liar - Default Question Set 2"
+    },
+    "description": {
+        "de_DE": "Ein weiteres standard Fragenset für das Spiel 'Finde den Lügner' (Schwierigkeit: 2)",
+        "en_US": "Another default question set for the game 'Find the Liar' (Difficulty: 2)"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Skills"
+        }
+    },
+    "questions": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsfilmgenre?",
+                "en_US": "What's your favorite movie genre?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Filmgenre meidest du?",
+                "en_US": "What movie genre do you avoid?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Wetter magst du am liebsten?",
+                "en_US": "What weather do you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Wetter magst du am wenigsten?",
+                "en_US": "What weather do you like least?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Brettspiel spielst du gern?",
+                "en_US": "Which board game do you enjoy?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Brettspiel macht dir keinen Spaß?",
+                "en_US": "Which board game is no fun for you?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingssnack im Kino?",
+                "en_US": "What's your favorite cinema snack?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Snack würdest du im Kino nie kaufen?",
+                "en_US": "Which snack would you never buy at the cinema?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Musikrichtung hörst du am liebsten?",
+                "en_US": "What music genre do you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Musikrichtung hörst du nie?",
+                "en_US": "What music genre do you never listen to?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Getränk bestellst du oft im Café?",
+                "en_US": "What drink do you often order at a café?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Getränk bestellst du im Café nie?",
+                "en_US": "What drink do you never order at a café?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Reiseziel würdest du gerne besuchen?",
+                "en_US": "Which travel destination would you like to visit?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Reiseziel reizt dich gar nicht?",
+                "en_US": "Which travel destination doesn't interest you at all?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Gemüse magst du am meisten?",
+                "en_US": "What vegetable do you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Gemüse magst du gar nicht?",
+                "en_US": "What vegetable do you dislike?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Tier findest du besonders schön?",
+                "en_US": "Which animal do you find especially beautiful?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Tier findest du nicht schön?",
+                "en_US": "Which animal do you not find beautiful?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welchen Wochentag findest du am angenehmsten?",
+                "en_US": "Which day of the week feels nicest?"
+            },
+            "liar_question": {
+                "de_DE": "Welcher Wochentag fühlt sich am unangenehmsten an?",
+                "en_US": "Which day of the week feels least nice?"
+            }
+        },
+
+
+
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "In welcher Stadt bist du geboren?",
+                "en_US": "In which city were you born?"
+            },
+            "liar_question": {
+                "de_DE": "In welcher Stadt bist du definitiv nicht geboren?",
+                "en_US": "In which city were you definitely not born?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Jahreszeit magst du am liebsten?",
+                "en_US": "What's your favorite season?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Jahreszeit magst du nicht?",
+                "en_US": "What season do you dislike?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Haustier hast du (oder hattest du)?",
+                "en_US": "What pet do you have (or did you have)?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Haustier hattest du nie?",
+                "en_US": "What pet have you never had?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Schuhgröße hast du?",
+                "en_US": "What shoe size do you have?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Schuhgröße hast du nicht?",
+                "en_US": "What shoe size do you not have?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Sprache sprichst du am besten?",
+                "en_US": "What language do you speak best?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Sprache sprichst du gar nicht?",
+                "en_US": "What language do you not speak at all?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Fach mochtest du in der Schule am meisten?",
+                "en_US": "Which school subject did you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Fach mochtest du in der Schule gar nicht?",
+                "en_US": "Which school subject did you dislike?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welchen Vornamen magst du besonders?",
+                "en_US": "Which first name do you especially like?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Vornamen magst du gar nicht?",
+                "en_US": "Which first name do you not like?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Land hast du zuletzt besucht?",
+                "en_US": "Which country did you visit last?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Land hast du noch nie besucht?",
+                "en_US": "Which country have you never visited?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Art Kleidung trägst du am liebsten?",
+                "en_US": "What type of clothing do you like wearing most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Art Kleidung würdest du nie tragen?",
+                "en_US": "What type of clothing would you never wear?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welches Essen magst du aus deiner Kindheit noch immer?",
+                "en_US": "What food from your childhood do you still like?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Essen aus deiner Kindheit mochtest du nie?",
+                "en_US": "What food from your childhood did you never like?"
+            }
+        },
+
+
+
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie viele Liegestütze schaffst du ungefähr?",
+                "en_US": "How many push-ups can you do approximately?"
+            },
+            "liar_question": {
+                "de_DE": "Wie viele Liegestütze kannst du auf keinen Fall schaffen?",
+                "en_US": "How many push-ups can you definitely not do?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie lange kannst du am Stück joggen?",
+                "en_US": "How long can you jog without stopping?"
+            },
+            "liar_question": {
+                "de_DE": "Wie lange könntest du auf keinen Fall joggen?",
+                "en_US": "How long could you definitely not jog?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie viele Sprachen kannst du sprechen?",
+                "en_US": "How many languages can you speak?"
+            },
+            "liar_question": {
+                "de_DE": "Wie viele Sprachen kannst du sicher nicht sprechen?",
+                "en_US": "How many languages can you definitely not speak?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Sportart kannst du am besten?",
+                "en_US": "Which sport are you best at?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Sportart liegt dir gar nicht?",
+                "en_US": "Which sport are you worst at?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie viele Kilometer kannst du mit dem Fahrrad fahren?",
+                "en_US": "How many kilometers can you ride a bike?"
+            },
+            "liar_question": {
+                "de_DE": "Wie viele Kilometer könntest du niemals mit dem Fahrrad fahren?",
+                "en_US": "How many kilometers could you never ride a bike?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Welche Computerspiele spielst du am besten?",
+                "en_US": "Which computer games are you best at?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Computerspiele kannst du gar nicht spielen?",
+                "en_US": "Which computer games can you not play at all?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie schnell kannst du schwimmen?",
+                "en_US": "How fast can you swim?"
+            },
+            "liar_question": {
+                "de_DE": "Wie langsam würdest du beim Schwimmen sein?",
+                "en_US": "How slow would you be at swimming?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie gut kannst du kochen?",
+                "en_US": "How good are you at cooking?"
+            },
+            "liar_question": {
+                "de_DE": "Wie schlecht bist du im Kochen?",
+                "en_US": "How bad are you at cooking?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie schnell kannst du einen Kilometer laufen?",
+                "en_US": "How fast can you run one kilometer?"
+            },
+            "liar_question": {
+                "de_DE": "Wie lange würdest du für einen Kilometer brauchen?",
+                "en_US": "How long would you take to run one kilometer?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 2,
+            "main_question": {
+                "de_DE": "Wie hoch kannst du springen?",
+                "en_US": "How high can you jump?"
+            },
+            "liar_question": {
+                "de_DE": "Wie niedrig würdest du springen?",
+                "en_US": "How low would you jump?"
+            }
+        }
+    ]
+}

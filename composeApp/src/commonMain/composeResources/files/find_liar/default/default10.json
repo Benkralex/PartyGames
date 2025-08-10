@@ -1,0 +1,391 @@
+{
+    "uid": "find_liar_default10",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset 10",
+        "en_US": "Find the Liar - Default Question Set 10"
+    },
+    "description": {
+        "de_DE": "Ein weiteres standard Fragenset für das Spiel 'Finde den Lügner' (Schwierigkeit: 10)",
+        "en_US": "Another default question set for the game 'Find the Liar' (Difficulty: 10)"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Skills"
+        }
+    },
+    "questions": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Musik hörst du beim Lernen?",
+                "en_US": "What music do you listen to while studying?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Musik lenkt dich beim Lernen ab?",
+                "en_US": "What music distracts you while studying?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was ist dein liebstes Wetter zum Spazierengehen?",
+                "en_US": "What's your favorite weather for taking walks?"
+            },
+            "liar_question": {
+                "de_DE": "Bei welchem Wetter gehst du ungern spazieren?",
+                "en_US": "What weather makes you reluctant to go for walks?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Art von Büchern liest du gerne?",
+                "en_US": "What kind of books do you enjoy reading?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Bücher findest du langweilig?",
+                "en_US": "What books do you find boring?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Farbe trägst du am liebsten?",
+                "en_US": "What color do you like wearing most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Farbe würdest du nie tragen?",
+                "en_US": "What color would you never wear?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was ist dein liebstes Getränk am Morgen?",
+                "en_US": "What's your favorite morning drink?"
+            },
+            "liar_question": {
+                "de_DE": "Was trinkst du morgens nie?",
+                "en_US": "What do you never drink in the morning?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche TV-Serie schaust du gerne?",
+                "en_US": "What TV series do you enjoy watching?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Art von TV-Serien magst du nicht?",
+                "en_US": "What type of TV series don't you like?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was ist dein liebstes Essen zum Frühstück?",
+                "en_US": "What's your favorite breakfast food?"
+            },
+            "liar_question": {
+                "de_DE": "Was isst du nie zum Frühstück?",
+                "en_US": "What do you never eat for breakfast?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welches Verkehrsmittel benutzt du am liebsten?",
+                "en_US": "What's your preferred mode of transportation?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Verkehrsmittel meidest du?",
+                "en_US": "What mode of transportation do you avoid?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Aktivität entspannt dich am besten?",
+                "en_US": "What activity relaxes you the most?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Aktivität stresst dich?",
+                "en_US": "What activity stresses you out?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welches Hobby würdest du gerne ausprobieren?",
+                "en_US": "What hobby would you like to try?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Hobby interessiert dich überhaupt nicht?",
+                "en_US": "What hobby doesn't interest you at all?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Wann stehst du am Wochenende auf?",
+                "en_US": "What time do you wake up on weekends?"
+            },
+            "liar_question": {
+                "de_DE": "Wann gehst du am Wochenende ins Bett?",
+                "en_US": "What time do you go to bed on weekends?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Wie oft checkst du dein Handy am Tag?",
+                "en_US": "How often do you check your phone per day?"
+            },
+            "liar_question": {
+                "de_DE": "Wie lange kannst du ohne Handy sein?",
+                "en_US": "How long can you go without your phone?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Womit verbringst du die meiste Freizeit?",
+                "en_US": "What do you spend most of your free time doing?"
+            },
+            "liar_question": {
+                "de_DE": "Wofür hättest du gerne mehr Zeit?",
+                "en_US": "What would you like to have more time for?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welchen Teil deines Zimmers magst du am meisten?",
+                "en_US": "What part of your room do you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Was würdest du in deinem Zimmer ändern?",
+                "en_US": "What would you change about your room?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welches Kleidungsstück trägst du am häufigsten?",
+                "en_US": "What piece of clothing do you wear most often?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Kleidungsstück hängt nur im Schrank?",
+                "en_US": "What piece of clothing just hangs in your closet?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was machst du als Erstes nach der Schule?",
+                "en_US": "What's the first thing you do after school?"
+            },
+            "liar_question": {
+                "de_DE": "Was schiebst du nach der Schule immer auf?",
+                "en_US": "What do you always put off after school?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welcher Ort in deiner Stadt gefällt dir am besten?",
+                "en_US": "What place in your city do you like most?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Ort in deiner Stadt meidest du?",
+                "en_US": "What place in your city do you avoid?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Wie lange brauchst du morgens fürs Fertigmachen?",
+                "en_US": "How long does it take you to get ready in the morning?"
+            },
+            "liar_question": {
+                "de_DE": "Wie lange könntest du maximal im Bett liegen bleiben?",
+                "en_US": "How long could you stay in bed at most?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was ist dein liebster Snack beim Lernen?",
+                "en_US": "What's your favorite snack while studying?"
+            },
+            "liar_question": {
+                "de_DE": "Was lenkst du beim Lernen ab?",
+                "en_US": "What distracts you while studying?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche App verwendest du täglich?",
+                "en_US": "What app do you use daily?"
+            },
+            "liar_question": {
+                "de_DE": "Welche App hast du schon lange nicht geöffnet?",
+                "en_US": "What app haven't you opened in a long time?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "In welchem Schulfach bist du am stärksten?",
+                "en_US": "What school subject are you strongest in?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Schulfach fällt dir am schwersten?",
+                "en_US": "What school subject do you find most difficult?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Sportart kannst du gut?",
+                "en_US": "What sport are you good at?"
+            },
+            "liar_question": {
+                "de_DE": "Bei welcher Sportart bist du schlecht?",
+                "en_US": "What sport are you bad at?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was kochst du am besten?",
+                "en_US": "What do you cook best?"
+            },
+            "liar_question": {
+                "de_DE": "Was gelingt dir in der Küche nie?",
+                "en_US": "What never works out for you in the kitchen?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welches Instrument spielst du gerne?",
+                "en_US": "What instrument do you enjoy playing?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Instrument würdest du nie lernen wollen?",
+                "en_US": "What instrument would you never want to learn?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Wie merkst du dir Dinge am besten?",
+                "en_US": "How do you remember things best?"
+            },
+            "liar_question": {
+                "de_DE": "Was vergisst du immer wieder?",
+                "en_US": "What do you keep forgetting?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Bei welcher Tätigkeit verlierst du das Zeitgefühl?",
+                "en_US": "What activity makes you lose track of time?"
+            },
+            "liar_question": {
+                "de_DE": "Was findest du so langweilig, dass die Zeit nicht vergeht?",
+                "en_US": "What do you find so boring that time drags on?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Was erklärst du anderen gerne?",
+                "en_US": "What do you enjoy explaining to others?"
+            },
+            "liar_question": {
+                "de_DE": "Was verstehst du selbst nicht gut genug zum Erklären?",
+                "en_US": "What don't you understand well enough to explain?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Womit hilfst du Freunden gerne?",
+                "en_US": "What do you like helping friends with?"
+            },
+            "liar_question": {
+                "de_DE": "Wobei können dir andere besser helfen als du ihnen?",
+                "en_US": "What can others help you with better than you can help them?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Welche Fähigkeit hast du dir selbst beigebracht?",
+                "en_US": "What skill did you teach yourself?"
+            },
+            "liar_question": {
+                "de_DE": "Was würdest du gerne können, aber es ist zu schwer?",
+                "en_US": "What would you like to be able to do, but it's too difficult?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_question": {
+                "de_DE": "Wie löst du Probleme am liebsten?",
+                "en_US": "How do you prefer to solve problems?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Art von Problemen überfordert dich?",
+                "en_US": "What kind of problems overwhelm you?"
+            }
+        }
+    ]
+}

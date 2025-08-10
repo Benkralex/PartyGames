@@ -32,10 +32,16 @@ data class FindLiarQuestionPair(
 var datasets: MutableList<FindLiarDataset> = mutableListOf()
 suspend fun updateQuestionDatasets() {
     val paths: List<String> = listOf(
-        "files/find_liar/default.json",
-        "files/find_liar/default1.json",
-        "files/find_liar/default2.json",
-        "files/find_liar/default3.json",
+        "files/find_liar/default/default1.json",
+        "files/find_liar/default/default2.json",
+        "files/find_liar/default/default3.json",
+        "files/find_liar/default/default4.json",
+        "files/find_liar/default/default5.json",
+        "files/find_liar/default/default6.json",
+        "files/find_liar/default/default7.json",
+        "files/find_liar/default/default8.json",
+        "files/find_liar/default/default9.json",
+        "files/find_liar/default/default10.json",
     )
     for (path in paths) {
         val bytes = Res.readBytes(path)

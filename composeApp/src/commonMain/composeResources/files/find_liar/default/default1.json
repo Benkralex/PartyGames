@@ -1,0 +1,397 @@
+{
+    "uid": "find_liar_default1",
+    "title": {
+        "de_DE": "Finde den Lügner - Standard Fragenset 1",
+        "en_US": "Find the Liar - Default Question Set 1"
+    },
+    "description": {
+        "de_DE": "Das standard Fragenset für das Spiel 'Finde den Lügner' (Schwierigkeit: 1)",
+        "en_US": "The default question set for the game 'Find the Liar' (Difficulty: 1)"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Skills"
+        }
+    },
+    "questions": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welches Obst magst du am liebsten?",
+                "en_US": "What's your favorite fruit?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Obst magst du gar nicht?",
+                "en_US": "What fruit do you dislike the most?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingsspiel?",
+                "en_US": "What's your favorite game?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Spiel findest du langweilig?",
+                "en_US": "What game do you find boring?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Magst du Pizza?",
+                "en_US": "Do you like pizza?"
+            },
+            "liar_question": {
+                "de_DE": "Magst du Spinat?",
+                "en_US": "Do you like spinach?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welche Stadt würdest du gerne besuchen?",
+                "en_US": "Which city would you like to visit?"
+            },
+            "liar_question": {
+                "de_DE": "In welche Stadt würdest du niemals reisen wollen?",
+                "en_US": "Which city would you never want to visit?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Magst du lieber Katzen oder Hunde?",
+                "en_US": "Do you prefer cats or dogs?"
+            },
+            "liar_question": {
+                "de_DE": "Findest du Katzen oder Hunde nerviger?",
+                "en_US": "Do you find cats or dogs more annoying?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Was ist dein Lieblingssport zum Zuschauen?",
+                "en_US": "What's your favorite sport to watch?"
+            },
+            "liar_question": {
+                "de_DE": "Welchen Sport schaust du nie?",
+                "en_US": "What sport do you never watch?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Magst du Filme lieber als Serien?",
+                "en_US": "Do you prefer movies over series?"
+            },
+            "liar_question": {
+                "de_DE": "Magst du Serien lieber als Filme?",
+                "en_US": "Do you prefer series over movies?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welches Land würdest du gerne bereisen?",
+                "en_US": "Which country would you like to travel to?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Land reizt dich gar nicht?",
+                "en_US": "Which country doesn't interest you at all?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Isst du lieber süß oder salzig?",
+                "en_US": "Do you prefer sweet or salty food?"
+            },
+            "liar_question": {
+                "de_DE": "Isst du lieber scharf oder mild?",
+                "en_US": "Do you prefer spicy or mild food?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welches Musikinstrument klingt am besten?",
+                "en_US": "Which musical instrument sounds the best?"
+            },
+            "liar_question": {
+                "de_DE": "Welches Musikinstrument klingt schrecklich?",
+                "en_US": "Which musical instrument sounds terrible?"
+            }
+        },
+
+
+
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "In welcher Stadt bist du geboren?",
+                "en_US": "In which city were you born?"
+            },
+            "liar_question": {
+                "de_DE": "In welcher Stadt wohnst du gerade?",
+                "en_US": "In which city do you currently live?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Hast du Geschwister?",
+                "en_US": "Do you have siblings?"
+            },
+            "liar_question": {
+                "de_DE": "Hast du Haustiere?",
+                "en_US": "Do you have pets?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Wie viele Sprachen kannst du sprechen?",
+                "en_US": "How many languages can you speak?"
+            },
+            "liar_question": {
+                "de_DE": "Wie viele Haustiere hattest du schon?",
+                "en_US": "How many pets have you had?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Hast du schon einmal gezeltet?",
+                "en_US": "Have you ever been camping?"
+            },
+            "liar_question": {
+                "de_DE": "Bist du schon einmal geflogen?",
+                "en_US": "Have you ever been on a plane?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Hast du schon einmal im Meer gebadet?",
+                "en_US": "Have you ever swum in the sea?"
+            },
+            "liar_question": {
+                "de_DE": "Bist du schon einmal auf einen Berg geklettert?",
+                "en_US": "Have you ever climbed a mountain?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Welche Schule besuchst du?",
+                "en_US": "Which school do you attend?"
+            },
+            "liar_question": {
+                "de_DE": "Welche Schule hast du zuletzt besucht?",
+                "en_US": "Which school did you last attend?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Warst du schon einmal in einem anderen Kontinent?",
+                "en_US": "Have you ever been to another continent?"
+            },
+            "liar_question": {
+                "de_DE": "Warst du schon einmal in einer anderen Stadt?",
+                "en_US": "Have you ever been to another city?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Wie alt warst du, als du Fahrradfahren gelernt hast?",
+                "en_US": "How old were you when you learned to ride a bike?"
+            },
+            "liar_question": {
+                "de_DE": "Wie alt warst du, als du Schwimmen gelernt hast?",
+                "en_US": "How old were you when you learned to swim?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Warst du schon einmal im Zoo?",
+                "en_US": "Have you ever been to the zoo?"
+            },
+            "liar_question": {
+                "de_DE": "Warst du schon einmal im Freizeitpark?",
+                "en_US": "Have you ever been to an amusement park?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Hast du schon einmal einen Preis gewonnen?",
+                "en_US": "Have you ever won a prize?"
+            },
+            "liar_question": {
+                "de_DE": "Hast du schon einmal ein Geschenk gemacht?",
+                "en_US": "Have you ever given a gift?"
+            }
+        },
+
+
+
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Kannst du ein Musikinstrument spielen?",
+                "en_US": "Can you play a musical instrument?"
+            },
+            "liar_question": {
+                "de_DE": "Kannst du singen?",
+                "en_US": "Can you sing?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Wie viele Liegestütze schaffst du?",
+                "en_US": "How many push-ups can you do?"
+            },
+            "liar_question": {
+                "de_DE": "Wie viele Klimmzüge schaffst du?",
+                "en_US": "How many pull-ups can you do?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Kannst du ein Fahrrad reparieren?",
+                "en_US": "Can you repair a bike?"
+            },
+            "liar_question": {
+                "de_DE": "Kannst du ein Auto waschen?",
+                "en_US": "Can you wash a car?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Wie schnell kannst du 100 Meter laufen?",
+                "en_US": "How fast can you run 100 meters?"
+            },
+            "liar_question": {
+                "de_DE": "Wie schnell kannst du 50 Meter schwimmen?",
+                "en_US": "How fast can you swim 50 meters?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Kannst du ein Omelett kochen?",
+                "en_US": "Can you cook an omelet?"
+            },
+            "liar_question": {
+                "de_DE": "Kannst du einen Kuchen backen?",
+                "en_US": "Can you bake a cake?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Kannst du jonglieren?",
+                "en_US": "Can you juggle?"
+            },
+            "liar_question": {
+                "de_DE": "Kannst du pfeifen?",
+                "en_US": "Can you whistle?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Wie viele Kilometer kannst du am Stück laufen?",
+                "en_US": "How many kilometers can you run in one go?"
+            },
+            "liar_question": {
+                "de_DE": "Wie viele Minuten kannst du am Stück schwimmen?",
+                "en_US": "How many minutes can you swim in one go?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Kannst du Schach spielen?",
+                "en_US": "Can you play chess?"
+            },
+            "liar_question": {
+                "de_DE": "Kannst du Dame spielen?",
+                "en_US": "Can you play checkers?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Kannst du einen Papierflieger basteln?",
+                "en_US": "Can you make a paper plane?"
+            },
+            "liar_question": {
+                "de_DE": "Kannst du ein Papierboot basteln?",
+                "en_US": "Can you make a paper boat?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 1,
+            "main_question": {
+                "de_DE": "Wie lange kannst du die Luft anhalten?",
+                "en_US": "How long can you hold your breath?"
+            },
+            "liar_question": {
+                "de_DE": "Wie lange kannst du auf einem Bein stehen?",
+                "en_US": "How long can you stand on one leg?"
+            }
+        }
+    ]
+}
