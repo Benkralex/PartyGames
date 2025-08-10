@@ -9,8 +9,8 @@ import de.benkralex.partygames.games.impostor.domain.Impostor
 import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 
 val gamesRegister: List<Game> = listOf(
-    Impostor(),
-    TruthOrDare(),
+    //Impostor(),
+    //TruthOrDare(),
     FindLiar(),
 )
 

@@ -40,7 +40,7 @@ napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 
 datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
-ui-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler" }
+ui-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "composeMultiplatform" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

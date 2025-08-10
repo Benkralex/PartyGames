@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import de.benkralex.partygames.app.gamesRegister
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import de.benkralex.partygames.games.impostor.domain.Impostor
@@ -20,17 +21,12 @@ fun GameSelectionPage(
                 onSettingsClick = onNavigateToSettings
             )
         }
-    ) {
-        innerPadding ->
+    ) { innerPadding ->
         GameSelectionList(
             onGameClick = onNavigateToGame,
             modifier = Modifier
                 .padding(innerPadding),
-            games = listOf(
-                Impostor(),
-                TruthOrDare(),
-                FindLiar(),
-            ),
+            games = gamesRegister,
         )
     }
 }
