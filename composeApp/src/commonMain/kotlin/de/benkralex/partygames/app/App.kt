@@ -3,10 +3,13 @@ package de.benkralex.partygames.app
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.graphics.Color
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.navigation.compose.NavHost
@@ -31,10 +34,13 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 @Preview
 fun App(
-    prefs: DataStore<Preferences>
+    prefs: DataStore<Preferences>,
+    theme: ColorScheme? = null,
 ) {
     Napier.base(DebugAntilog())
-    AppTheme {
+    AppTheme (
+        theme = theme
+    ) {
         LaunchedEffect(Unit) {
             updateQuestionDatasets()
             loadSettings(prefs)
