@@ -9,6 +9,10 @@
     <string name="how_to_play">How to play</string>
 
     <string name="accept_dialog">Okay</string>
+    <string name="cancel_dialog">Cancel</string>
+
+    <string name="exit_game">Exit Game</string>
+    <string name="exit_game_desc">Are you sure, you want to exit the game? The active game state will be lost.</string>
 
     <string name="error_valid_number">Please enter a valid number</string>
     <string name="error_valid_range">Please enter a number between %min% and %max%</string>

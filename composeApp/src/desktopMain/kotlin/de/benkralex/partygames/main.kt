@@ -16,7 +16,7 @@ fun main() {
             title = "PartyGames",
         ) {
             App(
-                prefs = prefs
+                prefs = prefs,
             )
         }
     }

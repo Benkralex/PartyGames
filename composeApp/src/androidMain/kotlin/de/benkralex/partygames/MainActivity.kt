@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                         if (isSystemInDarkTheme()) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
                     } else {
                         null
-                    }
+                    },
                 )
             }
         }

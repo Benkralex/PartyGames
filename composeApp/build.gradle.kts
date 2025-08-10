@@ -73,6 +73,7 @@ kotlin {
             implementation(compose.materialIconsExtended)
 
             implementation(libs.jetbrains.compose.navigation)
+            implementation(libs.ui.backhandler)
             implementation(libs.kotlinx.serialization.json)
 
             implementation(libs.napier)

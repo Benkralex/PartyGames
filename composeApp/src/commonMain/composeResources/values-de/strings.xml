@@ -9,6 +9,10 @@
     <string name="how_to_play">Spielanleitung</string>
 
     <string name="accept_dialog">Ok</string>
+    <string name="cancel_dialog">Abbrechen</string>
+
+    <string name="exit_game">Spiel verlassen</string>
+    <string name="exit_game_desc">Bist du dir sicher, dass du das Spiel verlassen möchtest? Der aktive Spielstand geht verlohren.</string>
 
     <string name="error_valid_number">Bitte eine gültige Zahl eingeben</string>
     <string name="error_valid_range">Bitte eine Zahl zwischen %min% und %max% eingeben</string>
