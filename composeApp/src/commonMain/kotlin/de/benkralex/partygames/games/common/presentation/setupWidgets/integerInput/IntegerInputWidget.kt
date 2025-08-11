@@ -2,9 +2,7 @@ package de.benkralex.partygames.games.common.presentation.setupWidgets.integerIn
 
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Adb
 import androidx.compose.material.icons.outlined.Add
-import androidx.compose.material.icons.outlined.Minimize
 import androidx.compose.material.icons.outlined.Remove
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton

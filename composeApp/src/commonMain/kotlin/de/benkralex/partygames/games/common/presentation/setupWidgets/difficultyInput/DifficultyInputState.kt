@@ -13,5 +13,4 @@ class DifficultyInputState(
     var value by mutableStateOf(defaultValue)
     val realValue = mutableStateOf(TextFieldValue(defaultValue.toString()))
     var isError by mutableStateOf(false)
-    var errorMessage by mutableStateOf("")
 }
