@@ -3,6 +3,7 @@ package de.benkralex.partygames.games.common.presentation.setupWidgets.difficult
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.TextFieldValue
 import de.benkralex.partygames.games.common.domain.Difficulty
 
 class DifficultyInputState(
@@ -10,7 +11,7 @@ class DifficultyInputState(
     defaultValue: Difficulty,
 ) {
     var value by mutableStateOf(defaultValue)
-    var realValue by mutableStateOf(defaultValue.toString())
+    val realValue = mutableStateOf(TextFieldValue(defaultValue.toString()))
     var isError by mutableStateOf(false)
     var errorMessage by mutableStateOf("")
 }

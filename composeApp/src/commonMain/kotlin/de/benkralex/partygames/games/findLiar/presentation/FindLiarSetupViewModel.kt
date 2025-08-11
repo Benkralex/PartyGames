@@ -3,6 +3,7 @@ package de.benkralex.partygames.games.findLiar.presentation
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.text.TextRange
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
@@ -74,29 +75,19 @@ class FindLiarSetupViewModel: ViewModel() {
         if (_playersState.value == null) {
             _playersState.value = StringListState(
                 label = playerListLabel,
-                stringSingleStates = if (settings.value.lastPlayers.isEmpty()) {
-                    mapOf(
-                        0 to StringSingleState(
-                            label = playerSingleLabel,
-                            defaultValue = "$playerNameStart 1"
-                        ),
-                        1 to StringSingleState(
-                            label = playerSingleLabel,
-                            defaultValue = "$playerNameStart 2"
-                        ),
-                        2 to StringSingleState(
-                            label = playerSingleLabel,
-                            defaultValue = "$playerNameStart 3"
-                        ),
+                stringSingleStates = settings.value.lastPlayers.filter { it.trim().isNotBlank() }.mapIndexed { index, playerName ->
+                    index to StringSingleState(
+                        label = playerSingleLabel,
+                        defaultValue = playerName
                     )
-                } else {
-                    settings.value.lastPlayers.mapIndexed { index, playerName ->
-                        index to StringSingleState(
+                }.toMap().plus(
+                    map = (settings.value.lastPlayers.filter { it.trim().isNotBlank() }.size until 3).associateWith { i ->
+                        StringSingleState(
                             label = playerSingleLabel,
-                            defaultValue = playerName
+                            defaultValue = "$playerNameStart ${i + 1}"
                         )
-                    }.toMap()
-                },
+                    }
+                ),
                 minCount = 3,
                 textFieldLabel = playerSingleLabel,
                 defaultValue = playerNameStart,
@@ -113,7 +104,10 @@ class FindLiarSetupViewModel: ViewModel() {
         liarCountState.max = maxOf(1, playerCount - 1)
         if (liarCountState.value > liarCountState.max) {
             liarCountState.value = liarCountState.max
-            liarCountState.realValue = liarCountState.max.toString()
+            liarCountState.realValue.value = liarCountState.realValue.value.copy(
+                text = liarCountState.max.toString(),
+                selection = TextRange(0),
+            )
         }
     }
 

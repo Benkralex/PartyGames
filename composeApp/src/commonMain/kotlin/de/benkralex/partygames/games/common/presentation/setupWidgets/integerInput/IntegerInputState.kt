@@ -3,6 +3,7 @@ package de.benkralex.partygames.games.common.presentation.setupWidgets.integerIn
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.TextFieldValue
 
 class IntegerInputState(
     var label: String,
@@ -11,7 +12,7 @@ class IntegerInputState(
     max: Int = Int.MAX_VALUE,
 ) {
     var value by mutableStateOf(defaultValue)
-    var realValue by mutableStateOf(defaultValue.toString())
+    val realValue = mutableStateOf(TextFieldValue(defaultValue.toString()))
     var isError by mutableStateOf(false)
     var errorMessage by mutableStateOf("")
     var min by mutableStateOf(min)

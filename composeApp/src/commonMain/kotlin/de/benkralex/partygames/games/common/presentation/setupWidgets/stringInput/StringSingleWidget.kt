@@ -4,7 +4,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
+import io.github.aakira.napier.Napier
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.error_duplicate
@@ -20,14 +26,26 @@ fun StringSingleWidget(
     val duplicateError = stringResource(Res.string.error_duplicate)
 
     state.errorMessage = when {
-        state.realValue.isEmpty() -> emptyValueError
+        state.realValue.value.text.isEmpty() -> emptyValueError
         state.isDuplicate -> duplicateError
         else -> ""
     }
     state.isError = state.errorMessage.isNotEmpty()
 
+    val coroutineScope = rememberCoroutineScope()
+
     OutlinedTextField(
-        modifier = modifier,
+        modifier = modifier
+            .onFocusChanged { focusState ->
+                if (focusState.isFocused) {
+                    Napier.i("StringSingleWidget: Focus gained, selecting all text")
+                    coroutineScope.launch {
+                        state.realValue.value = state.realValue.value.copy(
+                            selection = TextRange(state.realValue.value.text.length, 0)
+                        )
+                    }
+                }
+            },
         isError = state.isError,
         trailingIcon = trailingIcon,
         supportingText = if (state.isError) {
@@ -38,16 +56,16 @@ fun StringSingleWidget(
                 )
             }
         } else null,
-        value = state.realValue,
-        onValueChange = { newValue: String ->
-            state.realValue = newValue
+        value = state.realValue.value,
+        onValueChange = { newValue: TextFieldValue ->
+            state.realValue.value = newValue
 
-            state.isError = newValue.isEmpty()
+            state.isError = newValue.text.isEmpty()
             if (state.isError) {
                 state.errorMessage = emptyValueError
             } else {
                 state.errorMessage = ""
-                state.value = newValue
+                state.value = newValue.text
             }
         },
         label = {
