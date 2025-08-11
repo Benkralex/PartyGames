@@ -1,0 +1,78 @@
+{
+    "uid": "impostor_structure",
+    "title": {
+        "de_DE": "Titel",
+        "en_US": "Title",
+        "es": "Título",
+        "fr_FR": "Titre"
+    },
+    "description": {
+        "de_DE": "Beschreibung",
+        "en_US": "Description",
+        "es": "Descripción",
+        "fr_FR": "Description"
+    },
+    "author": {
+        "de_DE": "Autor",
+        "en_US": "Author",
+        "es": "Autor",
+        "fr_FR": "Auteur"
+    },
+    "topics": [
+        {
+            "key": "topic1",
+            "de_DE": "Thema 1",
+            "en_US": "Topic 1",
+            "es": "Tema 1",
+            "fr_FR": "Sujet 1"
+        },
+        {
+            "key": "topic2",
+            "de_DE": "Thema 2",
+            "en_US": "Topic 2",
+            "es": "Tema 2",
+            "fr_FR": "Sujet 2"
+        },
+        {
+            "key": "topic3",
+            "de_DE": "Thema 3",
+            "en_US": "Topic 3",
+            "es": "Tema 3",
+            "fr_FR": "Sujet 3"
+        }
+    ],
+    "word_pairs": [
+        {
+            "topic_key": "topic1",
+            "difficulty": 3,
+            "main_word": {
+                "de_DE": "Hauptwort 1",
+                "en_US": "Main Word 1",
+                "es": "Palabra Principal 1",
+                "fr_FR": "Mot Principal 1"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Hinweiswort 1",
+                "en_US": "Hint Word 1",
+                "es": "Palabra de Pista 1",
+                "fr_FR": "Mot Indice 1"
+            }
+        },
+        {
+            "topic_key": "topic2",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Hauptwort 2",
+                "en_US": "Main Word 2",
+                "es": "Palabra Principal 2",
+                "fr_FR": "Mot Principal 2"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Hinweiswort 2",
+                "en_US": "Hint Word 2",
+                "es": "Palabra de Pista 2",
+                "fr_FR": "Mot Indice 2"
+            }
+        }
+    ]
+}

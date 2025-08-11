@@ -1,0 +1,99 @@
+{
+    "uid": "impostor_default1",
+    "title": {
+        "de_DE": "Impostor - Standard Fragenset 1",
+        "en_US": "Impostor - Default Question Set 1"
+    },
+    "description": {
+        "de_DE": "Das standard Fragenset für das Spiel 'Impostor' (Schwierigkeit: 1)",
+        "en_US": "The default question set for the game 'Impostor' (Difficulty: 1)"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "animals": {
+            "de_DE": "Tiere",
+            "en_US": "Animals"
+        },
+        "things": {
+            "de_DE": "Dinge",
+            "en_US": "Things"
+        }
+    },
+    "word_pairs": [
+        {
+            "topic_key": "animals",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Hund",
+                "en_US": "Dog"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Verspielt",
+                "en_US": "Playful"
+            }
+        },
+        {
+            "topic_key": "animals",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Katze",
+                "en_US": "Cat"
+            },
+            "impostor_hint_word": {
+                "de_DE": "7 Leben",
+                "en_US": "7 Lives"
+            }
+        },
+        {
+            "topic_key": "animals",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Schlange",
+                "en_US": "Snake"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Wandern",
+                "en_US": "Hiking"
+            }
+        },
+        {
+            "topic_key": "things",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Tisch",
+                "en_US": "Table"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Essen",
+                "en_US": "Food"
+            }
+        },
+        {
+            "topic_key": "things",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Schrank",
+                "en_US": "Cupboard"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Aufbewahren",
+                "en_US": "Store something"
+            }
+        },
+        {
+            "topic_key": "things",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Schreibtischlampe",
+                "en_US": "Desk Lamp"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Beleuchtung",
+                "en_US": "Lighting"
+            }
+        }
+    ]
+}

@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.findLiar.data.FindLiarQuestionPair
-import de.benkralex.partygames.games.findLiar.data.getQuestionSets
+import de.benkralex.partygames.games.findLiar.data.getFindLiarQuestionSets
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import io.github.aakira.napier.Napier
 
@@ -31,7 +31,7 @@ class FindLiarPlayViewModel : ViewModel() {
         game?.settings?.get("difficulty") as? Difficulty ?: Difficulty.MEDIUM
     }
     val questionPairs by derivedStateOf {
-        getQuestionSets(listOf(Locale.current.language)).filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
+        getFindLiarQuestionSets(listOf(Locale.current.language)).filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
     }
 
 

@@ -1,0 +1,397 @@
+{
+    "uid": "impostor_default8",
+    "title": {
+        "de_DE": "Impostor - Standard Fragenset 8",
+        "en_US": "Impostor - Default Question Set 8"
+    },
+    "description": {
+        "de_DE": "Ein weiteres standard Fragenset für das Spiel 'Impostor' (Schwierigkeit: 8)",
+        "en_US": "Another default question set for the game 'Impostor' (Difficulty: 8)"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en_US": "Benkralex"
+    },
+    "topics": {
+        "own_opinion": {
+            "de_DE": "Eigene Meinung",
+            "en_US": "Own Opinion"
+        },
+        "personal": {
+            "de_DE": "Persönliches",
+            "en_US": "Personal"
+        },
+        "skills": {
+            "de_DE": "Eigenes Können",
+            "en_US": "Own Skills"
+        }
+    },
+    "word_pairs": [
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welcher Film hat dich am meisten beeindruckt?",
+                "en_US": "Which movie impressed you the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welcher Film hat dich am meisten enttäuscht?",
+                "en_US": "Which movie disappointed you the most?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Land würdest du sofort bereisen wollen?",
+                "en_US": "Which country would you travel to immediately?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Land würdest du nie bereisen wollen?",
+                "en_US": "Which country would you never want to visit?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Essen würdest du jeden Tag essen können?",
+                "en_US": "Which food could you eat every day?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Essen würdest du niemals essen wollen?",
+                "en_US": "Which food would you never want to eat?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Jahreszeit magst du am meisten?",
+                "en_US": "Which season do you like the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche Jahreszeit magst du am wenigsten?",
+                "en_US": "Which season do you like the least?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Fach sollte an Schulen neu eingeführt werden?",
+                "en_US": "Which subject should be introduced at schools?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Fach sollte an Schulen abgeschafft werden?",
+                "en_US": "Which subject should be removed from schools?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Tier würdest du gern als Haustier haben?",
+                "en_US": "Which animal would you like to have as a pet?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Tier würdest du niemals als Haustier wollen?",
+                "en_US": "Which animal would you never want as a pet?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Sportart schaust du am liebsten?",
+                "en_US": "Which sport do you like watching the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche Sportart langweilt dich am meisten?",
+                "en_US": "Which sport bores you the most?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Musikgenre hörst du am liebsten?",
+                "en_US": "Which music genre do you like the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Musikgenre magst du gar nicht?",
+                "en_US": "Which music genre do you dislike?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Getränk bestellst du am häufigsten?",
+                "en_US": "Which drink do you order most often?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Getränk bestellst du nie?",
+                "en_US": "Which drink do you never order?"
+            }
+        },
+        {
+            "topic_key": "own_opinion",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Buch würdest du jedem empfehlen?",
+                "en_US": "Which book would you recommend to everyone?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Buch würdest du niemandem empfehlen?",
+                "en_US": "Which book would you recommend to no one?"
+            }
+        },
+
+
+
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches war dein bisher größter Erfolg?",
+                "en_US": "What has been your biggest success so far?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches war dein bisher größter Misserfolg?",
+                "en_US": "What has been your biggest failure so far?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Stadt gefällt dir am besten?",
+                "en_US": "Which city do you like the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche Stadt gefällt dir am wenigsten?",
+                "en_US": "Which city do you like the least?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welchen Geruch magst du am meisten?",
+                "en_US": "Which smell do you like the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welchen Geruch kannst du nicht ausstehen?",
+                "en_US": "Which smell do you dislike the most?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welcher Tag in deinem Leben war der schönste?",
+                "en_US": "What was the best day of your life?"
+            },
+            "impostor_word": {
+                "de_DE": "Welcher Tag in deinem Leben war der schlimmste?",
+                "en_US": "What was the worst day of your life?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welchen Spitznamen magst du am liebsten?",
+                "en_US": "Which nickname do you like the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welchen Spitznamen magst du am wenigsten?",
+                "en_US": "Which nickname do you like the least?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Kleidungsstück trägst du am liebsten?",
+                "en_US": "Which piece of clothing do you like wearing the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Kleidungsstück trägst du ungern?",
+                "en_US": "Which piece of clothing do you dislike wearing?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche App benutzt du am meisten?",
+                "en_US": "Which app do you use the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche App benutzt du am wenigsten?",
+                "en_US": "Which app do you use the least?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Ereignis hat dein Leben am meisten verändert?",
+                "en_US": "Which event changed your life the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Ereignis hat dein Leben am negativsten beeinflusst?",
+                "en_US": "Which event had the most negative impact on your life?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches war dein schönstes Geschenk?",
+                "en_US": "What was your nicest gift?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches war dein enttäuschendstes Geschenk?",
+                "en_US": "What was your most disappointing gift?"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welchen Ort in deiner Stadt magst du am meisten?",
+                "en_US": "Which place in your city do you like the most?"
+            },
+            "impostor_word": {
+                "de_DE": "Welchen Ort in deiner Stadt meidest du?",
+                "en_US": "Which place in your city do you avoid?"
+            }
+        },
+
+
+
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Fähigkeit beherrschst du am besten?",
+                "en_US": "Which skill are you best at?"
+            },
+            "impostor_word": {
+                "de_DE": "In welcher Fähigkeit bist du am schlechtesten?",
+                "en_US": "Which skill are you worst at?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "In welchem Fach bist du am stärksten?",
+                "en_US": "Which school subject are you strongest in?"
+            },
+            "impostor_word": {
+                "de_DE": "In welchem Fach bist du am schwächsten?",
+                "en_US": "Which school subject are you weakest in?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Sportart kannst du besonders gut?",
+                "en_US": "Which sport are you especially good at?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche Sportart kannst du gar nicht?",
+                "en_US": "Which sport are you terrible at?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welches Gericht kannst du perfekt zubereiten?",
+                "en_US": "Which dish can you cook perfectly?"
+            },
+            "impostor_word": {
+                "de_DE": "Welches Gericht kannst du überhaupt nicht zubereiten?",
+                "en_US": "Which dish can you not cook at all?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Mit welchem Musikinstrument kannst du am besten umgehen?",
+                "en_US": "Which musical instrument can you play best?"
+            },
+            "impostor_word": {
+                "de_DE": "Mit welchem Musikinstrument kannst du gar nicht umgehen?",
+                "en_US": "Which musical instrument can you not play at all?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Sprache sprichst du am besten?",
+                "en_US": "Which language do you speak the best?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche Sprache sprichst du am schlechtesten?",
+                "en_US": "Which language do you speak the worst?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welche Art von Rätseln kannst du am besten lösen?",
+                "en_US": "What type of puzzles are you best at solving?"
+            },
+            "impostor_word": {
+                "de_DE": "Welche Art von Rätseln kannst du am schlechtesten lösen?",
+                "en_US": "What type of puzzles are you worst at solving?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Bei welcher Computerspielfähigkeit bist du besonders stark?",
+                "en_US": "Which video game skill are you especially strong at?"
+            },
+            "impostor_word": {
+                "de_DE": "Bei welcher Computerspielfähigkeit bist du besonders schwach?",
+                "en_US": "Which video game skill are you especially weak at?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Welchen Handwerkstrick kannst du besonders gut?",
+                "en_US": "Which crafting trick are you especially good at?"
+            },
+            "impostor_word": {
+                "de_DE": "Welchen Handwerkstrick kannst du gar nicht?",
+                "en_US": "Which crafting trick can you not do at all?"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "In welchem Schulprojekt hast du am meisten geglänzt?",
+                "en_US": "In which school project did you shine the most?"
+            },
+            "impostor_word": {
+                "de_DE": "In welchem Schulprojekt bist du am meisten gescheitert?",
+                "en_US": "In which school project did you fail the most?"
+            }
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.findLiar.data
+package de.benkralex.partygames.games.impostor.data
 
 import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
@@ -13,35 +13,35 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonPrimitive
 import partygames.composeapp.generated.resources.Res
 
-data class FindLiarDataset(
+data class ImpostorDataset(
     val uid: String,
     val title: TranslatableString,
     val description: TranslatableString,
     val author: TranslatableString,
     val topics: Map<String, TranslatableString>,
-    val questionPairs: List<FindLiarQuestionPair>,
+    val wordPairs: List<ImpostorWordPair>,
 )
 
-data class FindLiarQuestionPair(
-    val mainQuestion: TranslatableString,
-    val liarQuestion: TranslatableString,
+data class ImpostorWordPair(
+    val mainWord: TranslatableString,
+    val impostorHintWord: TranslatableString,
     val topic: TranslatableString,
     val difficulty: Difficulty,
 )
 
-var datasets: MutableList<FindLiarDataset> = mutableListOf()
-suspend fun updateFindLiarDatasets() {
+var datasets: MutableList<ImpostorDataset> = mutableListOf()
+suspend fun updateImpostorDatasets() {
     val paths: List<String> = listOf(
-        "files/find_liar/default/default1.json",
-        "files/find_liar/default/default2.json",
-        "files/find_liar/default/default3.json",
-        "files/find_liar/default/default4.json",
-        "files/find_liar/default/default5.json",
-        "files/find_liar/default/default6.json",
-        "files/find_liar/default/default7.json",
-        "files/find_liar/default/default8.json",
-        "files/find_liar/default/default9.json",
-        "files/find_liar/default/default10.json",
+        "files/impostor/default/default1.json",
+        /*"files/impostor/default/default2.json",
+        "files/impostor/default/default3.json",
+        "files/impostor/default/default4.json",
+        "files/impostor/default/default5.json",
+        "files/impostor/default/default6.json",
+        "files/impostor/default/default7.json",
+        "files/impostor/default/default8.json",
+        "files/impostor/default/default9.json",
+        "files/impostor/default/default10.json",*/
     )
     for (path in paths) {
         val bytes = Res.readBytes(path)
@@ -53,7 +53,7 @@ suspend fun updateFindLiarDatasets() {
                     jsonDataset = Json.parseToJsonElement(jsonString) as JsonObject
                 } catch (e: Exception) {
                     Napier.e(
-                        message = "Error decoding Find Liar dataset: $path",
+                        message = "Error decoding Impostor dataset: $path",
                         throwable = e
                     )
                     continue
@@ -65,7 +65,7 @@ suspend fun updateFindLiarDatasets() {
                         }.toMap()
                     )
                 }.toMap()
-                val dataset = FindLiarDataset(
+                val dataset = ImpostorDataset(
                     uid = (jsonDataset["uid"] as JsonPrimitive).content,
                     title = TranslatableString(
                         translations = (jsonDataset["title"] as JsonObject).map {
@@ -83,25 +83,25 @@ suspend fun updateFindLiarDatasets() {
                         }.toMap()
                     ),
                     topics = topics,
-                    questionPairs = (jsonDataset["questions"] as JsonArray).map { q ->
-                        val question = q as JsonObject
-                        FindLiarQuestionPair(
-                            mainQuestion = TranslatableString(
-                                translations = (question["main_question"] as JsonObject).map {
+                    wordPairs = (jsonDataset["word_pairs"] as JsonArray).map { w ->
+                        val wordPair = w as JsonObject
+                        ImpostorWordPair(
+                            mainWord = TranslatableString(
+                                translations = (wordPair["main_word"] as JsonObject).map {
                                     it.key to (it.value as JsonPrimitive).content
                                 }.toMap()
                             ),
-                            liarQuestion = TranslatableString(
-                                translations = (question["liar_question"] as JsonObject).map {
+                            impostorHintWord = TranslatableString(
+                                translations = (wordPair["impostor_hint_word"] as JsonObject).map {
                                     it.key to (it.value as JsonPrimitive).content
                                 }.toMap()
                             ),
                             topic = topics.getOrElse(
-                                key = question["topic_key"]?.jsonPrimitive?.content ?: "default",
+                                key = wordPair["topic_key"]?.jsonPrimitive?.content ?: "default",
                                 defaultValue = { TranslatableString() }
                             ),
                             difficulty = difficultyFromNumber(
-                                number = (question["difficulty"] as JsonPrimitive).int
+                                number = (wordPair["difficulty"] as JsonPrimitive).int
                             ),
                         )
                     }
@@ -109,25 +109,25 @@ suspend fun updateFindLiarDatasets() {
                 datasets.add(dataset)
             } catch (e: Exception) {
                 Napier.e(
-                    message = "Error parsing Find Liar dataset: $path",
+                    message = "Error parsing Impostor dataset: $path",
                     throwable = e
                 )
             }
         } else {
             Napier.e(
-                message = "Error reading Find Liar dataset: $path",
+                message = "Error reading Impostor dataset: $path",
             )
         }
     }
 }
 
-fun getFindLiarQuestionSets(languages: List<String>): List<FindLiarQuestionPair> {
-    return datasets.flatMap { it.questionPairs }.filter { q ->
-        q.liarQuestion.translations.keys.any { lang ->
+fun getImposterWordSets(languages: List<String>): List<ImpostorWordPair> {
+    return datasets.flatMap { it.wordPairs }.filter { q ->
+        q.impostorHintWord.translations.keys.any { lang ->
             lang in languages
                     || lang.split("_")[0] in languages
                     || lang in languages.map { it.split("_")[0] }
-        } && q.mainQuestion.translations.keys.any { lang ->
+        } && q.mainWord.translations.keys.any { lang ->
             lang in languages
                     || lang.split("_")[0] in languages
                     || lang in languages.map { it.split("_")[0] }
@@ -135,6 +135,6 @@ fun getFindLiarQuestionSets(languages: List<String>): List<FindLiarQuestionPair>
     }
 }
 
-fun getFindLiarTopics(languages: List<String>): List<TranslatableString> {
-    return getFindLiarQuestionSets(languages).map { it.topic }.toSet().toList()
+fun getImposterTopics(languages: List<String>): List<TranslatableString> {
+    return getImposterWordSets(languages).map { it.topic }.toSet().toList()
 }

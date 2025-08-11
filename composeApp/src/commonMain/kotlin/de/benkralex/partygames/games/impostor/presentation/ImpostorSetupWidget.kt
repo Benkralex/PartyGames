@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.findLiar.presentation
+package de.benkralex.partygames.games.impostor.presentation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,7 +14,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.games.common.domain.Difficulty
@@ -24,12 +23,12 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxIn
 import de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput.DifficultyInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
-import de.benkralex.partygames.games.findLiar.data.getFindLiarTopics
+import de.benkralex.partygames.games.impostor.data.getImposterTopics
 import de.benkralex.partygames.settingsPage.data.settings
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.difficulty
-import partygames.composeapp.generated.resources.find_liar_res_liar_count
+import partygames.composeapp.generated.resources.impostor_res_impostor_count
 import partygames.composeapp.generated.resources.player
 import partygames.composeapp.generated.resources.player_name
 import partygames.composeapp.generated.resources.players
@@ -37,32 +36,32 @@ import partygames.composeapp.generated.resources.start_game
 import partygames.composeapp.generated.resources.topics
 
 @Composable
-fun FindLiarSetupWidget(
+fun ImpostorSetupWidget(
     modifier: Modifier = Modifier,
-    viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(),
+    viewModel: ImpostorSetupViewModel = viewModel<ImpostorSetupViewModel>(),
     setupGame: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit = { _, _, _, _ -> }
 ) {
     // initialise labels
     val playerListLabel = stringResource(Res.string.players)
     val playerSingleLabel = stringResource(Res.string.player_name)
     val playerNameStart = stringResource(Res.string.player)
-    val liarCountLabel = stringResource(Res.string.find_liar_res_liar_count)
+    val impostorCountLabel = stringResource(Res.string.impostor_res_impostor_count)
     val difficultyLabel = stringResource(Res.string.difficulty)
     val topicsLabel = stringResource(Res.string.topics)
 
     viewModel.initializeLabels(
         playerListLabel, playerSingleLabel, playerNameStart,
-        liarCountLabel, difficultyLabel, topicsLabel
+        impostorCountLabel, difficultyLabel, topicsLabel
     )
 
-    viewModel.topicsState.checkboxSingleStates = getFindLiarTopics(settings.value.languages).map {
+    viewModel.topicsState.checkboxSingleStates = getImposterTopics(settings.value.languages).map {
         topic -> CheckboxSingleState(
             topic,
             true,
         )
     }
 
-    viewModel.updateLiarCountConstraints()
+    viewModel.updateImpostorCountConstraints()
 
     val scrollState = rememberScrollState()
     Column(modifier = modifier.verticalScroll(scrollState)) {
@@ -83,7 +82,7 @@ fun FindLiarSetupWidget(
         StringListWidget(modifier = childModifier, state = viewModel.playersState)
         CustomDivider()
 
-        IntegerInputWidget(modifier = childModifier, state = viewModel.liarCountState)
+        IntegerInputWidget(modifier = childModifier, state = viewModel.impostorCountState)
         CustomDivider()
 
         DifficultyInputWidget(modifier = childModifier, state = viewModel.difficultyState)

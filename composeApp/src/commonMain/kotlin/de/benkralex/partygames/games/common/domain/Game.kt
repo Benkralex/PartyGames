@@ -19,6 +19,7 @@ interface Game {
     //-------------
     val setupWidget: @Composable (modifier: Modifier) -> Unit
     val playWidget: @Composable (modifier: Modifier) -> Unit
+    val settingsWidget: @Composable (modifier: Modifier) -> Unit
 
     //-------------
     // Game Logic

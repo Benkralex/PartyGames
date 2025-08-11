@@ -38,10 +38,10 @@ private fun List<String>.toPreferencesString(): String {
 private fun String.toList(): List<String> {
     return this.split("/,").map { str ->
         str.replace("\\,", ",")
-    }
+    }.filter { it.isNotBlank() }
 }
 
 data class Settings (
-    val languages: List<String> = mutableListOf(),
-    val lastPlayers: List<String> = mutableListOf(),
+    var languages: List<String> = mutableListOf(),
+    var lastPlayers: List<String> = mutableListOf(),
 )

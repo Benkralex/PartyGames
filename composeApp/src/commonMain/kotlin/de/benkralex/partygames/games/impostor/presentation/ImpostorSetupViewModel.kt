@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.findLiar.presentation
+package de.benkralex.partygames.games.impostor.presentation
 
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -16,7 +16,7 @@ import de.benkralex.partygames.settingsPage.data.Settings
 import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 
-class FindLiarSetupViewModel: ViewModel() {
+class ImpostorSetupViewModel: ViewModel() {
 
     private val _playersState = mutableStateOf<StringListState?>(null)
     val playersState: StringListState get() = _playersState.value!!
@@ -32,15 +32,15 @@ class FindLiarSetupViewModel: ViewModel() {
         players.size
     }
 
-    val liarCountState = IntegerInputState(
+    val impostorCountState = IntegerInputState(
         label = "",
         min = 1,
         max = 2,
         defaultValue = 1,
     )
 
-    val liarCount by derivedStateOf {
-        liarCountState.value
+    val impostorCount by derivedStateOf {
+        impostorCountState.value
     }
 
     val difficultyState = DifficultyInputState(
@@ -68,7 +68,7 @@ class FindLiarSetupViewModel: ViewModel() {
         playerListLabel: String,
         playerSingleLabel: String,
         playerNameStart: String,
-        liarCountLabel: String,
+        impostorCountLabel: String,
         difficultyLabel: String,
         topicsLabel: String
     ) {
@@ -95,17 +95,17 @@ class FindLiarSetupViewModel: ViewModel() {
             )
         }
 
-        liarCountState.label = liarCountLabel
+        impostorCountState.label = impostorCountLabel
         difficultyState.label = difficultyLabel
         topicsState.label = topicsLabel
     }
 
-    fun updateLiarCountConstraints() {
-        liarCountState.max = maxOf(1, playerCount - 1)
-        if (liarCountState.value > liarCountState.max) {
-            liarCountState.value = liarCountState.max
-            liarCountState.realValue.value = liarCountState.realValue.value.copy(
-                text = liarCountState.max.toString(),
+    fun updateImpostorCountConstraints() {
+        impostorCountState.max = maxOf(1, playerCount - 1)
+        if (impostorCountState.value > impostorCountState.max) {
+            impostorCountState.value = impostorCountState.max
+            impostorCountState.realValue.value = impostorCountState.realValue.value.copy(
+                text = impostorCountState.max.toString(),
                 selection = TextRange(0),
             )
         }
@@ -114,7 +114,7 @@ class FindLiarSetupViewModel: ViewModel() {
     fun setupGame(setupGameCallback: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit) {
         Napier.i(
             "players=$players," +
-                    " liarCount=${liarCount}," +
+                    " impostorCount=${impostorCount}," +
                     " topics=$topics," +
                     " difficulty=${difficulty}"
         )
@@ -123,13 +123,17 @@ class FindLiarSetupViewModel: ViewModel() {
             Napier.e("Setup is invalid, cannot start game")
             return
         }
-        settings.value.lastPlayers = players
-        setupGameCallback(players, liarCount, topics, difficulty)
+        val newSettings = Settings(
+            languages = settings.value.languages,
+            lastPlayers = players
+        )
+        settings.value = newSettings
+        setupGameCallback(players, impostorCount, topics, difficulty)
     }
 
     private fun isSetupInvalid(): Boolean {
         return _playersState.value?.stringSingleStates?.values?.map { it.isError }?.any { it } == true ||
-                liarCountState.isError ||
+                impostorCountState.isError ||
                 difficultyState.isError ||
                 topicsState.isError
     }

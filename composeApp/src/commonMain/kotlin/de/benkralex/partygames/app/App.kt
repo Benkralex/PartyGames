@@ -15,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.backhandler.BackHandler
+import androidx.compose.ui.text.intl.Locale
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.navigation.compose.NavHost
@@ -26,7 +27,8 @@ import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.PlayGamePage
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
-import de.benkralex.partygames.games.findLiar.data.updateQuestionDatasets
+import de.benkralex.partygames.games.findLiar.data.updateFindLiarDatasets
+import de.benkralex.partygames.games.impostor.data.updateImpostorDatasets
 import de.benkralex.partygames.settingsPage.data.loadSettings
 import de.benkralex.partygames.settingsPage.data.saveSettings
 import de.benkralex.partygames.settingsPage.data.settings
@@ -52,8 +54,13 @@ fun App(
         theme = theme
     ) {
         LaunchedEffect(Unit) {
-            updateQuestionDatasets()
+            updateFindLiarDatasets()
+            updateImpostorDatasets()
             loadSettings(prefs)
+            if (settings.value.languages.isEmpty()) {
+                settings.value.languages =
+                    listOf(Locale.current.language + "_" + Locale.current.region)
+            }
         }
 
         LaunchedEffect(settings.value) {

@@ -9,9 +9,6 @@ Then, all answers and the main question are shown.
 Discuss the answers together and figure out who the liar is!
     </string>
 
-    <string name="find_liar_res_players">Players</string>
-    <string name="find_liar_res_player">Player</string>
-    <string name="find_liar_res_player_name">Playername</string>
     <string name="find_liar_res_liar_count">Liar Count</string>
 
     <string name="find_liar_data_topic_opinion">Own Opinion</string>

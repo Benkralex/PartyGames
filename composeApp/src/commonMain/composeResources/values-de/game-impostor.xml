@@ -11,4 +11,6 @@ Ziel ist es, anhand der Aussagen die Impostor zu entlarven.
 Wurden alle Impostor gefunden, dürfen sie noch einmal raten, welches Wort die anderen hatten.
 Raten sie richtig, gewinnen die Impostor – raten sie falsch, gewinnt das restliche Team.
     </string>
+
+    <string name="impostor_res_impostor_count">Anzahl an Impostoren</string>
 </resources>

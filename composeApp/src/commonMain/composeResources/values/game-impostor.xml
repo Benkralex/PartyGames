@@ -11,4 +11,6 @@ Try to identify the impostors based on what everyone says.
 Once all impostors are found, they get one chance to guess the secret word.
 If they guess correctly, the impostors win. If not, the rest of the players win.
     </string>
+
+    <string name="impostor_res_impostor_count">Impostor Count</string>
 </resources>

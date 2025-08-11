@@ -10,7 +10,7 @@ import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 
 val gamesRegister: List<Game> = listOf(
     Impostor(),
-    TruthOrDare(),
+    //TruthOrDare(),
     FindLiar(),
 )
 

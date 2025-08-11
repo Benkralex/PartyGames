@@ -6,6 +6,9 @@
 
     <string name="difficulty">Difficulty</string>
     <string name="topics">Topics</string>
+    <string name="players">Players</string>
+    <string name="player">Player</string>
+    <string name="player_name">Player name</string>
     <string name="how_to_play">How to play</string>
 
     <string name="accept_dialog">Okay</string>
