@@ -12,7 +12,6 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.difficulty
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringSingleState
-import de.benkralex.partygames.settingsPage.data.Settings
 import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 
