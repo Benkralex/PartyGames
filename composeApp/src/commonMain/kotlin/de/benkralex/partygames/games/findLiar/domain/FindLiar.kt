@@ -25,7 +25,6 @@ class FindLiar : Game {
         name = Res.string.find_liar_title,
         description = Res.string.find_liar_description,
         author = Res.string.find_liar_author,
-        image = "find_liar_image",
         colorLightTheme = Color.Companion.Red,
         colorDarkTheme = Color.Companion.Red,
         howToPlay = Res.string.find_liar_how_to_play,

@@ -11,7 +11,6 @@ data class GameInformation (
     @Contextual val description: StringResource,
     @Contextual val author: StringResource,
     @Contextual val howToPlay: StringResource,
-    val image: String,
     @Contextual val colorLightTheme: Color,
     @Contextual val colorDarkTheme: Color,
 )

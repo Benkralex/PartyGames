@@ -41,7 +41,6 @@ fun FindLiarSetupWidget(
     viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(),
     setupGame: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit = { _, _, _, _ -> }
 ) {
-    // initialise labels
     val playerListLabel = stringResource(Res.string.players)
     val playerSingleLabel = stringResource(Res.string.player_name)
     val playerNameStart = stringResource(Res.string.player)

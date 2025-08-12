@@ -14,6 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Game
 import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.content_description_back_button
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,7 +37,7 @@ fun PlayGamePage(
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back",
+                            contentDescription = stringResource(Res.string.content_description_back_button),
                             modifier = Modifier.padding(8.dp),
                         )
                     }

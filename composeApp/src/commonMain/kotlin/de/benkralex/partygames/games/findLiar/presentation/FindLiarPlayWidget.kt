@@ -37,6 +37,10 @@ import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getGameByKey
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import io.github.aakira.napier.Napier
+import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.find_liar_res_show_liars
+import partygames.composeapp.generated.resources.new_round
 
 @Composable
 fun FindLiarPlayWidget(
@@ -202,7 +206,6 @@ fun ShowAnswers(
                 val defaultColors = CardDefaults.cardColors()
                 val liarColors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.error.copy(alpha = 0.3f),
-                    //contentColor = Color.Black,
                 )
                 val colors by derivedStateOf {
                     if (showLiars && player in liars) {
@@ -255,9 +258,9 @@ fun ShowAnswers(
             }
         ) {
             val buttonText = if (!showLiars) {
-                "Zeige Lügner"
+                stringResource(Res.string.find_liar_res_show_liars)
             } else {
-                "Neue Runde"
+                stringResource(Res.string.new_round)
             }
             Text(
                 text = buttonText,

@@ -1,4 +1,5 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.compose.reload.core.name
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -34,7 +35,7 @@ kotlin {
     
     jvm("desktop")
     
-    @OptIn(ExperimentalWasmDsl::class)
+    /*@OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         outputModuleName.set("composeApp")
         browser {
@@ -52,7 +53,7 @@ kotlin {
             }
         }
         binaries.executable()
-    }
+    }*/
     
     sourceSets {
         val desktopMain by getting
@@ -128,8 +129,18 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "de.benkralex.partygames"
+            packageName = "PartyGames"
             packageVersion = "1.1.0"
+
+            macOS {
+                iconFile.set(project.file("src/commonMain/composeResources/drawable/icon.png"))
+            }
+            windows {
+                iconFile.set(project.file("src/commonMain/composeResources/drawable/icon.png"))
+            }
+            linux {
+                iconFile.set(project.file("src/commonMain/composeResources/drawable/icon.png"))
+            }
         }
     }
 }

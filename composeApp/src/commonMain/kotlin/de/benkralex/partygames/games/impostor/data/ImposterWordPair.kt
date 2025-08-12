@@ -33,7 +33,7 @@ var datasets: MutableList<ImpostorDataset> = mutableListOf()
 suspend fun updateImpostorDatasets() {
     val paths: List<String> = listOf(
         "files/impostor/default/default1.json",
-        /*"files/impostor/default/default2.json",
+        "files/impostor/default/default2.json",
         "files/impostor/default/default3.json",
         "files/impostor/default/default4.json",
         "files/impostor/default/default5.json",
@@ -41,7 +41,7 @@ suspend fun updateImpostorDatasets() {
         "files/impostor/default/default7.json",
         "files/impostor/default/default8.json",
         "files/impostor/default/default9.json",
-        "files/impostor/default/default10.json",*/
+        "files/impostor/default/default10.json",
     )
     for (path in paths) {
         val bytes = Res.readBytes(path)

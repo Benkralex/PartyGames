@@ -20,7 +20,6 @@ class TruthOrDare : Game {
         name = Res.string.truth_or_dare_title,
         description = Res.string.truth_or_dare_description,
         author = Res.string.truth_or_dare_author,
-        image = "truth_or_dare_image",
         colorLightTheme = Color.Companion.Green,
         colorDarkTheme = Color.Companion.Green,
         howToPlay = Res.string.truth_or_dare_how_to_play,

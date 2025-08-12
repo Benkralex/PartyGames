@@ -24,7 +24,6 @@ class Impostor : Game {
         name = Res.string.impostor_title,
         description = Res.string.impostor_description,
         author = Res.string.impostor_author,
-        image = "impostor_image",
         colorLightTheme = Color.Blue,
         colorDarkTheme = Color.Blue,
         howToPlay = Res.string.impostor_how_to_play,

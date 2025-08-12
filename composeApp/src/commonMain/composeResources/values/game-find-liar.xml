@@ -10,8 +10,5 @@ Discuss the answers together and figure out who the liar is!
     </string>
 
     <string name="find_liar_res_liar_count">Liar Count</string>
-
-    <string name="find_liar_data_topic_opinion">Own Opinion</string>
-    <string name="find_liar_data_topic_ability">Own Ability</string>
-    <string name="find_liar_data_topic_personal">Personal</string>
+    <string name="find_liar_res_show_liars">Show liars</string>
 </resources>

@@ -16,7 +16,9 @@
 
     <string name="exit_game">Exit Game</string>
     <string name="exit_game_desc">Are you sure, you want to exit the game? The active game state will be lost.</string>
+    <string name="new_round">New Round</string>
 
+    <string name="error_no_translation">No Translation found for language %lang%</string>
     <string name="error_valid_number">Please enter a valid number</string>
     <string name="error_valid_range">Please enter a number between %min% and %max%</string>
     <string name="error_empty_input">Please enter a value</string>
@@ -34,4 +36,6 @@
     <string name="difficulty_very_hard">Very Hard</string>
     <string name="difficulty_extreme">Extreme</string>
     <string name="difficulty_nightmare">Nightmare</string>
+
+    <string name="content_description_back_button">Back button</string>
 </resources>

@@ -23,6 +23,7 @@ import de.benkralex.partygames.games.common.domain.Game
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.accept_dialog
+import partygames.composeapp.generated.resources.content_description_back_button
 import partygames.composeapp.generated.resources.how_to_play
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -72,7 +73,7 @@ fun SetupGamePage(
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back",
+                            contentDescription = stringResource(Res.string.content_description_back_button),
                             modifier = Modifier.padding(8.dp),
                         )
                     }
@@ -85,7 +86,7 @@ fun SetupGamePage(
                     ) {
                         Icon(
                             imageVector = Icons.Outlined.Info,
-                            contentDescription = "Info",
+                            contentDescription = stringResource(Res.string.how_to_play),
                             modifier = Modifier.padding(8.dp),
                         )
                     }
