@@ -1,12 +1,12 @@
 {
-    "uid": "impostor_default1",
+    "uid": "impostor_default2",
     "title": {
-        "de_DE": "Impostor - Standard Fragenset 1",
-        "en_US": "Impostor - Default Question Set 1"
+        "de_DE": "Impostor - Standard Fragenset 2",
+        "en_US": "Impostor - Default Question Set 2"
     },
     "description": {
-        "de_DE": "Das standard Fragenset für das Spiel 'Impostor' (Schwierigkeit: 1)",
-        "en_US": "The default question set for the game 'Impostor' (Difficulty: 1)"
+        "de_DE": "Ein weiteres einfaches Fragenset für das Spiel 'Impostor' (Schwierigkeit: 1)",
+        "en_US": "Another easy question set for the game 'Impostor' (Difficulty: 1)"
     },
     "author": {
         "de_DE": "Benkralex",
@@ -20,6 +20,18 @@
         "things": {
             "de_DE": "Dinge",
             "en_US": "Things"
+        },
+        "food": {
+            "de_DE": "Essen",
+            "en_US": "Food"
+        },
+        "places": {
+            "de_DE": "Orte",
+            "en_US": "Places"
+        },
+        "sports": {
+            "de_DE": "Sportarten",
+            "en_US": "Sports"
         }
     },
     "word_pairs": [
@@ -27,72 +39,180 @@
             "topic_key": "animals",
             "difficulty": 1,
             "main_word": {
-                "de_DE": "Hund",
-                "en_US": "Dog"
+                "de_DE": "Elefant",
+                "en_US": "Elephant"
             },
             "impostor_hint_word": {
-                "de_DE": "Verspielt",
-                "en_US": "Playful"
+                "de_DE": "Groß",
+                "en_US": "Big"
             }
         },
         {
             "topic_key": "animals",
             "difficulty": 1,
             "main_word": {
-                "de_DE": "Katze",
-                "en_US": "Cat"
+                "de_DE": "Fisch",
+                "en_US": "Fish"
             },
             "impostor_hint_word": {
-                "de_DE": "7 Leben",
-                "en_US": "7 Lives"
+                "de_DE": "Wasser",
+                "en_US": "Water"
             }
         },
         {
             "topic_key": "animals",
             "difficulty": 1,
             "main_word": {
-                "de_DE": "Schlange",
-                "en_US": "Snake"
+                "de_DE": "Pferd",
+                "en_US": "Horse"
             },
             "impostor_hint_word": {
-                "de_DE": "Wandern",
-                "en_US": "Hiking"
+                "de_DE": "Reiten",
+                "en_US": "Riding"
             }
         },
         {
             "topic_key": "things",
             "difficulty": 1,
             "main_word": {
-                "de_DE": "Tisch",
-                "en_US": "Table"
+                "de_DE": "Stuhl",
+                "en_US": "Chair"
             },
             "impostor_hint_word": {
-                "de_DE": "Essen",
-                "en_US": "Food"
+                "de_DE": "Sitzen",
+                "en_US": "Sitting"
             }
         },
         {
             "topic_key": "things",
             "difficulty": 1,
             "main_word": {
-                "de_DE": "Schrank",
-                "en_US": "Cupboard"
+                "de_DE": "Fernseher",
+                "en_US": "TV"
             },
             "impostor_hint_word": {
-                "de_DE": "Aufbewahren",
-                "en_US": "Store something"
+                "de_DE": "Schauen",
+                "en_US": "Watching"
             }
         },
         {
             "topic_key": "things",
             "difficulty": 1,
             "main_word": {
-                "de_DE": "Schreibtischlampe",
-                "en_US": "Desk Lamp"
+                "de_DE": "Regenschirm",
+                "en_US": "Umbrella"
             },
             "impostor_hint_word": {
-                "de_DE": "Beleuchtung",
-                "en_US": "Lighting"
+                "de_DE": "Regen",
+                "en_US": "Rain"
+            }
+        },
+        {
+            "topic_key": "food",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Pizza",
+                "en_US": "Pizza"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Käse",
+                "en_US": "Cheese"
+            }
+        },
+        {
+            "topic_key": "food",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Apfel",
+                "en_US": "Apple"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Obst",
+                "en_US": "Fruit"
+            }
+        },
+        {
+            "topic_key": "food",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Eis",
+                "en_US": "Ice Cream"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Kalt",
+                "en_US": "Cold"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Strand",
+                "en_US": "Beach"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Sand",
+                "en_US": "Sand"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Schule",
+                "en_US": "School"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Lernen",
+                "en_US": "Learning"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Park",
+                "en_US": "Park"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Bäume",
+                "en_US": "Trees"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Fußball",
+                "en_US": "Soccer"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Tor",
+                "en_US": "Goal"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Tennis",
+                "en_US": "Tennis"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Schläger",
+                "en_US": "Racket"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 1,
+            "main_word": {
+                "de_DE": "Schwimmen",
+                "en_US": "Swimming"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Wasser",
+                "en_US": "Water"
             }
         }
     ]

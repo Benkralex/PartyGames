@@ -31,360 +31,108 @@
             "topic_key": "own_opinion",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Welche Musik hörst du beim Lernen?",
-                "en_US": "What music do you listen to while studying?"
+                "de_DE": "Zeit",
+                "en_US": "Time"
             },
-            "impostor_word": {
-                "de_DE": "Welche Musik lenkt dich beim Lernen ab?",
-                "en_US": "What music distracts you while studying?"
+            "impostor_hint_word": {
+                "de_DE": "Fluss ohne Ufer",
+                "en_US": "River without banks"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Seele",
+                "en_US": "Soul"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Schatten des Selbst",
+                "en_US": "Shadow of the self"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Erkenntnis",
+                "en_US": "Insight"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Licht im Dunkel",
+                "en_US": "Light in the dark"
             }
         },
         {
             "topic_key": "own_opinion",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Was ist dein liebstes Wetter zum Spazierengehen?",
-                "en_US": "What's your favorite weather for taking walks?"
+                "de_DE": "Existenz",
+                "en_US": "Existence"
             },
-            "impostor_word": {
-                "de_DE": "Bei welchem Wetter gehst du ungern spazieren?",
-                "en_US": "What weather makes you reluctant to go for walks?"
+            "impostor_hint_word": {
+                "de_DE": "Flüstern im Nichts",
+                "en_US": "Whisper in the void"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Bewusstsein",
+                "en_US": "Consciousness"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Spiegel der Gedanken",
+                "en_US": "Mirror of thoughts"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Transformation",
+                "en_US": "Transformation"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Metamorphose des Seins",
+                "en_US": "Metamorphosis of being"
             }
         },
         {
             "topic_key": "own_opinion",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Welche Art von Büchern liest du gerne?",
-                "en_US": "What kind of books do you enjoy reading?"
+                "de_DE": "Stille",
+                "en_US": "Silence"
             },
-            "impostor_word": {
-                "de_DE": "Welche Bücher findest du langweilig?",
-                "en_US": "What books do you find boring?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welche Farbe trägst du am liebsten?",
-                "en_US": "What color do you like wearing most?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Farbe würdest du nie tragen?",
-                "en_US": "What color would you never wear?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Was ist dein liebstes Getränk am Morgen?",
-                "en_US": "What's your favorite morning drink?"
-            },
-            "impostor_word": {
-                "de_DE": "Was trinkst du morgens nie?",
-                "en_US": "What do you never drink in the morning?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welche TV-Serie schaust du gerne?",
-                "en_US": "What TV series do you enjoy watching?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Art von TV-Serien magst du nicht?",
-                "en_US": "What type of TV series don't you like?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Was ist dein liebstes Essen zum Frühstück?",
-                "en_US": "What's your favorite breakfast food?"
-            },
-            "impostor_word": {
-                "de_DE": "Was isst du nie zum Frühstück?",
-                "en_US": "What do you never eat for breakfast?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welches Verkehrsmittel benutzt du am liebsten?",
-                "en_US": "What's your preferred mode of transportation?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Verkehrsmittel meidest du?",
-                "en_US": "What mode of transportation do you avoid?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welche Aktivität entspannt dich am besten?",
-                "en_US": "What activity relaxes you the most?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Aktivität stresst dich?",
-                "en_US": "What activity stresses you out?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welches Hobby würdest du gerne ausprobieren?",
-                "en_US": "What hobby would you like to try?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Hobby interessiert dich überhaupt nicht?",
-                "en_US": "What hobby doesn't interest you at all?"
+            "impostor_hint_word": {
+                "de_DE": "Leere Resonanz",
+                "en_US": "Empty resonance"
             }
         },
         {
             "topic_key": "personal",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Wann stehst du am Wochenende auf?",
-                "en_US": "What time do you wake up on weekends?"
+                "de_DE": "Erinnerung",
+                "en_US": "Memory"
             },
-            "impostor_word": {
-                "de_DE": "Wann gehst du am Wochenende ins Bett?",
-                "en_US": "What time do you go to bed on weekends?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Wie oft checkst du dein Handy am Tag?",
-                "en_US": "How often do you check your phone per day?"
-            },
-            "impostor_word": {
-                "de_DE": "Wie lange kannst du ohne Handy sein?",
-                "en_US": "How long can you go without your phone?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Womit verbringst du die meiste Freizeit?",
-                "en_US": "What do you spend most of your free time doing?"
-            },
-            "impostor_word": {
-                "de_DE": "Wofür hättest du gerne mehr Zeit?",
-                "en_US": "What would you like to have more time for?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welchen Teil deines Zimmers magst du am meisten?",
-                "en_US": "What part of your room do you like most?"
-            },
-            "impostor_word": {
-                "de_DE": "Was würdest du in deinem Zimmer ändern?",
-                "en_US": "What would you change about your room?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welches Kleidungsstück trägst du am häufigsten?",
-                "en_US": "What piece of clothing do you wear most often?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Kleidungsstück hängt nur im Schrank?",
-                "en_US": "What piece of clothing just hangs in your closet?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Was machst du als Erstes nach der Schule?",
-                "en_US": "What's the first thing you do after school?"
-            },
-            "impostor_word": {
-                "de_DE": "Was schiebst du nach der Schule immer auf?",
-                "en_US": "What do you always put off after school?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welcher Ort in deiner Stadt gefällt dir am besten?",
-                "en_US": "What place in your city do you like most?"
-            },
-            "impostor_word": {
-                "de_DE": "Welchen Ort in deiner Stadt meidest du?",
-                "en_US": "What place in your city do you avoid?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Wie lange brauchst du morgens fürs Fertigmachen?",
-                "en_US": "How long does it take you to get ready in the morning?"
-            },
-            "impostor_word": {
-                "de_DE": "Wie lange könntest du maximal im Bett liegen bleiben?",
-                "en_US": "How long could you stay in bed at most?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Was ist dein liebster Snack beim Lernen?",
-                "en_US": "What's your favorite snack while studying?"
-            },
-            "impostor_word": {
-                "de_DE": "Was lenkst du beim Lernen ab?",
-                "en_US": "What distracts you while studying?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welche App verwendest du täglich?",
-                "en_US": "What app do you use daily?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche App hast du schon lange nicht geöffnet?",
-                "en_US": "What app haven't you opened in a long time?"
+            "impostor_hint_word": {
+                "de_DE": "Spur im Sand",
+                "en_US": "Trail in the sand"
             }
         },
         {
             "topic_key": "skills",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "In welchem Schulfach bist du am stärksten?",
-                "en_US": "What school subject are you strongest in?"
+                "de_DE": "Balance",
+                "en_US": "Balance"
             },
-            "impostor_word": {
-                "de_DE": "Welches Schulfach fällt dir am schwersten?",
-                "en_US": "What school subject do you find most difficult?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welche Sportart kannst du gut?",
-                "en_US": "What sport are you good at?"
-            },
-            "impostor_word": {
-                "de_DE": "Bei welcher Sportart bist du schlecht?",
-                "en_US": "What sport are you bad at?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Was kochst du am besten?",
-                "en_US": "What do you cook best?"
-            },
-            "impostor_word": {
-                "de_DE": "Was gelingt dir in der Küche nie?",
-                "en_US": "What never works out for you in the kitchen?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welches Instrument spielst du gerne?",
-                "en_US": "What instrument do you enjoy playing?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Instrument würdest du nie lernen wollen?",
-                "en_US": "What instrument would you never want to learn?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Wie merkst du dir Dinge am besten?",
-                "en_US": "How do you remember things best?"
-            },
-            "impostor_word": {
-                "de_DE": "Was vergisst du immer wieder?",
-                "en_US": "What do you keep forgetting?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Bei welcher Tätigkeit verlierst du das Zeitgefühl?",
-                "en_US": "What activity makes you lose track of time?"
-            },
-            "impostor_word": {
-                "de_DE": "Was findest du so langweilig, dass die Zeit nicht vergeht?",
-                "en_US": "What do you find so boring that time drags on?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Was erklärst du anderen gerne?",
-                "en_US": "What do you enjoy explaining to others?"
-            },
-            "impostor_word": {
-                "de_DE": "Was verstehst du selbst nicht gut genug zum Erklären?",
-                "en_US": "What don't you understand well enough to explain?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Womit hilfst du Freunden gerne?",
-                "en_US": "What do you like helping friends with?"
-            },
-            "impostor_word": {
-                "de_DE": "Wobei können dir andere besser helfen als du ihnen?",
-                "en_US": "What can others help you with better than you can help them?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Welche Fähigkeit hast du dir selbst beigebracht?",
-                "en_US": "What skill did you teach yourself?"
-            },
-            "impostor_word": {
-                "de_DE": "Was würdest du gerne können, aber es ist zu schwer?",
-                "en_US": "What would you like to be able to do, but it's too difficult?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 10,
-            "main_word": {
-                "de_DE": "Wie löst du Probleme am liebsten?",
-                "en_US": "How do you prefer to solve problems?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Art von Problemen überfordert dich?",
-                "en_US": "What kind of problems overwhelm you?"
+            "impostor_hint_word": {
+                "de_DE": "Tanz auf dem Drahtseil",
+                "en_US": "Dance on the tightrope"
             }
         }
     ]

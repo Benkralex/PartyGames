@@ -31,366 +31,108 @@
             "topic_key": "own_opinion",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Welches Land würdest du als Erstes besuchen wollen?",
-                "en_US": "Which country would you visit first?"
+                "de_DE": "Einsamkeit",
+                "en_US": "Solitude"
             },
-            "impostor_word": {
-                "de_DE": "Welches Land würdest du als Letztes besuchen wollen?",
-                "en_US": "Which country would you visit last?"
+            "impostor_hint_word": {
+                "de_DE": "Echo ohne Antwort",
+                "en_US": "Echo without answer"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Melancholie",
+                "en_US": "Melancholy"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Blauer Schleier",
+                "en_US": "Blue veil"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Meditation",
+                "en_US": "Meditation"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Stille im Sturm",
+                "en_US": "Silence in the storm"
             }
         },
         {
             "topic_key": "own_opinion",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Welches Getränk passt am besten zu Pizza?",
-                "en_US": "Which drink goes best with pizza?"
+                "de_DE": "Wahrheit",
+                "en_US": "Truth"
             },
-            "impostor_word": {
-                "de_DE": "Welches Getränk passt am schlechtesten zu Pizza?",
-                "en_US": "Which drink goes worst with pizza?"
+            "impostor_hint_word": {
+                "de_DE": "Licht, das blendet",
+                "en_US": "Light that blinds"
+            }
+        },
+        {
+            "topic_key": "personal",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Vertrauen",
+                "en_US": "Trust"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Brücke aus Händen",
+                "en_US": "Bridge of hands"
+            }
+        },
+        {
+            "topic_key": "skills",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Inspiration",
+                "en_US": "Inspiration"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Funkenflug im Kopf",
+                "en_US": "Spark flight in the mind"
             }
         },
         {
             "topic_key": "own_opinion",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Welche Jahreszeit hat das beste Wetter?",
-                "en_US": "Which season has the best weather?"
+                "de_DE": "Phantasie",
+                "en_US": "Imagination"
             },
-            "impostor_word": {
-                "de_DE": "Welche Jahreszeit hat das schlimmste Wetter?",
-                "en_US": "Which season has the worst weather?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welcher Wochentag fühlt sich am längsten an?",
-                "en_US": "Which day of the week feels longest?"
-            },
-            "impostor_word": {
-                "de_DE": "Welcher Wochentag vergeht am schnellsten?",
-                "en_US": "Which day of the week goes by fastest?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Magst du lieber süßes oder salziges Popcorn?",
-                "en_US": "Do you prefer sweet or salty popcorn?"
-            },
-            "impostor_word": {
-                "de_DE": "Magst du süßes Popcorn weniger als salziges?",
-                "en_US": "Do you like sweet popcorn less than salty?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welches Brettspiel ist am spannendsten?",
-                "en_US": "Which board game is the most exciting?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Brettspiel ist am langweiligsten?",
-                "en_US": "Which board game is the most boring?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welcher Film hat dich zuletzt beeindruckt?",
-                "en_US": "Which movie impressed you most recently?"
-            },
-            "impostor_word": {
-                "de_DE": "Welcher Film hat dich zuletzt enttäuscht?",
-                "en_US": "Which movie disappointed you most recently?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welcher Wochentag ist der beste für einen Ausflug?",
-                "en_US": "Which day of the week is best for a trip?"
-            },
-            "impostor_word": {
-                "de_DE": "Welcher Wochentag ist der schlechteste für einen Ausflug?",
-                "en_US": "Which day of the week is worst for a trip?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welches Gemüse schmeckt dir am besten?",
-                "en_US": "Which vegetable tastes best to you?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Gemüse schmeckt dir am schlechtesten?",
-                "en_US": "Which vegetable tastes worst to you?"
-            }
-        },
-        {
-            "topic_key": "own_opinion",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Magst du lieber Sommer oder Winter?",
-                "en_US": "Do you prefer summer or winter?"
-            },
-            "impostor_word": {
-                "de_DE": "Magst du Winter lieber als Sommer?",
-                "en_US": "Do you prefer winter over summer?"
-            }
-        },
-
-
-
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welches Kleidungsstück trägst du am liebsten?",
-                "en_US": "Which piece of clothing do you wear most gladly?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Kleidungsstück trägst du am ungernsten?",
-                "en_US": "Which piece of clothing do you dislike wearing most?"
+            "impostor_hint_word": {
+                "de_DE": "Farben im Nebel",
+                "en_US": "Colors in the mist"
             }
         },
         {
             "topic_key": "personal",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Welches Essen kochst du am liebsten?",
-                "en_US": "Which meal do you like cooking the most?"
+                "de_DE": "Vergebung",
+                "en_US": "Forgiveness"
             },
-            "impostor_word": {
-                "de_DE": "Welches Essen vermeidest du zu kochen?",
-                "en_US": "Which meal do you avoid cooking?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welches Hobby hast du zuletzt ausprobiert?",
-                "en_US": "Which hobby did you try most recently?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Hobby hast du zuletzt aufgegeben?",
-                "en_US": "Which hobby did you give up most recently?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Mit wem hast du zuletzt lange telefoniert?",
-                "en_US": "Who did you last have a long phone call with?"
-            },
-            "impostor_word": {
-                "de_DE": "Wem weichst du bei Telefonaten eher aus?",
-                "en_US": "Who do you tend to avoid calling?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Magst du es, früh aufzustehen?",
-                "en_US": "Do you like getting up early?"
-            },
-            "impostor_word": {
-                "de_DE": "Findest du es anstrengend, früh aufzustehen?",
-                "en_US": "Do you find it exhausting to get up early?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welche App benutzt du am häufigsten?",
-                "en_US": "Which app do you use most often?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche App versuchst du zu vermeiden?",
-                "en_US": "Which app do you try to avoid?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welche Art Musik hörst du morgens am liebsten?",
-                "en_US": "What kind of music do you like listening to in the morning?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Art Musik meidest du morgens?",
-                "en_US": "What kind of music do you avoid in the morning?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Mit wem würdest du am liebsten einen Tag verbringen?",
-                "en_US": "Who would you most like to spend a day with?"
-            },
-            "impostor_word": {
-                "de_DE": "Mit wem würdest du ungern einen Tag verbringen?",
-                "en_US": "Who would you least like to spend a day with?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welches Tier magst du am meisten?",
-                "en_US": "Which animal do you like the most?"
-            },
-            "impostor_word": {
-                "de_DE": "Welches Tier magst du am wenigsten?",
-                "en_US": "Which animal do you like the least?"
-            }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Magst du lieber Tee oder Kaffee?",
-                "en_US": "Do you prefer tea or coffee?"
-            },
-            "impostor_word": {
-                "de_DE": "Magst du Kaffee lieber als Tee?",
-                "en_US": "Do you prefer coffee over tea?"
-            }
-        },
-
-
-
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Bei welcher Sportart bist du am besten?",
-                "en_US": "In which sport are you best?"
-            },
-            "impostor_word": {
-                "de_DE": "Bei welcher Sportart bist du am schlechtesten?",
-                "en_US": "In which sport are you worst?"
+            "impostor_hint_word": {
+                "de_DE": "Schwereloser Schatten",
+                "en_US": "Weightless shadow"
             }
         },
         {
             "topic_key": "skills",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Kannst du gut Kopfrechnen?",
-                "en_US": "Are you good at mental math?"
+                "de_DE": "Konzentration",
+                "en_US": "Concentration"
             },
-            "impostor_word": {
-                "de_DE": "Fällt dir Kopfrechnen schwer?",
-                "en_US": "Do you find mental math hard?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welche Sprache kannst du am besten sprechen?",
-                "en_US": "Which language can you speak best?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Sprache kannst du am schlechtesten sprechen?",
-                "en_US": "Which language can you speak worst?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Wie schnell kannst du 1 km laufen? (Minuten)",
-                "en_US": "How fast can you run 1 km? (Minutes)"
-            },
-            "impostor_word": {
-                "de_DE": "Wie langsam bist du beim 1 km Laufen? (Minuten)",
-                "en_US": "How slow are you at running 1 km? (Minutes)"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Kannst du gut zeichnen?",
-                "en_US": "Are you good at drawing?"
-            },
-            "impostor_word": {
-                "de_DE": "Kannst du schlecht zeichnen?",
-                "en_US": "Are you bad at drawing?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Bei welchem Videospiel bist du am besten?",
-                "en_US": "Which video game are you best at?"
-            },
-            "impostor_word": {
-                "de_DE": "Bei welchem Videospiel bist du am schlechtesten?",
-                "en_US": "Which video game are you worst at?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Kannst du gut improvisieren?",
-                "en_US": "Are you good at improvising?"
-            },
-            "impostor_word": {
-                "de_DE": "Fällt dir Improvisieren schwer?",
-                "en_US": "Do you find improvising hard?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Welche Schulnote hast du zuletzt in Mathe bekommen?",
-                "en_US": "What was your last math grade?"
-            },
-            "impostor_word": {
-                "de_DE": "Welche Schulnote hast du jemals als schlechteste in Mathe bekommen?",
-                "en_US": "What was the worst math grade you've ever had?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Kannst du gut multitasken?",
-                "en_US": "Are you good at multitasking?"
-            },
-            "impostor_word": {
-                "de_DE": "Fällt dir Multitasking schwer?",
-                "en_US": "Do you find multitasking hard?"
-            }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 9,
-            "main_word": {
-                "de_DE": "Wie viele Liegestütze schaffst du am Stück?",
-                "en_US": "How many push-ups can you do in a row?"
-            },
-            "impostor_word": {
-                "de_DE": "Wie wenige Liegestütze schaffst du mindestens am Stück?",
-                "en_US": "What is the minimum number of push-ups you can do in a row?"
+            "impostor_hint_word": {
+                "de_DE": "Fokus im Nebel",
+                "en_US": "Focus in the fog"
             }
         }
     ]

@@ -5,7 +5,7 @@
         "en_US": "Impostor - Default Question Set 4"
     },
     "description": {
-        "de_DE": "Ein weiteres standard Fragenset für das Spiel 'Impostor' (Schwierigkeit: 4)",
+        "de_DE": "Ein weiteres Standard-Fragenset für das Spiel 'Impostor' (Schwierigkeit: 4)",
         "en_US": "Another default question set for the game 'Impostor' (Difficulty: 4)"
     },
     "author": {
@@ -13,205 +13,207 @@
         "en_US": "Benkralex"
     },
     "topics": {
-        "own_opinion": {
-            "de_DE": "Eigene Meinung",
-            "en_US": "Own Opinion"
+        "animals": {
+            "de_DE": "Tiere",
+            "en_US": "Animals"
         },
-        "personal": {
-            "de_DE": "Persönliches",
-            "en_US": "Personal"
+        "things": {
+            "de_DE": "Dinge",
+            "en_US": "Things"
         },
-        "skills": {
-            "de_DE": "Eigenes Können",
-            "en_US": "Own Skills"
+        "food": {
+            "de_DE": "Essen",
+            "en_US": "Food"
+        },
+        "places": {
+            "de_DE": "Orte",
+            "en_US": "Places"
+        },
+        "sports": {
+            "de_DE": "Sportarten",
+            "en_US": "Sports"
         }
     },
     "word_pairs": [
         {
-            "topic_key": "own_opinion",
+            "topic_key": "animals",
             "difficulty": 4,
-            "main_word": { "de_DE": "Was ist dein Traumjob?", "en_US": "What's your dream job?" },
-            "impostor_word": { "de_DE": "Welcher Job wäre dein absoluter Albtraum?", "en_US": "What job would be your worst nightmare?" }
+            "main_word": {
+                "de_DE": "Chamäleon",
+                "en_US": "Chameleon"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Unsichtbar werden",
+                "en_US": "Become invisible"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "animals",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welchen Sport spielst oder schaust du am liebsten?", "en_US": "What's your favorite sport to play or watch?" },
-            "impostor_word": { "de_DE": "Welchen Sport findest du langweilig?", "en_US": "What sport do you find boring?" }
+            "main_word": {
+                "de_DE": "Wal",
+                "en_US": "Whale"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Sanfter Riese",
+                "en_US": "Gentle giant"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "animals",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welches Haustier hättest du gern?", "en_US": "What pet would you love to have?" },
-            "impostor_word": { "de_DE": "Welches Haustier würdest du niemals wollen?", "en_US": "What pet would you never want?" }
+            "main_word": {
+                "de_DE": "Krabbe",
+                "en_US": "Crab"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Seitwärts",
+                "en_US": "Sideways"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "things",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welche Jahreszeit magst du am meisten?", "en_US": "What's your favorite season?" },
-            "impostor_word": { "de_DE": "Welche Jahreszeit magst du am wenigsten?", "en_US": "What's your least favorite season?" }
+            "main_word": {
+                "de_DE": "Spiegel",
+                "en_US": "Mirror"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Doppelgänger",
+                "en_US": "Double"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "things",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welches Essen isst du am liebsten?", "en_US": "What's your favorite food?" },
-            "impostor_word": { "de_DE": "Welches Essen magst du gar nicht?", "en_US": "What's a food you dislike?" }
+            "main_word": {
+                "de_DE": "Thermometer",
+                "en_US": "Thermometer"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Fieberdetektiv",
+                "en_US": "Fever detective"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "things",
             "difficulty": 4,
-            "main_word": { "de_DE": "Magst du lieber Filme oder Serien?", "en_US": "Do you prefer movies or series?" },
-            "impostor_word": { "de_DE": "Findest du Filme und Serien langweilig?", "en_US": "Do you find movies and series boring?" }
+            "main_word": {
+                "de_DE": "Schere",
+                "en_US": "Scissors"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Zwillingsklingen",
+                "en_US": "Twin blades"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "food",
             "difficulty": 4,
-            "main_word": { "de_DE": "Magst du scharfes Essen?", "en_US": "Do you like spicy food?" },
-            "impostor_word": { "de_DE": "Magst du mildes Essen nicht?", "en_US": "Do you dislike mild food?" }
+            "main_word": {
+                "de_DE": "Avocado",
+                "en_US": "Avocado"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Grünes Gold",
+                "en_US": "Green gold"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "food",
             "difficulty": 4,
-            "main_word": { "de_DE": "Reist du lieber ins Ausland?", "en_US": "Do you prefer traveling abroad?" },
-            "impostor_word": { "de_DE": "Bleibst du lieber im eigenen Land?", "en_US": "Do you prefer staying in your own country?" }
+            "main_word": {
+                "de_DE": "Nudeln",
+                "en_US": "Pasta"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Faden zum Essen",
+                "en_US": "Edible thread"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "food",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welche Musikrichtung hörst du am liebsten?", "en_US": "What's your favorite music genre?" },
-            "impostor_word": { "de_DE": "Welche Musikrichtung magst du am wenigsten?", "en_US": "What's your least favorite music genre?" }
+            "main_word": {
+                "de_DE": "Erdbeere",
+                "en_US": "Strawberry"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Sommerjuwel",
+                "en_US": "Summer jewel"
+            }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "places",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welches Getränk trinkst du am liebsten?", "en_US": "What's your favorite drink?" },
-            "impostor_word": { "de_DE": "Welches Getränk würdest du nie trinken?", "en_US": "What's a drink you would never drink?" }
-        },
-
-
-
-        {
-            "topic_key": "personal",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Welchen Ort besuchst du am häufigsten?", "en_US": "What place do you visit the most?" },
-            "impostor_word": { "de_DE": "Welchen Ort meidest du?", "en_US": "What place do you avoid?" }
+            "main_word": {
+                "de_DE": "Flughafen",
+                "en_US": "Airport"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Tor zur Welt",
+                "en_US": "Gateway to the world"
+            }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "places",
             "difficulty": 4,
-            "main_word": { "de_DE": "Was war das beste Geschenk, das du je bekommen hast?", "en_US": "What's the best gift you've ever received?" },
-            "impostor_word": { "de_DE": "Welches Geschenk mochtest du nicht?", "en_US": "What's a gift you didn't like?" }
+            "main_word": {
+                "de_DE": "Wüste",
+                "en_US": "Desert"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Sandmeer",
+                "en_US": "Sea of sand"
+            }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "places",
             "difficulty": 4,
-            "main_word": { "de_DE": "Was trägst du am liebsten?", "en_US": "What's your favorite thing to wear?" },
-            "impostor_word": { "de_DE": "Welche Kleidung würdest du nie tragen?", "en_US": "What clothing would you never wear?" }
+            "main_word": {
+                "de_DE": "Kirche",
+                "en_US": "Church"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Ort der Stille",
+                "en_US": "Place of silence"
+            }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "sports",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welches Spiel spielst du am liebsten?", "en_US": "What's your favorite game to play?" },
-            "impostor_word": { "de_DE": "Bei welchem Spiel hast du nie Spaß?", "en_US": "What game do you never enjoy?" }
+            "main_word": {
+                "de_DE": "Skifahren",
+                "en_US": "Skiing"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Schneeabenteuer",
+                "en_US": "Snow adventure"
+            }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "sports",
             "difficulty": 4,
-            "main_word": { "de_DE": "Welches Geschenk hast du am liebsten verschenkt?", "en_US": "What's the best gift you've ever given?" },
-            "impostor_word": { "de_DE": "Welches Geschenk bereust du verschenkt zu haben?", "en_US": "What's a gift you regret giving?" }
+            "main_word": {
+                "de_DE": "Rudern",
+                "en_US": "Rowing"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Wasserschub",
+                "en_US": "Water push"
+            }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "sports",
             "difficulty": 4,
-            "main_word": { "de_DE": "Hast du viele Freunde?", "en_US": "Do you have many friends?" },
-            "impostor_word": { "de_DE": "Hast du kaum Freunde?", "en_US": "Do you have few friends?" }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Hast du Geschwister?", "en_US": "Do you have siblings?" },
-            "impostor_word": { "de_DE": "Bist du Einzelkind?", "en_US": "Are you an only child?" }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Warst du schon mal im Ausland?", "en_US": "Have you been abroad before?" },
-            "impostor_word": { "de_DE": "Warst du noch nie im Ausland?", "en_US": "Have you never been abroad?" }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Hast du schon mal ein Haustier gehabt?", "en_US": "Have you ever had a pet?" },
-            "impostor_word": { "de_DE": "Hattest du noch nie ein Haustier?", "en_US": "Have you never had a pet?" }
-        },
-        {
-            "topic_key": "personal",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Warst du schon einmal auf einem Konzert?", "en_US": "Have you ever been to a concert?" },
-            "impostor_word": { "de_DE": "Warst du noch nie auf einem Konzert?", "en_US": "Have you never been to a concert?" }
-        },
-
-
-
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du gut kochen?", "en_US": "Can you cook well?" },
-            "impostor_word": { "de_DE": "Kannst du gar nicht kochen?", "en_US": "Can you not cook at all?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Bist du gut im Schwimmen?", "en_US": "Are you good at swimming?" },
-            "impostor_word": { "de_DE": "Kannst du nicht schwimmen?", "en_US": "Can you not swim?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du gut singen?", "en_US": "Can you sing well?" },
-            "impostor_word": { "de_DE": "Kannst du überhaupt nicht singen?", "en_US": "Can you not sing at all?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du Fahrrad fahren?", "en_US": "Can you ride a bike?" },
-            "impostor_word": { "de_DE": "Kannst du kein Fahrrad fahren?", "en_US": "Can you not ride a bike?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Bist du gut im Zeichnen?", "en_US": "Are you good at drawing?" },
-            "impostor_word": { "de_DE": "Kannst du gar nicht zeichnen?", "en_US": "Can you not draw at all?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du ein Musikinstrument spielen?", "en_US": "Can you play a musical instrument?" },
-            "impostor_word": { "de_DE": "Kannst du kein Musikinstrument spielen?", "en_US": "Can you not play a musical instrument?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du ein Auto fahren?", "en_US": "Can you drive a car?" },
-            "impostor_word": { "de_DE": "Kannst du kein Auto fahren?", "en_US": "Can you not drive a car?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Bist du gut im Klettern?", "en_US": "Are you good at climbing?" },
-            "impostor_word": { "de_DE": "Bist du schlecht im Klettern?", "en_US": "Are you bad at climbing?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du schnell rennen?", "en_US": "Can you run fast?" },
-            "impostor_word": { "de_DE": "Bist du langsam beim Rennen?", "en_US": "Are you slow at running?" }
-        },
-        {
-            "topic_key": "skills",
-            "difficulty": 4,
-            "main_word": { "de_DE": "Kannst du gut backen?", "en_US": "Can you bake well?" },
-            "impostor_word": { "de_DE": "Kannst du überhaupt nicht backen?", "en_US": "Can you not bake at all?" }
+            "main_word": {
+                "de_DE": "Bogenschießen",
+                "en_US": "Archery"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Ziel mit Spannung",
+                "en_US": "Target with tension"
+            }
         }
     ]
 }
