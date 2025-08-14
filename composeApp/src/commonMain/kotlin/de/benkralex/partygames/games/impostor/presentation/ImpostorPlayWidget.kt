@@ -36,9 +36,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
-import de.benkralex.partygames.app.getGameByKey
 import de.benkralex.partygames.games.impostor.domain.Impostor
-import io.github.aakira.napier.Napier
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res

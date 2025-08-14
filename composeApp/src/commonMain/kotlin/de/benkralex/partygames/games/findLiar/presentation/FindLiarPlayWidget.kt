@@ -34,10 +34,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
-import de.benkralex.partygames.app.getGameByKey
-import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
-import io.github.aakira.napier.Napier
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_res_show_liars

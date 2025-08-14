@@ -1,9 +1,6 @@
 package de.benkralex.partygames.games.impostor.domain
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
@@ -12,7 +9,6 @@ import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import de.benkralex.partygames.games.impostor.presentation.ImpostorPlayWidget
 import de.benkralex.partygames.games.impostor.presentation.ImpostorSetupWidget
-import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.impostor_author
 import partygames.composeapp.generated.resources.impostor_description

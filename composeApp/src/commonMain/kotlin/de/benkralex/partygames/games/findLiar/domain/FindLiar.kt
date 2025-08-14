@@ -1,10 +1,7 @@
 package de.benkralex.partygames.games.findLiar.domain
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
@@ -13,7 +10,6 @@ import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarPlayWidget
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupWidget
-import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_author
 import partygames.composeapp.generated.resources.find_liar_description
