@@ -22,14 +22,16 @@ class StringListState(
             return
         }
         val nextKey = (stringSingleStates.keys.maxOrNull() ?: 0) + 1
+        var nextValue = ""
+        var i = 1
+        do {
+            nextValue = defaultValue(i)
+            i++
+        } while (nextValue in stringSingleStates.map { it.value.value })
         stringSingleStates = stringSingleStates.plus(
             nextKey to StringSingleState(
                 label = textFieldLabel,
-                defaultValue = defaultValue(
-                    (1 until stringSingleStates.size + 1).first { i ->
-                        defaultValue(i) !in stringSingleStates.map { it.value.value }
-                    }
-                ),
+                defaultValue = nextValue,
             )
         )
     }
