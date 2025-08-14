@@ -9,8 +9,8 @@
         "en_US": "Another default question set for the game 'Impostor' (Difficulty: 7)"
     },
     "author": {
-        "de_DE": "Benkralex",
-        "en_US": "Benkralex"
+        "de_DE": "ChatGPT",
+        "en_US": "ChatGPT"
     },
     "topics": {
         "animals": {
@@ -39,180 +39,180 @@
             "topic_key": "animals",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Eule",
-                "en_US": "Owl"
+                "de_DE": "Chamäleon",
+                "en_US": "Chameleon"
             },
             "impostor_hint_word": {
-                "de_DE": "Nächtlicher Seher",
-                "en_US": "Nocturnal seer"
+                "de_DE": "Anpassen",
+                "en_US": "Adapt"
             }
         },
         {
             "topic_key": "animals",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Känguru",
-                "en_US": "Kangaroo"
+                "de_DE": "Seepferdchen",
+                "en_US": "Seahorse"
             },
             "impostor_hint_word": {
-                "de_DE": "Beutelsprung",
-                "en_US": "Pouch leap"
+                "de_DE": "Seltsam",
+                "en_US": "Odd"
             }
         },
         {
             "topic_key": "animals",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Kolibri",
-                "en_US": "Hummingbird"
+                "de_DE": "Fledermaus",
+                "en_US": "Bat"
             },
             "impostor_hint_word": {
-                "de_DE": "Flügelzauberer",
-                "en_US": "Wing magician"
+                "de_DE": "Unten",
+                "en_US": "Below"
             }
         },
         {
             "topic_key": "things",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Teleskop",
-                "en_US": "Telescope"
+                "de_DE": "Schlüssel",
+                "en_US": "Key"
             },
             "impostor_hint_word": {
-                "de_DE": "Fenster zum Kosmos",
-                "en_US": "Window to the cosmos"
+                "de_DE": "Wichtig",
+                "en_US": "Important"
             }
         },
         {
             "topic_key": "things",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Zauberwürfel",
-                "en_US": "Rubik's Cube"
+                "de_DE": "Fernglas",
+                "en_US": "Binoculars"
             },
             "impostor_hint_word": {
-                "de_DE": "Bunter Gedankenknoten",
-                "en_US": "Colorful thought knot"
+                "de_DE": "Entfernt",
+                "en_US": "Distant"
             }
         },
         {
             "topic_key": "things",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Taschenlampe",
-                "en_US": "Flashlight"
+                "de_DE": "Sanduhr",
+                "en_US": "Hourglass"
             },
             "impostor_hint_word": {
-                "de_DE": "Führer im Dunkeln",
-                "en_US": "Guide in the dark"
+                "de_DE": "Begrenzt",
+                "en_US": "Limited"
             }
         },
         {
             "topic_key": "food",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Trüffel",
-                "en_US": "Truffle"
+                "de_DE": "Croissant",
+                "en_US": "Croissant"
             },
             "impostor_hint_word": {
-                "de_DE": "Geheimer Schatz",
-                "en_US": "Secret treasure"
+                "de_DE": "Morgen",
+                "en_US": "Morning"
             }
         },
         {
             "topic_key": "food",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Lavendelhonig",
-                "en_US": "Lavender honey"
+                "de_DE": "Ramen",
+                "en_US": "Ramen"
             },
             "impostor_hint_word": {
-                "de_DE": "Blütengeheimnis",
-                "en_US": "Blossom secret"
+                "de_DE": "Schüssel",
+                "en_US": "Bowl"
             }
         },
         {
             "topic_key": "food",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Feige",
-                "en_US": "Fig"
+                "de_DE": "Gulasch",
+                "en_US": "Goulash"
             },
             "impostor_hint_word": {
-                "de_DE": "Süßes Rätsel",
-                "en_US": "Sweet riddle"
+                "de_DE": "Eintopf",
+                "en_US": "Stew"
             }
         },
         {
             "topic_key": "places",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Observatorium",
-                "en_US": "Observatory"
+                "de_DE": "Planetarium",
+                "en_US": "Planetarium"
             },
             "impostor_hint_word": {
-                "de_DE": "Augen zum Himmel",
-                "en_US": "Eyes to the sky"
+                "de_DE": "Dunkel",
+                "en_US": "Dark"
             }
         },
         {
             "topic_key": "places",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Bibliothek",
-                "en_US": "Library"
+                "de_DE": "Höhle",
+                "en_US": "Cave"
             },
             "impostor_hint_word": {
-                "de_DE": "Schatzkammer der Worte",
-                "en_US": "Treasure chamber of words"
+                "de_DE": "Kalt",
+                "en_US": "Cold"
             }
         },
         {
             "topic_key": "places",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Labyrinth",
-                "en_US": "Labyrinth"
+                "de_DE": "Leuchtturm",
+                "en_US": "Lighthouse"
             },
             "impostor_hint_word": {
-                "de_DE": "Irrweg des Geistes",
-                "en_US": "Mind's maze"
+                "de_DE": "Wegweiser",
+                "en_US": "Guide"
             }
         },
         {
             "topic_key": "sports",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Parkour",
-                "en_US": "Parkour"
+                "de_DE": "Klettern",
+                "en_US": "Climbing"
             },
             "impostor_hint_word": {
-                "de_DE": "Stadtflucht",
-                "en_US": "Urban escape"
+                "de_DE": "Hoch",
+                "en_US": "High"
             }
         },
         {
             "topic_key": "sports",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Triathlon",
-                "en_US": "Triathlon"
+                "de_DE": "Eiskunstlauf",
+                "en_US": "Figure Skating"
             },
             "impostor_hint_word": {
-                "de_DE": "Dreifacher Kampf",
-                "en_US": "Triple fight"
+                "de_DE": "Elegant",
+                "en_US": "Elegant"
             }
         },
         {
             "topic_key": "sports",
             "difficulty": 7,
             "main_word": {
-                "de_DE": "Slackline",
-                "en_US": "Slackline"
+                "de_DE": "Speerwurf",
+                "en_US": "Javelin Throw"
             },
             "impostor_hint_word": {
-                "de_DE": "Balanceakt in der Luft",
-                "en_US": "Balance act in the air"
+                "de_DE": "Weit",
+                "en_US": "Far"
             }
         }
     ]

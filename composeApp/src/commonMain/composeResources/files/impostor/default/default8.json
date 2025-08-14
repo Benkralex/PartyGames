@@ -9,130 +9,210 @@
         "en_US": "Another default question set for the game 'Impostor' (Difficulty: 8)"
     },
     "author": {
-        "de_DE": "Benkralex",
-        "en_US": "Benkralex"
+        "de_DE": "ChatGPT",
+        "en_US": "ChatGPT"
     },
     "topics": {
-        "own_opinion": {
-            "de_DE": "Eigene Meinung",
-            "en_US": "Own Opinion"
+        "animals": {
+            "de_DE": "Tiere",
+            "en_US": "Animals"
         },
-        "personal": {
-            "de_DE": "Persönliches",
-            "en_US": "Personal"
+        "things": {
+            "de_DE": "Dinge",
+            "en_US": "Things"
         },
-        "skills": {
-            "de_DE": "Eigenes Können",
-            "en_US": "Own Skills"
+        "food": {
+            "de_DE": "Essen",
+            "en_US": "Food"
+        },
+        "places": {
+            "de_DE": "Orte",
+            "en_US": "Places"
+        },
+        "sports": {
+            "de_DE": "Sportarten",
+            "en_US": "Sports"
         }
     },
     "word_pairs": [
         {
-            "topic_key": "own_opinion",
+            "topic_key": "animals",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Freiheit",
-                "en_US": "Freedom"
+                "de_DE": "Axolotl",
+                "en_US": "Axolotl"
             },
             "impostor_hint_word": {
-                "de_DE": "Fliegender Funke",
-                "en_US": "Flying spark"
+                "de_DE": "Ungewöhnlich",
+                "en_US": "Unusual"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "animals",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Sehnsucht",
-                "en_US": "Longing"
+                "de_DE": "Albatros",
+                "en_US": "Albatross"
             },
             "impostor_hint_word": {
-                "de_DE": "Unerreichbare Melodie",
-                "en_US": "Unreachable melody"
+                "de_DE": "Weit",
+                "en_US": "Distant"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "animals",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Improvisation",
-                "en_US": "Improvisation"
+                "de_DE": "Nacktmull",
+                "en_US": "Naked Mole-Rat"
             },
             "impostor_hint_word": {
-                "de_DE": "Tanz ohne Plan",
-                "en_US": "Dance without plan"
+                "de_DE": "Versteckt",
+                "en_US": "Hidden"
             }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "things",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Mut",
-                "en_US": "Courage"
+                "de_DE": "Metronom",
+                "en_US": "Metronome"
             },
             "impostor_hint_word": {
-                "de_DE": "Feuer im Herzen",
-                "en_US": "Fire in the heart"
+                "de_DE": "Rhythmus",
+                "en_US": "Rhythm"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "things",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Trauer",
-                "en_US": "Grief"
+                "de_DE": "Zahnradsystem",
+                "en_US": "Gear Mechanism"
             },
             "impostor_hint_word": {
-                "de_DE": "Schattentanz",
-                "en_US": "Dance of shadows"
+                "de_DE": "Verbindung",
+                "en_US": "Connection"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "things",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Logik",
-                "en_US": "Logic"
+                "de_DE": "Barometer",
+                "en_US": "Barometer"
             },
             "impostor_hint_word": {
-                "de_DE": "Pfad der Klarheit",
-                "en_US": "Path of clarity"
+                "de_DE": "Vorhersage",
+                "en_US": "Prediction"
             }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "food",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Neugier",
-                "en_US": "Curiosity"
+                "de_DE": "Baklava",
+                "en_US": "Baklava"
             },
             "impostor_hint_word": {
-                "de_DE": "Schlüssel zum Unbekannten",
-                "en_US": "Key to the unknown"
+                "de_DE": "Süß",
+                "en_US": "Sweet"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "food",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Gelassenheit",
-                "en_US": "Calmness"
+                "de_DE": "Gazpacho",
+                "en_US": "Gazpacho"
             },
             "impostor_hint_word": {
-                "de_DE": "Stiller Fluss",
-                "en_US": "Silent river"
+                "de_DE": "Kalt",
+                "en_US": "Cold"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "food",
             "difficulty": 8,
             "main_word": {
-                "de_DE": "Kreativität",
-                "en_US": "Creativity"
+                "de_DE": "Kimchi",
+                "en_US": "Kimchi"
             },
             "impostor_hint_word": {
-                "de_DE": "Funken der Erneuerung",
-                "en_US": "Spark of renewal"
+                "de_DE": "Gärung",
+                "en_US": "Fermentation"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Katakomben",
+                "en_US": "Catacombs"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Unterirdisch",
+                "en_US": "Underground"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Oase",
+                "en_US": "Oasis"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Selten",
+                "en_US": "Rare"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Himalaya",
+                "en_US": "Himalayas"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Extrem",
+                "en_US": "Extreme"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Kanu-Slalom",
+                "en_US": "Canoe Slalom"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Kurven",
+                "en_US": "Turns"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Skeleton",
+                "en_US": "Skeleton"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Eis",
+                "en_US": "Ice"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 8,
+            "main_word": {
+                "de_DE": "Sepak Takraw",
+                "en_US": "Sepak Takraw"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Akrobatik",
+                "en_US": "Acrobatics"
             }
         }
     ]

@@ -9,130 +9,210 @@
         "en_US": "Another default question set for the game 'Impostor' (Difficulty: 9)"
     },
     "author": {
-        "de_DE": "Benkralex",
-        "en_US": "Benkralex"
+        "de_DE": "ChatGPT",
+        "en_US": "ChatGPT"
     },
     "topics": {
-        "own_opinion": {
-            "de_DE": "Eigene Meinung",
-            "en_US": "Own Opinion"
+        "animals": {
+            "de_DE": "Tiere",
+            "en_US": "Animals"
         },
-        "personal": {
-            "de_DE": "Persönliches",
-            "en_US": "Personal"
+        "things": {
+            "de_DE": "Dinge",
+            "en_US": "Things"
         },
-        "skills": {
-            "de_DE": "Eigenes Können",
-            "en_US": "Own Skills"
+        "food": {
+            "de_DE": "Essen",
+            "en_US": "Food"
+        },
+        "places": {
+            "de_DE": "Orte",
+            "en_US": "Places"
+        },
+        "sports": {
+            "de_DE": "Sportarten",
+            "en_US": "Sports"
         }
     },
     "word_pairs": [
         {
-            "topic_key": "own_opinion",
+            "topic_key": "animals",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Einsamkeit",
-                "en_US": "Solitude"
+                "de_DE": "Axolotl",
+                "en_US": "Axolotl"
             },
             "impostor_hint_word": {
-                "de_DE": "Echo ohne Antwort",
-                "en_US": "Echo without answer"
+                "de_DE": "Wiedergeburt",
+                "en_US": "Rebirth"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "animals",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Melancholie",
-                "en_US": "Melancholy"
+                "de_DE": "Narwal",
+                "en_US": "Narwhal"
             },
             "impostor_hint_word": {
-                "de_DE": "Blauer Schleier",
-                "en_US": "Blue veil"
+                "de_DE": "Legende",
+                "en_US": "Legend"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "animals",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Meditation",
-                "en_US": "Meditation"
+                "de_DE": "Kolibri",
+                "en_US": "Hummingbird"
             },
             "impostor_hint_word": {
-                "de_DE": "Stille im Sturm",
-                "en_US": "Silence in the storm"
+                "de_DE": "Sekunden",
+                "en_US": "Seconds"
             }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "things",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Wahrheit",
-                "en_US": "Truth"
+                "de_DE": "Astrolabium",
+                "en_US": "Astrolabe"
             },
             "impostor_hint_word": {
-                "de_DE": "Licht, das blendet",
-                "en_US": "Light that blinds"
+                "de_DE": "Sterne",
+                "en_US": "Stars"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "things",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Vertrauen",
-                "en_US": "Trust"
+                "de_DE": "Kaleidoskop",
+                "en_US": "Kaleidoscope"
             },
             "impostor_hint_word": {
-                "de_DE": "Brücke aus Händen",
-                "en_US": "Bridge of hands"
+                "de_DE": "Muster",
+                "en_US": "Pattern"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "things",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Inspiration",
-                "en_US": "Inspiration"
+                "de_DE": "Phonograph",
+                "en_US": "Phonograph"
             },
             "impostor_hint_word": {
-                "de_DE": "Funkenflug im Kopf",
-                "en_US": "Spark flight in the mind"
+                "de_DE": "Vergangenheit",
+                "en_US": "Past"
             }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "food",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Phantasie",
-                "en_US": "Imagination"
+                "de_DE": "Fugu",
+                "en_US": "Fugu"
             },
             "impostor_hint_word": {
-                "de_DE": "Farben im Nebel",
-                "en_US": "Colors in the mist"
+                "de_DE": "Gefahr",
+                "en_US": "Danger"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "food",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Vergebung",
-                "en_US": "Forgiveness"
+                "de_DE": "Trüffel",
+                "en_US": "Truffle"
             },
             "impostor_hint_word": {
-                "de_DE": "Schwereloser Schatten",
-                "en_US": "Weightless shadow"
+                "de_DE": "Versteckt",
+                "en_US": "Hidden"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "food",
             "difficulty": 9,
             "main_word": {
-                "de_DE": "Konzentration",
-                "en_US": "Concentration"
+                "de_DE": "Borschtsch",
+                "en_US": "Borscht"
             },
             "impostor_hint_word": {
-                "de_DE": "Fokus im Nebel",
-                "en_US": "Focus in the fog"
+                "de_DE": "Rot",
+                "en_US": "Red"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Antarktis",
+                "en_US": "Antarctica"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Leere",
+                "en_US": "Void"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Machu Picchu",
+                "en_US": "Machu Picchu"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Verloren",
+                "en_US": "Lost"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Versailles",
+                "en_US": "Versailles"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Prunk",
+                "en_US": "Splendor"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Parkour",
+                "en_US": "Parkour"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Freiheit",
+                "en_US": "Freedom"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Boccia",
+                "en_US": "Bocce"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Präzision",
+                "en_US": "Precision"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 9,
+            "main_word": {
+                "de_DE": "Kitesurfen",
+                "en_US": "Kitesurfing"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Zug",
+                "en_US": "Pull"
             }
         }
     ]

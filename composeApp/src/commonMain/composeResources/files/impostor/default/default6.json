@@ -9,210 +9,210 @@
         "en_US": "Another default question set for the game 'Impostor' (Difficulty: 6)"
     },
     "author": {
-        "de_DE": "Benkralex",
-        "en_US": "Benkralex"
+        "de_DE": "ChatGPT",
+        "en_US": "ChatGPT"
     },
     "topics": {
-        "myth_creatures": {
-            "de_DE": "Mythische Wesen",
-            "en_US": "Mythical Creatures"
+        "animals": {
+            "de_DE": "Tiere",
+            "en_US": "Animals"
         },
-        "tools": {
-            "de_DE": "Werkzeuge",
-            "en_US": "Tools"
+        "things": {
+            "de_DE": "Dinge",
+            "en_US": "Things"
         },
-        "nature": {
-            "de_DE": "Natur",
-            "en_US": "Nature"
+        "food": {
+            "de_DE": "Essen",
+            "en_US": "Food"
         },
-        "technology": {
-            "de_DE": "Technologie",
-            "en_US": "Technology"
+        "places": {
+            "de_DE": "Orte",
+            "en_US": "Places"
         },
-        "abstract": {
-            "de_DE": "Abstrakte Begriffe",
-            "en_US": "Abstract Concepts"
+        "sports": {
+            "de_DE": "Sportarten",
+            "en_US": "Sports"
         }
     },
     "word_pairs": [
         {
-            "topic_key": "myth_creatures",
+            "topic_key": "animals",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Phönix",
-                "en_US": "Phoenix"
+                "de_DE": "Eule",
+                "en_US": "Owl"
             },
             "impostor_hint_word": {
-                "de_DE": "Aschenkind",
-                "en_US": "Child of ashes"
+                "de_DE": "Nacht",
+                "en_US": "Night"
             }
         },
         {
-            "topic_key": "myth_creatures",
+            "topic_key": "animals",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Minotaurus",
-                "en_US": "Minotaur"
+                "de_DE": "Känguru",
+                "en_US": "Kangaroo"
             },
             "impostor_hint_word": {
-                "de_DE": "Gefangener im Labyrinth",
-                "en_US": "Prisoner in the maze"
+                "de_DE": "Springen",
+                "en_US": "Jumping"
             }
         },
         {
-            "topic_key": "myth_creatures",
+            "topic_key": "animals",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Nixe",
-                "en_US": "Mermaid"
+                "de_DE": "Tintenfisch",
+                "en_US": "Octopus"
             },
             "impostor_hint_word": {
-                "de_DE": "Gesang der Tiefe",
-                "en_US": "Song of the deep"
+                "de_DE": "Arme",
+                "en_US": "Arms"
             }
         },
         {
-            "topic_key": "tools",
+            "topic_key": "things",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Wasserwaage",
-                "en_US": "Spirit Level"
+                "de_DE": "Mikroskop",
+                "en_US": "Microscope"
             },
             "impostor_hint_word": {
-                "de_DE": "Flüssige Präzision",
-                "en_US": "Liquid precision"
+                "de_DE": "Klein",
+                "en_US": "Small"
             }
         },
         {
-            "topic_key": "tools",
+            "topic_key": "things",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Drehmomentschlüssel",
-                "en_US": "Torque Wrench"
+                "de_DE": "Taschenlampe",
+                "en_US": "Flashlight"
             },
             "impostor_hint_word": {
-                "de_DE": "Kraft im richtigen Maß",
-                "en_US": "Force in the right measure"
+                "de_DE": "Suchen",
+                "en_US": "Searching"
             }
         },
         {
-            "topic_key": "tools",
+            "topic_key": "things",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Lötkolben",
-                "en_US": "Soldering Iron"
+                "de_DE": "Kompass",
+                "en_US": "Compass"
             },
             "impostor_hint_word": {
-                "de_DE": "Metallkleber",
-                "en_US": "Metal glue"
+                "de_DE": "Richtung",
+                "en_US": "Direction"
             }
         },
         {
-            "topic_key": "nature",
+            "topic_key": "food",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Gletscher",
-                "en_US": "Glacier"
+                "de_DE": "Lasagne",
+                "en_US": "Lasagna"
             },
             "impostor_hint_word": {
-                "de_DE": "Schlafendes Eis",
-                "en_US": "Sleeping ice"
+                "de_DE": "Schichten",
+                "en_US": "Layers"
             }
         },
         {
-            "topic_key": "nature",
+            "topic_key": "food",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Moor",
-                "en_US": "Bog"
+                "de_DE": "Sushi",
+                "en_US": "Sushi"
             },
             "impostor_hint_word": {
-                "de_DE": "Grüne Falle",
-                "en_US": "Green trap"
+                "de_DE": "Rollen",
+                "en_US": "Rolls"
             }
         },
         {
-            "topic_key": "nature",
+            "topic_key": "food",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Lianen",
-                "en_US": "Vines"
+                "de_DE": "Pfannkuchen",
+                "en_US": "Pancake"
             },
             "impostor_hint_word": {
-                "de_DE": "Seile des Dschungels",
-                "en_US": "Jungle ropes"
+                "de_DE": "Rund",
+                "en_US": "Round"
             }
         },
         {
-            "topic_key": "technology",
+            "topic_key": "places",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Gyroskop",
-                "en_US": "Gyroscope"
+                "de_DE": "Bibliothek",
+                "en_US": "Library"
             },
             "impostor_hint_word": {
-                "de_DE": "Meister des Gleichgewichts",
-                "en_US": "Master of balance"
+                "de_DE": "Leise",
+                "en_US": "Quiet"
             }
         },
         {
-            "topic_key": "technology",
+            "topic_key": "places",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Thermometer",
-                "en_US": "Thermometer"
+                "de_DE": "Bahnhof",
+                "en_US": "Train Station"
             },
             "impostor_hint_word": {
-                "de_DE": "Fieberflüsterer",
-                "en_US": "Fever whisperer"
+                "de_DE": "Reise",
+                "en_US": "Travel"
             }
         },
         {
-            "topic_key": "technology",
+            "topic_key": "places",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Oszilloskop",
-                "en_US": "Oscilloscope"
+                "de_DE": "Krankenhaus",
+                "en_US": "Hospital"
             },
             "impostor_hint_word": {
-                "de_DE": "Seismograph des Stroms",
-                "en_US": "Seismograph of electricity"
+                "de_DE": "Pflege",
+                "en_US": "Care"
             }
         },
         {
-            "topic_key": "abstract",
+            "topic_key": "sports",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Geduld",
-                "en_US": "Patience"
+                "de_DE": "Fechten",
+                "en_US": "Fencing"
             },
             "impostor_hint_word": {
-                "de_DE": "Stille Ausdauer",
-                "en_US": "Silent endurance"
+                "de_DE": "Spitze",
+                "en_US": "Point"
             }
         },
         {
-            "topic_key": "abstract",
+            "topic_key": "sports",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Chaos",
-                "en_US": "Chaos"
+                "de_DE": "Rudern",
+                "en_US": "Rowing"
             },
             "impostor_hint_word": {
-                "de_DE": "Ordnungslosigkeit",
-                "en_US": "Lack of order"
+                "de_DE": "Wellen",
+                "en_US": "Waves"
             }
         },
         {
-            "topic_key": "abstract",
+            "topic_key": "sports",
             "difficulty": 6,
             "main_word": {
-                "de_DE": "Hoffnung",
-                "en_US": "Hope"
+                "de_DE": "Bogenschießen",
+                "en_US": "Archery"
             },
             "impostor_hint_word": {
-                "de_DE": "Licht im Nebel",
-                "en_US": "Light in the fog"
+                "de_DE": "Ziel",
+                "en_US": "Target"
             }
         }
     ]

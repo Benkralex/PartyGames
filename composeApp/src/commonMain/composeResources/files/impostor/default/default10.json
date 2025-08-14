@@ -9,130 +9,210 @@
         "en_US": "Another default question set for the game 'Impostor' (Difficulty: 10)"
     },
     "author": {
-        "de_DE": "Benkralex",
-        "en_US": "Benkralex"
+        "de_DE": "ChatGPT",
+        "en_US": "ChatGPT"
     },
     "topics": {
-        "own_opinion": {
-            "de_DE": "Eigene Meinung",
-            "en_US": "Own Opinion"
+        "animals": {
+            "de_DE": "Tiere",
+            "en_US": "Animals"
         },
-        "personal": {
-            "de_DE": "Persönliches",
-            "en_US": "Personal"
+        "things": {
+            "de_DE": "Dinge",
+            "en_US": "Things"
         },
-        "skills": {
-            "de_DE": "Eigenes Können",
-            "en_US": "Own Skills"
+        "food": {
+            "de_DE": "Essen",
+            "en_US": "Food"
+        },
+        "places": {
+            "de_DE": "Orte",
+            "en_US": "Places"
+        },
+        "sports": {
+            "de_DE": "Sportarten",
+            "en_US": "Sports"
         }
     },
     "word_pairs": [
         {
-            "topic_key": "own_opinion",
+            "topic_key": "animals",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Zeit",
-                "en_US": "Time"
+                "de_DE": "Quastenflosser",
+                "en_US": "Coelacanth"
             },
             "impostor_hint_word": {
-                "de_DE": "Fluss ohne Ufer",
-                "en_US": "River without banks"
+                "de_DE": "Vergangenheit",
+                "en_US": "Past"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "animals",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Seele",
-                "en_US": "Soul"
+                "de_DE": "Schuhschnabel",
+                "en_US": "Shoebill"
             },
             "impostor_hint_word": {
-                "de_DE": "Schatten des Selbst",
-                "en_US": "Shadow of the self"
+                "de_DE": "Starr",
+                "en_US": "Rigid"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "animals",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Erkenntnis",
-                "en_US": "Insight"
+                "de_DE": "Riesenassel",
+                "en_US": "Giant Isopod"
             },
             "impostor_hint_word": {
-                "de_DE": "Licht im Dunkel",
-                "en_US": "Light in the dark"
+                "de_DE": "Boden",
+                "en_US": "Ground"
             }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "things",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Existenz",
-                "en_US": "Existence"
+                "de_DE": "Orrery",
+                "en_US": "Orrery"
             },
             "impostor_hint_word": {
-                "de_DE": "Flüstern im Nichts",
-                "en_US": "Whisper in the void"
+                "de_DE": "Kreise",
+                "en_US": "Circles"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "things",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Bewusstsein",
-                "en_US": "Consciousness"
+                "de_DE": "Zuse Z3",
+                "en_US": "Zuse Z3"
             },
             "impostor_hint_word": {
-                "de_DE": "Spiegel der Gedanken",
-                "en_US": "Mirror of thoughts"
+                "de_DE": "Anfang",
+                "en_US": "Beginning"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "things",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Transformation",
-                "en_US": "Transformation"
+                "de_DE": "Kythera-Mechanismus",
+                "en_US": "Antikythera Mechanism"
             },
             "impostor_hint_word": {
-                "de_DE": "Metamorphose des Seins",
-                "en_US": "Metamorphosis of being"
+                "de_DE": "Rätsel",
+                "en_US": "Puzzle"
             }
         },
         {
-            "topic_key": "own_opinion",
+            "topic_key": "food",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Stille",
-                "en_US": "Silence"
+                "de_DE": "Hákarl",
+                "en_US": "Hákarl"
             },
             "impostor_hint_word": {
-                "de_DE": "Leere Resonanz",
-                "en_US": "Empty resonance"
+                "de_DE": "Geruch",
+                "en_US": "Smell"
             }
         },
         {
-            "topic_key": "personal",
+            "topic_key": "food",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Erinnerung",
-                "en_US": "Memory"
+                "de_DE": "Durian",
+                "en_US": "Durian"
             },
             "impostor_hint_word": {
-                "de_DE": "Spur im Sand",
-                "en_US": "Trail in the sand"
+                "de_DE": "Kontrovers",
+                "en_US": "Controversial"
             }
         },
         {
-            "topic_key": "skills",
+            "topic_key": "food",
             "difficulty": 10,
             "main_word": {
-                "de_DE": "Balance",
-                "en_US": "Balance"
+                "de_DE": "Surströmming",
+                "en_US": "Surströmming"
             },
             "impostor_hint_word": {
-                "de_DE": "Tanz auf dem Drahtseil",
-                "en_US": "Dance on the tightrope"
+                "de_DE": "Extrem",
+                "en_US": "Extreme"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Tschernobyl",
+                "en_US": "Chernobyl"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Verboten",
+                "en_US": "Forbidden"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Area 51",
+                "en_US": "Area 51"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Gerüchte",
+                "en_US": "Rumors"
+            }
+        },
+        {
+            "topic_key": "places",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Bermuda-Dreieck",
+                "en_US": "Bermuda Triangle"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Verschwinden",
+                "en_US": "Disappear"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Bossaball",
+                "en_US": "Bossaball"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Springen",
+                "en_US": "Jump"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Unterwasser-Hockey",
+                "en_US": "Underwater Hockey"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Unten",
+                "en_US": "Below"
+            }
+        },
+        {
+            "topic_key": "sports",
+            "difficulty": 10,
+            "main_word": {
+                "de_DE": "Schachboxen",
+                "en_US": "Chess Boxing"
+            },
+            "impostor_hint_word": {
+                "de_DE": "Wechsel",
+                "en_US": "Switch"
             }
         }
     ]
