@@ -11,7 +11,7 @@ class StringListState(
     val minCount: Int = 0,
     val maxCount: Int = Int.MAX_VALUE,
     var textFieldLabel: String = "",
-    var defaultValue: String = "",
+    var defaultValue: (Int) -> String,
     val noDuplicates: Boolean = false,
 ) {
     var stringSingleStates by mutableStateOf(stringSingleStates)
@@ -25,7 +25,11 @@ class StringListState(
         stringSingleStates = stringSingleStates.plus(
             nextKey to StringSingleState(
                 label = textFieldLabel,
-                defaultValue = defaultValue,
+                defaultValue = defaultValue(
+                    (1 until stringSingleStates.size + 1).first { i ->
+                        defaultValue(i) !in stringSingleStates.map { it.value.value }
+                    }
+                ),
             )
         )
     }

@@ -90,7 +90,7 @@ class ImpostorSetupViewModel: ViewModel() {
                 ),
                 minCount = 3,
                 textFieldLabel = playerSingleLabel,
-                defaultValue = playerNameStart,
+                defaultValue = { "$playerNameStart $it" },
                 noDuplicates = true,
             )
         }

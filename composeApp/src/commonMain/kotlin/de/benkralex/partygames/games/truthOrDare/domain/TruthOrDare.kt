@@ -1,9 +1,7 @@
 package de.benkralex.partygames.games.truthOrDare.domain
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.games.common.domain.Game
@@ -39,16 +37,7 @@ class TruthOrDare : Game {
         Text("Play ${stringResource(information.name)}", modifier = modifier)
     }
 
-    override val settingsWidget = @Composable { modifier: Modifier ->
-        Box(
-            modifier = modifier,
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "${stringResource(information.name)} Settings",
-            )
-        }
-    }
+    override val settingsWidget = null
 
     override fun createGame(
         //topics: List<String>,

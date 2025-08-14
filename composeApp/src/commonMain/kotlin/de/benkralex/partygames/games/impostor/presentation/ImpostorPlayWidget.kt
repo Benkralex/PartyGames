@@ -40,31 +40,24 @@ import de.benkralex.partygames.app.getGameByKey
 import de.benkralex.partygames.games.impostor.domain.Impostor
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.content_description_scroll_down_button
+import partygames.composeapp.generated.resources.content_description_scroll_up_button
+import partygames.composeapp.generated.resources.impostor_res_next
+import partygames.composeapp.generated.resources.impostor_res_reveal_impostors
+import partygames.composeapp.generated.resources.impostor_res_word
+import partygames.composeapp.generated.resources.impostor_title
+import partygames.composeapp.generated.resources.new_round
 import kotlin.math.max
 import kotlin.math.min
 
 @Composable
 fun ImpostorPlayWidget(
     modifier: Modifier = Modifier,
+    game: Impostor,
     viewModel: ImpostorPlayViewModel = viewModel<ImpostorPlayViewModel>(key = activeGame),
 ) {
-    if (activeGame == null) {
-        Napier.e("No active game found")
-        Text("No active game found")
-        return
-    }
-    val game = getGameByKey(activeGame!!)
-    if (game == null) {
-        Napier.e("Game with key $activeGame not found")
-        Text("Game with key $activeGame not found")
-        return
-    }
-    if (game !is Impostor) {
-        Napier.e("Game with key $activeGame is not a Impostor game")
-        Text("Game with key $activeGame is not a Impostor game")
-        return
-    }
-
     LaunchedEffect(game) {
         viewModel.game = game
         viewModel.initNewRound()
@@ -152,7 +145,7 @@ fun ShowWordCard(
                         text = if (!impostor) {
                             word
                         } else {
-                            "Impostor"
+                            stringResource(Res.string.impostor_title)
                         },
                         style = MaterialTheme.typography.headlineLarge,
                     )
@@ -171,7 +164,9 @@ fun ShowWordCard(
                         next()
                     }
                 ) {
-                    Text("Fertig")
+                    Text(
+                        text = stringResource(Res.string.impostor_res_next),
+                    )
                 }
             }
         }
@@ -208,12 +203,12 @@ fun ShowImpostors(
         ) {
             if (!opened) {
                 Text(
-                    text = "Aufdecken",
+                    text = stringResource(Res.string.impostor_res_reveal_impostors),
                     style = MaterialTheme.typography.displayMedium,
                 )
             } else {
                 Text(
-                    text = "Wort: $mainWord",
+                    text = "${stringResource(Res.string.impostor_res_word)}: $mainWord",
                     style = MaterialTheme.typography.headlineLarge,
                 )
                 Box(
@@ -244,7 +239,6 @@ fun ShowImpostors(
                                 .align(Alignment.TopEnd)
                                 .padding(8.dp),
                             onClick = {
-                                Napier.e("Scrolling to top")
                                 coroutineScope.launch {
                                     scrollState.animateScrollTo(
                                         0
@@ -254,7 +248,7 @@ fun ShowImpostors(
                         ) {
                             Icon(
                                 imageVector = Icons.Outlined.ArrowUpward,
-                                contentDescription = "scroll up",
+                                contentDescription = stringResource(Res.string.content_description_scroll_up_button),
                             )
                         }
                     }
@@ -273,7 +267,7 @@ fun ShowImpostors(
                         ) {
                             Icon(
                                 imageVector = Icons.Outlined.ArrowDownward,
-                                contentDescription = "scroll down",
+                                contentDescription = stringResource(Res.string.content_description_scroll_down_button),
                             )
                         }
                     }
@@ -287,7 +281,9 @@ fun ShowImpostors(
                         newRoundCallback()
                     }
                 ) {
-                    Text("Neue Runde")
+                    Text(
+                        text = stringResource(Res.string.new_round)
+                    )
                 }
             }
         }

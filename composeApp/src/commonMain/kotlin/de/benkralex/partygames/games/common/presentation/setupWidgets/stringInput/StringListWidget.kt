@@ -20,6 +20,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.content_description_add_string_button
+import partygames.composeapp.generated.resources.content_description_remove_string_button
 
 @Composable
 fun StringListWidget(
@@ -60,7 +64,7 @@ fun StringListWidget(
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Add",
+                    contentDescription = stringResource(Res.string.content_description_add_string_button),
                 )
             }
         }
@@ -78,7 +82,7 @@ fun StringListWidget(
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Delete,
-                                contentDescription = "Delete",
+                                contentDescription = stringResource(Res.string.content_description_remove_string_button),
                                 tint = MaterialTheme.colorScheme.error,
                             )
                         }

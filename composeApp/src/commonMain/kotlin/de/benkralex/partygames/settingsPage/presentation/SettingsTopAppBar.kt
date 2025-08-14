@@ -15,6 +15,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.settingsPage.data.Settings
 import de.benkralex.partygames.settingsPage.data.settings
+import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.content_description_back_button
+import partygames.composeapp.generated.resources.content_description_reset_settings_button
+import partygames.composeapp.generated.resources.settings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -22,14 +27,18 @@ fun SettingsTopAppBar(
     onNavigateBack: () -> Unit = {},
 ) {
     TopAppBar(
-        title = { Text(text = "Settings") },
+        title = {
+            Text(
+                text = stringResource(Res.string.settings),
+            )
+        },
         navigationIcon = {
             IconButton(
                 onClick = onNavigateBack,
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Back",
+                    contentDescription = stringResource(Res.string.content_description_back_button),
                     modifier = Modifier.padding(8.dp),
                 )
             }
@@ -43,7 +52,7 @@ fun SettingsTopAppBar(
                 ) {
                     Icon(
                         imageVector = Icons.Outlined.Replay,
-                        contentDescription = "Reset Settings",
+                        contentDescription = stringResource(Res.string.content_description_reset_settings_button),
                         modifier = Modifier.padding(8.dp),
                     )
                 }

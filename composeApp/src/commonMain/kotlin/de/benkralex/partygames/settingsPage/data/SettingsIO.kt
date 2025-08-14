@@ -6,6 +6,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
+import io.github.aakira.napier.Napier
 
 var settings: MutableState<Settings> = mutableStateOf(Settings())
 private val languagesKey = stringPreferencesKey("languages")
@@ -13,6 +14,11 @@ private val lastPlayersKey = stringPreferencesKey("lastPlayers")
 
 
 suspend fun saveSettings(prefs: DataStore<Preferences>) {
+    Napier.d( message =
+        "Settings Saved: \n" +
+        "Languages: ${settings.value.languages} \n" +
+        "LastPlayers: ${settings.value.lastPlayers} \n"
+    )
     prefs.edit { preferences ->
         preferences[languagesKey] = settings.value.languages.toPreferencesString()
         preferences[lastPlayersKey] = settings.value.lastPlayers.toPreferencesString()

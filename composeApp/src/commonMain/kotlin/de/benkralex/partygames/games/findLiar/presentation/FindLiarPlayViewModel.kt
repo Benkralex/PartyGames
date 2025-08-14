@@ -44,7 +44,7 @@ class FindLiarPlayViewModel : ViewModel() {
 
     fun initNewRound() {
         if (game == null) {
-            Napier.e("Game is not initialized")
+            Napier.e("Game is not initialized yet")
             return
         }
         if (questionPairs.none { !playedQuestions.contains(it) }) {
@@ -61,14 +61,12 @@ class FindLiarPlayViewModel : ViewModel() {
 
         currentQuestionPair = questionPairs.filter { !playedQuestions.contains(it) }.random()
         playedQuestions.add(currentQuestionPair!!)
-        Napier.d("New round initialized with question: ${currentQuestionPair?.mainQuestion} and liars: $liars")
         answers.clear()
         updateAnsweringPlayer()
     }
 
     fun answerQuestion(player: String, answer: String) {
         answers[player] = answer
-        Napier.d("Player $player answered: $answer")
         updateAnsweringPlayer()
     }
 
@@ -76,15 +74,12 @@ class FindLiarPlayViewModel : ViewModel() {
         answeringPlayer = players.firstOrNull { !answers.containsKey(it) }
         question = when (answeringPlayer) {
             null -> {
-                Napier.d("All players have answered the question")
                 null
             }
             in liars -> {
-                Napier.d("Current answering player is a liar: $answeringPlayer")
                 currentQuestionPair?.liarQuestion
             }
             else -> {
-                Napier.d("Current answering player is not a liar: $answeringPlayer")
                 currentQuestionPair?.mainQuestion
             }
         }

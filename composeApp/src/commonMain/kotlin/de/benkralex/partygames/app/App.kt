@@ -54,6 +54,7 @@ fun App(
         theme = theme
     ) {
         LaunchedEffect(Unit) {
+            // Async setup functions
             updateFindLiarDatasets()
             updateImpostorDatasets()
             loadSettings(prefs)
@@ -64,41 +65,34 @@ fun App(
         }
 
         LaunchedEffect(settings.value) {
-            Napier.i("Settings Saved: \nLanguages: ${settings.value.languages} \nLastPlayers: ${settings.value.lastPlayers}")
             saveSettings(prefs)
         }
 
         val navController = rememberNavController()
         NavHost(
             navController = navController,
-            startDestination = Route.GameSelection,
-            enterTransition = {
-                EnterTransition.None
-            },
-            exitTransition = {
-                ExitTransition.None
-            },
-            popEnterTransition = {
-                EnterTransition.None
-            },
-            popExitTransition = {
-                ExitTransition.None
-            }
+            startDestination = Route.GameSelectionRoute,
+            enterTransition = { EnterTransition.None },
+            exitTransition = { ExitTransition.None },
+            popEnterTransition = { EnterTransition.None },
+            popExitTransition = { ExitTransition.None }
         ) {
-            composable<Route.GameSelection> {
+            composable<Route.GameSelectionRoute> {
                 activeGame = null
                 GameSelectionPage(
                     onNavigateToSettings = {
-                        navController.navigate(Route.Settings)
+                        navController.navigate(Route.SettingsRoute)
                     },
                     onNavigateToGame = { game ->
                         navController.navigate(
-                            Route.GameSettings(gameKey = getKeyByGame(game))
+                            Route.GameSetupRoute(gameKey = getKeyByGame(game))
                         )
                     }
                 )
             }
-            composable<Route.Settings> {
+
+
+            composable<Route.SettingsRoute> {
                 activeGame = null
                 SettingsPage(
                     onNavigateBack = {
@@ -106,21 +100,21 @@ fun App(
                     },
                 )
             }
-            composable<Route.GameSettings> { backStackEntry ->
-                val gameSettings = backStackEntry.toRoute<Route.GameSettings>()
+
+
+            composable<Route.GameSetupRoute> { backStackEntry ->
+                val gameSettings = backStackEntry.toRoute<Route.GameSetupRoute>()
                 val game: Game? = getGameByKey(gameSettings.gameKey)
                 if (game == null) {
-                    Napier.e("Game with key ${gameSettings.gameKey} not found")
+                    Napier.e("Game with key ${gameSettings.gameKey} not found, navigating back")
                     navController.navigateUp()
                     return@composable
                 }
 
                 LaunchedEffect(activeGame) {
-                    Napier.i("Active game changed")
                     if (activeGame != null) {
-                        Napier.i("Active game already set, navigating to GamePlay")
-                        navController.navigate(Route.GamePlay) {
-                            popUpTo<Route.GameSettings> { inclusive = true }
+                        navController.navigate(Route.GamePlayRoute) {
+                            popUpTo<Route.GameSetupRoute> { inclusive = true }
                         }
                     }
                 }
@@ -132,25 +126,21 @@ fun App(
                     }
                 )
             }
-            composable<Route.GamePlay> {
+
+
+            composable<Route.GamePlayRoute> {
                 if (activeGame == null) {
-                    Napier.e("No active game found")
+                    Napier.e("No active game found, navigating back")
                     navController.navigateUp()
                     return@composable
                 }
                 val game = getGameByKey(activeGame!!)
                 if (game == null) {
-                    Napier.e("Game with key $activeGame not found")
+                    Napier.e("Game with key $activeGame not found, navigating back")
+                    activeGame = null
                     navController.navigateUp()
                     return@composable
                 }
-
-                fun backToGameSelection() {
-                    navController.navigate(Route.GameSelection) {
-                        popUpTo(Route.GameSelection) { inclusive = true }
-                    }
-                }
-
 
                 var showExitDialog by remember { mutableStateOf(false) }
 
@@ -174,7 +164,9 @@ fun App(
                             TextButton(
                                 onClick = {
                                     showExitDialog = false
-                                    backToGameSelection()
+                                    navController.navigate(Route.GameSelectionRoute) {
+                                        popUpTo(Route.GameSelectionRoute) { inclusive = true }
+                                    }
                                 }
                             ) {
                                 Text(stringResource(Res.string.exit_game))

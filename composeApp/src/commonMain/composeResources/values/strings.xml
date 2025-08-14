@@ -10,13 +10,14 @@
     <string name="player">Player</string>
     <string name="player_name">Player name</string>
     <string name="how_to_play">How to play</string>
+    <string name="new_round">New round</string>
+    <string name="settings">Settings</string>
 
     <string name="accept_dialog">Okay</string>
     <string name="cancel_dialog">Cancel</string>
 
     <string name="exit_game">Exit Game</string>
     <string name="exit_game_desc">Are you sure, you want to exit the game? The active game state will be lost.</string>
-    <string name="new_round">New Round</string>
 
     <string name="error_no_translation">No Translation found for language %lang%</string>
     <string name="error_valid_number">Please enter a valid number</string>
@@ -37,5 +38,12 @@
     <string name="difficulty_extreme">Extreme</string>
     <string name="difficulty_nightmare">Nightmare</string>
 
-    <string name="content_description_back_button">Back button</string>
+    <string name="content_description_back_button">Back</string>
+    <string name="content_description_scroll_up_button">Scroll up</string>
+    <string name="content_description_scroll_down_button">Scroll down</string>
+    <string name="content_description_decrease_value_button">Decrease value</string>
+    <string name="content_description_increase_value_button">Increase value</string>
+    <string name="content_description_add_string_button">Add string</string>
+    <string name="content_description_remove_string_button">Remove string</string>
+    <string name="content_description_reset_settings_button">Reset settings</string>
 </resources>

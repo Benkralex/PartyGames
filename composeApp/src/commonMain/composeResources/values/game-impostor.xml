@@ -13,4 +13,7 @@ If they guess correctly, the impostors win. If not, the rest of the players win.
     </string>
 
     <string name="impostor_res_impostor_count">Impostor Count</string>
+    <string name="impostor_res_reveal_impostors">Reveal</string>
+    <string name="impostor_res_word">Word</string>
+    <string name="impostor_res_next">Pass to next</string>
 </resources>

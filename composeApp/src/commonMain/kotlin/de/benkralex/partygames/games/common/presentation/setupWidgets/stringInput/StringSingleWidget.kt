@@ -38,7 +38,6 @@ fun StringSingleWidget(
         modifier = modifier
             .onFocusChanged { focusState ->
                 if (focusState.isFocused) {
-                    Napier.i("StringSingleWidget: Focus gained, selecting all text")
                     coroutineScope.launch {
                         state.realValue.value = state.realValue.value.copy(
                             selection = TextRange(state.realValue.value.text.length, 0)

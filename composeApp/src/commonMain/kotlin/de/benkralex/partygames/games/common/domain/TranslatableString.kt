@@ -13,13 +13,12 @@ data class TranslatableString(
     @Composable
     operator fun get(language: String): String {
         return translations[language]
-            ?: translations[language.split("_")[0]]
-            ?: translations[
-                translations.keys.first {
-                    it.split("_")[0] == language.split("_")[0]
-                }
-            ]
-            ?: stringResource(Res.string.error_no_translation).replace("%lang%", language)
+            ?: translations[language.substringBefore("_")]
+            ?: translations.keys.firstOrNull {
+                    it.substringBefore("_") == language.substringBefore("_")
+                }?.let { translations[it] }
+            ?: stringResource(Res.string.error_no_translation)
+                .replace("%lang%", language)
     }
 
     operator fun plus(other: TranslatableString): TranslatableString {

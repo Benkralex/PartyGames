@@ -19,6 +19,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.content_description_decrease_value_button
+import partygames.composeapp.generated.resources.content_description_increase_value_button
 import partygames.composeapp.generated.resources.error_empty_input
 import partygames.composeapp.generated.resources.error_valid_number
 import partygames.composeapp.generated.resources.error_valid_range
@@ -74,7 +76,7 @@ fun IntegerInputWidget(
             ) {
                 Icon(
                     imageVector = Icons.Outlined.Remove,
-                    contentDescription = "Decrease Value",
+                    contentDescription = stringResource(Res.string.content_description_decrease_value_button),
                     tint = if (state.value > state.min) {
                         LocalContentColor.current
                     } else {
@@ -97,7 +99,7 @@ fun IntegerInputWidget(
             ) {
                 Icon(
                     imageVector = Icons.Outlined.Add,
-                    contentDescription = "Increase Value",
+                    contentDescription = stringResource(Res.string.content_description_increase_value_button),
                     tint = if (state.value < state.max) {
                         LocalContentColor.current
                     } else {

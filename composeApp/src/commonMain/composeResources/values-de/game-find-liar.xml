@@ -10,8 +10,6 @@ Diskutiert gemeinsam, wer lügt, und enttarnt die Lügner!
     </string>
 
     <string name="find_liar_res_liar_count">Anzahl an Lügnern</string>
-
-    <string name="find_liar_data_topic_opinion">Eigene Meinung</string>
-    <string name="find_liar_data_topic_ability">Eigenes Können</string>
-    <string name="find_liar_data_topic_personal">Persönliches</string>
+    <string name="find_liar_res_show_liars">Zeige Lügner</string>
+    <string name="find_liar_res_submit">Fertig</string>
 </resources>

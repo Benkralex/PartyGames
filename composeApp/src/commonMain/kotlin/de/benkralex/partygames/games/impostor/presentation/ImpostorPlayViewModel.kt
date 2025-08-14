@@ -44,7 +44,7 @@ class ImpostorPlayViewModel : ViewModel() {
 
     fun initNewRound() {
         if (game == null) {
-            Napier.e("Game is not initialized")
+            Napier.e("Game is not initialized yet")
             return
         }
         if (wordPairs.none { !playedWordPairs.contains(it) }) {
@@ -61,7 +61,6 @@ class ImpostorPlayViewModel : ViewModel() {
 
         currentWordPair = wordPairs.filter { !playedWordPairs.contains(it) }.random()
         playedWordPairs.add(currentWordPair!!)
-        Napier.d("New round initialized with question: ${currentWordPair?.mainWord} and impostors: $impostors")
         finishedPlayers.clear()
         updateActivePlayer()
     }
@@ -73,15 +72,12 @@ class ImpostorPlayViewModel : ViewModel() {
         activePlayer = players.firstOrNull { !finishedPlayers.contains(it) }
         word = when (activePlayer) {
             null -> {
-                Napier.d("All players have answered the question")
                 null
             }
             in impostors -> {
-                Napier.d("Current answering player is a liar: $activePlayer")
                 currentWordPair?.impostorHintWord
             }
             else -> {
-                Napier.d("Current answering player is not a liar: $activePlayer")
                 currentWordPair?.mainWord
             }
         }

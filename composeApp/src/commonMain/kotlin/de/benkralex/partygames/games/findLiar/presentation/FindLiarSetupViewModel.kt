@@ -89,7 +89,7 @@ class FindLiarSetupViewModel: ViewModel() {
                 ),
                 minCount = 3,
                 textFieldLabel = playerSingleLabel,
-                defaultValue = playerNameStart,
+                defaultValue = { "$playerNameStart $it" },
                 noDuplicates = true,
             )
         }
@@ -111,7 +111,7 @@ class FindLiarSetupViewModel: ViewModel() {
     }
 
     fun setupGame(setupGameCallback: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit) {
-        Napier.i(
+        Napier.d(
             "players=$players," +
                     " liarCount=${liarCount}," +
                     " topics=$topics," +

@@ -53,7 +53,7 @@ suspend fun updateFindLiarDatasets() {
                     jsonDataset = Json.parseToJsonElement(jsonString) as JsonObject
                 } catch (e: Exception) {
                     Napier.e(
-                        message = "Error decoding Find Liar dataset: $path",
+                        message = "Error decoding Find Liar dataset: $path, skipping",
                         throwable = e
                     )
                     continue
@@ -109,13 +109,13 @@ suspend fun updateFindLiarDatasets() {
                 datasets.add(dataset)
             } catch (e: Exception) {
                 Napier.e(
-                    message = "Error parsing Find Liar dataset: $path",
+                    message = "Error parsing Find Liar dataset: $path, skipping",
                     throwable = e
                 )
             }
         } else {
             Napier.e(
-                message = "Error reading Find Liar dataset: $path",
+                message = "Error reading Find Liar dataset: $path, skipping",
             )
         }
     }

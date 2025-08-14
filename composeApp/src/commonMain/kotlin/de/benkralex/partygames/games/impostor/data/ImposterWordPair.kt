@@ -53,7 +53,7 @@ suspend fun updateImpostorDatasets() {
                     jsonDataset = Json.parseToJsonElement(jsonString) as JsonObject
                 } catch (e: Exception) {
                     Napier.e(
-                        message = "Error decoding Impostor dataset: $path",
+                        message = "Error decoding Impostor dataset: $path, skipping",
                         throwable = e
                     )
                     continue
@@ -109,13 +109,13 @@ suspend fun updateImpostorDatasets() {
                 datasets.add(dataset)
             } catch (e: Exception) {
                 Napier.e(
-                    message = "Error parsing Impostor dataset: $path",
+                    message = "Error parsing Impostor dataset: $path, skipping",
                     throwable = e
                 )
             }
         } else {
             Napier.e(
-                message = "Error reading Impostor dataset: $path",
+                message = "Error reading Impostor dataset: $path, skipping",
             )
         }
     }

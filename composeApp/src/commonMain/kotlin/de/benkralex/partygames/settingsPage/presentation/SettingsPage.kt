@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.app.gamesRegister
 import de.benkralex.partygames.settingsPage.data.settings
 import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.settings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -40,25 +42,14 @@ fun SettingsPage(
         var selectedTabIndex by remember { mutableIntStateOf(0) }
         val tabsList = listOf(
             TabData(
-                title = "Allgemeine Einstellungen",
-                content = {
-                    Box(
-                        modifier = Modifier
-                            .padding(innerPadding)
-                            .fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "Languages: ${settings.value.languages} \n LastPlayers: ${settings.value.lastPlayers}",
-                        )
-                    }
-                },
+                title = stringResource(Res.string.settings),
+                content = {},
             ),
-        ).plus(gamesRegister.map {
+        ).plus(gamesRegister.filter { it.settingsWidget != null }.map {
             TabData(
                 title = stringResource(it.information.name),
                 content = {
-                    it.settingsWidget(Modifier.fillMaxSize())
+                    it.settingsWidget!!(Modifier.fillMaxSize())
                 },
             )
         })
@@ -78,6 +69,8 @@ fun SettingsPage(
         ) {
             ScrollableTabRow (
                 selectedTabIndex = selectedTabIndex,
+                modifier = Modifier
+                    .fillMaxWidth(),
             ) {
                 tabsList.forEachIndexed { index, tab ->
                     Tab(

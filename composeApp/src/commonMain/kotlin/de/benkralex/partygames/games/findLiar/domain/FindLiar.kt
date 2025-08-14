@@ -57,19 +57,11 @@ class FindLiar : Game {
     override val playWidget = @Composable { modifier: Modifier ->
         FindLiarPlayWidget(
             modifier = modifier,
+            game = this,
         )
     }
 
-    override val settingsWidget = @Composable { modifier: Modifier ->
-        Box(
-            modifier = modifier,
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "${stringResource(information.name)} Settings",
-            )
-        }
-    }
+    override val settingsWidget = null
 
     override fun createGame(
         settings: Map<String, Any?>,

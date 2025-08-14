@@ -10,6 +10,8 @@
     <string name="player">Spieler</string>
     <string name="player_name">Spielername</string>
     <string name="how_to_play">Spielanleitung</string>
+    <string name="new_round">Neue Runde</string>
+    <string name="settings">Einstellungen</string>
 
     <string name="accept_dialog">Ok</string>
     <string name="cancel_dialog">Abbrechen</string>
@@ -17,6 +19,7 @@
     <string name="exit_game">Spiel verlassen</string>
     <string name="exit_game_desc">Bist du dir sicher, dass du das Spiel verlassen möchtest? Der aktive Spielstand geht verlohren.</string>
 
+    <string name="error_no_translation">No Translation found for language %lang%</string>
     <string name="error_valid_number">Bitte eine gültige Zahl eingeben</string>
     <string name="error_valid_range">Bitte eine Zahl zwischen %min% und %max% eingeben</string>
     <string name="error_empty_input">Bitte geben Sie einen Wert ein</string>
@@ -34,4 +37,13 @@
     <string name="difficulty_very_hard">Sehr schwierig</string>
     <string name="difficulty_extreme">Extrem</string>
     <string name="difficulty_nightmare">Albtraum</string>
+
+    <string name="content_description_back_button">Zurück</string>
+    <string name="content_description_scroll_up_button">Hoch scrollen</string>
+    <string name="content_description_scroll_down_button">Runter scrollen</string>
+    <string name="content_description_decrease_value_button">Wert verringern</string>
+    <string name="content_description_increase_value_button">Wert vergrößern</string>
+    <string name="content_description_add_string_button">Textfeld hinzufügen</string>
+    <string name="content_description_remove_string_button">Textfeld entfernen</string>
+    <string name="content_description_reset_settings_button">Einstellungen zurücksetzen</string>
 </resources>

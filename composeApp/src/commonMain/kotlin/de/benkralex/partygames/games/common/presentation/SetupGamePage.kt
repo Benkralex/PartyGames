@@ -32,10 +32,10 @@ fun SetupGamePage(
     game: Game,
     onNavigateBack: () -> Unit = {},
 ) {
-    var showInfoDialog by remember { mutableStateOf(false) }
-    if (showInfoDialog) {
+    var showHowToPlayDialog by remember { mutableStateOf(false) }
+    if (showHowToPlayDialog) {
         AlertDialog(
-            onDismissRequest = { showInfoDialog = false },
+            onDismissRequest = { showHowToPlayDialog = false },
             title = {
                 Text(
                     text = stringResource(Res.string.how_to_play),
@@ -48,7 +48,7 @@ fun SetupGamePage(
            },
             confirmButton = {
                 TextButton(
-                    onClick = { showInfoDialog = false }
+                    onClick = { showHowToPlayDialog = false }
                 ) {
                     Text(
                         text = stringResource(Res.string.accept_dialog),
@@ -81,7 +81,7 @@ fun SetupGamePage(
                 actions = {
                     IconButton(
                         onClick = {
-                            showInfoDialog = true
+                            showHowToPlayDialog = true
                         },
                     ) {
                         Icon(

@@ -35,35 +35,21 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getGameByKey
+import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import io.github.aakira.napier.Napier
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_res_show_liars
+import partygames.composeapp.generated.resources.find_liar_res_submit
 import partygames.composeapp.generated.resources.new_round
 
 @Composable
 fun FindLiarPlayWidget(
     modifier: Modifier = Modifier,
+    game: FindLiar,
     viewModel: FindLiarPlayViewModel = viewModel<FindLiarPlayViewModel>(key = activeGame),
 ) {
-    if (activeGame == null) {
-        Napier.e("No active game found")
-        Text("No active game found")
-        return
-    }
-    val game = getGameByKey(activeGame!!)
-    if (game == null) {
-        Napier.e("Game with key $activeGame not found")
-        Text("Game with key $activeGame not found")
-        return
-    }
-    if (game !is FindLiar) {
-        Napier.e("Game with key $activeGame is not a FindLiar game")
-        Text("Game with key $activeGame is not a FindLiar game")
-        return
-    }
-
     LaunchedEffect(game) {
         viewModel.game = game
         viewModel.initNewRound()
@@ -80,7 +66,6 @@ fun FindLiarPlayWidget(
                     question = viewModel.question!![Locale.current.language + "_" + Locale.current.region],
                     player = viewModel.answeringPlayer!!,
                     onAnswer = { answer: String ->
-                        Napier.i("Antwort von ${viewModel.answeringPlayer} eingereicht: $answer")
                         viewModel.answerQuestion(viewModel.answeringPlayer!!, answer)
                     },
                     modifier = Modifier
@@ -165,7 +150,9 @@ fun AskQuestionCard(
                         onAnswer(answer)
                     }
                 ) {
-                    Text("Fertig")
+                    Text(
+                        text = stringResource(Res.string.find_liar_res_submit)
+                    )
                 }
             }
         }

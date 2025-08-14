@@ -11,4 +11,5 @@ Discuss the answers together and figure out who the liar is!
 
     <string name="find_liar_res_liar_count">Liar Count</string>
     <string name="find_liar_res_show_liars">Show liars</string>
+    <string name="find_liar_res_submit">Submit</string>
 </resources>
