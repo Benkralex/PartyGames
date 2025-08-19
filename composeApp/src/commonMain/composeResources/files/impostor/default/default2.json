@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Pinguin",
                 "en_US": "Penguin"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Känguru",
                 "en_US": "Kangaroo"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Eule",
                 "en_US": "Owl"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Uhr",
                 "en_US": "Clock"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Kamera",
                 "en_US": "Camera"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Schlüssel",
                 "en_US": "Key"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Banane",
                 "en_US": "Banana"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Brot",
                 "en_US": "Bread"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Kuchen",
                 "en_US": "Cake"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Bahnhof",
                 "en_US": "Train Station"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Bibliothek",
                 "en_US": "Library"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Krankenhaus",
                 "en_US": "Hospital"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Basketball",
                 "en_US": "Basketball"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Boxen",
                 "en_US": "Boxing"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 2,
             "main_word": {
                 "de_DE": "Volleyball",
                 "en_US": "Volleyball"

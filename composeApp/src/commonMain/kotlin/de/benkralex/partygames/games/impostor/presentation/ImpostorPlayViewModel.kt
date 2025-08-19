@@ -6,11 +6,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.ViewModel
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.impostor.data.ImpostorWordPair
-import de.benkralex.partygames.games.impostor.data.getImposterWordSets
+import de.benkralex.partygames.games.impostor.data.getImposterWordPairs
 import de.benkralex.partygames.games.impostor.domain.Impostor
+import de.benkralex.partygames.games.impostor.domain.ImpostorWordPair
 import io.github.aakira.napier.Napier
 
 class ImpostorPlayViewModel : ViewModel() {
@@ -27,11 +26,8 @@ class ImpostorPlayViewModel : ViewModel() {
     val playerCount: Int by derivedStateOf {
         players.size
     }
-    val difficulty: Difficulty by derivedStateOf {
-        game?.settings?.get("difficulty") as? Difficulty ?: Difficulty.MEDIUM
-    }
     val wordPairs by derivedStateOf {
-        getImposterWordSets(listOf(Locale.current.language)).filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
+        getImposterWordPairs(listOf(Locale.current.language)).filter { topics.contains(it.topic) }
     }
 
 
@@ -48,7 +44,7 @@ class ImpostorPlayViewModel : ViewModel() {
             return
         }
         if (wordPairs.none { !playedWordPairs.contains(it) }) {
-            Napier.e("No question pairs available for the selected topics and difficulty")
+            Napier.e("No question pairs available for the selected topics")
             return
         }
 

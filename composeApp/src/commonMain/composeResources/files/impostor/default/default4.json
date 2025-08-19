@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Chamäleon",
                 "en_US": "Chameleon"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Wal",
                 "en_US": "Whale"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Krabbe",
                 "en_US": "Crab"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Spiegel",
                 "en_US": "Mirror"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Thermometer",
                 "en_US": "Thermometer"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Schere",
                 "en_US": "Scissors"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Avocado",
                 "en_US": "Avocado"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Nudeln",
                 "en_US": "Pasta"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Erdbeere",
                 "en_US": "Strawberry"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Flughafen",
                 "en_US": "Airport"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Wüste",
                 "en_US": "Desert"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Kirche",
                 "en_US": "Church"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Skifahren",
                 "en_US": "Skiing"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Rudern",
                 "en_US": "Rowing"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 4,
             "main_word": {
                 "de_DE": "Bogenschießen",
                 "en_US": "Archery"

@@ -16,18 +16,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
-import de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput.DifficultyInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
 import de.benkralex.partygames.games.impostor.data.getImposterTopics
 import de.benkralex.partygames.settingsPage.data.settings
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
-import partygames.composeapp.generated.resources.difficulty
 import partygames.composeapp.generated.resources.impostor_res_impostor_count
 import partygames.composeapp.generated.resources.player
 import partygames.composeapp.generated.resources.player_name
@@ -39,19 +36,18 @@ import partygames.composeapp.generated.resources.topics
 fun ImpostorSetupWidget(
     modifier: Modifier = Modifier,
     viewModel: ImpostorSetupViewModel = viewModel<ImpostorSetupViewModel>(),
-    setupGame: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit = { _, _, _, _ -> }
+    setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> }
 ) {
     // initialise labels
     val playerListLabel = stringResource(Res.string.players)
     val playerSingleLabel = stringResource(Res.string.player_name)
     val playerNameStart = stringResource(Res.string.player)
     val impostorCountLabel = stringResource(Res.string.impostor_res_impostor_count)
-    val difficultyLabel = stringResource(Res.string.difficulty)
     val topicsLabel = stringResource(Res.string.topics)
 
     viewModel.initializeLabels(
         playerListLabel, playerSingleLabel, playerNameStart,
-        impostorCountLabel, difficultyLabel, topicsLabel
+        impostorCountLabel, topicsLabel
     )
 
     viewModel.topicsState.checkboxSingleStates = getImposterTopics(settings.value.languages).map {
@@ -83,9 +79,6 @@ fun ImpostorSetupWidget(
         CustomDivider()
 
         IntegerInputWidget(modifier = childModifier, state = viewModel.impostorCountState)
-        CustomDivider()
-
-        DifficultyInputWidget(modifier = childModifier, state = viewModel.difficultyState)
         CustomDivider()
 
         CheckboxListWidget(modifier = childModifier, state = viewModel.topicsState)

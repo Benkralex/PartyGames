@@ -30,19 +30,17 @@ class Impostor : Game {
         "impostorCount" to null,
         "topics" to null,
         "hint" to null,
-        "difficulty" to null,
     )
 
     override val setupWidget = @Composable { modifier: Modifier ->
         ImpostorSetupWidget(
             modifier = modifier,
-            setupGame = { players, impostorCount, topics, difficulty ->
+            setupGame = { players, impostorCount, topics ->
                 createGame(
                     settings = mapOf(
                         "players" to players,
                         "impostorCount" to impostorCount,
                         "topics" to topics,
-                        "difficulty" to difficulty
                     ),
                 )
             }

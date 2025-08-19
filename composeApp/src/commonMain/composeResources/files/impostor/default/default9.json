@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Axolotl",
                 "en_US": "Axolotl"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Narwal",
                 "en_US": "Narwhal"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Kolibri",
                 "en_US": "Hummingbird"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Astrolabium",
                 "en_US": "Astrolabe"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Kaleidoskop",
                 "en_US": "Kaleidoscope"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Phonograph",
                 "en_US": "Phonograph"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Fugu",
                 "en_US": "Fugu"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Trüffel",
                 "en_US": "Truffle"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Borschtsch",
                 "en_US": "Borscht"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Antarktis",
                 "en_US": "Antarctica"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Machu Picchu",
                 "en_US": "Machu Picchu"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Versailles",
                 "en_US": "Versailles"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Parkour",
                 "en_US": "Parkour"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Boccia",
                 "en_US": "Bocce"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 9,
             "main_word": {
                 "de_DE": "Kitesurfen",
                 "en_US": "Kitesurfing"

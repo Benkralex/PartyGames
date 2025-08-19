@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Eule",
                 "en_US": "Owl"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Känguru",
                 "en_US": "Kangaroo"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Tintenfisch",
                 "en_US": "Octopus"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Mikroskop",
                 "en_US": "Microscope"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Taschenlampe",
                 "en_US": "Flashlight"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Kompass",
                 "en_US": "Compass"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Lasagne",
                 "en_US": "Lasagna"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Sushi",
                 "en_US": "Sushi"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Pfannkuchen",
                 "en_US": "Pancake"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Bibliothek",
                 "en_US": "Library"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Bahnhof",
                 "en_US": "Train Station"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Krankenhaus",
                 "en_US": "Hospital"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Fechten",
                 "en_US": "Fencing"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Rudern",
                 "en_US": "Rowing"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 6,
             "main_word": {
                 "de_DE": "Bogenschießen",
                 "en_US": "Archery"

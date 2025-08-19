@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Quastenflosser",
                 "en_US": "Coelacanth"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Schuhschnabel",
                 "en_US": "Shoebill"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Riesenassel",
                 "en_US": "Giant Isopod"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Orrery",
                 "en_US": "Orrery"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Zuse Z3",
                 "en_US": "Zuse Z3"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Kythera-Mechanismus",
                 "en_US": "Antikythera Mechanism"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Hákarl",
                 "en_US": "Hákarl"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Durian",
                 "en_US": "Durian"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Surströmming",
                 "en_US": "Surströmming"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Tschernobyl",
                 "en_US": "Chernobyl"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Area 51",
                 "en_US": "Area 51"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Bermuda-Dreieck",
                 "en_US": "Bermuda Triangle"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Bossaball",
                 "en_US": "Bossaball"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Unterwasser-Hockey",
                 "en_US": "Underwater Hockey"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 10,
             "main_word": {
                 "de_DE": "Schachboxen",
                 "en_US": "Chess Boxing"

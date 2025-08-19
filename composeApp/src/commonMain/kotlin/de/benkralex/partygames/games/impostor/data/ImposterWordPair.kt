@@ -1,33 +1,16 @@
 package de.benkralex.partygames.games.impostor.data
 
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.common.domain.difficultyFromNumber
+import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
+import de.benkralex.partygames.games.impostor.domain.ImpostorWordPair
 import io.github.aakira.napier.Napier
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonPrimitive
 import partygames.composeapp.generated.resources.Res
-
-data class ImpostorDataset(
-    val uid: String,
-    val title: TranslatableString,
-    val description: TranslatableString,
-    val author: TranslatableString,
-    val topics: Map<String, TranslatableString>,
-    val wordPairs: List<ImpostorWordPair>,
-)
-
-data class ImpostorWordPair(
-    val mainWord: TranslatableString,
-    val impostorHintWord: TranslatableString,
-    val topic: TranslatableString,
-    val difficulty: Difficulty,
-)
 
 var datasets: MutableList<ImpostorDataset> = mutableListOf()
 suspend fun updateImpostorDatasets() {
@@ -100,9 +83,6 @@ suspend fun updateImpostorDatasets() {
                                 key = wordPair["topic_key"]?.jsonPrimitive?.content ?: "default",
                                 defaultValue = { TranslatableString() }
                             ),
-                            difficulty = difficultyFromNumber(
-                                number = (wordPair["difficulty"] as JsonPrimitive).int
-                            ),
                         )
                     }
                 )
@@ -121,7 +101,7 @@ suspend fun updateImpostorDatasets() {
     }
 }
 
-fun getImposterWordSets(languages: List<String>): List<ImpostorWordPair> {
+fun getImposterWordPairs(languages: List<String>): List<ImpostorWordPair> {
     return datasets.flatMap { it.wordPairs }.filter { q ->
         q.impostorHintWord.translations.keys.any { lang ->
             lang in languages
@@ -136,5 +116,5 @@ fun getImposterWordSets(languages: List<String>): List<ImpostorWordPair> {
 }
 
 fun getImposterTopics(languages: List<String>): List<TranslatableString> {
-    return getImposterWordSets(languages).map { it.topic }.toSet().toList()
+    return getImposterWordPairs(languages).map { it.topic }.toSet().toList()
 }

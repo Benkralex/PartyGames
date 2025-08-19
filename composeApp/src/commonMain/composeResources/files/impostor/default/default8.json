@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Axolotl",
                 "en_US": "Axolotl"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Albatros",
                 "en_US": "Albatross"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Nacktmull",
                 "en_US": "Naked Mole-Rat"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Metronom",
                 "en_US": "Metronome"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Zahnradsystem",
                 "en_US": "Gear Mechanism"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Barometer",
                 "en_US": "Barometer"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Baklava",
                 "en_US": "Baklava"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Gazpacho",
                 "en_US": "Gazpacho"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Kimchi",
                 "en_US": "Kimchi"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Katakomben",
                 "en_US": "Catacombs"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Oase",
                 "en_US": "Oasis"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Himalaya",
                 "en_US": "Himalayas"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Kanu-Slalom",
                 "en_US": "Canoe Slalom"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Skeleton",
                 "en_US": "Skeleton"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 8,
             "main_word": {
                 "de_DE": "Sepak Takraw",
                 "en_US": "Sepak Takraw"

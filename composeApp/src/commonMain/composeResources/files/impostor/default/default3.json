@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Delfin",
                 "en_US": "Dolphin"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Pfau",
                 "en_US": "Peacock"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Igel",
                 "en_US": "Hedgehog"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Fernglas",
                 "en_US": "Binoculars"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Kompass",
                 "en_US": "Compass"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Kerze",
                 "en_US": "Candle"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Lasagne",
                 "en_US": "Lasagna"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Honig",
                 "en_US": "Honey"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Spinat",
                 "en_US": "Spinach"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Zoo",
                 "en_US": "Zoo"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Museum",
                 "en_US": "Museum"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Berggipfel",
                 "en_US": "Mountain Peak"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Fechten",
                 "en_US": "Fencing"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Klettern",
                 "en_US": "Climbing"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Reiten",
                 "en_US": "Horse Riding"

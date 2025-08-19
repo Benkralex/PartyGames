@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Fledermaus",
                 "en_US": "Bat"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Oktopus",
                 "en_US": "Octopus"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Kuckuck",
                 "en_US": "Cuckoo"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Schlüsselbund",
                 "en_US": "Keyring"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Fernbedienung",
                 "en_US": "Remote Control"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Kommode",
                 "en_US": "Dresser"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Kürbis",
                 "en_US": "Pumpkin"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Muschel",
                 "en_US": "Mussel"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Mandel",
                 "en_US": "Almond"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Höhle",
                 "en_US": "Cave"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Marktplatz",
                 "en_US": "Marketplace"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Leuchtturm",
                 "en_US": "Lighthouse"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Eiskunstlauf",
                 "en_US": "Figure Skating"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Windsurfen",
                 "en_US": "Windsurfing"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 5,
             "main_word": {
                 "de_DE": "Speerwurf",
                 "en_US": "Javelin Throw"

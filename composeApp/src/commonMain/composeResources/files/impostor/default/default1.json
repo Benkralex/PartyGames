@@ -37,7 +37,6 @@
     "word_pairs": [
         {
             "topic_key": "animals",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Elefant",
                 "en_US": "Elephant"
@@ -49,7 +48,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Fisch",
                 "en_US": "Fish"
@@ -61,7 +59,6 @@
         },
         {
             "topic_key": "animals",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Pferd",
                 "en_US": "Horse"
@@ -73,7 +70,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Stuhl",
                 "en_US": "Chair"
@@ -85,7 +81,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Fernseher",
                 "en_US": "TV"
@@ -97,7 +92,6 @@
         },
         {
             "topic_key": "things",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Regenschirm",
                 "en_US": "Umbrella"
@@ -109,7 +103,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Pizza",
                 "en_US": "Pizza"
@@ -121,7 +114,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Apfel",
                 "en_US": "Apple"
@@ -133,7 +125,6 @@
         },
         {
             "topic_key": "food",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Eis",
                 "en_US": "Ice Cream"
@@ -145,7 +136,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Strand",
                 "en_US": "Beach"
@@ -157,7 +147,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Schule",
                 "en_US": "School"
@@ -169,7 +158,6 @@
         },
         {
             "topic_key": "places",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Park",
                 "en_US": "Park"
@@ -181,7 +169,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Fußball",
                 "en_US": "Soccer"
@@ -193,7 +180,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Tennis",
                 "en_US": "Tennis"
@@ -205,7 +191,6 @@
         },
         {
             "topic_key": "sports",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Schwimmen",
                 "en_US": "Swimming"

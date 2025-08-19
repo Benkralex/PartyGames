@@ -44,7 +44,6 @@
     "word_pairs": [
         {
             "topic_key": "topic1",
-            "difficulty": 3,
             "main_word": {
                 "de_DE": "Hauptwort 1",
                 "en_US": "Main Word 1",
@@ -60,7 +59,6 @@
         },
         {
             "topic_key": "topic2",
-            "difficulty": 1,
             "main_word": {
                 "de_DE": "Hauptwort 2",
                 "en_US": "Main Word 2",
