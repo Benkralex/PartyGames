@@ -5,10 +5,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.text.TextRange
 import androidx.lifecycle.ViewModel
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListState
-import de.benkralex.partygames.games.common.presentation.setupWidgets.difficultyInput.DifficultyInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringSingleState
@@ -42,15 +40,6 @@ class FindLiarSetupViewModel: ViewModel() {
         liarCountState.value
     }
 
-    val difficultyState = DifficultyInputState(
-        label = "",
-        defaultValue = Difficulty.MEDIUM,
-    )
-
-    val difficulty by derivedStateOf {
-        difficultyState.value
-    }
-
     val topicsState = CheckboxListState(
         label = "",
         checkboxSingleStates = emptyList(),
@@ -68,7 +57,6 @@ class FindLiarSetupViewModel: ViewModel() {
         playerSingleLabel: String,
         playerNameStart: String,
         liarCountLabel: String,
-        difficultyLabel: String,
         topicsLabel: String
     ) {
         if (_playersState.value == null) {
@@ -95,7 +83,6 @@ class FindLiarSetupViewModel: ViewModel() {
         }
 
         liarCountState.label = liarCountLabel
-        difficultyState.label = difficultyLabel
         topicsState.label = topicsLabel
     }
 
@@ -110,12 +97,11 @@ class FindLiarSetupViewModel: ViewModel() {
         }
     }
 
-    fun setupGame(setupGameCallback: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit) {
+    fun setupGame(setupGameCallback: (List<String>, Int, List<TranslatableString>) -> Unit) {
         Napier.d(
             "players=$players," +
                     " liarCount=${liarCount}," +
-                    " topics=$topics," +
-                    " difficulty=${difficulty}"
+                    " topics=$topics"
         )
 
         if (isSetupInvalid()) {
@@ -123,13 +109,12 @@ class FindLiarSetupViewModel: ViewModel() {
             return
         }
         settings.value.lastPlayers = players
-        setupGameCallback(players, liarCount, topics, difficulty)
+        setupGameCallback(players, liarCount, topics)
     }
 
     private fun isSetupInvalid(): Boolean {
         return _playersState.value?.stringSingleStates?.values?.map { it.isError }?.any { it } == true ||
                 liarCountState.isError ||
-                difficultyState.isError ||
                 topicsState.isError
     }
 }

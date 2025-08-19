@@ -6,10 +6,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.ViewModel
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.findLiar.data.FindLiarQuestionPair
-import de.benkralex.partygames.games.findLiar.data.getFindLiarQuestionSets
+import de.benkralex.partygames.games.findLiar.data.getFindLiarQuestionPairs
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import io.github.aakira.napier.Napier
 
@@ -27,11 +26,8 @@ class FindLiarPlayViewModel : ViewModel() {
     val playerCount: Int by derivedStateOf {
         players.size
     }
-    val difficulty: Difficulty by derivedStateOf {
-        game?.settings?.get("difficulty") as? Difficulty ?: Difficulty.MEDIUM
-    }
     val questionPairs by derivedStateOf {
-        getFindLiarQuestionSets(listOf(Locale.current.language)).filter { it.difficulty == difficulty }.filter { topics.contains(it.topic) }
+        getFindLiarQuestionPairs(listOf(Locale.current.language)).filter { topics.contains(it.topic) }
     }
 
 
@@ -61,6 +57,14 @@ class FindLiarPlayViewModel : ViewModel() {
 
         currentQuestionPair = questionPairs.filter { !playedQuestions.contains(it) }.random()
         playedQuestions.add(currentQuestionPair!!)
+        if (currentQuestionPair!!.switchable && (0..1).random() == 0) {
+            currentQuestionPair = FindLiarQuestionPair(
+                switchable = true,
+                mainQuestion = currentQuestionPair!!.liarQuestion,
+                liarQuestion = currentQuestionPair!!.mainQuestion,
+                topic = currentQuestionPair!!.topic
+            )
+        }
         answers.clear()
         updateAnsweringPlayer()
     }

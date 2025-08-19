@@ -22,7 +22,7 @@ class StringListState(
             return
         }
         val nextKey = (stringSingleStates.keys.maxOrNull() ?: 0) + 1
-        var nextValue = ""
+        var nextValue: String
         var i = 1
         do {
             nextValue = defaultValue(i)

@@ -30,20 +30,18 @@ class FindLiar : Game {
         "players" to null,
         "liarCount" to null,
         "topics" to null,
-        "difficulty" to null,
     )
 
     @OptIn(ExperimentalMaterial3Api::class)
     override val setupWidget = @Composable { modifier: Modifier ->
         FindLiarSetupWidget(
             modifier = modifier,
-            setupGame = { players, liarCount, topics, difficulty ->
+            setupGame = { players, liarCount, topics ->
                 createGame(
                     mapOf(
                         "players" to players,
                         "liarCount" to liarCount,
                         "topics" to topics,
-                        "difficulty" to difficulty,
                     )
                 )
             }

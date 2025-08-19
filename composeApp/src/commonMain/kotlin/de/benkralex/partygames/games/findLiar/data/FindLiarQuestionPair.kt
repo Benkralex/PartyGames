@@ -1,15 +1,13 @@
 package de.benkralex.partygames.games.findLiar.data
 
-import de.benkralex.partygames.games.common.domain.Difficulty
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.common.domain.difficultyFromNumber
 import io.github.aakira.napier.Napier
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import kotlinx.serialization.json.int
+import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.jsonPrimitive
 import partygames.composeapp.generated.resources.Res
 
@@ -23,25 +21,16 @@ data class FindLiarDataset(
 )
 
 data class FindLiarQuestionPair(
+    val switchable: Boolean = true,
     val mainQuestion: TranslatableString,
     val liarQuestion: TranslatableString,
     val topic: TranslatableString,
-    val difficulty: Difficulty,
 )
 
 var datasets: MutableList<FindLiarDataset> = mutableListOf()
 suspend fun updateFindLiarDatasets() {
     val paths: List<String> = listOf(
-        "files/find_liar/default/default1.json",
-        "files/find_liar/default/default2.json",
-        "files/find_liar/default/default3.json",
-        "files/find_liar/default/default4.json",
-        "files/find_liar/default/default5.json",
-        "files/find_liar/default/default6.json",
-        "files/find_liar/default/default7.json",
-        "files/find_liar/default/default8.json",
-        "files/find_liar/default/default9.json",
-        "files/find_liar/default/default10.json",
+        "files/find_liar/new_default/default.json"
     )
     for (path in paths) {
         val bytes = Res.readBytes(path)
@@ -100,9 +89,7 @@ suspend fun updateFindLiarDatasets() {
                                 key = question["topic_key"]?.jsonPrimitive?.content ?: "default",
                                 defaultValue = { TranslatableString() }
                             ),
-                            difficulty = difficultyFromNumber(
-                                number = (question["difficulty"] as JsonPrimitive).int
-                            ),
+                            switchable = (question["switchable"] as JsonPrimitive).boolean,
                         )
                     }
                 )
@@ -121,7 +108,7 @@ suspend fun updateFindLiarDatasets() {
     }
 }
 
-fun getFindLiarQuestionSets(languages: List<String>): List<FindLiarQuestionPair> {
+fun getFindLiarQuestionPairs(languages: List<String>): List<FindLiarQuestionPair> {
     return datasets.flatMap { it.questionPairs }.filter { q ->
         q.liarQuestion.translations.keys.any { lang ->
             lang in languages
@@ -136,5 +123,5 @@ fun getFindLiarQuestionSets(languages: List<String>): List<FindLiarQuestionPair>
 }
 
 fun getFindLiarTopics(languages: List<String>): List<TranslatableString> {
-    return getFindLiarQuestionSets(languages).map { it.topic }.toSet().toList()
+    return getFindLiarQuestionPairs(languages).map { it.topic }.toSet().toList()
 }

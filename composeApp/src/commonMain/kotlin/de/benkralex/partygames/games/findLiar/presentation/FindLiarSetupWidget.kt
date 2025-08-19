@@ -39,18 +39,17 @@ import partygames.composeapp.generated.resources.topics
 fun FindLiarSetupWidget(
     modifier: Modifier = Modifier,
     viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(),
-    setupGame: (List<String>, Int, List<TranslatableString>, Difficulty) -> Unit = { _, _, _, _ -> }
+    setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> }
 ) {
     val playerListLabel = stringResource(Res.string.players)
     val playerSingleLabel = stringResource(Res.string.player_name)
     val playerNameStart = stringResource(Res.string.player)
     val liarCountLabel = stringResource(Res.string.find_liar_res_liar_count)
-    val difficultyLabel = stringResource(Res.string.difficulty)
     val topicsLabel = stringResource(Res.string.topics)
 
     viewModel.initializeLabels(
         playerListLabel, playerSingleLabel, playerNameStart,
-        liarCountLabel, difficultyLabel, topicsLabel
+        liarCountLabel, topicsLabel
     )
 
     viewModel.topicsState.checkboxSingleStates = getFindLiarTopics(settings.value.languages).map {
@@ -82,9 +81,6 @@ fun FindLiarSetupWidget(
         CustomDivider()
 
         IntegerInputWidget(modifier = childModifier, state = viewModel.liarCountState)
-        CustomDivider()
-
-        DifficultyInputWidget(modifier = childModifier, state = viewModel.difficultyState)
         CustomDivider()
 
         CheckboxListWidget(modifier = childModifier, state = viewModel.topicsState)
