@@ -98,7 +98,7 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "2.0.0"
+        versionName = "2.1.0"
     }
     packaging {
         resources {
@@ -127,7 +127,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "PartyGames"
-            packageVersion = "2.0.0"
+            packageVersion = "2.1.0"
 
             macOS {
                 iconFile.set(project.file("src/commonMain/composeResources/drawable/icon.png"))
