@@ -1,44 +1,57 @@
 {
     "uid": "default_dataset",
     "title": {
-        "de_DE": "Standard Datenset"
+        "de_DE": "Standard Datenset",
+        "en": "Default Dataset"
     },
     "description": {
-        "de_DE": "Das Standart Datenset für das Spiel 'Finde den Lügner'"
+        "de_DE": "Das Standart Datenset für das Spiel 'Finde den Lügner'",
+        "en": "The default dataset for the game 'Find the Liar'"
     },
     "author": {
-        "de_DE": "Benkralex & Gemini 2.5 Pro"
+        "de_DE": "Benkralex & Gemini 2.5 Pro",
+        "en": "Benkralex & Gemini 2.5 Pro"
     },
     "topics": {
         "daily_routines": {
-            "de_DE": "Tägliche Routinen"
+            "de_DE": "Tägliche Routinen",
+            "en": "Daily Routines"
         },
         "aspirations_and_dreams": {
-            "de_DE": "Träume und Wünsche"
+            "de_DE": "Träume und Wünsche",
+            "en": "Aspirations and Dreams"
         },
         "food_and_drink": {
-            "de_DE": "Essen und Trinken"
+            "de_DE": "Essen und Trinken",
+            "en": "Food and Drink"
         },
         "media_and_technology": {
-            "de_DE": "Medien und Technologie"
+            "de_DE": "Medien und Technologie",
+            "en": "Media and Technology"
         },
         "self_perception": {
-            "de_DE": "Selbstwahrnehmung"
+            "de_DE": "Selbstwahrnehmung",
+            "en": "Self-Perception"
         },
         "personal_tastes": {
-            "de_DE": "Persönliche Vorlieben"
+            "de_DE": "Persönliche Vorlieben",
+            "en": "Personal Tastes"
         },
         "personal_style": {
-            "de_DE": "Persönlicher Stil"
+            "de_DE": "Persönlicher Stil",
+            "en": "Personal Style"
         },
         "life_and_travel": {
-            "de_DE": "Leben und Reisen"
+            "de_DE": "Leben und Reisen",
+            "en": "Life and Travel"
         },
         "relationships_and_social": {
-            "de_DE": "Beziehungen und Soziales"
+            "de_DE": "Beziehungen und Soziales",
+            "en": "Relationships and Social"
         },
         "leisure_and_hobbies": {
-            "de_DE": "Freizeit und Hobbys"
+            "de_DE": "Freizeit und Hobbys",
+            "en": "Leisure and Hobbies"
         }
     },
     "questions": [
@@ -46,580 +59,696 @@
             "topic_key": "daily_routines",
             "switchable": false,
             "main_question": {
-                "de_DE": "Wie viele Stunden schläfst du normalerweise pro Nacht?"
+                "de_DE": "Wie viele Stunden schläfst du normalerweise pro Nacht?",
+                "en": "How many hours do you usually sleep per night?"
             },
             "liar_question": {
-                "de_DE": "Wie oft wechselst du wöchentlich deine Unterwäsche?"
+                "de_DE": "Wie oft wechselst du wöchentlich deine Unterwäsche?",
+                "en": "How often do you change your underwear weekly?"
             }
         },
         {
             "topic_key": "daily_routines",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie kommst du meistens von A nach B? (Öffis, laufen, Auto, ...)"
+                "de_DE": "Wie kommst du meistens von A nach B? (Öffis, laufen, Auto, ...)",
+                "en": "How do you usually get from A to B? (Public transport, walking, car, ...)"
             },
             "liar_question": {
-                "de_DE": "Wie kommst du normalerweise zur Arbeit/Schule? (Öffis, laufen, Auto, ...)"
+                "de_DE": "Wie kommst du normalerweise zur Arbeit/Schule? (Öffis, laufen, Auto, ...)",
+                "en": "How do you normally get to work/school? (Public transport, walking, car, ...)"
             }
         },
         {
             "topic_key": "daily_routines",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie oft putzst du deine Zähne am Tag?"
+                "de_DE": "Wie oft putzst du deine Zähne am Tag?",
+                "en": "How often do you brush your teeth a day?"
             },
             "liar_question": {
-                "de_DE": "Wie oft isst du täglich warme Mahlzeiten?"
+                "de_DE": "Wie oft isst du täglich warme Mahlzeiten?",
+                "en": "How often do you eat hot meals daily?"
             }
         },
         {
             "topic_key": "aspirations_and_dreams",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welchen Beruf wolltest du als Kind gerne werden?"
+                "de_DE": "Welchen Beruf wolltest du als Kind gerne werden?",
+                "en": "What job did you want to have as a child?"
             },
             "liar_question": {
-                "de_DE": "Was ist dein Traumberuf?"
+                "de_DE": "Was ist dein Traumberuf?",
+                "en": "What is your dream job?"
             }
         },
         {
             "topic_key": "aspirations_and_dreams",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welchen Namen würdest du deinem Kind geben?"
+                "de_DE": "Welchen Namen würdest du deinem Kind geben?",
+                "en": "What name would you give your child?"
             },
             "liar_question": {
-                "de_DE": "Welchen Namen hättest du dir als Kind gegeben?"
+                "de_DE": "Welchen Namen hättest du dir als Kind gegeben?",
+                "en": "What name would you have given yourself as a child?"
             }
         },
         {
             "topic_key": "aspirations_and_dreams",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Haustier hättest du gerne?"
+                "de_DE": "Welches Haustier hättest du gerne?",
+                "en": "What pet would you like to have?"
             },
             "liar_question": {
-                "de_DE": "Welches Haustier hättest du als Kind gerne gehabt?"
+                "de_DE": "Welches Haustier hättest du als Kind gerne gehabt?",
+                "en": "What pet would you have liked to have as a child?"
             }
         },
         {
             "topic_key": "aspirations_and_dreams",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welcher Superheld wärst du gerne?"
+                "de_DE": "Welcher Superheld wärst du gerne?",
+                "en": "Which superhero would you like to be?"
             },
             "liar_question": {
-                "de_DE": "Welcher Superheld ist overrated?"
+                "de_DE": "Welcher Superheld ist overrated?",
+                "en": "Which superhero is overrated?"
             }
         },
         {
             "topic_key": "food_and_drink",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viel Liter Wasser trinkst du in zwei Tagen?"
+                "de_DE": "Wie viel Liter Wasser trinkst du in zwei Tagen?",
+                "en": "How many liters of water do you drink in two days?"
             },
             "liar_question": {
-                "de_DE": "Wie oft isst du pro Monat auswärts?"
+                "de_DE": "Wie oft isst du pro Monat auswärts?",
+                "en": "How often do you eat out per month?"
             }
         },
         {
             "topic_key": "food_and_drink",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Gemüse isst du am liebsten?"
+                "de_DE": "Welches Gemüse isst du am liebsten?",
+                "en": "What is your favorite vegetable?"
             },
             "liar_question": {
-                "de_DE": "Welches Gemüse hat deine Lieblingsfarbe?"
+                "de_DE": "Welches Gemüse hat deine Lieblingsfarbe?",
+                "en": "Which vegetable has your favorite color?"
             }
         },
         {
             "topic_key": "food_and_drink",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welche Süßigkeit isst du am liebsten?"
+                "de_DE": "Welche Süßigkeit isst du am liebsten?",
+                "en": "What is your favorite candy?"
             },
             "liar_question": {
-                "de_DE": "Welche Süßigkeit isst du bei schlechter Laune"
+                "de_DE": "Welche Süßigkeit isst du bei schlechter Laune",
+                "en": "What candy do you eat when you're in a bad mood?"
             }
         },
         {
             "topic_key": "food_and_drink",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Getränk trinkst du am liebsten?"
+                "de_DE": "Welches Getränk trinkst du am liebsten?",
+                "en": "What is your favorite drink?"
             },
             "liar_question": {
-                "de_DE": "Welches Getränk sollte auf jeder Party in Mengen vorhanden sein?"
+                "de_DE": "Welches Getränk sollte auf jeder Party in Mengen vorhanden sein?",
+                "en": "Which drink should be available in abundance at every party?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": false,
             "main_question": {
-                "de_DE": "Welche App nutzt du am häufigsten?"
+                "de_DE": "Welche App nutzt du am häufigsten?",
+                "en": "Which app do you use most often?"
             },
             "liar_question": {
-                "de_DE": "Welche Social-Media-Plattform nutzt du am häufigsten?"
+                "de_DE": "Welche Social-Media-Plattform nutzt du am häufigsten?",
+                "en": "Which social media platform do you use most often?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welchen Streaming-Dienst nutzt du am meiseten?"
+                "de_DE": "Welchen Streaming-Dienst nutzt du am meiseten?",
+                "en": "Which streaming service do you use the most?"
             },
             "liar_question": {
-                "de_DE": "Welchen Streaming-Dienst nutzt deine Familie am meisten?"
+                "de_DE": "Welchen Streaming-Dienst nutzt deine Familie am meisten?",
+                "en": "Which streaming service does your family use the most?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie alt warst du, als du dein erstes Handy bekommen hast?"
+                "de_DE": "Wie alt warst du, als du dein erstes Handy bekommen hast?",
+                "en": "How old were you when you got your first phone?"
             },
             "liar_question": {
-                "de_DE": "Wie alt sollte man mindestens sein, wenn man sein erstes Handy bekommt?"
+                "de_DE": "Wie alt sollte man mindestens sein, wenn man sein erstes Handy bekommt?",
+                "en": "What is the minimum age someone should be to get their first phone?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie oft checkst du täglich deine Emails?"
+                "de_DE": "Wie oft checkst du täglich deine Emails?",
+                "en": "How often do you check your emails daily?"
             },
             "liar_question": {
-                "de_DE": "Wie oft checkst du täglich deine Nachrichten?"
+                "de_DE": "Wie oft checkst du täglich deine Nachrichten?",
+                "en": "How often do you check your messages daily?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Stunden verbringst du täglich am Bildschirm?"
+                "de_DE": "Wie viele Stunden verbringst du täglich am Bildschirm?",
+                "en": "How many hours a day do you spend in front of a screen?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Stunden verbringst du täglich in Social Media?"
+                "de_DE": "Wie viele Stunden verbringst du täglich in Social Media?",
+                "en": "How many hours a day do you spend on social media?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Apps hast du auf deinem Handy?"
+                "de_DE": "Wie viele Apps hast du auf deinem Handy?",
+                "en": "How many apps do you have on your phone?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Fotos machst du durchschnittlich pro Jahr?"
+                "de_DE": "Wie viele Fotos machst du durchschnittlich pro Jahr?",
+                "en": "How many photos do you take on average per year?"
             }
         },
         {
             "topic_key": "media_and_technology",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Spiel hat dich am meisten geprägt?"
+                "de_DE": "Welches Spiel hat dich am meisten geprägt?",
+                "en": "Which game has influenced you the most?"
             },
             "liar_question": {
-                "de_DE": "Welches Spiel fandest du am fesselndsten?"
+                "de_DE": "Welches Spiel fandest du am fesselndsten?",
+                "en": "Which game did you find the most captivating?"
             }
         },
         {
             "topic_key": "self_perception",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welchen Ort findest du am entspannendsten?"
+                "de_DE": "Welchen Ort findest du am entspannendsten?",
+                "en": "What place do you find most relaxing?"
             },
             "liar_question": {
-                "de_DE": "Welcher Ort ist dir am wichtigsten?"
+                "de_DE": "Welcher Ort ist dir am wichtigsten?",
+                "en": "What place is most important to you?"
             }
         },
         {
             "topic_key": "self_perception",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welche Tageszeit ist deine produktivste?"
+                "de_DE": "Welche Tageszeit ist deine produktivste?",
+                "en": "What time of day are you most productive?"
             },
             "liar_question": {
-                "de_DE": "Zu welcher Tageszeit bist du am kreativsten?"
+                "de_DE": "Zu welcher Tageszeit bist du am kreativsten?",
+                "en": "At what time of day are you most creative?"
             }
         },
         {
             "topic_key": "self_perception",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Element passt zu dir?"
+                "de_DE": "Welches Element passt zu dir?",
+                "en": "Which element suits you?"
             },
             "liar_question": {
-                "de_DE": "Welches Element passt nicht zu dir?"
+                "de_DE": "Welches Element passt nicht zu dir?",
+                "en": "Which element does not suit you?"
             }
         },
         {
             "topic_key": "self_perception",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Tier beschreibt deine Persönlichkeit am besten?"
+                "de_DE": "Welches Tier beschreibt deine Persönlichkeit am besten?",
+                "en": "Which animal best describes your personality?"
             },
             "liar_question": {
-                "de_DE": "Welches Tier beschreibt die Persönlichkeiten deiner Freunde am besten?"
+                "de_DE": "Welches Tier beschreibt die Persönlichkeiten deiner Freunde am besten?",
+                "en": "Which animal best describes the personalities of your friends?"
             }
         },
         {
             "topic_key": "personal_tastes",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welche Jahreszeit magst du am liebsten?"
+                "de_DE": "Welche Jahreszeit magst du am liebsten?",
+                "en": "What is your favorite season?"
             },
             "liar_question": {
-                "de_DE": "In welcher Jahreszeit hast du Geburtstag?"
+                "de_DE": "In welcher Jahreszeit hast du Geburtstag?",
+                "en": "In which season is your birthday?"
             }
         },
         {
             "topic_key": "personal_style",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Material trägst du am liebsten (Baumwolle, Seide, etc.)?"
+                "de_DE": "Welches Material trägst du am liebsten (Baumwolle, Seide, etc.)?",
+                "en": "What material do you like to wear the most (cotton, silk, etc.)?"
             },
             "liar_question": {
-                "de_DE": "Welches Material trägst du am seltensten (Baumwolle, Seide, etc.)?"
+                "de_DE": "Welches Material trägst du am seltensten (Baumwolle, Seide, etc.)?",
+                "en": "What material do you wear the least (cotton, silk, etc.)?"
             }
         },
         {
             "topic_key": "personal_style",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welche Blumen Farbe magst du am meisten?"
+                "de_DE": "Welche Blumen Farbe magst du am meisten?",
+                "en": "What flower color do you like the most?"
             },
             "liar_question": {
-                "de_DE": "Welche Farbe trägst du am liebsten?"
+                "de_DE": "Welche Farbe trägst du am liebsten?",
+                "en": "What color do you like to wear the most?"
             }
         },
         {
             "topic_key": "food_and_drink",
             "switchable": true,
             "main_question": {
-                "de_DE": "Was ist dein Lieblingseis?"
+                "de_DE": "Was ist dein Lieblingseis?",
+                "en": "What is your favorite ice cream?"
             },
             "liar_question": {
-                "de_DE": "Wenn du nur noch eine Eissorte essen dürftest, welche wäre das?"
+                "de_DE": "Wenn du nur noch eine Eissorte essen dürftest, welche wäre das?",
+                "en": "If you could only eat one flavor of ice cream for the rest of your life, what would it be?"
             }
         },
         {
             "topic_key": "personal_tastes",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Genre schaust du am liebsten (Comedy, Drama, etc.)?"
+                "de_DE": "Welches Genre schaust du am liebsten (Comedy, Drama, etc.)?",
+                "en": "What genre do you like to watch the most (comedy, drama, etc.)?"
             },
             "liar_question": {
-                "de_DE": "Welches Genre hat dein Lieblingsbuch?"
+                "de_DE": "Welches Genre hat dein Lieblingsbuch?",
+                "en": "What genre is your favorite book?"
             }
         },
         {
             "topic_key": "personal_tastes",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Wetter magst du am liebsten?"
+                "de_DE": "Welches Wetter magst du am liebsten?",
+                "en": "What is your favorite weather?"
             },
             "liar_question": {
-                "de_DE": "Bei welchem Wetter fühlst du dich am wohlsten?"
+                "de_DE": "Bei welchem Wetter fühlst du dich am wohlsten?",
+                "en": "In what weather do you feel most comfortable?"
             }
         },
         {
             "topic_key": "personal_tastes",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Genre hörst du am liebsten?"
+                "de_DE": "Welches Genre hörst du am liebsten?",
+                "en": "What genre do you like to listen to the most?"
             },
             "liar_question": {
-                "de_DE": "Welches Genre höhrt deine Familie am liebsten?"
+                "de_DE": "Welches Genre höhrt deine Familie am liebsten?",
+                "en": "What genre does your family like to listen to the most?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Schulfach war/ist dein Lieblingsfach?"
+                "de_DE": "Welches Schulfach war/ist dein Lieblingsfach?",
+                "en": "What was/is your favorite school subject?"
             },
             "liar_question": {
-                "de_DE": "Welches Schulfach findest du am interessantesten?"
+                "de_DE": "Welches Schulfach findest du am interessantesten?",
+                "en": "Which school subject do you find most interesting?"
             }
         },
         {
             "topic_key": "personal_tastes",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welcher Wochentag ist dein Lieblings-Tag?"
+                "de_DE": "Welcher Wochentag ist dein Lieblings-Tag?",
+                "en": "Which day of the week is your favorite?"
             },
             "liar_question": {
-                "de_DE": "Welchen Wochentagnamen findest du am schönsten?"
+                "de_DE": "Welchen Wochentagnamen findest du am schönsten?",
+                "en": "Which day of the week has the most beautiful name to you?"
             }
         },
         {
             "topic_key": "personal_tastes",
             "switchable": true,
             "main_question": {
-                "de_DE": "Was ist deine Lieblingsfarbe?"
+                "de_DE": "Was ist deine Lieblingsfarbe?",
+                "en": "What is your favorite color?"
             },
             "liar_question": {
-                "de_DE": "Welche Farbe beschreibt deine aktuelle Stimmung am besten?"
+                "de_DE": "Welche Farbe beschreibt deine aktuelle Stimmung am besten?",
+                "en": "Which color best describes your current mood?"
             }
         },
         {
             "topic_key": "personal_style",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Paar Schuhe besitzt du?"
+                "de_DE": "Wie viele Paar Schuhe besitzt du?",
+                "en": "How many pairs of shoes do you own?"
             },
             "liar_question": {
-                "de_DE": "Wie oft gehst du pro Jahr zum Friseur?"
+                "de_DE": "Wie oft gehst du pro Jahr zum Friseur?",
+                "en": "How many times a year do you go to the hairdresser?"
             }
         },
         {
             "topic_key": "daily_routines",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Minuten brauchst du morgens zum Fertigmachen?"
+                "de_DE": "Wie viele Minuten brauchst du morgens zum Fertigmachen?",
+                "en": "How many minutes do you need to get ready in the morning?"
             },
             "liar_question": {
-                "de_DE": "Wie viele T-Shirts besitzt du ungefähr?"
+                "de_DE": "Wie viele T-Shirts besitzt du ungefähr?",
+                "en": "How many T-shirts do you own, approximately?"
             }
         },
         {
             "topic_key": "personal_style",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Pflanzen hast du in deinem Zimmer?"
+                "de_DE": "Wie viele Pflanzen hast du in deinem Zimmer?",
+                "en": "How many plants do you have in your room?"
             },
             "liar_question": {
-                "de_DE": "Wie viele verschiedene Handtaschen/Rucksäcke benutzt du regelmäßig?"
+                "de_DE": "Wie viele verschiedene Handtaschen/Rucksäcke benutzt du regelmäßig?",
+                "en": "How many different handbags/backpacks do you use regularly?"
             }
         },
         {
             "topic_key": "relationships_and_social",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie alt warst du bei deinem ersten Kuss?"
+                "de_DE": "Wie alt warst du bei deinem ersten Kuss?",
+                "en": "How old were you when you had your first kiss?"
             },
             "liar_question": {
-                "de_DE": "Wie alt warst du in deiner ersten Beziehung?"
+                "de_DE": "Wie alt warst du in deiner ersten Beziehung?",
+                "en": "How old were you in your first relationship?"
             }
         },
         {
             "topic_key": "relationships_and_social",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Mal warst du schon richtig verliebt?"
+                "de_DE": "Wie viele Mal warst du schon richtig verliebt?",
+                "en": "How many times have you been truly in love?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Haustiere hattest du in deinem Leben?"
+                "de_DE": "Wie viele Haustiere hattest du in deinem Leben?",
+                "en": "How many pets have you had in your life?"
             }
         },
         {
             "topic_key": "relationships_and_social",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie lange war deine längste Beziehung (in Monaten)?"
+                "de_DE": "Wie lange war deine längste Beziehung (in Monaten)?",
+                "en": "How long was your longest relationship (in months)?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Menschen würdest du als deine engsten Freunde bezeichnen?"
+                "de_DE": "Wie viele Menschen würdest du als deine engsten Freunde bezeichnen?",
+                "en": "How many people would you consider your closest friends?"
             }
         },
         {
             "topic_key": "relationships_and_social",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welcher Name gefällt dir am besten für einen Hund?"
+                "de_DE": "Welcher Name gefällt dir am besten für einen Hund?",
+                "en": "What name do you like best for a dog?"
             },
             "liar_question": {
-                "de_DE": "Welcher Name gefällt dir am besten für einen Katze?"
+                "de_DE": "Welcher Name gefällt dir am besten für einen Katze?",
+                "en": "What name do you like best for a cat?"
             }
         },
         {
             "topic_key": "relationships_and_social",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welchen Spitznamen hattest du als Kind?"
+                "de_DE": "Welchen Spitznamen hattest du als Kind?",
+                "en": "What nickname did you have as a child?"
             },
             "liar_question": {
-                "de_DE": "Welchen Spitznamen hättest du dir als Kind gegeben?"
+                "de_DE": "Welchen Spitznamen hättest du dir als Kind gegeben?",
+                "en": "What nickname would you have given yourself as a child?"
             }
         },
         {
             "topic_key": "aspirations_and_dreams",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Haustiere hattest du in deinem Leben?"
+                "de_DE": "Wie viele Haustiere hattest du in deinem Leben?",
+                "en": "How many pets have you had in your life?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Kinder möchtest du haben?"
+                "de_DE": "Wie viele Kinder möchtest du haben?",
+                "en": "How many children do you want to have?"
             }
         },
         {
             "topic_key": "relationships_and_social",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Freunde würdest du zu deiner Hochzeit einladen?"
+                "de_DE": "Wie viele Freunde würdest du zu deiner Hochzeit einladen?",
+                "en": "How many friends would you invite to your wedding?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Kontakte hast du in deinem Handy gespeichert?"
+                "de_DE": "Wie viele Kontakte hast du in deinem Handy gespeichert?",
+                "en": "How many contacts do you have saved in your phone?"
             }
         },
         {
             "topic_key": "leisure_and_hobbies",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie oft gehst du pro Jahr ins Kino?"
+                "de_DE": "Wie oft gehst du pro Jahr ins Kino?",
+                "en": "How many times a year do you go to the cinema?"
             },
             "liar_question": {
-                "de_DE": "Wie oft gehst du pro Woche Sport machen?"
+                "de_DE": "Wie oft gehst du pro Woche Sport machen?",
+                "en": "How many times a week do you do sports?"
             }
         },
         {
             "topic_key": "leisure_and_hobbies",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Kurse/Workshops hast du dieses Jahr besucht?"
+                "de_DE": "Wie viele Kurse/Workshops hast du dieses Jahr besucht?",
+                "en": "How many courses/workshops have you attended this year?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Hobbys hast du?"
+                "de_DE": "Wie viele Hobbys hast du?",
+                "en": "How many hobbies do you have?"
             }
         },
         {
             "topic_key": "daily_routines",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Minuten brauchst du zur Arbeit/Uni/Schule?"
+                "de_DE": "Wie viele Minuten brauchst du zur Arbeit/Uni/Schule?",
+                "en": "How many minutes does it take you to get to work/university/school?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Lieder hörst du täglich?"
+                "de_DE": "Wie viele Lieder hörst du täglich?",
+                "en": "How many songs do you listen to daily?"
             }
         },
         {
             "topic_key": "leisure_and_hobbies",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Bücher liest du etwa pro Jahr?"
+                "de_DE": "Wie viele Bücher liest du etwa pro Jahr?",
+                "en": "How many books do you read per year, approximately?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Comics liest du etwa pro Jahr?"
+                "de_DE": "Wie viele Comics liest du etwa pro Jahr?",
+                "en": "How many comics do you read per year, approximately?"
             }
         },
         {
             "topic_key": "daily_routines",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welcher Tag der Woche ist für dich der stressigste?"
+                "de_DE": "Welcher Tag der Woche ist für dich der stressigste?",
+                "en": "Which day of the week is the most stressful for you?"
             },
             "liar_question": {
-                "de_DE": "An welchem Wochentag unter der Woche hast du am meisten Zeit für dich selbst?"
+                "de_DE": "An welchem Wochentag unter der Woche hast du am meisten Zeit für dich selbst?",
+                "en": "On which weekday do you have the most time for yourself?"
             }
         },
         {
             "topic_key": "leisure_and_hobbies",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welches Hobby würdest du gerne anfangen?"
+                "de_DE": "Welches Hobby würdest du gerne anfangen?",
+                "en": "What hobby would you like to start?"
             },
             "liar_question": {
-                "de_DE": "Welches Hobby hast du früher mal gemacht?"
+                "de_DE": "Welches Hobby hast du früher mal gemacht?",
+                "en": "What hobby did you used to do?"
             }
         },
         {
             "topic_key": "leisure_and_hobbies",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welcher Sport macht dir am meisten Spaß?"
+                "de_DE": "Welcher Sport macht dir am meisten Spaß?",
+                "en": "Which sport do you enjoy the most?"
             },
             "liar_question": {
-                "de_DE": "Welches Instrument würdest du gerne lernen?"
+                "de_DE": "Welches Instrument würdest du gerne lernen?",
+                "en": "Which instrument would you like to learn?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "In welcher Stadt möchtest du gerne leben?"
+                "de_DE": "In welcher Stadt möchtest du gerne leben?",
+                "en": "In which city would you like to live?"
             },
             "liar_question": {
-                "de_DE": "Welche Stadt steht ganz oben auf deiner Reise-Wunschliste?"
+                "de_DE": "Welche Stadt steht ganz oben auf deiner Reise-Wunschliste?",
+                "en": "Which city is at the top of your travel wish list?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welche Sprache klingt für dich am schönsten?"
+                "de_DE": "Welche Sprache klingt für dich am schönsten?",
+                "en": "Which language sounds the most beautiful to you?"
             },
             "liar_question": {
-                "de_DE": "Welche Sprache würdest du gerne lernen?"
+                "de_DE": "Welche Sprache würdest du gerne lernen?",
+                "en": "Which language would you like to learn?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welcher Duft erinnert dich an Kindheit?"
+                "de_DE": "Welcher Duft erinnert dich an Kindheit?",
+                "en": "What scent reminds you of your childhood?"
             },
             "liar_question": {
-                "de_DE": "Welcher Duft erinnert dich an deine Heimat?"
+                "de_DE": "Welcher Duft erinnert dich an deine Heimat?",
+                "en": "What scent reminds you of your hometown?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Länder hast du schon besucht?"
+                "de_DE": "Wie viele Länder hast du schon besucht?",
+                "en": "How many countries have you visited?"
             },
             "liar_question": {
-                "de_DE": "Wie oft warst du schon im Krankenhaus?"
+                "de_DE": "Wie oft warst du schon im Krankenhaus?",
+                "en": "How many times have you been to the hospital?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie oft wurdest du schon von fremden nach dem Weg gefragt?"
+                "de_DE": "Wie oft wurdest du schon von fremden nach dem Weg gefragt?",
+                "en": "How many times have strangers asked you for directions?"
             },
             "liar_question": {
-                "de_DE": "Wie oft warst du schon auf einer Hochzeit?"
+                "de_DE": "Wie oft warst du schon auf einer Hochzeit?",
+                "en": "How many times have you been to a wedding?"
             }
         },
         {
             "topic_key": "life_and_travel",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Konzerte/Festivals hast du dieses Jahr besucht?"
+                "de_DE": "Wie viele Konzerte/Festivals hast du dieses Jahr besucht?",
+                "en": "How many concerts/festivals have you attended this year?"
             },
             "liar_question": {
-                "de_DE": "Auf wie viele Konzerte/Festivals würdest du gerne gehen?"
+                "de_DE": "Auf wie viele Konzerte/Festivals würdest du gerne gehen?",
+                "en": "How many concerts/festivals would you like to go to?"
             }
         },
         {
             "topic_key": "self_perception",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Sprachen möchtest du lernen?"
+                "de_DE": "Wie viele Sprachen möchtest du lernen?",
+                "en": "How many languages do you want to learn?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Sprachen sprichst du?"
+                "de_DE": "Wie viele Sprachen sprichst du?",
+                "en": "How many languages do you speak?"
             }
         },
         {
             "topic_key": "food_and_drink",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Kochrezepte kennst du auswendig?"
+                "de_DE": "Wie viele Kochrezepte kennst du auswendig?",
+                "en": "How many cooking recipes do you know by heart?"
             },
             "liar_question": {
-                "de_DE": "Wie oft kochst du pro Monat?"
+                "de_DE": "Wie oft kochst du pro Monat?",
+                "en": "How many times do you cook per month?"
             }
         },
         {
             "topic_key": "self_perception",
             "switchable": true,
             "main_question": {
-                "de_DE": "Wie viele Liegestütze schaffst du ohne Pause?"
+                "de_DE": "Wie viele Liegestütze schaffst du ohne Pause?",
+                "en": "How many push-ups can you do without a break?"
             },
             "liar_question": {
-                "de_DE": "Wie viele Lieder kannst du (fast) perfekt singen?"
+                "de_DE": "Wie viele Lieder kannst du (fast) perfekt singen?",
+                "en": "How many songs can you sing (almost) perfectly?"
             }
         }
     ]
