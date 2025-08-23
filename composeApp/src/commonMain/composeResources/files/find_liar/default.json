@@ -1,5 +1,6 @@
 {
     "uid": "default_dataset",
+    "game": "find_liar",
     "title": {
         "de_DE": "Standard Datenset",
         "en": "Default Dataset"

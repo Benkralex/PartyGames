@@ -19,18 +19,12 @@ kotlin {
         }
     }
     
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
+    jvm("desktop") {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
-    jvm("desktop")
     
     /*@OptIn(ExperimentalWasmDsl::class)
     wasmJs {
@@ -68,13 +62,12 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-            implementation(compose.materialIconsExtended)
-
             implementation(libs.jetbrains.compose.navigation)
+            implementation(libs.napier)
+
+            implementation(compose.materialIconsExtended)
             implementation(libs.ui.backhandler)
             implementation(libs.kotlinx.serialization.json)
-
-            implementation(libs.napier)
 
             api(libs.datastore.preferences)
             api(libs.datastore)

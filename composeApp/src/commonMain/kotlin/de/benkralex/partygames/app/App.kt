@@ -75,7 +75,7 @@ fun App(
             enterTransition = { EnterTransition.None },
             exitTransition = { ExitTransition.None },
             popEnterTransition = { EnterTransition.None },
-            popExitTransition = { ExitTransition.None }
+            popExitTransition = { ExitTransition.None },
         ) {
             composable<Route.GameSelectionRoute> {
                 activeGame = null

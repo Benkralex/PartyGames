@@ -1,5 +1,8 @@
 package de.benkralex.partygames.games.impostor.data
 
+import de.benkralex.partygames.games.common.data.getApplicationDataDirectory
+import de.benkralex.partygames.games.common.data.getJsonFileContent
+import de.benkralex.partygames.games.common.data.getJsonFiles
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
 import de.benkralex.partygames.games.impostor.domain.ImpostorWordPair
@@ -10,24 +13,12 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.jsonPrimitive
-import partygames.composeapp.generated.resources.Res
 
 var datasets: MutableList<ImpostorDataset> = mutableListOf()
 suspend fun updateImpostorDatasets() {
-    val paths: List<String> = listOf(
-        "files/impostor/default/default1.json",
-        "files/impostor/default/default2.json",
-        "files/impostor/default/default3.json",
-        "files/impostor/default/default4.json",
-        "files/impostor/default/default5.json",
-        "files/impostor/default/default6.json",
-        "files/impostor/default/default7.json",
-        "files/impostor/default/default8.json",
-        "files/impostor/default/default9.json",
-        "files/impostor/default/default10.json",
-    )
+    val paths: List<String> = getJsonFiles(getApplicationDataDirectory() + "impostor/")
     for (path in paths) {
-        val bytes = Res.readBytes(path)
+        val bytes = getJsonFileContent(path)
         if (bytes.isNotEmpty()) {
             try {
                 val jsonDataset: JsonElement
@@ -38,6 +29,12 @@ suspend fun updateImpostorDatasets() {
                     Napier.e(
                         message = "Error decoding Impostor dataset: $path, skipping",
                         throwable = e
+                    )
+                    continue
+                }
+                if (jsonDataset["game"]?.jsonPrimitive?.content != "impostor") {
+                    Napier.e(
+                        message = "Invalid Impostor dataset: $path, skipping",
                     )
                     continue
                 }

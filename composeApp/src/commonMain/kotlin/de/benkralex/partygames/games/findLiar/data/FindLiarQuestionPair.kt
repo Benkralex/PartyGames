@@ -1,5 +1,8 @@
 package de.benkralex.partygames.games.findLiar.data
 
+import de.benkralex.partygames.games.common.data.getApplicationDataDirectory
+import de.benkralex.partygames.games.common.data.getJsonFileContent
+import de.benkralex.partygames.games.common.data.getJsonFiles
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import io.github.aakira.napier.Napier
 import kotlinx.serialization.json.Json
@@ -9,7 +12,6 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.jsonPrimitive
-import partygames.composeapp.generated.resources.Res
 
 data class FindLiarDataset(
     val uid: String,
@@ -29,11 +31,9 @@ data class FindLiarQuestionPair(
 
 var datasets: MutableList<FindLiarDataset> = mutableListOf()
 suspend fun updateFindLiarDatasets() {
-    val paths: List<String> = listOf(
-        "files/find_liar/new_default/default.json"
-    )
+    val paths: List<String> = getJsonFiles(getApplicationDataDirectory() + "find_liar/")
     for (path in paths) {
-        val bytes = Res.readBytes(path)
+        val bytes = getJsonFileContent(path)
         if (bytes.isNotEmpty()) {
             try {
                 val jsonDataset: JsonElement
@@ -44,6 +44,12 @@ suspend fun updateFindLiarDatasets() {
                     Napier.e(
                         message = "Error decoding Find Liar dataset: $path, skipping",
                         throwable = e
+                    )
+                    continue
+                }
+                if (jsonDataset["game"]?.jsonPrimitive?.content != "find_liar") {
+                    Napier.e(
+                        message = "Invalid Find Liar dataset: $path, skipping",
                     )
                     continue
                 }
