@@ -1,9 +1,10 @@
 package de.benkralex.partygames.games.findLiar.data
 
-import de.benkralex.partygames.games.common.data.getApplicationDataDirectory
+import androidx.compose.runtime.Composable
 import de.benkralex.partygames.games.common.data.getJsonFileContent
 import de.benkralex.partygames.games.common.data.getJsonFiles
 import de.benkralex.partygames.games.common.domain.TranslatableString
+import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
@@ -31,7 +32,8 @@ data class FindLiarQuestionPair(
 
 var datasets: MutableList<FindLiarDataset> = mutableListOf()
 suspend fun updateFindLiarDatasets() {
-    val paths: List<String> = getJsonFiles(getApplicationDataDirectory() + "find_liar/")
+    val paths: List<String> = getJsonFiles(settings.value.datasetPath, "find_liar")
+    Napier.i("Paths (Find Liar): $paths")
     for (path in paths) {
         val bytes = getJsonFileContent(path)
         if (bytes.isNotEmpty()) {

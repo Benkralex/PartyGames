@@ -1,7 +1,12 @@
 package de.benkralex.partygames
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.ComponentCaller
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -13,11 +18,20 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import createDataStore
 import de.benkralex.partygames.app.App
+import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetPathCallbackHolder
+
 
 class MainActivity : ComponentActivity() {
+
+    companion object {
+        lateinit var instance: MainActivity
+            private set
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        instance = this
 
         setContent {
             MaterialTheme {
@@ -33,6 +47,24 @@ class MainActivity : ComponentActivity() {
                     },
                 )
             }
+        }
+    }
+
+    @SuppressLint("WrongConstant")
+    override fun onActivityResult(
+        requestCode: Int,
+        resultCode: Int,
+        data: Intent?,
+        caller: ComponentCaller
+    ) {
+        super.onActivityResult(requestCode, resultCode, data, caller)
+        if (requestCode == 1001 && resultCode == Activity.RESULT_OK) {
+            val uri = data?.data ?: return
+            val flags: Int = data.flags and
+                    (Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+            contentResolver.takePersistableUriPermission(uri, flags)
+            DatasetPathCallbackHolder.callback?.invoke(uri.toString())
+            DatasetPathCallbackHolder.callback = null
         }
     }
 }

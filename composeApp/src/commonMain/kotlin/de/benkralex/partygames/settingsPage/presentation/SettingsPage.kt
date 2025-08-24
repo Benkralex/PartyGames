@@ -1,5 +1,6 @@
 package de.benkralex.partygames.settingsPage.presentation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -7,10 +8,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScrollableTabRow
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRowDefaults
+import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -20,8 +27,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.geometry.RoundRect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.app.gamesRegister
+import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetPathSetting
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.settings
@@ -42,7 +54,9 @@ fun SettingsPage(
         val tabsList = listOf(
             TabData(
                 title = stringResource(Res.string.settings),
-                content = {},
+                content = {
+                    DatasetPathSetting()
+                },
             ),
         ).plus(gamesRegister.filter { it.settingsWidget != null }.map {
             TabData(
@@ -64,12 +78,15 @@ fun SettingsPage(
             }
         }
         Column (
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxWidth(),
         ) {
             ScrollableTabRow (
                 selectedTabIndex = selectedTabIndex,
                 modifier = Modifier
                     .fillMaxWidth(),
+                divider = {},
             ) {
                 tabsList.forEachIndexed { index, tab ->
                     Tab(
@@ -79,10 +96,11 @@ fun SettingsPage(
                             Text(
                                 text = tab.title,
                             )
-                        },
+                        }
                     )
                 }
             }
+            HorizontalDivider()
             HorizontalPager (
                 state = pagerState,
                 modifier = Modifier

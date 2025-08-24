@@ -15,6 +15,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListWidget
@@ -31,11 +34,19 @@ import partygames.composeapp.generated.resources.player_name
 import partygames.composeapp.generated.resources.players
 import partygames.composeapp.generated.resources.start_game
 import partygames.composeapp.generated.resources.topics
+import kotlin.reflect.KClass
+import kotlin.reflect.cast
 
 @Composable
 fun FindLiarSetupWidget(
     modifier: Modifier = Modifier,
-    viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(),
+    viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(
+        factory = object: ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
+                return modelClass.cast(FindLiarSetupViewModel())
+            }
+        }
+    ),
     setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> }
 ) {
     val playerListLabel = stringResource(Res.string.players)

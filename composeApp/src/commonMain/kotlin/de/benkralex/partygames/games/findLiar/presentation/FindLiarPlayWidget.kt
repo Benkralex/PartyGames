@@ -32,6 +32,9 @@ import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
@@ -40,12 +43,20 @@ import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_res_show_liars
 import partygames.composeapp.generated.resources.find_liar_res_submit
 import partygames.composeapp.generated.resources.new_round
+import kotlin.reflect.KClass
+import kotlin.reflect.cast
 
 @Composable
 fun FindLiarPlayWidget(
     modifier: Modifier = Modifier,
     game: FindLiar,
-    viewModel: FindLiarPlayViewModel = viewModel<FindLiarPlayViewModel>(key = activeGame),
+    viewModel: FindLiarPlayViewModel = viewModel<FindLiarPlayViewModel>(
+        factory = object: ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
+                return modelClass.cast(FindLiarPlayViewModel())
+            }
+        }
+    ),
 ) {
     LaunchedEffect(game) {
         viewModel.game = game

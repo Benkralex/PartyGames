@@ -1,11 +1,12 @@
 package de.benkralex.partygames.games.impostor.data
 
-import de.benkralex.partygames.games.common.data.getApplicationDataDirectory
+import androidx.compose.runtime.Composable
 import de.benkralex.partygames.games.common.data.getJsonFileContent
 import de.benkralex.partygames.games.common.data.getJsonFiles
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
 import de.benkralex.partygames.games.impostor.domain.ImpostorWordPair
+import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
@@ -15,8 +16,10 @@ import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.jsonPrimitive
 
 var datasets: MutableList<ImpostorDataset> = mutableListOf()
+
 suspend fun updateImpostorDatasets() {
-    val paths: List<String> = getJsonFiles(getApplicationDataDirectory() + "impostor/")
+    val paths: List<String> = getJsonFiles(settings.value.datasetPath, "impostor")
+    Napier.i("Paths (Impostor): $paths")
     for (path in paths) {
         val bytes = getJsonFileContent(path)
         if (bytes.isNotEmpty()) {

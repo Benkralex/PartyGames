@@ -34,8 +34,12 @@ import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
+import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupViewModel
 import de.benkralex.partygames.games.impostor.domain.Impostor
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
@@ -49,12 +53,20 @@ import partygames.composeapp.generated.resources.impostor_title
 import partygames.composeapp.generated.resources.new_round
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.reflect.KClass
+import kotlin.reflect.cast
 
 @Composable
 fun ImpostorPlayWidget(
     modifier: Modifier = Modifier,
     game: Impostor,
-    viewModel: ImpostorPlayViewModel = viewModel<ImpostorPlayViewModel>(key = activeGame),
+    viewModel: ImpostorPlayViewModel = viewModel<ImpostorPlayViewModel>(
+        factory = object: ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
+                return modelClass.cast(ImpostorPlayViewModel())
+            }
+        }
+    ),
 ) {
     LaunchedEffect(game) {
         viewModel.game = game

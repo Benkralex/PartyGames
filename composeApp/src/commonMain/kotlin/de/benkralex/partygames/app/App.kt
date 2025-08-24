@@ -10,6 +10,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -54,7 +55,6 @@ fun App(
         theme = theme
     ) {
         LaunchedEffect(Unit) {
-            // Async setup functions
             updateFindLiarDatasets()
             updateImpostorDatasets()
             loadSettings(prefs)
@@ -66,6 +66,8 @@ fun App(
 
         LaunchedEffect(settings.value) {
             saveSettings(prefs)
+            updateFindLiarDatasets()
+            updateImpostorDatasets()
         }
 
         val navController = rememberNavController()
