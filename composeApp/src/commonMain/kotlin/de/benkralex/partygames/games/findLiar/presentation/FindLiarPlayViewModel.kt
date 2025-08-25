@@ -11,15 +11,20 @@ import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
 import de.benkralex.partygames.games.findLiar.domain.FindLiarQuestionPair
 import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
+import kotlin.collections.emptyList
 
 class FindLiarPlayViewModel : ViewModel() {
     var datasets: List<FindLiarDataset> = emptyList()
     var game: FindLiar? = null
     val players: List<String> by derivedStateOf {
-        game?.settings?.get("players") as? List<String> ?: emptyList()
+        (game?.settings?.get("players") as? List<*>)?.map {
+            it as? String
+        }?.filter { it != null }?.map { it!! } ?: emptyList()
     }
     val topics: List<TranslatableString> by derivedStateOf {
-        game?.settings?.get("topics") as? List<TranslatableString> ?: emptyList()
+        (game?.settings?.get("players") as? List<*>)?.map {
+            it as? TranslatableString
+        }?.filter { it != null }?.map { it!! } ?: emptyList()
     }
     val liarCount: Int by derivedStateOf {
         game?.settings?.get("liarCount") as? Int ?: 1

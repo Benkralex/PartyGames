@@ -8,7 +8,6 @@ import de.benkralex.partygames.app.getKeyByGame
 import de.benkralex.partygames.games.common.domain.Dataset
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
-import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
 import de.benkralex.partygames.games.impostor.data.parseImpostorDataset
 import de.benkralex.partygames.games.impostor.presentation.ImpostorPlayWidget
 import de.benkralex.partygames.games.impostor.presentation.ImpostorSetupWidget

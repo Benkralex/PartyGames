@@ -36,8 +36,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
-import de.benkralex.partygames.app.activeGame
-import de.benkralex.partygames.games.common.domain.Dataset
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
 import org.jetbrains.compose.resources.stringResource

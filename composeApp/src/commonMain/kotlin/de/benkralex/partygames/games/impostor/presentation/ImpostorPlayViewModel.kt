@@ -16,10 +16,14 @@ class ImpostorPlayViewModel : ViewModel() {
     var datasets: List<ImpostorDataset> = emptyList()
     var game: Impostor? = null
     val players: List<String> by derivedStateOf {
-        game?.settings?.get("players") as? List<String> ?: emptyList()
+        (game?.settings?.get("players") as? List<*>)?.map {
+            it as? String
+        }?.filter { it != null }?.map { it!! } ?: emptyList()
     }
     val topics: List<TranslatableString> by derivedStateOf {
-        game?.settings?.get("topics") as? List<TranslatableString> ?: emptyList()
+        (game?.settings?.get("players") as? List<*>)?.map {
+            it as? TranslatableString
+        }?.filter { it != null }?.map { it!! } ?: emptyList()
     }
     val impostorCount: Int by derivedStateOf {
         game?.settings?.get("impostorCount") as? Int ?: 1
