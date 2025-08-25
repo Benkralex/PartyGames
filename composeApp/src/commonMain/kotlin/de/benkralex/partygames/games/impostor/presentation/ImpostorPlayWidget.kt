@@ -38,9 +38,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
-import de.benkralex.partygames.app.activeGame
-import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupViewModel
 import de.benkralex.partygames.games.impostor.domain.Impostor
+import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
@@ -67,7 +66,9 @@ fun ImpostorPlayWidget(
             }
         }
     ),
+    datasets: List<ImpostorDataset>,
 ) {
+    viewModel.datasets = datasets
     LaunchedEffect(game) {
         viewModel.game = game
         viewModel.initNewRound()

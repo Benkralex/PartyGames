@@ -37,7 +37,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.activeGame
+import de.benkralex.partygames.games.common.domain.Dataset
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
+import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_res_show_liars
@@ -57,7 +59,9 @@ fun FindLiarPlayWidget(
             }
         }
     ),
+    datasets: List<FindLiarDataset>,
 ) {
+    viewModel.datasets = datasets
     LaunchedEffect(game) {
         viewModel.game = game
         viewModel.initNewRound()
@@ -191,22 +195,26 @@ fun ShowAnswers(
             items(answers.entries.toList()) { (player, answer) ->
                 val liarColor = MaterialTheme.colorScheme.error
                 val defaultColor = MaterialTheme.colorScheme.outline
-                val boarder by derivedStateOf {
-                    if (showLiars && player in liars) {
-                        BorderStroke(2.dp, liarColor)
-                    } else {
-                        BorderStroke(1.dp, defaultColor)
+                val boarder by remember {
+                    derivedStateOf {
+                        if (showLiars && player in liars) {
+                            BorderStroke(2.dp, liarColor)
+                        } else {
+                            BorderStroke(1.dp, defaultColor)
+                        }
                     }
                 }
                 val defaultColors = CardDefaults.cardColors()
                 val liarColors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.error.copy(alpha = 0.3f),
                 )
-                val colors by derivedStateOf {
-                    if (showLiars && player in liars) {
-                        liarColors
-                    } else {
-                        defaultColors
+                val colors by remember {
+                    derivedStateOf {
+                        if (showLiars && player in liars) {
+                            liarColors
+                        } else {
+                            defaultColors
+                        }
                     }
                 }
                 Card(

@@ -8,7 +8,8 @@ import de.benkralex.partygames.app.createDataStore
 
 fun main() {
     val prefs = createDataStore {
-        "./$DATA_STORE_FILE_NAME"
+        System.getProperty("user.home") +
+        "/.partygames/.pref/$DATA_STORE_FILE_NAME"
     }
     application {
         Window(

@@ -23,3 +23,7 @@ fun getGameByKey(key: String): Game? {
 fun getKeyByGame(game: Game): String {
     return game.information.name.key
 }
+
+fun getGameByGameId(gameId: String): Game? {
+    return gamesRegister.firstOrNull { it.gameId == gameId }
+}

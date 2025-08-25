@@ -4,15 +4,16 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.findLiar.data.FindLiarQuestionPair
-import de.benkralex.partygames.games.findLiar.data.getFindLiarQuestionPairs
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
+import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
+import de.benkralex.partygames.games.findLiar.domain.FindLiarQuestionPair
+import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 
 class FindLiarPlayViewModel : ViewModel() {
+    var datasets: List<FindLiarDataset> = emptyList()
     var game: FindLiar? = null
     val players: List<String> by derivedStateOf {
         game?.settings?.get("players") as? List<String> ?: emptyList()
@@ -27,7 +28,18 @@ class FindLiarPlayViewModel : ViewModel() {
         players.size
     }
     val questionPairs by derivedStateOf {
-        getFindLiarQuestionPairs(listOf(Locale.current.language)).filter { topics.contains(it.topic) }
+        val languages = settings.value.languages
+        datasets.flatMap { it.questionPairs }.filter { q ->
+            q.liarQuestion.translations.keys.any { lang ->
+                lang in languages
+                        || lang.split("_")[0] in languages
+                        || lang in languages.map { it.split("_")[0] }
+            } && q.mainQuestion.translations.keys.any { lang ->
+                lang in languages
+                        || lang.split("_")[0] in languages
+                        || lang in languages.map { it.split("_")[0] }
+            }
+        }.filter { topics.contains(it.topic) }
     }
 
 

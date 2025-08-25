@@ -4,15 +4,16 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import de.benkralex.partygames.games.impostor.data.getImposterWordPairs
 import de.benkralex.partygames.games.impostor.domain.Impostor
+import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
 import de.benkralex.partygames.games.impostor.domain.ImpostorWordPair
+import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 
 class ImpostorPlayViewModel : ViewModel() {
+    var datasets: List<ImpostorDataset> = emptyList()
     var game: Impostor? = null
     val players: List<String> by derivedStateOf {
         game?.settings?.get("players") as? List<String> ?: emptyList()
@@ -27,7 +28,18 @@ class ImpostorPlayViewModel : ViewModel() {
         players.size
     }
     val wordPairs by derivedStateOf {
-        getImposterWordPairs(listOf(Locale.current.language)).filter { topics.contains(it.topic) }
+        val languages = settings.value.languages
+        datasets.flatMap { it.wordPairs }.filter { q ->
+            q.impostorHintWord.translations.keys.any { lang ->
+                lang in languages
+                        || lang.split("_")[0] in languages
+                        || lang in languages.map { it.split("_")[0] }
+            } && q.mainWord.translations.keys.any { lang ->
+                lang in languages
+                        || lang.split("_")[0] in languages
+                        || lang in languages.map { it.split("_")[0] }
+            }
+        }.filter { topics.contains(it.topic) }
     }
 
 

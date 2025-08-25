@@ -3,11 +3,9 @@ package de.benkralex.partygames.games.common.data
 import io.github.aakira.napier.Napier
 import java.io.File
 
-actual suspend fun getJsonFiles(
-    basePath: String,
-    folder: String,
-): List<String> {
-    val paths = File("$basePath/$folder")
+actual suspend fun getJsonFiles(basePath: String): List<String> {
+    val path = basePath
+    val paths = File(path)
         .walkTopDown()
         .filter { it.isFile && it.extension == "json" }
         .map { it.absolutePath }

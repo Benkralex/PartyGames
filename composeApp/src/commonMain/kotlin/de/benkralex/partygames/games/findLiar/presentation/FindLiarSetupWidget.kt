@@ -24,8 +24,6 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxIn
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
-import de.benkralex.partygames.games.findLiar.data.getFindLiarTopics
-import de.benkralex.partygames.settingsPage.data.settings
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_res_liar_count
@@ -47,7 +45,8 @@ fun FindLiarSetupWidget(
             }
         }
     ),
-    setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> }
+    setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> },
+    topics: List<TranslatableString>,
 ) {
     val playerListLabel = stringResource(Res.string.players)
     val playerSingleLabel = stringResource(Res.string.player_name)
@@ -60,7 +59,7 @@ fun FindLiarSetupWidget(
         liarCountLabel, topicsLabel
     )
 
-    viewModel.topicsState.checkboxSingleStates = getFindLiarTopics(settings.value.languages).map {
+    viewModel.topicsState.checkboxSingleStates = topics.map {
         topic -> CheckboxSingleState(
             topic,
             true,

@@ -24,8 +24,6 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxIn
 import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputWidget
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
-import de.benkralex.partygames.games.impostor.data.getImposterTopics
-import de.benkralex.partygames.settingsPage.data.settings
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.impostor_res_impostor_count
@@ -47,7 +45,8 @@ fun ImpostorSetupWidget(
             }
         }
     ),
-    setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> }
+    setupGame: (List<String>, Int, List<TranslatableString>) -> Unit = { _, _, _ -> },
+    topics: List<TranslatableString>,
 ) {
     // initialise labels
     val playerListLabel = stringResource(Res.string.players)
@@ -61,7 +60,7 @@ fun ImpostorSetupWidget(
         impostorCountLabel, topicsLabel
     )
 
-    viewModel.topicsState.checkboxSingleStates = getImposterTopics(settings.value.languages).map {
+    viewModel.topicsState.checkboxSingleStates = topics.map {
         topic -> CheckboxSingleState(
             topic,
             true,

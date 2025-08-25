@@ -6,11 +6,8 @@ import de.benkralex.partygames.MainActivity
 import io.github.aakira.napier.Napier
 import java.io.File
 
-actual suspend fun getJsonFiles(
-    basePath: String,
-    folder: String,
-): List<String> {
-    val uri = "$basePath%2F$folder".toUri()
+actual suspend fun getJsonFiles(basePath: String): List<String> {
+    val uri = basePath.toUri()
     return when (uri.scheme) {
         "content" -> {
             val ctx = MainActivity.instance

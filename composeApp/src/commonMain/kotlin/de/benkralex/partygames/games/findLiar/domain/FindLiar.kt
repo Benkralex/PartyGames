@@ -6,10 +6,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getKeyByGame
+import de.benkralex.partygames.games.common.domain.Dataset
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
+import de.benkralex.partygames.games.findLiar.data.parseFindLiarDataset
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarPlayWidget
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupWidget
+import kotlinx.serialization.json.JsonObject
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.find_liar_author
 import partygames.composeapp.generated.resources.find_liar_description
@@ -17,6 +20,8 @@ import partygames.composeapp.generated.resources.find_liar_how_to_play
 import partygames.composeapp.generated.resources.find_liar_title
 
 class FindLiar : Game {
+    override val gameId: String = "find_liar"
+
     override val information: GameInformation = GameInformation(
         name = Res.string.find_liar_title,
         description = Res.string.find_liar_description,
@@ -31,6 +36,8 @@ class FindLiar : Game {
         "liarCount" to null,
         "topics" to null,
     )
+    override val parseData: (JsonObject) -> Dataset? = { parseFindLiarDataset(it) }
+    override val datasets: MutableList<Dataset> = mutableListOf()
 
     @OptIn(ExperimentalMaterial3Api::class)
     override val setupWidget = @Composable { modifier: Modifier ->
@@ -44,7 +51,19 @@ class FindLiar : Game {
                         "topics" to topics,
                     )
                 )
-            }
+            },
+            topics = datasets.flatMap { (it as FindLiarDataset).questionPairs }.filter { q ->
+                val languages = de.benkralex.partygames.settingsPage.data.settings.value.languages
+                q.liarQuestion.translations.keys.any { lang ->
+                    lang in languages
+                            || lang.split("_")[0] in languages
+                            || lang in languages.map { it.split("_")[0] }
+                } && q.mainQuestion.translations.keys.any { lang ->
+                    lang in languages
+                            || lang.split("_")[0] in languages
+                            || lang in languages.map { it.split("_")[0] }
+                }
+            }.map { it.topic }.toSet().toList(),
         )
     }
 
@@ -52,6 +71,7 @@ class FindLiar : Game {
         FindLiarPlayWidget(
             modifier = modifier,
             game = this,
+            datasets = datasets.map { it as FindLiarDataset },
         )
     }
 

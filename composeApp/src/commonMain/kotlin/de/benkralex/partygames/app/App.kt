@@ -10,7 +10,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -25,17 +24,18 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import de.benkralex.partygames.app.theme.AppTheme
 import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
+import de.benkralex.partygames.games.common.data.loadDatasets
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.PlayGamePage
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
-import de.benkralex.partygames.games.findLiar.data.updateFindLiarDatasets
-import de.benkralex.partygames.games.impostor.data.updateImpostorDatasets
 import de.benkralex.partygames.settingsPage.data.loadSettings
 import de.benkralex.partygames.settingsPage.data.saveSettings
 import de.benkralex.partygames.settingsPage.data.settings
 import de.benkralex.partygames.settingsPage.presentation.SettingsPage
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import partygames.composeapp.generated.resources.Res
@@ -55,9 +55,14 @@ fun App(
         theme = theme
     ) {
         LaunchedEffect(Unit) {
-            updateFindLiarDatasets()
-            updateImpostorDatasets()
             loadSettings(prefs)
+            Thread {
+                runBlocking {
+                    launch {
+                        loadDatasets(settings.value.datasetPath)
+                    }
+                }
+            }.start()
             if (settings.value.languages.isEmpty()) {
                 settings.value.languages =
                     listOf(Locale.current.language + "_" + Locale.current.region)
@@ -66,8 +71,13 @@ fun App(
 
         LaunchedEffect(settings.value) {
             saveSettings(prefs)
-            updateFindLiarDatasets()
-            updateImpostorDatasets()
+            Thread {
+                runBlocking {
+                    launch {
+                        loadDatasets(settings.value.datasetPath)
+                    }
+                }
+            }.start()
         }
 
         val navController = rememberNavController()
