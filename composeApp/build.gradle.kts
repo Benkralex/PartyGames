@@ -54,6 +54,7 @@ kotlin {
             implementation(libs.androidx.activity.compose)
 
             implementation(libs.androidx.documentfile)
+            implementation(libs.core.splashscreen)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -93,7 +94,7 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "2.1.0"
+        versionName = "3.0.0"
     }
     packaging {
         resources {
@@ -122,7 +123,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "PartyGames"
-            packageVersion = "2.1.0"
+            packageVersion = "3.0.0"
             modules("jdk.unsupported")
 
             macOS {
