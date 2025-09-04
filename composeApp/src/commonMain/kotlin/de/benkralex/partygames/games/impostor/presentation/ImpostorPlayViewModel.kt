@@ -21,7 +21,7 @@ class ImpostorPlayViewModel : ViewModel() {
         }?.filter { it != null }?.map { it!! } ?: emptyList()
     }
     val topics: List<TranslatableString> by derivedStateOf {
-        (game?.settings?.get("players") as? List<*>)?.map {
+        (game?.settings?.get("topics") as? List<*>)?.map {
             it as? TranslatableString
         }?.filter { it != null }?.map { it!! } ?: emptyList()
     }

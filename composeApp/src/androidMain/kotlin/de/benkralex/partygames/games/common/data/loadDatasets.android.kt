@@ -57,6 +57,6 @@ actual suspend fun getJsonFileContent(path: String): ByteArray {
             bytes = ByteArray(0)
         }
     }
-    Napier.d("Path: $path\n Content:\n${bytes}")
+    Napier.d("Path: $path\n Content:\n${bytes.decodeToString().replace("\n", "\\n")}")
     return bytes
 }
