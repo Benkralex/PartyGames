@@ -9,7 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import de.benkralex.partygames.games.common.data.getJsonFiles
+import de.benkralex.partygames.datasets.getJsonFiles
 import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 

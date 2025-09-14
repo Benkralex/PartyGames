@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getKeyByGame
-import de.benkralex.partygames.games.common.domain.Dataset
+import de.benkralex.partygames.datasets.Dataset
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import de.benkralex.partygames.games.findLiar.data.parseFindLiarDataset

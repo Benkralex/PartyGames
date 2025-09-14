@@ -1,0 +1,65 @@
+{
+    "uid": "default_dataset",
+    "game": "truth_or_dare",
+    "title": {
+        "de_DE": "Standard Datenset",
+        "en": "Default Dataset"
+    },
+    "description": {
+        "de_DE": "Das Standart Datenset für das Spiel 'Wahrheit oder Pflicht'",
+        "en": "The default dataset for the game 'Truth or Dare'"
+    },
+    "author": {
+        "de_DE": "Benkralex",
+        "en": "Benkralex"
+    },
+    "topics": {
+        "love": {
+            "de_DE": "Liebe",
+            "en": "Love"
+        },
+        "sport": {
+            "de_DE": "Sport",
+            "en": "Sport"
+        }
+    },
+    "truths": [
+        {
+            "topic_key": "love",
+            "value": {
+                "de_DE": "Wer war dein erster Schwarm?",
+                "en": "Who was your first crush?"
+            }
+        },
+        {
+            "topic_key": "love",
+            "value": {
+                "de_DE": "Wer ist dein Schwarm?",
+                "en": "Who is your crush?"
+            }
+        },
+        {
+            "topic_key": "sport",
+            "value": {
+                "de_DE": "Welcher Sport gefällt dir am meisten?",
+                "en": "Which sport do you like the most?"
+            }
+        }
+    ],
+    "dares": [
+        {
+            "topic_key": "love",
+            "value": {
+                "de_DE": "Küss die Person zu deiner Rechten.",
+                "en": "Kiss the person to your right."
+            }
+        },
+        {
+            "topic_key": "sport",
+            "value": {
+                "de_DE": "Mach 10 Liegestütze.",
+                "en": "Do 10 push-ups."
+            }
+        }
+    ]
+}

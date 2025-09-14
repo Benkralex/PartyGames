@@ -12,7 +12,7 @@ var settings: MutableState<Settings> = mutableStateOf(Settings())
 private val languagesKey = stringPreferencesKey("languages")
 private val lastPlayersKey = stringPreferencesKey("lastPlayers")
 private val datasetPathKey = stringPreferencesKey("datasetPath")
-private val gitRepoDatasetUrlsKey = stringPreferencesKey("gitRepoDatasetUrls")
+private val datasetUrlsKey = stringPreferencesKey("datasetUrls")
 
 
 suspend fun saveSettings(prefs: DataStore<Preferences>) {
@@ -20,14 +20,14 @@ suspend fun saveSettings(prefs: DataStore<Preferences>) {
         preferences[languagesKey] = settings.value.languages.toPreferencesString()
         preferences[lastPlayersKey] = settings.value.lastPlayers.toPreferencesString()
         preferences[datasetPathKey] = settings.value.datasetPath
-        preferences[gitRepoDatasetUrlsKey] = settings.value.gitRepoDatasetUrls.toPreferencesString()
+        preferences[datasetUrlsKey] = settings.value.datasetUrls.toPreferencesString()
     }
     Napier.d( message =
         "Settings Saved: \n" +
         "Languages: ${settings.value.languages} \n" +
         "LastPlayers: ${settings.value.lastPlayers} \n" +
         "DatasetPath: ${settings.value.datasetPath} \n" +
-        "GitRepoDatasetUrls: ${settings.value.gitRepoDatasetUrls} \n"
+        "datasetUrls: ${settings.value.datasetUrls} \n"
     )
 }
 
@@ -37,7 +37,7 @@ suspend fun loadSettings(prefs: DataStore<Preferences>) {
             languages = preferences[languagesKey]?.toList() ?: mutableListOf(),
             lastPlayers = preferences[lastPlayersKey]?.toList() ?: mutableListOf(),
             datasetPath = preferences[datasetPathKey] ?: "",
-            gitRepoDatasetUrls = preferences[gitRepoDatasetUrlsKey]?.toList() ?: mutableListOf(),
+            datasetUrls = preferences[datasetUrlsKey]?.toList() ?: mutableListOf(),
         )
     }
 }
@@ -59,5 +59,5 @@ data class Settings (
     var languages: List<String> = mutableListOf(),
     var lastPlayers: List<String> = mutableListOf(),
     var datasetPath: String = "",
-    var gitRepoDatasetUrls: List<String> = mutableListOf(),
+    var datasetUrls: List<String> = mutableListOf(),
 )

@@ -24,7 +24,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import de.benkralex.partygames.app.theme.AppTheme
 import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
-import de.benkralex.partygames.games.common.data.loadDatasets
+import de.benkralex.partygames.datasets.loadDatasets
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.PlayGamePage
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
@@ -56,20 +56,16 @@ fun App(
     ) {
         LaunchedEffect(Unit) {
             loadSettings(prefs)
-            Thread {
-                runBlocking {
-                    launch {
-                        loadDatasets(settings.value.datasetPath)
-                    }
-                }
-            }.start()
             if (settings.value.languages.isEmpty()) {
                 settings.value.languages =
                     listOf(Locale.current.language + "_" + Locale.current.region)
             }
+            if (settings.value.datasetUrls.isEmpty()) {
+                settings.value.datasetUrls = listOf("https://benkralex.github.io/partygames-datasets/")
+            }
         }
 
-        LaunchedEffect(settings.value) {
+        LaunchedEffect(settings.value, Unit) {
             saveSettings(prefs)
             Thread {
                 runBlocking {

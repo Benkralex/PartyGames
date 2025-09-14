@@ -2,6 +2,7 @@ package de.benkralex.partygames.games.common.domain
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import de.benkralex.partygames.datasets.Dataset
 import kotlinx.serialization.json.JsonObject
 
 interface Game {

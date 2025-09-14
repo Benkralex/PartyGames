@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.common.data
+package de.benkralex.partygames.datasets
 
 import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile

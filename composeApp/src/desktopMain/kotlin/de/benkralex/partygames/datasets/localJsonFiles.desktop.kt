@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.common.data
+package de.benkralex.partygames.datasets
 
 import io.github.aakira.napier.Napier
 import java.io.File

@@ -1,55 +1,26 @@
-package de.benkralex.partygames.games.common.data
+package de.benkralex.partygames.datasets
 
 import de.benkralex.partygames.app.gamesRegister
 import de.benkralex.partygames.app.getGameByGameId
-import de.benkralex.partygames.games.common.domain.Dataset
 import io.github.aakira.napier.Napier
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import partygames.composeapp.generated.resources.Res
-
-
-expect suspend fun getJsonFiles(basePath: String): List<String>
-
-expect suspend fun getJsonFileContent(path: String): ByteArray
 
 suspend fun loadDatasets(basePath: String) {
     for (game in gamesRegister) {
         game.datasets.clear()
     }
+    //loadRemoteJsonFiles()
     val paths = getJsonFiles(basePath)
     for (path in paths) {
         val bytes = getJsonFileContent(path)
         parseDataset(bytes, path)
     }
-    loadResourceDatasets(
-        listOf(
-            "files/find_liar/default.json",
-
-            "files/impostor/default1.json",
-            "files/impostor/default2.json",
-            "files/impostor/default3.json",
-            "files/impostor/default4.json",
-            "files/impostor/default5.json",
-            "files/impostor/default6.json",
-            "files/impostor/default7.json",
-            "files/impostor/default8.json",
-            "files/impostor/default9.json",
-            "files/impostor/default10.json",
-        )
-    )
+    loadAllResourceDatasets()
 }
 
-suspend fun loadResourceDatasets(paths: List<String>) {
-    for (path in paths) {
-        val bytes = Res.readBytes(path)
-        Napier.d("Path: $path, size: ${bytes.size}, content: ${bytes.decodeToString().take(100)}")
-        parseDataset(bytes, path)
-    }
-}
-
-private fun parseDataset(bytes: ByteArray, path: String = ""): Dataset? {
+fun parseDataset(bytes: ByteArray, path: String = ""): Dataset? {
     if (bytes.isNotEmpty()) {
         try {
             val jsonString = bytes.decodeToString()
