@@ -1,37 +1,42 @@
 package de.benkralex.partygames.games.common.domain
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import de.benkralex.partygames.datasets.Dataset
 import kotlinx.serialization.json.JsonObject
 
-interface Game {
+abstract class Game {
     //-------------
     // Information
     //-------------
-    val information: GameInformation
-    val gameId: String
+    abstract val information: GameInformation
+    abstract val gameId: String
 
     //-------------
     // Settings
     //-------------
-    val settings: Map<String, Any?>
+    abstract val settings: Map<String, Any?>
 
     //-------------
     // Data
     //-------------
-    val parseData: (json: JsonObject) -> Dataset?
-    val datasets: MutableList<Dataset>
+    abstract val parseData: (json: JsonObject) -> Dataset?
+    abstract val datasets: MutableList<Dataset>
+    val activeDatasets: List<Dataset>
+        get() = datasets.filter { it.active }
 
     //-------------
     // UI
     //-------------
-    val setupWidget: @Composable (modifier: Modifier) -> Unit
-    val playWidget: @Composable (modifier: Modifier) -> Unit
-    val settingsWidget: (@Composable (modifier: Modifier) -> Unit)?
+    abstract val setupWidget: @Composable (modifier: Modifier) -> Unit
+    abstract val playWidget: @Composable (modifier: Modifier) -> Unit
+    abstract val settingsWidget: (@Composable (modifier: Modifier) -> Unit)?
 
     //-------------
     // Game Logic
     //-------------
-    fun createGame(settings: Map<String, Any?>)
+    abstract fun createGame(settings: Map<String, Any?>)
 }

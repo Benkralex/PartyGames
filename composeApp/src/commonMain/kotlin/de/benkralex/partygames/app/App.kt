@@ -43,6 +43,8 @@ import partygames.composeapp.generated.resources.cancel_dialog
 import partygames.composeapp.generated.resources.exit_game
 import partygames.composeapp.generated.resources.exit_game_desc
 
+lateinit var local: String
+
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 @Preview
@@ -54,11 +56,13 @@ fun App(
     AppTheme (
         theme = theme
     ) {
+        local = Locale.current.language + "_" + Locale.current.region
+
         LaunchedEffect(Unit) {
             loadSettings(prefs)
             if (settings.value.languages.isEmpty()) {
                 settings.value.languages =
-                    listOf(Locale.current.language + "_" + Locale.current.region)
+                    listOf(local)
             }
             if (settings.value.datasetUrls.isEmpty()) {
                 settings.value.datasetUrls = listOf("https://benkralex.github.io/partygames-datasets/")

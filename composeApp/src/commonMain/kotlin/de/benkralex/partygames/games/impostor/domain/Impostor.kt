@@ -18,15 +18,15 @@ import partygames.composeapp.generated.resources.impostor_description
 import partygames.composeapp.generated.resources.impostor_how_to_play
 import partygames.composeapp.generated.resources.impostor_title
 
-class Impostor : Game {
+class Impostor : Game() {
     override val gameId: String = "impostor"
 
     override val information: GameInformation = GameInformation(
         name = Res.string.impostor_title,
         description = Res.string.impostor_description,
         author = Res.string.impostor_author,
-        colorLightTheme = Color.Blue,
-        colorDarkTheme = Color.Blue,
+        colorLightTheme = Color(0xFFaa76de),
+        colorDarkTheme = Color(0xFF3b0273),
         howToPlay = Res.string.impostor_how_to_play,
     )
 
@@ -51,7 +51,7 @@ class Impostor : Game {
                     ),
                 )
             },
-            topics = datasets.flatMap { (it as ImpostorDataset).wordPairs }.filter { w ->
+            topics = activeDatasets.flatMap { (it as ImpostorDataset).wordPairs }.filter { w ->
                 val languages = de.benkralex.partygames.settingsPage.data.settings.value.languages
                 w.mainWord.translations.keys.any { lang ->
                     lang in languages
@@ -70,7 +70,7 @@ class Impostor : Game {
         ImpostorPlayWidget(
             modifier = modifier,
             game = this,
-            datasets = datasets.map { it as ImpostorDataset },
+            datasets = activeDatasets.map { it as ImpostorDataset },
         )
     }
 

@@ -5,6 +5,7 @@ import de.benkralex.partygames.games.common.domain.TranslatableString
 
 data class ImpostorDataset(
     override val uid: String,
+    override var active: Boolean = true,
     override val title: TranslatableString,
     override val description: TranslatableString,
     override val author: TranslatableString,

@@ -38,6 +38,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
+import de.benkralex.partygames.app.local
 import de.benkralex.partygames.games.impostor.domain.Impostor
 import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
 import kotlinx.coroutines.launch
@@ -83,7 +84,7 @@ fun ImpostorPlayWidget(
         key(viewModel.game, viewModel.activePlayer, viewModel.word) {
             if (viewModel.game != null && viewModel.word != null && viewModel.activePlayer != null) {
                 ShowWordCard(
-                    word = viewModel.word!![Locale.current.language + "_" + Locale.current.region],
+                    word = viewModel.word!![local],
                     player = viewModel.activePlayer!!,
                     next = {
                         viewModel.updateActivePlayer()
@@ -99,7 +100,7 @@ fun ImpostorPlayWidget(
                 )
             } else if (viewModel.game != null && viewModel.activePlayer == null && viewModel.finishedPlayers.size == viewModel.playerCount) {
                 ShowImpostors(
-                    mainWord = viewModel.currentWordPair!!.mainWord[Locale.current.language + "_" + Locale.current.region],
+                    mainWord = viewModel.currentWordPair!!.mainWord[local],
                     impostors = viewModel.impostors,
                     modifier = Modifier
                         .fillMaxWidth()

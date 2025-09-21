@@ -61,7 +61,7 @@ class FindLiarPlayViewModel : ViewModel() {
             return
         }
         if (questionPairs.none { !playedQuestions.contains(it) }) {
-            Napier.e("No question pairs available for the selected topics and difficulty")
+            Napier.e("No question pairs available for the selected topics")
             return
         }
 

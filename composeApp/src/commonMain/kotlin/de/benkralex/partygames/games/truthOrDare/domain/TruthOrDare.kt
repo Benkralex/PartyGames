@@ -15,7 +15,7 @@ import partygames.composeapp.generated.resources.truth_or_dare_description
 import partygames.composeapp.generated.resources.truth_or_dare_how_to_play
 import partygames.composeapp.generated.resources.truth_or_dare_title
 
-class TruthOrDare : Game {
+class TruthOrDare : Game() {
     override val gameId: String = "truth_or_dare"
 
     override var information: GameInformation = GameInformation(

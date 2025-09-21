@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.dp
+import de.benkralex.partygames.app.local
 
 @Composable
 fun CheckboxSingleWidget(
@@ -33,7 +34,7 @@ fun CheckboxSingleWidget(
             },
         )
         Text(
-            text = state.label[Locale.current.language + "_" + Locale.current.region],
+            text = state.label[local],
         )
     }
 }

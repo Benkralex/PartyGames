@@ -19,15 +19,15 @@ import partygames.composeapp.generated.resources.find_liar_description
 import partygames.composeapp.generated.resources.find_liar_how_to_play
 import partygames.composeapp.generated.resources.find_liar_title
 
-class FindLiar : Game {
+class FindLiar : Game() {
     override val gameId: String = "find_liar"
 
     override val information: GameInformation = GameInformation(
         name = Res.string.find_liar_title,
         description = Res.string.find_liar_description,
         author = Res.string.find_liar_author,
-        colorLightTheme = Color.Companion.Red,
-        colorDarkTheme = Color.Companion.Red,
+        colorLightTheme = Color(0xFF59c976),
+        colorDarkTheme = Color(0xFF2d663c),
         howToPlay = Res.string.find_liar_how_to_play,
     )
 
@@ -52,7 +52,7 @@ class FindLiar : Game {
                     )
                 )
             },
-            topics = datasets.flatMap { (it as FindLiarDataset).questionPairs }.filter { q ->
+            topics = activeDatasets.flatMap { (it as FindLiarDataset).questionPairs }.filter { q ->
                 val languages = de.benkralex.partygames.settingsPage.data.settings.value.languages
                 q.liarQuestion.translations.keys.any { lang ->
                     lang in languages
@@ -71,7 +71,7 @@ class FindLiar : Game {
         FindLiarPlayWidget(
             modifier = modifier,
             game = this,
-            datasets = datasets.map { it as FindLiarDataset },
+            datasets = activeDatasets.map { it as FindLiarDataset },
         )
     }
 

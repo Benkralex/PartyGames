@@ -36,6 +36,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
+import de.benkralex.partygames.app.local
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
 import org.jetbrains.compose.resources.stringResource
@@ -73,7 +74,7 @@ fun FindLiarPlayWidget(
         key(viewModel.game, viewModel.answeringPlayer, viewModel.question) {
             if (viewModel.game != null && viewModel.question != null && viewModel.answeringPlayer != null) {
                 AskQuestionCard(
-                    question = viewModel.question!![Locale.current.language + "_" + Locale.current.region],
+                    question = viewModel.question!![local],
                     player = viewModel.answeringPlayer!!,
                     onAnswer = { answer: String ->
                         viewModel.answerQuestion(viewModel.answeringPlayer!!, answer)
@@ -89,7 +90,7 @@ fun FindLiarPlayWidget(
             } else if (viewModel.game != null && viewModel.answeringPlayer == null && viewModel.answers.size == viewModel.playerCount) {
                 ShowAnswers(
                     answers = viewModel.answers,
-                    question = viewModel.currentQuestionPair!!.mainQuestion[Locale.current.language + "_" + Locale.current.region],
+                    question = viewModel.currentQuestionPair!!.mainQuestion[local],
                     liars = viewModel.liars,
                     modifier = Modifier
                         .fillMaxWidth()

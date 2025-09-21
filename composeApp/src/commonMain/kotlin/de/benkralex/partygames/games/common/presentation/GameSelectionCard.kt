@@ -1,5 +1,6 @@
 package de.benkralex.partygames.games.common.presentation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -40,14 +41,15 @@ fun GameSelectionCard(
             )
             .drawBehind {
                 drawRoundRect(
-                    brush = Brush.radialGradient(
+                    /*brush = Brush.radialGradient(
                         colors = listOf(
                             color.copy(alpha = 0.5f),
                             color.copy(alpha = 0.1f)
                         ),
                         center = Offset(size.width,0f),
                         radius = size.maxDimension / 1.2f
-                    ),
+                    ),*/
+                    color = color,
                     size = size,
                     cornerRadius = CornerRadius(
                         x = 16.dp.toPx(),

@@ -45,6 +45,7 @@ fun DatasetPathSetting(
 
     OutlinedTextField(
         modifier = modifier.fillMaxWidth(),
+        readOnly = true,
         value = viewModel.datasetPath,
         onValueChange = { viewModel.onPathSelected(it) },
         label = { Text("Dataset Path") },

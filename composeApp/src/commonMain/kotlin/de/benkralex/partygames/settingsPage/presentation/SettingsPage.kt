@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.app.gamesRegister
 import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetPathSetting
+import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetSelection
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.settings
@@ -57,10 +58,15 @@ fun SettingsPage(
                             ),
                     ) {
                         DatasetPathSetting()
-                        //DatasetSelection()
                     }
                 },
             ),
+            TabData(
+                title = "Datasets",
+                content = {
+                    DatasetSelection()
+                }
+            )
         ).plus(gamesRegister.filter { it.settingsWidget != null }.map {
             TabData(
                 title = stringResource(it.information.name),
