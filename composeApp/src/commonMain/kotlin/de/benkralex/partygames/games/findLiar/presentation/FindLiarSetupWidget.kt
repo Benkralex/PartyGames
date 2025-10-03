@@ -38,7 +38,7 @@ import kotlin.reflect.cast
 @Composable
 fun FindLiarSetupWidget(
     modifier: Modifier = Modifier,
-    viewModel: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(
+    vm: FindLiarSetupViewModel = viewModel<FindLiarSetupViewModel>(
         factory = object: ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
                 return modelClass.cast(FindLiarSetupViewModel())
@@ -54,19 +54,19 @@ fun FindLiarSetupWidget(
     val liarCountLabel = stringResource(Res.string.find_liar_res_liar_count)
     val topicsLabel = stringResource(Res.string.topics)
 
-    viewModel.initializeLabels(
+    vm.initializeLabels(
         playerListLabel, playerSingleLabel, playerNameStart,
         liarCountLabel, topicsLabel
     )
 
-    viewModel.topicsState.checkboxSingleStates = topics.map {
+    vm.topicsState.checkboxSingleStates = topics.map {
         topic -> CheckboxSingleState(
             topic,
             true,
         )
     }
 
-    viewModel.updateLiarCountConstraints()
+    vm.updateLiarCountConstraints()
 
     val scrollState = rememberScrollState()
     Column(modifier = modifier.verticalScroll(scrollState)) {
@@ -84,17 +84,17 @@ fun FindLiarSetupWidget(
             .padding(horizontal = 20.dp, vertical = 8.dp)
             .fillMaxWidth()
 
-        StringListWidget(modifier = childModifier, state = viewModel.playersState)
+        StringListWidget(modifier = childModifier, state = vm.playersState)
         CustomDivider()
 
-        IntegerInputWidget(modifier = childModifier, state = viewModel.liarCountState)
+        IntegerInputWidget(modifier = childModifier, state = vm.liarCountState)
         CustomDivider()
 
-        CheckboxListWidget(modifier = childModifier, state = viewModel.topicsState)
+        CheckboxListWidget(modifier = childModifier, state = vm.topicsState)
         CustomDivider()
 
         ElevatedButton(
-            onClick = { viewModel.setupGame(setupGame) },
+            onClick = { vm.setupGame(setupGame) },
             modifier = Modifier
                 .padding(horizontal = 20.dp, vertical = 8.dp)
                 .align(Alignment.End),

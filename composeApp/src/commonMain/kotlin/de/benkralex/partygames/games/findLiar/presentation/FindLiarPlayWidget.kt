@@ -27,8 +27,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -51,19 +51,19 @@ import kotlin.reflect.cast
 fun FindLiarPlayWidget(
     modifier: Modifier = Modifier,
     game: FindLiar,
-    viewModel: FindLiarPlayViewModel = viewModel<FindLiarPlayViewModel>(
-        factory = object: ViewModelProvider.Factory {
+    vm: FindLiarPlayViewModel = viewModel<FindLiarPlayViewModel>(
+        factory = object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
                 return modelClass.cast(FindLiarPlayViewModel())
             }
-        }
+        },
     ),
     datasets: List<FindLiarDataset>,
 ) {
-    viewModel.datasets = datasets
+    vm.datasets = datasets
     LaunchedEffect(game) {
-        viewModel.game = game
-        viewModel.initNewRound()
+        vm.game = game
+        vm.initNewRound()
     }
 
     Column (
@@ -71,13 +71,13 @@ fun FindLiarPlayWidget(
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        key(viewModel.game, viewModel.answeringPlayer, viewModel.question) {
-            if (viewModel.game != null && viewModel.question != null && viewModel.answeringPlayer != null) {
+        key(vm.game, vm.answeringPlayer, vm.question) {
+            if (vm.game != null && vm.question != null && vm.answeringPlayer != null) {
                 AskQuestionCard(
-                    question = viewModel.question!![local],
-                    player = viewModel.answeringPlayer!!,
+                    question = vm.question!![local],
+                    player = vm.answeringPlayer!!,
                     onAnswer = { answer: String ->
-                        viewModel.answerQuestion(viewModel.answeringPlayer!!, answer)
+                        vm.answerQuestion(vm.answeringPlayer!!, answer)
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -87,16 +87,16 @@ fun FindLiarPlayWidget(
                             vertical = 16.dp,
                         ),
                 )
-            } else if (viewModel.game != null && viewModel.answeringPlayer == null && viewModel.answers.size == viewModel.playerCount) {
+            } else if (vm.game != null && vm.answeringPlayer == null && vm.answers.size == vm.playerCount) {
                 ShowAnswers(
-                    answers = viewModel.answers,
-                    question = viewModel.currentQuestionPair!!.mainQuestion[local],
-                    liars = viewModel.liars,
+                    answers = vm.answers,
+                    question = vm.currentQuestionPair!!.mainQuestion[local],
+                    liars = vm.liars,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(4.dp),
                     newRoundCallback = {
-                        viewModel.initNewRound()
+                        vm.initNewRound()
                     },
                 )
             }
@@ -113,7 +113,7 @@ fun AskQuestionCard(
 ) {
     var answer by remember { mutableStateOf("") }
     var opened by remember { mutableStateOf(false) }
-    val focusRequester = remember { androidx.compose.ui.focus.FocusRequester() }
+    val focusRequester = remember { FocusRequester() }
     LaunchedEffect(opened) {
         if (opened) {
             focusRequester.requestFocus()

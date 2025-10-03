@@ -38,7 +38,7 @@ import kotlin.reflect.cast
 @Composable
 fun ImpostorSetupWidget(
     modifier: Modifier = Modifier,
-    viewModel: ImpostorSetupViewModel = viewModel<ImpostorSetupViewModel>(
+    vm: ImpostorSetupViewModel = viewModel<ImpostorSetupViewModel>(
         factory = object: ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
                 return modelClass.cast(ImpostorSetupViewModel())
@@ -55,19 +55,19 @@ fun ImpostorSetupWidget(
     val impostorCountLabel = stringResource(Res.string.impostor_res_impostor_count)
     val topicsLabel = stringResource(Res.string.topics)
 
-    viewModel.initializeLabels(
+    vm.initializeLabels(
         playerListLabel, playerSingleLabel, playerNameStart,
         impostorCountLabel, topicsLabel
     )
 
-    viewModel.topicsState.checkboxSingleStates = topics.map {
+    vm.topicsState.checkboxSingleStates = topics.map {
         topic -> CheckboxSingleState(
             topic,
             true,
         )
     }
 
-    viewModel.updateImpostorCountConstraints()
+    vm.updateImpostorCountConstraints()
 
     val scrollState = rememberScrollState()
     Column(modifier = modifier.verticalScroll(scrollState)) {
@@ -85,17 +85,17 @@ fun ImpostorSetupWidget(
             .padding(horizontal = 20.dp, vertical = 8.dp)
             .fillMaxWidth()
 
-        StringListWidget(modifier = childModifier, state = viewModel.playersState)
+        StringListWidget(modifier = childModifier, state = vm.playersState)
         CustomDivider()
 
-        IntegerInputWidget(modifier = childModifier, state = viewModel.impostorCountState)
+        IntegerInputWidget(modifier = childModifier, state = vm.impostorCountState)
         CustomDivider()
 
-        CheckboxListWidget(modifier = childModifier, state = viewModel.topicsState)
+        CheckboxListWidget(modifier = childModifier, state = vm.topicsState)
         CustomDivider()
 
         ElevatedButton(
-            onClick = { viewModel.setupGame(setupGame) },
+            onClick = { vm.setupGame(setupGame) },
             modifier = Modifier
                 .padding(horizontal = 20.dp, vertical = 8.dp)
                 .align(Alignment.End),

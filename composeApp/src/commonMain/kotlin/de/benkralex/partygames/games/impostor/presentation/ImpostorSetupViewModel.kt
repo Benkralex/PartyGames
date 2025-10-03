@@ -10,7 +10,6 @@ import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxIn
 import de.benkralex.partygames.games.common.presentation.setupWidgets.integerInput.IntegerInputState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListState
 import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringSingleState
-import de.benkralex.partygames.settingsPage.data.Settings
 import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 
@@ -61,15 +60,16 @@ class ImpostorSetupViewModel: ViewModel() {
         topicsLabel: String
     ) {
         if (_playersState.value == null) {
+            val lastPlayers = settings.value.lastPlayers.filter { it.trim().isNotBlank() }
             _playersState.value = StringListState(
                 label = playerListLabel,
-                stringSingleStates = settings.value.lastPlayers.filter { it.trim().isNotBlank() }.mapIndexed { index, playerName ->
+                stringSingleStates = lastPlayers.mapIndexed { index, playerName ->
                     index to StringSingleState(
                         label = playerSingleLabel,
                         defaultValue = playerName
                     )
                 }.toMap().plus(
-                    map = (settings.value.lastPlayers.filter { it.trim().isNotBlank() }.size until 3).associateWith { i ->
+                    map = (lastPlayers.size until 3).associateWith { i ->
                         StringSingleState(
                             label = playerSingleLabel,
                             defaultValue = "$playerNameStart ${i + 1}"
@@ -109,11 +109,9 @@ class ImpostorSetupViewModel: ViewModel() {
             Napier.e("Setup is invalid, cannot start game")
             return
         }
-        val newSettings = Settings(
-            languages = settings.value.languages,
+        settings.value = settings.value.copy(
             lastPlayers = players
         )
-        settings.value = newSettings
         setupGameCallback(players, impostorCount, topics)
     }
 

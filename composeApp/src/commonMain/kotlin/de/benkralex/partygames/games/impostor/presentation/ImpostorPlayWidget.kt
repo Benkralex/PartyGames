@@ -30,7 +30,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -60,7 +59,7 @@ import kotlin.reflect.cast
 fun ImpostorPlayWidget(
     modifier: Modifier = Modifier,
     game: Impostor,
-    viewModel: ImpostorPlayViewModel = viewModel<ImpostorPlayViewModel>(
+    vm: ImpostorPlayViewModel = viewModel<ImpostorPlayViewModel>(
         factory = object: ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
                 return modelClass.cast(ImpostorPlayViewModel())
@@ -69,10 +68,10 @@ fun ImpostorPlayWidget(
     ),
     datasets: List<ImpostorDataset>,
 ) {
-    viewModel.datasets = datasets
+    vm.datasets = datasets
     LaunchedEffect(game) {
-        viewModel.game = game
-        viewModel.initNewRound()
+        vm.game = game
+        vm.initNewRound()
     }
 
     Column (
@@ -81,13 +80,13 @@ fun ImpostorPlayWidget(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        key(viewModel.game, viewModel.activePlayer, viewModel.word) {
-            if (viewModel.game != null && viewModel.word != null && viewModel.activePlayer != null) {
+        key(vm.game, vm.activePlayer, vm.word) {
+            if (vm.game != null && vm.word != null && vm.activePlayer != null) {
                 ShowWordCard(
-                    word = viewModel.word!![local],
-                    player = viewModel.activePlayer!!,
+                    word = vm.word!![local],
+                    player = vm.activePlayer!!,
                     next = {
-                        viewModel.updateActivePlayer()
+                        vm.updateActivePlayer()
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -96,21 +95,21 @@ fun ImpostorPlayWidget(
                             horizontal = 32.dp,
                             vertical = 16.dp,
                         ),
-                    impostor = viewModel.impostors.contains(viewModel.activePlayer),
+                    impostor = vm.impostors.contains(vm.activePlayer),
                 )
-            } else if (viewModel.game != null && viewModel.activePlayer == null && viewModel.finishedPlayers.size == viewModel.playerCount) {
+            } else if (vm.game != null && vm.activePlayer == null && vm.finishedPlayers.size == vm.playerCount) {
                 ShowImpostors(
-                    mainWord = viewModel.currentWordPair!!.mainWord[local],
-                    impostors = viewModel.impostors,
+                    mainWord = vm.currentWordPair!!.mainWord[local],
+                    impostors = vm.impostors,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height((min(max(200 + viewModel.impostors.size * 40, 300), 700)).dp)
+                        .height((min(max(200 + vm.impostors.size * 40, 300), 700)).dp)
                         .padding(
                             horizontal = 32.dp,
                             vertical = 16.dp,
                         ),
                     newRoundCallback = {
-                        viewModel.initNewRound()
+                        vm.initNewRound()
                     },
                 )
             }

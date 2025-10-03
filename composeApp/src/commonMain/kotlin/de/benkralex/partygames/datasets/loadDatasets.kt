@@ -11,7 +11,6 @@ suspend fun loadDatasets(basePath: String) {
     for (game in gamesRegister) {
         game.datasets.clear()
     }
-    //loadRemoteJsonFiles()
     val paths = getJsonFiles(basePath)
     for (path in paths) {
         val bytes = getJsonFileContent(path)

@@ -16,6 +16,8 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
 import createDataStore
 import de.benkralex.partygames.app.App
 import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetPathCallbackHolder
@@ -26,6 +28,8 @@ class MainActivity : ComponentActivity() {
     companion object {
         lateinit var instance: MainActivity
             private set
+
+        lateinit var prefs: DataStore<Preferences>
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,11 +39,11 @@ class MainActivity : ComponentActivity() {
         instance = this
 
         setContent {
+            prefs = remember {
+                createDataStore(applicationContext)
+            }
             MaterialTheme {
                 App(
-                    prefs = remember {
-                        createDataStore(applicationContext)
-                    },
                     theme = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S)  {
                         val context = LocalContext.current
                         if (isSystemInDarkTheme()) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)

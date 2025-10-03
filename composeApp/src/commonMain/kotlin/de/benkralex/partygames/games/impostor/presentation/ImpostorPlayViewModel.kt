@@ -9,7 +9,6 @@ import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.impostor.domain.Impostor
 import de.benkralex.partygames.games.impostor.domain.ImpostorDataset
 import de.benkralex.partygames.games.impostor.domain.ImpostorWordPair
-import de.benkralex.partygames.settingsPage.data.settings
 import io.github.aakira.napier.Napier
 
 class ImpostorPlayViewModel : ViewModel() {
@@ -32,7 +31,7 @@ class ImpostorPlayViewModel : ViewModel() {
         players.size
     }
     val wordPairs by derivedStateOf {
-        val languages = settings.value.languages
+        val languages = de.benkralex.partygames.settingsPage.data.settings.value.languages
         datasets.flatMap { it.wordPairs }.filter { q ->
             q.impostorHintWord.translations.keys.any { lang ->
                 lang in languages

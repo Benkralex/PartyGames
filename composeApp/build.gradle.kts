@@ -1,8 +1,8 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-//import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-//import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -28,7 +28,7 @@ kotlin {
         }
     }
     
-    /*@OptIn(ExperimentalWasmDsl::class)
+    @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         outputModuleName.set("composeApp")
         browser {
@@ -46,7 +46,7 @@ kotlin {
             }
         }
         binaries.executable()
-    }*/
+    }
     
     sourceSets {
         val desktopMain by getting
@@ -57,6 +57,9 @@ kotlin {
 
             implementation(libs.androidx.documentfile)
             implementation(libs.core.splashscreen)
+
+            api(libs.datastore.preferences)
+            api(libs.datastore)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -74,11 +77,7 @@ kotlin {
             implementation(libs.ui.backhandler)
             implementation(libs.kotlinx.serialization.json)
 
-            implementation(libs.ktor.clientCore)
-            implementation(libs.ktor.okHttp)
-
-            api(libs.datastore.preferences)
-            api(libs.datastore)
+            implementation(libs.kotlin.coroutines)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -86,6 +85,9 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+
+            api(libs.datastore.preferences)
+            api(libs.datastore)
 
             runtimeOnly(libs.slf4j.simple)
         }

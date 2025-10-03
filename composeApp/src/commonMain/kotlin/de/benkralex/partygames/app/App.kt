@@ -16,15 +16,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.text.intl.Locale
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import de.benkralex.partygames.app.theme.AppTheme
-import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
 import de.benkralex.partygames.datasets.loadDatasets
+import de.benkralex.partygames.gameSelectionPage.presentation.GameSelectionPage
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.PlayGamePage
 import de.benkralex.partygames.games.common.presentation.SetupGamePage
@@ -35,7 +33,7 @@ import de.benkralex.partygames.settingsPage.presentation.SettingsPage
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+//import kotlinx.coroutines.runBlocking
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import partygames.composeapp.generated.resources.Res
@@ -44,12 +42,12 @@ import partygames.composeapp.generated.resources.exit_game
 import partygames.composeapp.generated.resources.exit_game_desc
 
 lateinit var local: String
+internal const val DATA_STORE_FILE_NAME = "prefs.preferences_pb"
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 @Preview
 fun App(
-    prefs: DataStore<Preferences>,
     theme: ColorScheme? = null,
 ) {
     Napier.base(DebugAntilog())
@@ -59,25 +57,22 @@ fun App(
         local = Locale.current.language + "_" + Locale.current.region
 
         LaunchedEffect(Unit) {
-            loadSettings(prefs)
+            loadSettings()
             if (settings.value.languages.isEmpty()) {
                 settings.value.languages =
                     listOf(local)
             }
-            if (settings.value.datasetUrls.isEmpty()) {
-                settings.value.datasetUrls = listOf("https://benkralex.github.io/partygames-datasets/")
-            }
         }
 
         LaunchedEffect(settings.value, Unit) {
-            saveSettings(prefs)
-            Thread {
-                runBlocking {
+            saveSettings()
+            //Thread {
+                //runBlocking {
                     launch {
                         loadDatasets(settings.value.datasetPath)
                     }
-                }
-            }.start()
+                //}
+            //}.start()
         }
 
         val navController = rememberNavController()

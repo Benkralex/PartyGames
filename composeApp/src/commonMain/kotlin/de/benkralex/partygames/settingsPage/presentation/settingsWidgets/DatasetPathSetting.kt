@@ -25,7 +25,7 @@ import kotlin.reflect.cast
 @Composable
 fun DatasetPathSetting(
     modifier: Modifier = Modifier,
-    viewModel: DatasetPathSettingViewModel = viewModel<DatasetPathSettingViewModel>(
+    vm: DatasetPathSettingViewModel = viewModel<DatasetPathSettingViewModel>(
         factory = object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
                 return modelClass.cast(DatasetPathSettingViewModel())
@@ -38,7 +38,7 @@ fun DatasetPathSetting(
     }
 
     if (openFilePicker) {
-        viewModel.OpenFilePicker()
+        vm.OpenFilePicker()
         openFilePicker = false
     }
 
@@ -46,8 +46,8 @@ fun DatasetPathSetting(
     OutlinedTextField(
         modifier = modifier.fillMaxWidth(),
         readOnly = true,
-        value = viewModel.datasetPath,
-        onValueChange = { viewModel.onPathSelected(it) },
+        value = vm.datasetPath,
+        onValueChange = { vm.onPathSelected(it) },
         label = { Text("Dataset Path") },
         placeholder = { Text("Enter dataset path") },
         singleLine = true,
