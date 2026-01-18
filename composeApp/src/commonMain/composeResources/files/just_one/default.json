@@ -1,0 +1,766 @@
+{
+  "uid": "default_dataset",
+  "game": "just_one",
+  "title": {
+    "de_DE": "Standard Datenset",
+    "en": "Default Dataset"
+  },
+  "description": {
+    "de_DE": "Das Standart Datenset für das Spiel 'Just One'",
+    "en": "The default dataset for the game 'Just One'"
+  },
+  "author": {
+    "de_DE": "skippyall",
+    "en": "skippyall"
+  },
+  "topics": {
+    "animals": {
+      "de_DE": "Tiere",
+      "en_US": "Animals"
+    },
+    "things": {
+      "de_DE": "Dinge",
+      "en_US": "Things"
+    },
+    "food": {
+      "de_DE": "Essen",
+      "en_US": "Food"
+    },
+    "places": {
+      "de_DE": "Orte",
+      "en_US": "Places"
+    },
+    "sports": {
+      "de_DE": "Sportarten",
+      "en_US": "Sports"
+    }
+  },
+  "words": [
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Elefant",
+        "en_US": "Elephant"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Groß",
+        "en_US": "Big"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Fisch",
+        "en_US": "Fish"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Wasser",
+        "en_US": "Water"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Pferd",
+        "en_US": "Horse"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Reiten",
+        "en_US": "Riding"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Stuhl",
+        "en_US": "Chair"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Sitzen",
+        "en_US": "Sitting"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Fernseher",
+        "en_US": "TV"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Schauen",
+        "en_US": "Watching"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Regenschirm",
+        "en_US": "Umbrella"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Regen",
+        "en_US": "Rain"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Pizza",
+        "en_US": "Pizza"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Käse",
+        "en_US": "Cheese"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Apfel",
+        "en_US": "Apple"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Obst",
+        "en_US": "Fruit"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Eis",
+        "en_US": "Ice Cream"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Kalt",
+        "en_US": "Cold"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Strand",
+        "en_US": "Beach"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Sand",
+        "en_US": "Sand"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Schule",
+        "en_US": "School"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Lernen",
+        "en_US": "Learning"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Park",
+        "en_US": "Park"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Bäume",
+        "en_US": "Trees"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Fußball",
+        "en_US": "Soccer"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Tor",
+        "en_US": "Goal"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Tennis",
+        "en_US": "Tennis"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Schläger",
+        "en_US": "Racket"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Schwimmen",
+        "en_US": "Swimming"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Wasser",
+        "en_US": "Water"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Pinguin",
+        "en_US": "Penguin"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Kalt",
+        "en_US": "Cold"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Känguru",
+        "en_US": "Kangaroo"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Springen",
+        "en_US": "Jump"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Uhr",
+        "en_US": "Clock"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Zeit",
+        "en_US": "Time"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Kamera",
+        "en_US": "Camera"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Fotos",
+        "en_US": "Photos"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Banane",
+        "en_US": "Banana"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Gelb",
+        "en_US": "Yellow"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Brot",
+        "en_US": "Bread"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Scheibe",
+        "en_US": "Slice"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Kuchen",
+        "en_US": "Cake"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Feier",
+        "en_US": "Celebration"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Basketball",
+        "en_US": "Basketball"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Korb",
+        "en_US": "Hoop"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Boxen",
+        "en_US": "Boxing"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Schlag",
+        "en_US": "Punch"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Volleyball",
+        "en_US": "Volleyball"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Netz",
+        "en_US": "Net"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Delfin",
+        "en_US": "Dolphin"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Intelligent",
+        "en_US": "Intelligent"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Igel",
+        "en_US": "Hedgehog"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Stachelig",
+        "en_US": "Spiky"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Kompass",
+        "en_US": "Compass"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Orientierung",
+        "en_US": "Orientation"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Kerze",
+        "en_US": "Candle"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Flamme",
+        "en_US": "Flame"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Honig",
+        "en_US": "Honey"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Süß",
+        "en_US": "Sweet"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Spinat",
+        "en_US": "Spinach"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Grün",
+        "en_US": "Green"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Zoo",
+        "en_US": "Zoo"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Tier",
+        "en_US": "Animal"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Museum",
+        "en_US": "Museum"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Ausstellung",
+        "en_US": "Exhibition"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Berg",
+        "en_US": "Mountain"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Hoch",
+        "en_US": "Heigh"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Reiten",
+        "en_US": "Horse Riding"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Sattel",
+        "en_US": "Saddle"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Voltigieren",
+        "en_US": "Vaulting"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Geschicklichkeit",
+        "en_US": "Agility"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Spiegel",
+        "en_US": "Mirror"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Schminken",
+        "en_US": "Makeup"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Schere",
+        "en_US": "Scissors"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Klingen",
+        "en_US": "Blades"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Erdbeere",
+        "en_US": "Strawberry"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Eis",
+        "en_US": "Ice"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Flughafen",
+        "en_US": "Airport"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Zeitdruck",
+        "en_US": "Time pressure"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Kirche",
+        "en_US": "Church"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Ort der Stille",
+        "en_US": "Place of silence"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Schlüsselbund",
+        "en_US": "Keyring"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Torwächter",
+        "en_US": "Gatekeeper"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Fernbedienung",
+        "en_US": "Remote Control"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Macht aus der Ferne",
+        "en_US": "Power from afar"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Kürbis",
+        "en_US": "Pumpkin"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Herbstlicht",
+        "en_US": "Autumn lantern"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Marktplatz",
+        "en_US": "Marketplace"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Gemüseverkauf",
+        "en_US": "Vegetable sale"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Eule",
+        "en_US": "Owl"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Schlau",
+        "en_US": "Clever"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Mikroskop",
+        "en_US": "Microscope"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Klein",
+        "en_US": "Small"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Taschenlampe",
+        "en_US": "Flashlight"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Suchen",
+        "en_US": "Searching"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Lasagne",
+        "en_US": "Lasagna"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Schichten",
+        "en_US": "Layers"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Sushi",
+        "en_US": "Sushi"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Rollen",
+        "en_US": "Rolls"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Pfannkuchen",
+        "en_US": "Pancake"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Rund",
+        "en_US": "Round"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Bibliothek",
+        "en_US": "Library"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Leise",
+        "en_US": "Quiet"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Bahnhof",
+        "en_US": "Train Station"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Reise",
+        "en_US": "Travel"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Krankenhaus",
+        "en_US": "Hospital"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Pflege",
+        "en_US": "Care"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Schlüssel",
+        "en_US": "Key"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Wichtig",
+        "en_US": "Important"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Croissant",
+        "en_US": "Croissant"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Morgen",
+        "en_US": "Morning"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Höhle",
+        "en_US": "Cave"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Kalt",
+        "en_US": "Cold"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Leuchtturm",
+        "en_US": "Lighthouse"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Wegweiser",
+        "en_US": "Guide"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Klettern",
+        "en_US": "Climbing"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Hoch",
+        "en_US": "High"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Ballett",
+        "en_US": "Ballet"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Elegant",
+        "en_US": "Elegant"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Metronom",
+        "en_US": "Metronome"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Rhythmus",
+        "en_US": "Rhythm"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Zahnrad",
+        "en_US": "Gear"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Verbindung",
+        "en_US": "Connection"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Antarktis",
+        "en_US": "Antarctica"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Kalt",
+        "en_US": "Cold"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Parkour",
+        "en_US": "Parkour"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Hindernisse",
+        "en_US": "Obstacles"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Tschernobyl",
+        "en_US": "Chernobyl"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Verboten",
+        "en_US": "Forbidden"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Area 51",
+        "en_US": "Area 51"
+      },
+      "impostor_hint_word": {
+        "de_DE": "Gerüchte",
+        "en_US": "Rumors"
+      }
+    }
+  ]
+}

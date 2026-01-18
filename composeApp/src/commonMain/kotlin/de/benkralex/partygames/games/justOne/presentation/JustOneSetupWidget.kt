@@ -1,0 +1,100 @@
+package de.benkralex.partygames.games.justOne.presentation
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.CreationExtras
+import androidx.lifecycle.viewmodel.compose.viewModel
+import de.benkralex.partygames.games.common.domain.TranslatableString
+import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxListWidget
+import de.benkralex.partygames.games.common.presentation.setupWidgets.checkboxInput.CheckboxSingleState
+import de.benkralex.partygames.games.common.presentation.setupWidgets.stringInput.StringListWidget
+import org.jetbrains.compose.resources.stringResource
+import partygames.composeapp.generated.resources.Res
+import partygames.composeapp.generated.resources.player
+import partygames.composeapp.generated.resources.player_name
+import partygames.composeapp.generated.resources.players
+import partygames.composeapp.generated.resources.start_game
+import partygames.composeapp.generated.resources.topics
+import kotlin.reflect.KClass
+import kotlin.reflect.cast
+
+@Composable
+fun JustOneSetupWidget(
+    modifier: Modifier = Modifier,
+    vm: JustOneSetupViewModel = viewModel<JustOneSetupViewModel>(
+        factory = object: ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
+                return modelClass.cast(JustOneSetupViewModel())
+            }
+        }
+    ),
+    setupGame: (List<String>, List<TranslatableString>) -> Unit = { _, _ -> },
+    topics: List<TranslatableString>,
+) {
+    // initialise labels
+    val playerListLabel = stringResource(Res.string.players)
+    val playerSingleLabel = stringResource(Res.string.player_name)
+    val playerNameStart = stringResource(Res.string.player)
+    val topicsLabel = stringResource(Res.string.topics)
+
+    vm.initializeLabels(
+        playerListLabel, playerSingleLabel, playerNameStart, topicsLabel
+    )
+
+    vm.topicsState.checkboxSingleStates = topics.map {
+        topic -> CheckboxSingleState(
+            topic,
+            true,
+        )
+    }
+
+    val scrollState = rememberScrollState()
+    Column(modifier = modifier.verticalScroll(scrollState)) {
+        @Composable
+        fun CustomDivider() {
+            HorizontalDivider(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 8.dp)
+                    .padding(top = 8.dp),
+            )
+        }
+
+        val childModifier: Modifier = Modifier
+            .padding(horizontal = 20.dp, vertical = 8.dp)
+            .fillMaxWidth()
+
+        StringListWidget(modifier = childModifier, state = vm.playersState)
+        CustomDivider()
+
+        CheckboxListWidget(modifier = childModifier, state = vm.topicsState)
+        CustomDivider()
+
+        ElevatedButton(
+            onClick = { vm.setupGame(setupGame) },
+            modifier = Modifier
+                .padding(horizontal = 20.dp, vertical = 8.dp)
+                .align(Alignment.End),
+            colors = ButtonDefaults.filledTonalButtonColors(),
+        ) {
+            Text(text = stringResource(Res.string.start_game))
+        }
+
+        Spacer(modifier = Modifier.height(70.dp))
+    }
+}
