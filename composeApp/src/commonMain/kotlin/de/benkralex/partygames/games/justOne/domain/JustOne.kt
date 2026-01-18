@@ -11,7 +11,6 @@ import de.benkralex.partygames.games.common.domain.GameInformation
 import de.benkralex.partygames.games.justOne.presentation.JustOnePlayWidget
 import de.benkralex.partygames.games.justOne.presentation.JustOneSetupWidget
 import io.github.aakira.napier.Napier
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 import partygames.composeapp.generated.resources.Res
@@ -44,7 +43,7 @@ class JustOne : Game() {
     fun parseData(jsonObject: JsonObject): Dataset? {
         var dataset: Dataset? = null
         try {
-            dataset = Json.decodeFromJsonElement<JustOneDataset>(jsonObject)
+            dataset = json.decodeFromJsonElement<JustOneDataset>(jsonObject)
         } catch (e: Exception) {
             Napier.e("Error while decoding Just one dataset", e)
         }

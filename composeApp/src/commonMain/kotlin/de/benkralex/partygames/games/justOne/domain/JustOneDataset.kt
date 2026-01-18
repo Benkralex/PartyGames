@@ -3,15 +3,18 @@ package de.benkralex.partygames.games.justOne.domain
 
 import de.benkralex.partygames.datasets.Dataset
 import de.benkralex.partygames.games.common.domain.TranslatableString
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.UseSerializers
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.json.JsonIgnoreUnknownKeys
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
+
+val json = Json {
+    ignoreUnknownKeys = true
+}
 
 @Serializable
 data class JustOneDataset(
@@ -20,14 +23,11 @@ data class JustOneDataset(
     override val title: TranslatableString,
     override val description: TranslatableString,
     override val author: TranslatableString,
-    val game: String,
     val topics: Map<String, TranslatableString>,
     val words: List<JustOneWord>,
 ) : Dataset
 
-@OptIn(ExperimentalSerializationApi::class)
 @Serializable
-@JsonIgnoreUnknownKeys
 data class JustOneWord(
     val topic_key: String,
     val word: TranslatableString,
