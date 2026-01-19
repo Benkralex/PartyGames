@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="just_one_title">Just one</string>
-    <string name="just_one_description">A clever guessing game where just_ones must be uncovered before they guess the secret word!</string>
+    <string name="just_one_description">Give the detective creative clues to the secret word - without repeating any.</string>
     <string name="just_one_author">skippyall</string>
     <string name="just_one_how_to_play">
 Every player except the detective gets the secret word that should be guessed by the detective.
