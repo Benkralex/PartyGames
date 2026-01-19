@@ -6,14 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import de.benkralex.partygames.app.gamesRegister
 import de.benkralex.partygames.games.common.domain.Game
-import de.benkralex.partygames.games.findLiar.domain.FindLiar
-import de.benkralex.partygames.games.impostor.domain.Impostor
-import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 
 @Composable
 fun GameSelectionPage(
     onNavigateToSettings: () -> Unit = {},
-    onNavigateToGame: (Game) -> Unit = {},
+    onNavigateToGame: (Game<*,*>) -> Unit = {},
 ) {
     Scaffold (
         topBar = {

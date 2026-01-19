@@ -17,17 +17,13 @@ class FindLiarPlayViewModel : ViewModel() {
     var datasets: List<FindLiarDataset> = emptyList()
     var game: FindLiar? = null
     val players: List<String> by derivedStateOf {
-        (game?.settings?.get("players") as? List<*>)?.map {
-            it as? String
-        }?.filter { it != null }?.map { it!! } ?: emptyList()
+        game?.settings?.players ?: emptyList()
     }
     val topics: List<TranslatableString> by derivedStateOf {
-        (game?.settings?.get("topics") as? List<*>)?.map {
-            it as? TranslatableString
-        }?.filter { it != null }?.map { it!! } ?: emptyList()
+        game?.settings?.topics ?: emptyList()
     }
     val liarCount: Int by derivedStateOf {
-        game?.settings?.get("liarCount") as? Int ?: 1
+        game?.settings?.liarCount ?: 1
     }
     val playerCount: Int by derivedStateOf {
         players.size

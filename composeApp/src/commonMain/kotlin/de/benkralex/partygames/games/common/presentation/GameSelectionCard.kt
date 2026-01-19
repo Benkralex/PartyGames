@@ -19,7 +19,7 @@ import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun GameSelectionCard(
-    game: Game,
+    game: Game<*,*>,
     modifier: Modifier = Modifier,
 ) {
     val color = if (isSystemInDarkTheme()) {

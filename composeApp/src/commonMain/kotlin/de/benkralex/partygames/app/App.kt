@@ -111,7 +111,7 @@ fun App(
 
             composable<Route.GameSetupRoute> { backStackEntry ->
                 val gameSettings = backStackEntry.toRoute<Route.GameSetupRoute>()
-                val game: Game? = getGameByKey(gameSettings.gameKey)
+                val game: Game<*,*>? = getGameByKey(gameSettings.gameKey)
                 if (game == null) {
                     Napier.e("Game with key ${gameSettings.gameKey} not found, navigating back")
                     navController.navigateUp()
