@@ -10,8 +10,7 @@ Der Detektiv erhält alle Hinweiswörter, die von genau einem Spieler genannt wu
 Wenn er das Wort errät, haben alle die Runde gewonnen.
     </string>
     <string name="just_one_res_show_word">Wort zeigen</string>
-    <string name="just_one_res_new_round">Neue Runde</string>
-    <string name="just_one_res_submit">Bestätigen</string>
-    <string name="just_one_res_guess">Errate das Wort, </string>
-    <string name="just_one_res_is_detective"> ist der Detektiv.</string>
+    <string name="just_one_res_submit">Fertig</string>
+    <string name="just_one_res_guess">Errate das Wort, {player}</string>
+    <string name="just_one_res_is_detective">{player} ist der Detektiv</string>
 </resources>

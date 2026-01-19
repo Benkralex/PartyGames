@@ -44,9 +44,9 @@ import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.accept_dialog
 import partygames.composeapp.generated.resources.just_one_res_guess
 import partygames.composeapp.generated.resources.just_one_res_is_detective
-import partygames.composeapp.generated.resources.just_one_res_new_round
 import partygames.composeapp.generated.resources.just_one_res_show_word
 import partygames.composeapp.generated.resources.just_one_res_submit
+import partygames.composeapp.generated.resources.new_round
 import kotlin.reflect.KClass
 import kotlin.reflect.cast
 
@@ -73,17 +73,28 @@ fun JustOnePlayWidget(
         modifier = modifier
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement =
+            if (vm.phase == Phase.SHOW_DETECTIVE)
+                Arrangement.Center
+            else
+                Arrangement.Top,
     ) {
         key(vm.phase, vm.activePlayer) {
             if(vm.phase == Phase.SHOW_DETECTIVE) {
                 ShowText(
-                    word = vm.detective + stringResource(Res.string.just_one_res_is_detective),
+                    word = stringResource(Res.string.just_one_res_is_detective).replace("{player}", vm.detective),
                     buttonText = stringResource(Res.string.accept_dialog),
                     callback = {
                         vm.phase = Phase.PROVIDE_HINT
                         vm.updateActivePlayer()
-                    }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(300.dp)
+                        .padding(
+                            horizontal = 32.dp,
+                            vertical = 16.dp,
+                        ),
                 )
             } else if (vm.phase == Phase.PROVIDE_HINT && vm.activePlayer != null) {
                 AskHintCard(
@@ -106,18 +117,23 @@ fun JustOnePlayWidget(
                         .fillMaxWidth()
                         .padding(4.dp),
                     answers = vm.hints,
-                    question = stringResource(Res.string.just_one_res_guess) + vm.detective,
+                    question = stringResource(Res.string.just_one_res_guess).replace("{player}", vm.detective),
                     showWordCallback = {
                         vm.phase = Phase.SHOW_WORD
                     },
+                    buttonText = stringResource(Res.string.just_one_res_show_word),
                 )
             } else if (vm.phase == Phase.SHOW_WORD) {
-                ShowText(
-                    word = vm.currentWord!![local],
-                    buttonText = stringResource(Res.string.just_one_res_new_round),
-                    callback = {
+                ShowHints(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(4.dp),
+                    answers = vm.hints,
+                    question = vm.currentWord!![local],
+                    showWordCallback = {
                         vm.initNewRound()
-                    }
+                    },
+                    buttonText = stringResource(Res.string.new_round),
                 )
             }
         }
@@ -195,14 +211,17 @@ fun ShowHints(
     modifier: Modifier = Modifier,
     answers: Map<String, String>,
     question: String,
-    showWordCallback: () -> Unit = {}
+    showWordCallback: () -> Unit = {},
+    buttonText: String,
 ) {
     Column {
         Text(
             modifier = Modifier
+                .fillMaxWidth()
                 .padding(12.dp),
             text = question,
             style = MaterialTheme.typography.headlineSmall,
+            textAlign = TextAlign.Center,
         )
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
@@ -255,7 +274,7 @@ fun ShowHints(
             onClick = showWordCallback
         ) {
             Text(
-                text = stringResource(Res.string.just_one_res_show_word),
+                text = buttonText,
             )
         }
     }
@@ -266,9 +285,10 @@ fun ShowText(
     word: String,
     buttonText: String,
     callback: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .padding(8.dp),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline)
     ) {
@@ -280,8 +300,11 @@ fun ShowText(
             verticalArrangement = Arrangement.Center,
         ) {
             Text(
+                modifier = Modifier
+                    .fillMaxWidth(),
                 text = word,
-                style = MaterialTheme.typography.displayLarge
+                style = MaterialTheme.typography.displaySmall,
+                textAlign = TextAlign.Center,
             )
             Button(
                 modifier = Modifier

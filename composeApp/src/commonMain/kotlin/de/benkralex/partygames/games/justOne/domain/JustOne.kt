@@ -27,7 +27,7 @@ class JustOne : Game() {
         description = Res.string.just_one_description,
         author = Res.string.just_one_author,
         colorLightTheme = Color(0xffff9900),
-        colorDarkTheme = Color(0xffff9900),
+        colorDarkTheme = Color(0xdddd7700),
         howToPlay = Res.string.just_one_how_to_play,
     )
 

@@ -182,9 +182,11 @@ fun ShowAnswers(
     Column {
         Text(
             modifier = Modifier
+                .fillMaxWidth()
                 .padding(12.dp),
             text = question,
             style = MaterialTheme.typography.headlineSmall,
+            textAlign = TextAlign.Center,
         )
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),

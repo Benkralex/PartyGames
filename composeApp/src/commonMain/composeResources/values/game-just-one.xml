@@ -10,8 +10,7 @@ The detective gets all hint words that were given by exactly one player. All dup
 If they guess the secret word, all players win the round.
     </string>
     <string name="just_one_res_show_word">Show word</string>
-    <string name="just_one_res_new_round">New Round</string>
     <string name="just_one_res_submit">Submit</string>
-    <string name="just_one_res_guess">Guess the word, </string>
-    <string name="just_one_res_is_detective"> is the detective.</string>
+    <string name="just_one_res_guess">Guess the word, {player}</string>
+    <string name="just_one_res_is_detective">{player} is the detective</string>
 </resources>
