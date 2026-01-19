@@ -81,8 +81,10 @@ class JustOnePlayViewModel : ViewModel() {
 
         val values = hints.values.toList()
         values.forEachIndexed { i, value ->
-            if(values.indexOfFirst { other -> other.trim().equals(value.trim(), ignoreCase = true) } != i) {
+            val firstIndex = values.indexOfFirst { other -> other.trim().equals(value.trim(), ignoreCase = true) }
+            if(firstIndex != i) {
                 duplicates += value
+                duplicates += values[firstIndex]
             }
         }
 
