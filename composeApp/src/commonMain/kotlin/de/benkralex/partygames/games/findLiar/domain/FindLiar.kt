@@ -6,9 +6,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getKeyByGame
-import de.benkralex.partygames.datasets.Dataset
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
+import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.findLiar.data.parseFindLiarDataset
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarPlayWidget
 import de.benkralex.partygames.games.findLiar.presentation.FindLiarSetupWidget
@@ -19,7 +19,7 @@ import partygames.composeapp.generated.resources.find_liar_description
 import partygames.composeapp.generated.resources.find_liar_how_to_play
 import partygames.composeapp.generated.resources.find_liar_title
 
-class FindLiar : Game() {
+class FindLiar : Game<FindLiarSettings, FindLiarDataset>() {
     override val gameId: String = "find_liar"
 
     override val information: GameInformation = GameInformation(
@@ -31,13 +31,9 @@ class FindLiar : Game() {
         howToPlay = Res.string.find_liar_how_to_play,
     )
 
-    override var settings: Map<String, Any?> = mapOf(
-        "players" to null,
-        "liarCount" to null,
-        "topics" to null,
-    )
-    override val parseData: (JsonObject) -> Dataset? = { parseFindLiarDataset(it) }
-    override val datasets: MutableList<Dataset> = mutableListOf()
+    override var settings: FindLiarSettings? = null
+    override val parseData: (JsonObject) -> FindLiarDataset? = { parseFindLiarDataset(it) }
+    override val datasets: MutableList<FindLiarDataset> = mutableListOf()
 
     @OptIn(ExperimentalMaterial3Api::class)
     override val setupWidget = @Composable { modifier: Modifier ->
@@ -45,14 +41,14 @@ class FindLiar : Game() {
             modifier = modifier,
             setupGame = { players, liarCount, topics ->
                 createGame(
-                    mapOf(
-                        "players" to players,
-                        "liarCount" to liarCount,
-                        "topics" to topics,
+                    FindLiarSettings(
+                        players = players,
+                        liarCount = liarCount,
+                        topics = topics,
                     )
                 )
             },
-            topics = activeDatasets.flatMap { (it as FindLiarDataset).questionPairs }.filter { q ->
+            topics = activeDatasets.flatMap { it.questionPairs }.filter { q ->
                 val languages = de.benkralex.partygames.settingsPage.data.settings.value.languages
                 q.liarQuestion.translations.keys.any { lang ->
                     lang in languages
@@ -71,16 +67,23 @@ class FindLiar : Game() {
         FindLiarPlayWidget(
             modifier = modifier,
             game = this,
-            datasets = activeDatasets.map { it as FindLiarDataset },
+            datasets = activeDatasets,
         )
     }
 
     override val settingsWidget = null
 
+    /**
+     * Apply the given game settings and mark this Find Liar instance as the active game.
+     *
+     * @param settings The settings to use for the new game, including players, liar count, and selected topics.
+     */
     override fun createGame(
-        settings: Map<String, Any?>,
+        settings: FindLiarSettings,
     ) {
         this.settings = settings
         activeGame = getKeyByGame(this)
     }
 }
+
+data class FindLiarSettings(val players: List<String>, val liarCount: Int, val topics: List<TranslatableString>)

@@ -4,7 +4,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import de.benkralex.partygames.datasets.Dataset
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import kotlinx.serialization.json.JsonObject
@@ -15,25 +14,21 @@ import partygames.composeapp.generated.resources.truth_or_dare_description
 import partygames.composeapp.generated.resources.truth_or_dare_how_to_play
 import partygames.composeapp.generated.resources.truth_or_dare_title
 
-class TruthOrDare : Game() {
+class TruthOrDare : Game<TruthOrDareSettings, TruthOrDareDataset>() {
     override val gameId: String = "truth_or_dare"
 
     override var information: GameInformation = GameInformation(
         name = Res.string.truth_or_dare_title,
         description = Res.string.truth_or_dare_description,
         author = Res.string.truth_or_dare_author,
-        colorLightTheme = Color.Companion.Green,
-        colorDarkTheme = Color.Companion.Green,
+        colorLightTheme = Color.Green,
+        colorDarkTheme = Color.Green,
         howToPlay = Res.string.truth_or_dare_how_to_play,
     )
 
-    override var settings: Map<String, Any?> = mapOf(
-        "topics" to null,
-        "ageMin" to null,
-        "ageMax" to null,
-    )
-    override val parseData: (JsonObject) -> Dataset? = { null }
-    override val datasets: MutableList<Dataset> = mutableListOf()
+    override var settings: TruthOrDareSettings? = null
+    override val parseData: (JsonObject) -> TruthOrDareDataset? = { null }
+    override val datasets: MutableList<TruthOrDareDataset> = mutableListOf()
 
     override val setupWidget = @Composable { modifier: Modifier ->
         Text("Setup ${stringResource(information.name)}", modifier = modifier)
@@ -45,16 +40,16 @@ class TruthOrDare : Game() {
 
     override val settingsWidget = null
 
+    /**
+     * Apply and store the provided settings for this game instance.
+     *
+     * @param settings Configuration for the game, including selected topics and optional minimum/maximum ages.
+     */
     override fun createGame(
-        //topics: List<String>,
-        //ageMin: Int?,
-        //ageMax: Int?,
-        settings: Map<String, Any?>
+        settings: TruthOrDareSettings
     ) {
-        this.settings = settings// mapOf(
-            //"topics" to topics,
-            //"ageMin" to ageMin,
-            //"ageMax" to ageMax,
-        //)
+        this.settings = settings
     }
 }
+
+data class TruthOrDareSettings(val topics: List<String>, val ageMin: Int?, val ageMax: Int?)

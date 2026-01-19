@@ -17,10 +17,18 @@ import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.content_description_back_button
 
+/**
+ * Displays the play screen for the given game with a top app bar showing the game's name and a back button.
+ *
+ * The composable places the game's play UI into a Scaffold so the content is inset by the scaffold's padding.
+ *
+ * @param game The game instance whose play UI and display name are presented.
+ * @param onNavigateBack Callback invoked when the top app bar back button is pressed.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlayGamePage(
-    game: Game,
+    game: Game<*,*>,
     onNavigateBack: () -> Unit = {},
 ) {
     Scaffold(

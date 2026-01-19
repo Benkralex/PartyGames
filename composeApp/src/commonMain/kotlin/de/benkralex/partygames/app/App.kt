@@ -44,6 +44,15 @@ import partygames.composeapp.generated.resources.exit_game_desc
 lateinit var local: String
 internal const val DATA_STORE_FILE_NAME = "prefs.preferences_pb"
 
+/**
+ * Root Composable that configures the app UI, state initialization, and navigation graph.
+ *
+ * Initializes logging and the current locale, loads and persists user settings, starts dataset loading,
+ * applies the app theme, and provides navigation between game selection, settings, game setup, and gameplay,
+ * including back handling and an exit confirmation dialog for active games.
+ *
+ * @param theme Optional color scheme to override the app's themed colors; when null the default theme is used.
+ */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
 @Preview
@@ -111,7 +120,7 @@ fun App(
 
             composable<Route.GameSetupRoute> { backStackEntry ->
                 val gameSettings = backStackEntry.toRoute<Route.GameSetupRoute>()
-                val game: Game? = getGameByKey(gameSettings.gameKey)
+                val game: Game<*,*>? = getGameByKey(gameSettings.gameKey)
                 if (game == null) {
                     Napier.e("Game with key ${gameSettings.gameKey} not found, navigating back")
                     navController.navigateUp()

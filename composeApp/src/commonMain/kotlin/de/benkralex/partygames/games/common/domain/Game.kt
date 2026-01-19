@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import de.benkralex.partygames.datasets.Dataset
 import kotlinx.serialization.json.JsonObject
 
-abstract class Game {
+abstract class Game<S, D : Dataset> {
     //-------------
     // Information
     //-------------
@@ -15,14 +15,14 @@ abstract class Game {
     //-------------
     // Settings
     //-------------
-    abstract val settings: Map<String, Any?>
+    abstract val settings: S?
 
     //-------------
     // Data
     //-------------
-    abstract val parseData: (json: JsonObject) -> Dataset?
-    abstract val datasets: MutableList<Dataset>
-    val activeDatasets: List<Dataset>
+    abstract val parseData: (json: JsonObject) -> D?
+    abstract val datasets: MutableList<D>
+    val activeDatasets: List<D>
         get() = datasets.filter { it.active }
 
     //-------------
@@ -34,6 +34,10 @@ abstract class Game {
 
     //-------------
     // Game Logic
-    //-------------
-    abstract fun createGame(settings: Map<String, Any?>)
+    /**
+ * Initializes a new game instance using the provided settings.
+ *
+ * @param settings Configuration values used to create and configure the game instance.
+ */
+    abstract fun createGame(settings: S)
 }

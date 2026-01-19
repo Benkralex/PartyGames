@@ -26,10 +26,16 @@ import partygames.composeapp.generated.resources.accept_dialog
 import partygames.composeapp.generated.resources.content_description_back_button
 import partygames.composeapp.generated.resources.how_to_play
 
+/**
+ * Displays the game's setup screen including a top app bar, a "how to play" dialog, and the game's setup widget.
+ *
+ * @param game The game instance whose localized title, how-to-play text, and setup widget will be rendered.
+ * @param onNavigateBack Callback invoked when the back navigation icon is pressed.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SetupGamePage(
-    game: Game,
+    game: Game<*,*>,
     onNavigateBack: () -> Unit = {},
 ) {
     var showHowToPlayDialog by remember { mutableStateOf(false) }

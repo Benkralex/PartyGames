@@ -17,9 +17,17 @@ import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Game
 import org.jetbrains.compose.resources.stringResource
 
+/**
+ * Displays a rounded card showing a game's title, author, and description.
+ *
+ * The card uses the game's configured light or dark background color depending on the system theme,
+ * draws a 16.dp rounded background with a 1.dp border, and applies 16.dp inner padding.
+ *
+ * @param game Game instance whose `information` provides string resource IDs for the title, author,
+ *             description and color values for light/dark themes.
 @Composable
 fun GameSelectionCard(
-    game: Game,
+    game: Game<*,*>,
     modifier: Modifier = Modifier,
 ) {
     val color = if (isSystemInDarkTheme()) {

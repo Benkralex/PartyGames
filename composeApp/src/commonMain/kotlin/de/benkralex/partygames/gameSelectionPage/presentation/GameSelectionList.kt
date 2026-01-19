@@ -14,11 +14,18 @@ import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.presentation.GameSelectionCard
 
+/**
+ * Displays a vertically scrollable list of selectable game cards.
+ *
+ * @param modifier Modifier applied to the list container.
+ * @param games List of games to display; each item's identity is derived from `game.information.name.key`.
+ * @param onGameClick Callback invoked with the selected `Game<*,*>` when a card is clicked.
+ */
 @Composable
 fun GameSelectionList (
     modifier: Modifier = Modifier,
-    games: List<Game>,
-    onGameClick: (Game) -> Unit = {},
+    games: List<Game<*,*>>,
+    onGameClick: (Game<*,*>) -> Unit = {},
 ) {
     val scrollState: LazyListState = rememberLazyListState()
     LazyColumn (
