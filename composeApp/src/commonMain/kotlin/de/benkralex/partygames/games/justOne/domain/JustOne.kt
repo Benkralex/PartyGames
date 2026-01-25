@@ -5,7 +5,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import de.benkralex.partygames.app.activeGame
 import de.benkralex.partygames.app.getKeyByGame
-import de.benkralex.partygames.datasets.Dataset
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.common.domain.GameInformation
 import de.benkralex.partygames.games.justOne.presentation.JustOnePlayWidget
@@ -19,7 +18,7 @@ import partygames.composeapp.generated.resources.just_one_description
 import partygames.composeapp.generated.resources.just_one_how_to_play
 import partygames.composeapp.generated.resources.just_one_title
 
-class JustOne : Game() {
+class JustOne : Game<JustOne.JustOneSettings, JustOneDataset>() {
     override val gameId: String = "just_one"
 
     override val information: GameInformation = GameInformation(
@@ -31,17 +30,13 @@ class JustOne : Game() {
         howToPlay = Res.string.just_one_how_to_play,
     )
 
-    override var settings: Map<String, Any?> = mapOf(
-        "players" to null,
-        "topics" to null,
-        "hint" to null,
-    )
+    override var settings: JustOneSettings? = null
 
 
-    override val parseData: (JsonObject) -> Dataset? = ::parseData
+    override val parseData: (JsonObject) -> JustOneDataset? = ::parseData
 
-    fun parseData(jsonObject: JsonObject): Dataset? {
-        var dataset: Dataset? = null
+    fun parseData(jsonObject: JsonObject): JustOneDataset? {
+        var dataset: JustOneDataset? = null
         try {
             dataset = json.decodeFromJsonElement<JustOneDataset>(jsonObject)
         } catch (e: Exception) {
@@ -51,20 +46,20 @@ class JustOne : Game() {
         return dataset
     }
 
-    override val datasets: MutableList<Dataset> = mutableListOf()
+    override val datasets: MutableList<JustOneDataset> = mutableListOf()
 
     override val setupWidget = @Composable { modifier: Modifier ->
         JustOneSetupWidget(
             modifier = modifier,
             setupGame = { players, topics ->
                 createGame(
-                    settings = mapOf(
-                        "players" to players,
-                        "topics" to activeDatasets.flatMap { (it as JustOneDataset).topics.toList() }.filter { topics.contains(it.second) },
+                    settings = JustOneSettings(
+                        players = players,
+                        topics = activeDatasets.flatMap { it.topics.toList() }.filter { topics.contains(it.second) }.map { it.first },
                     ),
                 )
             },
-            topics = activeDatasets.flatMap { (it as JustOneDataset).topics.values },
+            topics = activeDatasets.flatMap { it.topics.values },
         )
     }
 
@@ -72,16 +67,18 @@ class JustOne : Game() {
         JustOnePlayWidget(
             modifier = modifier,
             game = this,
-            datasets = activeDatasets.map { it as JustOneDataset },
+            datasets = activeDatasets,
         )
     }
 
     override val settingsWidget = null
 
     override fun createGame(
-        settings: Map<String, Any?>
+        settings: JustOneSettings
     ) {
         this.settings = settings
         activeGame = getKeyByGame(this)
     }
+
+    data class JustOneSettings(val players: List<String>, val topics: List<String>)
 }

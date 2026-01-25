@@ -15,16 +15,14 @@ class JustOnePlayViewModel : ViewModel() {
     var datasets: List<JustOneDataset> = emptyList()
     var game: JustOne? = null
     val players: List<String> by derivedStateOf {
-        (game?.settings?.get("players") as? List<*>)?.map {
-            it as? String
-        }?.filter { it != null }?.map { it!! } ?: emptyList()
+        game?.settings?.players ?: emptyList()
     }
-    val topics: List<Pair<String, TranslatableString>> by derivedStateOf {
-        (game?.settings?.get("topics") as? List<Pair<String, TranslatableString>>) ?: emptyList()
+    val topics: List<String> by derivedStateOf {
+        game?.settings?.topics ?: emptyList()
     }
     val words by derivedStateOf {
         datasets.flatMap { it.words }
-            .filter { topics.map { it.first }.contains(it.topic_key) }
+            .filter { topics.contains(it.topic_key) }
             .map { it.word }
     }
     var currentWord: TranslatableString? = null
