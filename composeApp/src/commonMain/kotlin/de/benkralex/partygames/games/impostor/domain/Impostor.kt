@@ -25,7 +25,7 @@ class Impostor : Game<ImpostorSettings, ImpostorDataset>() {
         name = Res.string.impostor_title,
         description = Res.string.impostor_description,
         author = Res.string.impostor_author,
-        colorLightTheme = Color(0xFFaa76de),
+        colorLightTheme = Color(0xFFC09CE3),
         colorDarkTheme = Color(0xFF3b0273),
         howToPlay = Res.string.impostor_how_to_play,
     )

@@ -1,5 +1,6 @@
 package de.benkralex.partygames.games.common.presentation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -11,8 +12,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.dropShadow
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.shadow.Shadow
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import de.benkralex.partygames.games.common.domain.Game
 import org.jetbrains.compose.resources.stringResource
@@ -28,32 +35,42 @@ fun GameSelectionCard(
         game.information.colorLightTheme
     }
     Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .border(
-                width = 1.dp,
-                color = MaterialTheme.colorScheme.onBackground,
-                shape = RoundedCornerShape(16.dp),
-            )
-            .drawBehind {
-                drawRoundRect(
-                    /*brush = Brush.radialGradient(
-                        colors = listOf(
-                            color.copy(alpha = 0.5f),
-                            color.copy(alpha = 0.1f)
-                        ),
-                        center = Offset(size.width,0f),
-                        radius = size.maxDimension / 1.2f
-                    ),*/
-                    color = color,
-                    size = size,
-                    cornerRadius = CornerRadius(
-                        x = 16.dp.toPx(),
-                        y = 16.dp.toPx()
-                    )
+        modifier = if (isSystemInDarkTheme()) {
+            modifier
+                .fillMaxWidth()
+                .border(
+                    width = 1.dp,
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                    shape = RoundedCornerShape(16.dp),
                 )
-            }
-            .padding(16.dp)
+                .background(
+                    color = color,
+                    shape = RoundedCornerShape(16.dp),
+                )
+                .padding(16.dp)
+        } else {
+            modifier
+                .fillMaxWidth()
+                .border(
+                    width = 1.dp,
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                    shape = RoundedCornerShape(16.dp),
+                )
+                .dropShadow(
+                    shape = RoundedCornerShape(16.dp),
+                    shadow = Shadow(
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.2f),
+                        radius = 6.dp,
+                        spread = 2.dp,
+                        offset = DpOffset(2.dp, 2.dp)
+                    ),
+                )
+                .background(
+                    color = color,
+                    shape = RoundedCornerShape(16.dp),
+                )
+                .padding(16.dp)
+        }
     ) {
         Column {
             Text(

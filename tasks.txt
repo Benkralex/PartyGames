@@ -1,0 +1,6 @@
+1. Web funktioniert nicht
+2. Karten auf dem Startbildschirm Hover muss abgerundet werden
+3. Padding überall geleich
+4. Debug entfernen
+5. Spielen eine API geben
+6. Desktop QR-Scanner

@@ -10,7 +10,8 @@ private val lastPlayersKey = stringPreferencesKey("lastPlayers")
 private val datasetPathKey = stringPreferencesKey("datasetPath")
 
 actual suspend fun saveSettings() {
-    prefs.edit { preferences ->
+    if (prefs == null) return
+    prefs!!.edit { preferences ->
         preferences[languagesKey] = settings.value.languages.toPreferencesString()
         preferences[lastPlayersKey] = settings.value.lastPlayers.toPreferencesString()
         preferences[datasetPathKey] = settings.value.datasetPath
@@ -24,7 +25,8 @@ actual suspend fun saveSettings() {
 }
 
 actual suspend fun loadSettings() {
-    prefs.edit { preferences ->
+    if (prefs == null) return
+    prefs!!.edit { preferences ->
         settings.value = Settings(
             languages = preferences[languagesKey]?.toListOfPrefString() ?: mutableListOf(),
             lastPlayers = preferences[lastPlayersKey]?.toListOfPrefString() ?: mutableListOf(),
