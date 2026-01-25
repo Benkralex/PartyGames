@@ -1,0 +1,502 @@
+{
+  "uid": "default_dataset",
+  "game": "just_one",
+  "title": {
+    "de_DE": "Standard Datenset",
+    "en": "Default Dataset"
+  },
+  "description": {
+    "de_DE": "Das Standart Datenset für das Spiel 'Just One'",
+    "en": "The default dataset for the game 'Just One'"
+  },
+  "author": {
+    "de_DE": "skippyall",
+    "en": "skippyall"
+  },
+  "topics": {
+    "animals": {
+      "de_DE": "Tiere",
+      "en_US": "Animals"
+    },
+    "things": {
+      "de_DE": "Dinge",
+      "en_US": "Things"
+    },
+    "food": {
+      "de_DE": "Essen",
+      "en_US": "Food"
+    },
+    "places": {
+      "de_DE": "Orte",
+      "en_US": "Places"
+    },
+    "sports": {
+      "de_DE": "Sportarten",
+      "en_US": "Sports"
+    }
+  },
+  "words": [
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Elefant",
+        "en_US": "Elephant"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Fisch",
+        "en_US": "Fish"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Pferd",
+        "en_US": "Horse"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Stuhl",
+        "en_US": "Chair"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Fernseher",
+        "en_US": "TV"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Regenschirm",
+        "en_US": "Umbrella"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Pizza",
+        "en_US": "Pizza"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Apfel",
+        "en_US": "Apple"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Eis",
+        "en_US": "Ice Cream"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Strand",
+        "en_US": "Beach"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Schule",
+        "en_US": "School"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Park",
+        "en_US": "Park"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Fußball",
+        "en_US": "Soccer"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Tennis",
+        "en_US": "Tennis"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Schwimmen",
+        "en_US": "Swimming"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Pinguin",
+        "en_US": "Penguin"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Känguru",
+        "en_US": "Kangaroo"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Uhr",
+        "en_US": "Clock"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Kamera",
+        "en_US": "Camera"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Banane",
+        "en_US": "Banana"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Brot",
+        "en_US": "Bread"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Kuchen",
+        "en_US": "Cake"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Basketball",
+        "en_US": "Basketball"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Boxen",
+        "en_US": "Boxing"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Volleyball",
+        "en_US": "Volleyball"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Delfin",
+        "en_US": "Dolphin"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Igel",
+        "en_US": "Hedgehog"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Kompass",
+        "en_US": "Compass"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Kerze",
+        "en_US": "Candle"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Honig",
+        "en_US": "Honey"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Spinat",
+        "en_US": "Spinach"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Zoo",
+        "en_US": "Zoo"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Museum",
+        "en_US": "Museum"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Berg",
+        "en_US": "Mountain"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Reiten",
+        "en_US": "Horse Riding"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Voltigieren",
+        "en_US": "Vaulting"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Spiegel",
+        "en_US": "Mirror"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Schere",
+        "en_US": "Scissors"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Erdbeere",
+        "en_US": "Strawberry"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Flughafen",
+        "en_US": "Airport"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Kirche",
+        "en_US": "Church"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Schlüsselbund",
+        "en_US": "Keyring"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Fernbedienung",
+        "en_US": "Remote Control"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Kürbis",
+        "en_US": "Pumpkin"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Marktplatz",
+        "en_US": "Marketplace"
+      }
+    },
+    {
+      "topic_key": "animals",
+      "word": {
+        "de_DE": "Eule",
+        "en_US": "Owl"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Mikroskop",
+        "en_US": "Microscope"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Taschenlampe",
+        "en_US": "Flashlight"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Lasagne",
+        "en_US": "Lasagna"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Sushi",
+        "en_US": "Sushi"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Pfannkuchen",
+        "en_US": "Pancake"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Bibliothek",
+        "en_US": "Library"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Bahnhof",
+        "en_US": "Train Station"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Krankenhaus",
+        "en_US": "Hospital"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Schlüssel",
+        "en_US": "Key"
+      }
+    },
+    {
+      "topic_key": "food",
+      "word": {
+        "de_DE": "Croissant",
+        "en_US": "Croissant"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Höhle",
+        "en_US": "Cave"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Leuchtturm",
+        "en_US": "Lighthouse"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Klettern",
+        "en_US": "Climbing"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Ballett",
+        "en_US": "Ballet"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Metronom",
+        "en_US": "Metronome"
+      }
+    },
+    {
+      "topic_key": "things",
+      "word": {
+        "de_DE": "Zahnrad",
+        "en_US": "Gear"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Antarktis",
+        "en_US": "Antarctica"
+      }
+    },
+    {
+      "topic_key": "sports",
+      "word": {
+        "de_DE": "Parkour",
+        "en_US": "Parkour"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Tschernobyl",
+        "en_US": "Chernobyl"
+      }
+    },
+    {
+      "topic_key": "places",
+      "word": {
+        "de_DE": "Area 51",
+        "en_US": "Area 51"
+      }
+    }
+  ]
+}

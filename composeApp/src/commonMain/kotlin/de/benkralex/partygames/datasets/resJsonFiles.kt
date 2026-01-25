@@ -15,8 +15,8 @@ suspend fun loadAllResourceDatasets() {
     loadResourceDatasets(
         listOf(
             "files/find_liar/default.json",
-
             "files/impostor/default.json",
+            "files/just_one/default.json"
         )
     )
 }

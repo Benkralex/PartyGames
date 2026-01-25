@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="just_one_title">Just one</string>
+    <string name="just_one_description">Gebt dem Detektiv kreative Hinweise auf das Geheimwort - ohne dass es Doppelte gibt.</string>
+    <string name="just_one_author">skippyall</string>
+    <string name="just_one_how_to_play">
+Jeder Spieler außer dem Detektiv erhält das Geheimwort, das der Detektiv erraten soll.
+Zu diesem Wort überlegt sich jeder Spieler ein Hinweiswort. Es darf keine Teile des Geheimworts enthalten.
+Der Detektiv erhält alle Hinweiswörter, die von genau einem Spieler genannt wurden.
+Wenn er das Wort errät, haben alle die Runde gewonnen.
+    </string>
+    <string name="just_one_res_show_word">Wort zeigen</string>
+    <string name="just_one_res_submit">Fertig</string>
+    <string name="just_one_res_guess">Errate das Wort, {player}</string>
+    <string name="just_one_res_is_detective">{player} ist der Detektiv</string>
+    <string name="just_one_res_hint">Tipp</string>
+</resources>

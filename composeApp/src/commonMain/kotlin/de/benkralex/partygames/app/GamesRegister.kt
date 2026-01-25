@@ -6,11 +6,14 @@ import androidx.compose.runtime.setValue
 import de.benkralex.partygames.games.common.domain.Game
 import de.benkralex.partygames.games.findLiar.domain.FindLiar
 import de.benkralex.partygames.games.impostor.domain.Impostor
+import de.benkralex.partygames.games.justOne.domain.JustOne
+
 //import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 
 val gamesRegister: List<Game<*,*>> = listOf(
     Impostor(),
     FindLiar(),
+    JustOne(),
     //TruthOrDare(),
 )
 
