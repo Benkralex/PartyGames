@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import de.benkralex.partygames.games.common.domain.TranslatableString
 import de.benkralex.partygames.games.justOne.domain.JustOne
 import de.benkralex.partygames.games.justOne.domain.JustOneDataset
+import de.benkralex.partygames.games.justOne.domain.JustOnePhase
 import io.github.aakira.napier.Napier
 
 class JustOnePlayViewModel : ViewModel() {
@@ -35,7 +36,7 @@ class JustOnePlayViewModel : ViewModel() {
 
     var hints: MutableMap<String,String> = mutableMapOf()
 
-    var phase: Phase by mutableStateOf(Phase.INITIALIZE)
+    var phase: JustOnePhase by mutableStateOf(JustOnePhase.INITIALIZE)
 
     fun initNewRound() {
         if (game == null) {
@@ -58,7 +59,7 @@ class JustOnePlayViewModel : ViewModel() {
         detective = players.filter { !previousDetectives.contains(it) }.random()
         previousDetectives.add(detective)
 
-        phase = Phase.SHOW_DETECTIVE
+        phase = JustOnePhase.SHOW_DETECTIVE
     }
 
     fun onProvideHint(hint: String) {
@@ -90,14 +91,6 @@ class JustOnePlayViewModel : ViewModel() {
 
         hints = hints.filter { !duplicates.contains(it.value) }.toMutableMap()
 
-        phase = Phase.SHOW_HINTS
+        phase = JustOnePhase.SHOW_HINTS
     }
-}
-
-enum class Phase {
-    INITIALIZE,
-    SHOW_DETECTIVE,
-    PROVIDE_HINT,
-    SHOW_HINTS,
-    SHOW_WORD
 }

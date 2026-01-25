@@ -39,10 +39,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.local
 import de.benkralex.partygames.games.justOne.domain.JustOne
 import de.benkralex.partygames.games.justOne.domain.JustOneDataset
+import de.benkralex.partygames.games.justOne.domain.JustOnePhase
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
 import partygames.composeapp.generated.resources.accept_dialog
 import partygames.composeapp.generated.resources.just_one_res_guess
+import partygames.composeapp.generated.resources.just_one_res_hint
 import partygames.composeapp.generated.resources.just_one_res_is_detective
 import partygames.composeapp.generated.resources.just_one_res_show_word
 import partygames.composeapp.generated.resources.just_one_res_submit
@@ -74,18 +76,18 @@ fun JustOnePlayWidget(
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement =
-            if (vm.phase == Phase.SHOW_DETECTIVE)
+            if (vm.phase == JustOnePhase.SHOW_DETECTIVE)
                 Arrangement.Center
             else
                 Arrangement.Top,
     ) {
         key(vm.phase, vm.activePlayer) {
-            if(vm.phase == Phase.SHOW_DETECTIVE) {
+            if(vm.phase == JustOnePhase.SHOW_DETECTIVE) {
                 ShowText(
                     word = stringResource(Res.string.just_one_res_is_detective).replace("{player}", vm.detective),
                     buttonText = stringResource(Res.string.accept_dialog),
                     callback = {
-                        vm.phase = Phase.PROVIDE_HINT
+                        vm.phase = JustOnePhase.PROVIDE_HINT
                         vm.updateActivePlayer()
                     },
                     modifier = Modifier
@@ -96,7 +98,7 @@ fun JustOnePlayWidget(
                             vertical = 16.dp,
                         ),
                 )
-            } else if (vm.phase == Phase.PROVIDE_HINT && vm.activePlayer != null) {
+            } else if (vm.phase == JustOnePhase.PROVIDE_HINT && vm.activePlayer != null) {
                 AskHintCard(
                     word = vm.currentWord!![local],
                     player = vm.activePlayer!!,
@@ -111,7 +113,7 @@ fun JustOnePlayWidget(
                             vertical = 16.dp,
                         ),
                 )
-            } else if (vm.phase == Phase.SHOW_HINTS) {
+            } else if (vm.phase == JustOnePhase.SHOW_HINTS) {
                 ShowHints(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -119,11 +121,11 @@ fun JustOnePlayWidget(
                     answers = vm.hints,
                     question = stringResource(Res.string.just_one_res_guess).replace("{player}", vm.detective),
                     showWordCallback = {
-                        vm.phase = Phase.SHOW_WORD
+                        vm.phase = JustOnePhase.SHOW_WORD
                     },
                     buttonText = stringResource(Res.string.just_one_res_show_word),
                 )
-            } else if (vm.phase == Phase.SHOW_WORD) {
+            } else if (vm.phase == JustOnePhase.SHOW_WORD) {
                 ShowHints(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -188,6 +190,9 @@ fun AskHintCard(
                         answer = newAnswer
                     },
                     singleLine = true,
+                    label = {
+                        Text(stringResource(Res.string.just_one_res_hint))
+                    }
                 )
                 Button(
                     modifier = Modifier
@@ -197,9 +202,7 @@ fun AskHintCard(
                         onAnswer(answer)
                     }
                 ) {
-                    Text(
-                        text = stringResource(Res.string.just_one_res_submit)
-                    )
+                    Text(stringResource(Res.string.just_one_res_submit))
                 }
             }
         }

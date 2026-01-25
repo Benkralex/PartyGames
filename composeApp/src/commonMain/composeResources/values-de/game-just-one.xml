@@ -13,4 +13,5 @@ Wenn er das Wort errät, haben alle die Runde gewonnen.
     <string name="just_one_res_submit">Fertig</string>
     <string name="just_one_res_guess">Errate das Wort, {player}</string>
     <string name="just_one_res_is_detective">{player} ist der Detektiv</string>
+    <string name="just_one_res_hint">Tipp</string>
 </resources>

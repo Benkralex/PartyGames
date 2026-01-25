@@ -13,4 +13,5 @@ If they guess the secret word, all players win the round.
     <string name="just_one_res_submit">Submit</string>
     <string name="just_one_res_guess">Guess the word, {player}</string>
     <string name="just_one_res_is_detective">{player} is the detective</string>
+    <string name="just_one_res_hint">Hint</string>
 </resources>
