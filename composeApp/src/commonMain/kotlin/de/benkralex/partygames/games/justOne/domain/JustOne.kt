@@ -18,7 +18,7 @@ import partygames.composeapp.generated.resources.just_one_description
 import partygames.composeapp.generated.resources.just_one_how_to_play
 import partygames.composeapp.generated.resources.just_one_title
 
-class JustOne : Game<JustOne.JustOneSettings, JustOneDataset>() {
+class JustOne : Game<JustOneSettings, JustOneDataset>() {
     override val gameId: String = "just_one"
 
     override val information: GameInformation = GameInformation(
@@ -79,6 +79,4 @@ class JustOne : Game<JustOne.JustOneSettings, JustOneDataset>() {
         this.settings = settings
         activeGame = getKeyByGame(this)
     }
-
-    data class JustOneSettings(val players: List<String>, val topics: List<String>)
 }

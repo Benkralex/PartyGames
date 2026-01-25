@@ -46,5 +46,3 @@ class TruthOrDare : Game<TruthOrDareSettings, TruthOrDareDataset>() {
         this.settings = settings
     }
 }
-
-data class TruthOrDareSettings(val topics: List<String>, val ageMin: Int?, val ageMax: Int?)

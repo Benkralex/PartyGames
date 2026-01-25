@@ -80,5 +80,3 @@ class FindLiar : Game<FindLiarSettings, FindLiarDataset>() {
         activeGame = getKeyByGame(this)
     }
 }
-
-data class FindLiarSettings(val players: List<String>, val liarCount: Int, val topics: List<TranslatableString>)

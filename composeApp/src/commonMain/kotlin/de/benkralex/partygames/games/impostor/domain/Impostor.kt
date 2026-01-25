@@ -78,10 +78,3 @@ class Impostor : Game<ImpostorSettings, ImpostorDataset>() {
         activeGame = getKeyByGame(this)
     }
 }
-
-data class ImpostorSettings(
-    val players: List<String>,
-    val impostorCount: Int,
-    val topics: List<TranslatableString>,
-    val hint: Any? = null,
-)
