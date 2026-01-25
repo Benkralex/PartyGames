@@ -2,6 +2,7 @@ package de.benkralex.partygames.gameSelectionPage.presentation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Lan
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -18,6 +19,7 @@ import partygames.composeapp.generated.resources.settings
 @Composable
 fun GameSelectionTopAppBar(
     onSettingsClick: () -> Unit = {},
+    onLANPartyClick: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     TopAppBar(
@@ -28,6 +30,14 @@ fun GameSelectionTopAppBar(
             )
         },
         actions = {
+            IconButton(
+                onClick = onLANPartyClick
+            ) {
+                Icon(
+                    imageVector = Icons.Outlined.Lan,
+                    contentDescription = null,
+                )
+            }
             IconButton(
                 onClick = onSettingsClick
             ) {

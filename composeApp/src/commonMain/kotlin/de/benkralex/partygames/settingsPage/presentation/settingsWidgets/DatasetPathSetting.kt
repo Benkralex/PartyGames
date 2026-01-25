@@ -49,7 +49,6 @@ fun DatasetPathSetting(
         value = vm.datasetPath,
         onValueChange = { vm.onPathSelected(it) },
         label = { Text("Dataset Path") },
-        placeholder = { Text("Enter dataset path") },
         singleLine = true,
         trailingIcon = {
             IconButton(

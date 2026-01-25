@@ -14,4 +14,16 @@ sealed interface Route {
 
     @Serializable
     data object GamePlayRoute : Route
+
+    @Serializable
+    data object LANPartyOverviewRoute : Route
+
+    @Serializable
+    data object LANPartyHostRoute : Route
+
+    @Serializable
+    data class LANPartyManageRoute(val port: Int, val hostPlays: Boolean, val name: String) : Route
+
+    @Serializable
+    data object LANPartyJoinRoute : Route
 }

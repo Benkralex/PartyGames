@@ -60,6 +60,20 @@ kotlin {
 
             api(libs.datastore.preferences)
             api(libs.datastore)
+
+            // Ktor client engine for Android/JVM
+            implementation(libs.ktor.client.cio)
+
+            implementation(libs.ktor.server.core)
+            implementation(libs.ktor.server.netty)
+            implementation(libs.ktor.server.websockets)
+
+            // QR Scanner
+            implementation(libs.mlkit.barcode)
+            implementation(libs.camerax.core)
+            implementation(libs.camerax.camera2)
+            implementation(libs.camerax.lifecycle)
+            implementation(libs.camerax.view)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -68,6 +82,9 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation(libs.ktor.clientCore)
+            implementation(libs.ktor.client.websockets)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.jetbrains.compose.navigation)
@@ -78,10 +95,20 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
 
             implementation(libs.kotlin.coroutines)
+
+            implementation(libs.qrose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+
+        val wasmJsMain by getting {
+            dependencies {
+                // Ktor client engine for Browser/WASM
+                implementation(libs.ktor.client.js)
+            }
+        }
+
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
@@ -90,6 +117,17 @@ kotlin {
             api(libs.datastore)
 
             runtimeOnly(libs.slf4j.simple)
+
+            // QR Scanner
+            implementation(libs.zxing.core)
+            implementation(libs.zxing.javase)
+
+            // Ktor client engine for JVM
+            implementation(libs.ktor.client.cio)
+
+            implementation(libs.ktor.server.core)
+            implementation(libs.ktor.server.netty)
+            implementation(libs.ktor.server.websockets)
         }
     }
 }
@@ -108,6 +146,8 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/INDEX.LIST"
+            excludes += "/META-INF/io.netty.versions.properties"
         }
     }
     buildTypes {

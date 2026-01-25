@@ -14,11 +14,13 @@ import de.benkralex.partygames.games.truthOrDare.domain.TruthOrDare
 fun GameSelectionPage(
     onNavigateToSettings: () -> Unit = {},
     onNavigateToGame: (Game) -> Unit = {},
+    onNavigateToLANParty: () -> Unit = {},
 ) {
     Scaffold (
         topBar = {
             GameSelectionTopAppBar(
-                onSettingsClick = onNavigateToSettings
+                onSettingsClick = onNavigateToSettings,
+                onLANPartyClick = onNavigateToLANParty,
             )
         }
     ) { innerPadding ->

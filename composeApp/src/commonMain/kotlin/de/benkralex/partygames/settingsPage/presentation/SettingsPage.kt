@@ -25,6 +25,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import de.benkralex.partygames.app.PLATFORM
 import de.benkralex.partygames.app.gamesRegister
 import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetPathSetting
 import de.benkralex.partygames.settingsPage.presentation.settingsWidgets.DatasetSelection
@@ -45,8 +46,8 @@ fun SettingsPage(
         }
     ) { innerPadding ->
         var selectedTabIndex by remember { mutableIntStateOf(0) }
-        val tabsList = listOf(
-            TabData(
+        val tabsList = listOfNotNull(
+            if (PLATFORM != "WEB") TabData(
                 title = stringResource(Res.string.settings),
                 content = {
                     Column (
@@ -60,7 +61,7 @@ fun SettingsPage(
                         DatasetPathSetting()
                     }
                 },
-            ),
+            ) else null,
             TabData(
                 title = "Datasets",
                 content = {
