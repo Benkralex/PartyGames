@@ -1,4 +1,4 @@
-package de.benkralex.partygames.games.findLiar.presentation
+package de.benkralex.partygames.games.justOne.presentation
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
@@ -37,28 +37,33 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.benkralex.partygames.app.local
-import de.benkralex.partygames.games.findLiar.domain.FindLiar
-import de.benkralex.partygames.games.findLiar.domain.FindLiarDataset
+import de.benkralex.partygames.games.justOne.domain.JustOne
+import de.benkralex.partygames.games.justOne.domain.JustOneDataset
+import de.benkralex.partygames.games.justOne.domain.JustOnePhase
 import org.jetbrains.compose.resources.stringResource
 import partygames.composeapp.generated.resources.Res
-import partygames.composeapp.generated.resources.find_liar_res_show_liars
-import partygames.composeapp.generated.resources.find_liar_res_submit
+import partygames.composeapp.generated.resources.accept_dialog
+import partygames.composeapp.generated.resources.just_one_res_guess
+import partygames.composeapp.generated.resources.just_one_res_hint
+import partygames.composeapp.generated.resources.just_one_res_is_detective
+import partygames.composeapp.generated.resources.just_one_res_show_word
+import partygames.composeapp.generated.resources.just_one_res_submit
 import partygames.composeapp.generated.resources.new_round
 import kotlin.reflect.KClass
 import kotlin.reflect.cast
 
 @Composable
-fun FindLiarPlayWidget(
+fun JustOnePlayWidget(
     modifier: Modifier = Modifier,
-    game: FindLiar,
-    vm: FindLiarPlayViewModel = viewModel<FindLiarPlayViewModel>(
-        factory = object : ViewModelProvider.Factory {
+    game: JustOne,
+    vm: JustOnePlayViewModel = viewModel<JustOnePlayViewModel>(
+        factory = object: ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: KClass<T>, extras: CreationExtras): T {
-                return modelClass.cast(FindLiarPlayViewModel())
+                return modelClass.cast(JustOnePlayViewModel())
             }
-        },
+        }
     ),
-    datasets: List<FindLiarDataset>,
+    datasets: List<JustOneDataset>,
 ) {
     vm.datasets = datasets
     LaunchedEffect(game) {
@@ -70,14 +75,20 @@ fun FindLiarPlayWidget(
         modifier = modifier
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement =
+            if (vm.phase == JustOnePhase.SHOW_DETECTIVE)
+                Arrangement.Center
+            else
+                Arrangement.Top,
     ) {
-        key(vm.game, vm.answeringPlayer, vm.question) {
-            if (vm.game != null && vm.question != null && vm.answeringPlayer != null) {
-                AskQuestionCard(
-                    question = vm.question!![local],
-                    player = vm.answeringPlayer!!,
-                    onAnswer = { answer: String ->
-                        vm.answerQuestion(vm.answeringPlayer!!, answer)
+        key(vm.phase, vm.activePlayer) {
+            if(vm.phase == JustOnePhase.SHOW_DETECTIVE) {
+                ShowText(
+                    word = stringResource(Res.string.just_one_res_is_detective).replace("{player}", vm.detective),
+                    buttonText = stringResource(Res.string.accept_dialog),
+                    callback = {
+                        vm.phase = JustOnePhase.PROVIDE_HINT
+                        vm.updateActivePlayer()
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -87,17 +98,44 @@ fun FindLiarPlayWidget(
                             vertical = 16.dp,
                         ),
                 )
-            } else if (vm.game != null && vm.answeringPlayer == null && vm.answers.size == vm.playerCount) {
-                ShowAnswers(
-                    answers = vm.answers,
-                    question = vm.currentQuestionPair!!.mainQuestion[local],
-                    liars = vm.liars,
+            } else if (vm.phase == JustOnePhase.PROVIDE_HINT && vm.activePlayer != null) {
+                AskHintCard(
+                    word = vm.currentWord!![local],
+                    player = vm.activePlayer!!,
+                    onAnswer = {
+                        vm.onProvideHint(it)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(300.dp)
+                        .padding(
+                            horizontal = 32.dp,
+                            vertical = 16.dp,
+                        ),
+                )
+            } else if (vm.phase == JustOnePhase.SHOW_HINTS) {
+                ShowHints(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(4.dp),
-                    newRoundCallback = {
+                    answers = vm.hints,
+                    question = stringResource(Res.string.just_one_res_guess).replace("{player}", vm.detective),
+                    showWordCallback = {
+                        vm.phase = JustOnePhase.SHOW_WORD
+                    },
+                    buttonText = stringResource(Res.string.just_one_res_show_word),
+                )
+            } else if (vm.phase == JustOnePhase.SHOW_WORD) {
+                ShowHints(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(4.dp),
+                    answers = vm.hints,
+                    question = vm.currentWord!![local],
+                    showWordCallback = {
                         vm.initNewRound()
                     },
+                    buttonText = stringResource(Res.string.new_round),
                 )
             }
         }
@@ -105,9 +143,9 @@ fun FindLiarPlayWidget(
 }
 
 @Composable
-fun AskQuestionCard(
+fun AskHintCard(
     modifier: Modifier = Modifier,
-    question: String,
+    word: String,
     player: String,
     onAnswer: (String) -> Unit,
 ) {
@@ -139,7 +177,7 @@ fun AskQuestionCard(
                 )
             } else {
                 Text(
-                    text = question,
+                    text = word,
                     style = MaterialTheme.typography.headlineSmall,
                 )
                 OutlinedTextField(
@@ -152,6 +190,9 @@ fun AskQuestionCard(
                         answer = newAnswer
                     },
                     singleLine = true,
+                    label = {
+                        Text(stringResource(Res.string.just_one_res_hint))
+                    }
                 )
                 Button(
                     modifier = Modifier
@@ -161,9 +202,7 @@ fun AskQuestionCard(
                         onAnswer(answer)
                     }
                 ) {
-                    Text(
-                        text = stringResource(Res.string.find_liar_res_submit)
-                    )
+                    Text(stringResource(Res.string.just_one_res_submit))
                 }
             }
         }
@@ -171,14 +210,13 @@ fun AskQuestionCard(
 }
 
 @Composable
-fun ShowAnswers(
+fun ShowHints(
     modifier: Modifier = Modifier,
     answers: Map<String, String>,
     question: String,
-    liars: List<String>,
-    newRoundCallback: () -> Unit = {}
+    showWordCallback: () -> Unit = {},
+    buttonText: String,
 ) {
-    var showLiars by remember { mutableStateOf(false) }
     Column {
         Text(
             modifier = Modifier
@@ -194,35 +232,19 @@ fun ShowAnswers(
                 .weight(1f)
         ) {
             items(answers.entries.toList()) { (player, answer) ->
-                val liarColor = MaterialTheme.colorScheme.error
                 val defaultColor = MaterialTheme.colorScheme.outline
-                val boarder by remember {
+                val border by remember {
                     derivedStateOf {
-                        if (showLiars && player in liars) {
-                            BorderStroke(2.dp, liarColor)
-                        } else {
-                            BorderStroke(1.dp, defaultColor)
-                        }
+                        BorderStroke(1.dp, defaultColor)
                     }
                 }
-                val defaultColors = CardDefaults.cardColors()
-                val liarColors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.error.copy(alpha = 0.3f),
-                )
-                val colors by remember {
-                    derivedStateOf {
-                        if (showLiars && player in liars) {
-                            liarColors
-                        } else {
-                            defaultColors
-                        }
-                    }
-                }
+
+                val colors = CardDefaults.cardColors()
                 Card(
                     modifier = Modifier
                         .padding(4.dp)
                         .height(125.dp),
-                    border = boarder,
+                    border = border,
                     colors = colors,
                 ) {
                     Column(
@@ -252,23 +274,51 @@ fun ShowAnswers(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp),
-            onClick = {
-                if (!showLiars) {
-                    showLiars = true
-                } else {
-                    newRoundCallback()
-                    showLiars = false
-                }
-            }
+            onClick = showWordCallback
         ) {
-            val buttonText = if (!showLiars) {
-                stringResource(Res.string.find_liar_res_show_liars)
-            } else {
-                stringResource(Res.string.new_round)
-            }
             Text(
                 text = buttonText,
             )
+        }
+    }
+}
+
+@Composable
+fun ShowText(
+    word: String,
+    buttonText: String,
+    callback: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Card(
+        modifier = modifier
+            .padding(8.dp),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+        ) {
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                text = word,
+                style = MaterialTheme.typography.displaySmall,
+                textAlign = TextAlign.Center,
+            )
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(4.dp),
+                onClick = callback
+            ) {
+                Text(
+                    text = buttonText
+                )
+            }
         }
     }
 }

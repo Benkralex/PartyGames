@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="impostor_title">Impostor</string>
-    <string name="impostor_description">Ein cleveres Ratespiel, bei dem die Impostor enttarnt werden müssen, bevor sie das geheime Wort erraten!</string>
+    <string name="impostor_description">Ein cleveres Ratespiel, bei dem die Impostors enttarnt werden müssen, bevor sie das geheime Wort erraten!</string>
     <string name="impostor_author">Benkralex</string>
     <string name="impostor_how_to_play">
 Jeder Spieler bekommt ein geheimes Wort angezeigt – außer den Impostor(en).
