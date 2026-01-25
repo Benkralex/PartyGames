@@ -20,7 +20,7 @@ import partygames.composeapp.generated.resources.content_description_back_button
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlayGamePage(
-    game: Game,
+    game: Game<*,*>,
     onNavigateBack: () -> Unit = {},
 ) {
     Scaffold(

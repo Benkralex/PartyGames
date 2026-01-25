@@ -29,7 +29,7 @@ import partygames.composeapp.generated.resources.how_to_play
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SetupGamePage(
-    game: Game,
+    game: Game<*,*>,
     onNavigateBack: () -> Unit = {},
 ) {
     var showHowToPlayDialog by remember { mutableStateOf(false) }

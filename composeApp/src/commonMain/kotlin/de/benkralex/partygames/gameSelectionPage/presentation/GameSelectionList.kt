@@ -17,8 +17,8 @@ import de.benkralex.partygames.games.common.presentation.GameSelectionCard
 @Composable
 fun GameSelectionList (
     modifier: Modifier = Modifier,
-    games: List<Game>,
-    onGameClick: (Game) -> Unit = {},
+    games: List<Game<*,*>>,
+    onGameClick: (Game<*,*>) -> Unit = {},
 ) {
     val scrollState: LazyListState = rememberLazyListState()
     LazyColumn (
