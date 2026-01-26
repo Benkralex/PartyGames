@@ -2,6 +2,9 @@ package de.benkralex.partygames.gameSelectionPage.presentation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
@@ -17,17 +20,21 @@ import de.benkralex.partygames.games.common.presentation.GameSelectionCard
 @Composable
 fun GameSelectionList (
     modifier: Modifier = Modifier,
-    games: List<Game>,
-    onGameClick: (Game) -> Unit = {},
+    games: List<Game<*,*>>,
+    onGameClick: (Game<*,*>) -> Unit = {},
 ) {
     val scrollState: LazyListState = rememberLazyListState()
     LazyColumn (
         modifier = modifier
-            .padding(16.dp),
+            .padding(16.dp)
+            .fillMaxSize(),
         state = scrollState,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        item {
+            Spacer(Modifier.height(4.dp))
+        }
         items (
             items = games,
             key = { game -> game.information.name.key }

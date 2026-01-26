@@ -96,7 +96,7 @@
             "topic_key": "aspirations_and_dreams",
             "switchable": true,
             "main_question": {
-                "de_DE": "Welchen Beruf wolltest du als Kind gerne werden?",
+                "de_DE": "Welchen Beruf wolltest du als Kind gerne haben?",
                 "en": "What job did you want to have as a child?"
             },
             "liar_question": {

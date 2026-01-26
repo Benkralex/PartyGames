@@ -86,6 +86,7 @@ kotlin {
             implementation(libs.ktor.clientCore)
             implementation(libs.ktor.client.websockets)
             implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.jetbrains.compose.navigation)
             implementation(libs.napier)

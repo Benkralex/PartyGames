@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         lateinit var instance: MainActivity
             private set
 
-        lateinit var prefs: DataStore<Preferences>
+        var prefs: DataStore<Preferences>? = null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,11 +37,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         instance = this
-
+        if (prefs == null) {
+            prefs = createDataStore(applicationContext)
+        }
         setContent {
-            prefs = remember {
-                createDataStore(applicationContext)
-            }
             MaterialTheme {
                 App(
                     theme = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S)  {
