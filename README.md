@@ -1,3 +1,7 @@
+# UMGEZOGEN AUF [https://codeberg.org/Benkralex/PartyGames](https://codeberg.org/Benkralex/PartyGames)
+
+
+
 <img src="media/banner.png" alt="Banner"><br>
 # PartyGames
 A collection of fun simple party games.<br>
